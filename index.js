@@ -4,7 +4,6 @@ t.innerHTML = `
 <style>
 .clock-container {
   box-shadow: 0 2px 10px #999999;
-  width: 24vw;
   padding: 2px;
   border-radius: 4px;
   background: linear-gradient(#ccc, #fefefe, #ddd);
