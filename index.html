@@ -9,6 +9,8 @@
   grid-area: topnav;
   box-shadow: 0 0 4px grey;
   font-family: 'Trebuchet MS';
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .topnav .name {
   font-size: 20px;
@@ -40,7 +42,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-areas:
-    'topnav info'
+    'topnav topnav'
     'profile skills'
     'workexp workexp';
   grid-gap: 10px;
