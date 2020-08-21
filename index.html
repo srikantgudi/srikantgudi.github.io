@@ -1,87 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html>
-<head>
-<style>
-:root {
-  font-family: helvetica;
-}
-.topnav {
-  grid-area: topnav;
-  box-shadow: 0 0 4px grey;
-  font-family: 'Trebuchet MS';
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.name {
-  font-size: 20px;
-  font-weight: 600;
-}
-.loc {
-  font-size: 14px;
-}
-.profile {
-  grid-area: profile;
-  box-shadow: 0 0 2px grey;
-  width: 50vw;
-}
-.info {
-  grid-area: info;
-  box-shadow: 0 0 4px grey;
-  text-align: right;
-}
-.skills {
-  grid-area: skills;
-  box-shadow: 0 0 2px maroon;
-}
-.workexp {
-  grid-area: workexp;
-  box-shadow: 0 0 4px olive;
-}
-.grid-container {
-  width: 80vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas:
-    'topnav topnav'
-    'profile skills'
-    'workexp workexp';
-  grid-gap: 10px;
-  padding: 10px;
-  background-color: #f7f7f7;
-}
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+    <script src="lib/script.js"></script>
+  </head>
 
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 4px;
-}
-</style>
-</head>
-<body
-<div class="grid-container">
-  <div class="topnav">
-    <div>
-      <div class='name'>Srikant Gudi</div>
-      <div class='loc'>Bengaluru, India</div>
+  <body>
+    <h1>Hello Plunker!</h1>
+    <div class="container">
+      <div class='topnav'>
+        <div class='name-loc'>
+          <div class='name'>dfjksdf</div>
+          <div class='loc'>loc...</div>
+        </div>
+        <div class='info'>
+          <div>email</div>
+          <div>phone</div>
+        </div>
+      </div>
+      <div class='profile-skills-nav'>
+        <div class='profile'>profile</div>
+        <div class='skills'>skills</div>
+      </div>
+      <div class='work'>work</div>
     </div>
-    <div class="info">
-      <div>abc@temp.com</div>
-      <div>+99 999-999-9999</div>
-    </div>
-  </div>
-  <div class="profile">
-  	<h3>Profile</h3>
-    <ul>
-    	<li>Into IT since 1993</li>
-      <li>Application development till 2004</li>
-      <li>Web development from 2005 to 2013</li>
-      <li>Frontend development since 2014</li>
-    </ul>
-  </div>
-  <div class="skills">
-  	<h3>Technical Skills</h3>
-  </div>
-  <div class="workexp">Work Experience</div>
-</div>
-
-</body>
+  </body>
 </html>
