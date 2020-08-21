@@ -1,0 +1,56 @@
+* {
+  font-family: 'Trebuchet MS';
+}
+.container {
+  border: 1px solid blue;
+  display: grid;
+  grid-template-areas:
+    'topnav topnav'
+    'profile-skills profile-skills'
+    'work ...'
+  ;
+  grid-gap: 10px;
+}
+.container > div {
+  box-sizing: border-box;
+  padding: 10px;
+}
+.name, .info {
+  box-sizing: border-box;
+  padding: 8px;
+}
+.name-loc {
+}
+.name {
+  font-size: 20px;
+  padding: 0;
+}
+.loc {
+  font-size: 14px;
+}
+.info {
+  text-align: right;
+}
+.topnav {
+  grid-area: topnav;
+  border: 2px solid olive;
+  display: grid;
+  grid-template-areas: 'name info';
+  grid-gap: 8px;
+}
+.profile-skills-nav {
+  grid-area: profile-skills;
+  display: grid;
+  grid-template-areas: 'profile skills';
+}
+.profile {
+  grid-area: profile;
+  width: 50%;
+}
+.skills {
+  grid-area: skills;
+  width: 50%;
+}
+.work {
+  grid-area: work;
+}
