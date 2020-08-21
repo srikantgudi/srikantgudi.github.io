@@ -1,58 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta char="utf8" />
-    <title>Personal Web-site</title>
-    <style>
-      * {
-        font-family: Helvetica;
-      }
-      .container {
-        box-shadow: 0 2px 4px #666666;
-        padding: 20px;
-        width: 60vw;
-        height: 80vh;
-        margin: auto;
-      }
-      .info {
-        display: grid;
-        grid-template-areas: 
-          "header header"
-          "profile skills"
-          "workexp"
-      }
-      .header {
-        width: 100vw;
-        clear: both;
-        box-shadow: 0 2px 4px #999999;
-      }
-      .profile, .skills {
-        height: 30vh;
-        width: 50vw;
-        bpx-shadow: 0 0 4px #cccccc;
-      }
-      .workexp {
-        padding: 10px 20px;
-        box-shadow: 0 2px 4px #666666;
-      }
-    </style>
-  </head>
-  <body>
-    <h2>Srikant Gudi</h2>
-    <div class="container">
-      <div class="header">
-        header
-      </div>
-      <div class="pprofile">
-        
-      </div>
-      <div class="skills">
-        skills
-      </div>
-      <div class="workexp">
-        work experience
-      </div>
-    </div>
-    <script src="index.js"></script>
-  </body>
+<head>
+<style>
+:root {
+  font-family: helvetica;
+}
+.topnav {
+  grid-area: topnav;
+  box-shadow: 0 0 4px blue;
+  font-family: 'Trebuchet MS';
+}
+.topnav .name {
+  font-size: 20px;
+}
+.topnav .loc {
+  font-size: 14px;
+}
+.profile {
+  grid-area: profile;
+  box-shadow: 0 0 2px grey;
+}
+.info {
+  grid-area: info;
+  text-align: right;
+}
+.skills {
+  grid-area: skills;
+  box-shadow: 0 0 2px maroon;
+}
+.workexp {
+  grid-area: workexp;
+  box-shadow: 0 0 4px olive;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'topnav info'
+    'profile skills'
+    'workexp workexp';
+  grid-gap: 10px;
+  padding: 10px;
+  background-color: #2196F3;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 4px;
+}
+</style>
+</head>
+<body
+<div class="grid-container">
+  <div class="topnav">
+  	<div class='name'>Srikant Gudi</div>
+    <div class='loc'>Bengaluru, India</div>
+  </div>
+  <div class="info">
+  	<div>abc@temp.com</div>
+    <div>+99 999-999-9999</div>
+  </div>
+  <div class="profile">
+  	<h3>Profile</h3>
+    <ul>
+    	<li>Total exp</li>
+        <li>Total exp</li>
+        <li>Total exp</li>
+    </ul>
+  </div>
+  <div class="skills">
+  	<h3>Technical Skills</h3>
+  </div>
+  <div class="workexp">Work Experience</div>
+</div>
+
+</body>
 </html>
