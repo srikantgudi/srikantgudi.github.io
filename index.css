@@ -33,7 +33,6 @@
 }
 .topnav {
   grid-area: topnav;
-  border: 2px solid olive;
   display: grid;
   grid-template-areas: 'name info';
   grid-gap: 8px;
