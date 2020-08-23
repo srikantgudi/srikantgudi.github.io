@@ -1,55 +1,99 @@
 * {
   font-family: 'Trebuchet MS';
 }
+:root {
+  background-color: navy;
+}
 .container {
+  background-color: #e9e9e9;
   margin: 0 5vw;
   display: grid;
-  grid-template-areas:
-    'topnav topnav'
-    'profile-skills profile-skills'
-    'work ...'
-  ;
-  grid-gap: 10px;
+  grid-template-areas: 
+  'topnav'
+  'content';
 }
-.container > div {
-  box-sizing: border-box;
+.topnav {
+  box-shadow: 0 4px 4px #999999;
+  display: grid;
+  grid-template-areas: 'nameloc contact';
+  grid-gap: 10px;
+  margin-bottom: 10px;
+  opacity: 1;
+  background-color: #eeeeee;
+  transition: all 1s;
+}
+.topnav:hover {
+  opacity: 1;
+  background-color: #f9f9f9;
+  transition: all 1s;
+}
+.nameloc {
+  grid-area: nameloc;
   padding: 10px;
 }
-.name, .info {
-  box-sizing: border-box;
-  padding: 8px;
-}
-.name-loc {
+.contact {
+  grid-area: contact;
+  padding: 10px;
 }
 .name {
   font-size: 20px;
-  padding: 0;
+  font-weight: 600;
 }
-.loc {
-  font-size: 14px;
-}
-.info {
+.contact {
   text-align: right;
 }
-.topnav {
-  grid-area: topnav;
+.left-nav {
+  padding: 10px;
+  box-shadow: 0 4px 2px #999999;
+  opacity: 0.4;
+  background-color: #cccccc;
+  transition: all 1s;
+}
+.left-nav:hover {
+  opacity: 1;
+  background-color: #f9f9f9;
+  transition: all 1s;
+}
+.right-nav {
+  padding: 10px;
+  box-shadow: 0 4px 2px #999999;
+  opacity: 0.4;
+  background-color: #cccccc;
+  transition: all 1s;
+}
+.right-nav:hover {
+  opacity: 1;
+  background-color: #f9f9f9;
+  transition: all 1s;
+}
+.section {
   display: grid;
-  grid-template-areas: 'name info';
-  grid-gap: 8px;
+  grid-template-areas: 
+  'section-title'
+  'section-content';
+  margin-bottom: 10px;
+  box-shadow: 0 2px 0 #cccccc;
 }
-.profile-skills-nav {
-  grid-area: profile-skills;
+.section-title {
+  grid-area: section-title;
+  font-weight: 600;
+  font-size: 18px;
+}
+.section-content {
+  grid-area: section-content;
+}
+.tech-skills {
   display: grid;
-  grid-template-areas: 'profile skills';
+  grid-template-columns: 1fr 1fr;
 }
-.profile {
-  grid-area: profile;
-  width: 50%;
+.content {
+  grid-area: content;
+  height: 85vh;
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  grid-template-areas: 'left-nav right-nav';
+  grid-gap: 10px;
 }
-.skills {
-  grid-area: skills;
-  width: 50%;
-}
-.work {
-  grid-area: work;
+li {
+  list-style: none;
 }

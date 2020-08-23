@@ -3,31 +3,43 @@
 <html>
   <head>
     <link rel="stylesheet" href="./index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </head>
 
   <body>
     <div class="container">
       <div class='topnav'>
-        <div class='name-loc'>
+        <div class='nameloc'>
           <div class='name'>Srikant Gudi</div>
           <div class='loc'>Bengaluru, India</div>
         </div>
-        <div class='info'>
+        <div class='contact'>
           <div>srikantgudi@gmail.com</div>
           <div>+91 829-665-6336</div>
         </div>
       </div>
-      <div class='profile-skills-nav'>
-        <div class='profile'>
-          <h3>Profile</h3>
+      <div class="content">
+        <div class='left-nav'>
+          <div class='section'>
+            <button onclick="loadtemp('profile')">Profile</button>
+          </div>
+          <div class='section'>
+            <button onclick="loadtemp('techskills')">Technical Skills</button>
+          </div>
         </div>
-        <div class='skills'>
-          <h3>Skills</h3>
+        <div class='right-nav'>
+          <div id="content"></div>
         </div>
-      </div>
-      <div class='work'>
-        <h3>Work Experience</h3>
       </div>
     </div>
+    <script>
+      $("button").css({backgroundColor: '#eee',border:0,padding:'8px auto',fontSize:'18px'})
+      function loadtemp(templ) {
+        $('#content').fadeOut(() => {
+          $('#content').load(templ + '.html').fadeIn();
+        });
+      }
+      $("#content").load("profile.html");
+    </script>
   </body>
 </html>
