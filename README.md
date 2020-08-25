@@ -1,2 +1,2 @@
 # srikantgudi.github.io
-Personal Info
+## Personal Info
