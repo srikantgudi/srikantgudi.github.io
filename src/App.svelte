@@ -77,18 +77,6 @@
 	</div>
 	<h3>Experience</h3>
 	<div id='workexp'>
-		<!--<div class="exp" on:click={() => opt = 2}>
-			<div class="exphdr" class:bold={opt===2}>exp-2</div>
-			<div class:expactive={opt === 2} class:exphide={opt !== 2} class="expcontent">exp-1-content</div>
-		</div>
-		<div class="exp" on:click={() => opt = 3}>
-			<div class="exphdr" class:bold={opt===3}>exp-3</div>
-			<div class:expactive={opt === 3} class:exphide={opt !== 3}  class="expcontent">exp-1-content</div>
-		</div>
-		<div class="workexp" on:click={() => opt = 4}>
-			<div class="exphdr" class:bold={opt===4}>exp-1</div>
-			<div class:expactive={opt === 4} class:exphide={opt !== 4}  class="expcontent">exp-1-content</div>
-		</div> -->
 		<div class='exp-left'>
 			{#each expList as exp}
 				<div on:click={() => curExp = exp} class='exp-hdr-title'>{exp.header.org}</div>
@@ -204,15 +192,8 @@
 		padding: 8px;
 		font-size: 16px;
 		transition: all 1s;
-		height: 60vh;
+		height: inherit;
 		overflow-y: auto;
-		background-color: #def;
 	}
 
-	@media screen and (min-width: 512px) {
-		.expcontent {
-			height: 60vh;
-			overflow-y: auto;
-		}
-	}
 </style>
