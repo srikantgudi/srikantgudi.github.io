@@ -137,6 +137,8 @@
 		font-family: cursive;
 		font-size: 30px;
 		font-weight: 600;
+		color: #00f;
+		text-shadow: 1px 2px 2px olive;
 	}
 	#contact {
 		grid-area: contact;
