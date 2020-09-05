@@ -24,7 +24,7 @@
 				'Worked offshore in Bengaluru with a banking conglomerate on  projects in Angular and React',
 				'Worked onsite in Glasgow, UK with a banking conglomerate on Angular based projects',
 				'Worked offshore at client-side with Schneider Electric on Management Dashboard using Angular 1.x',
-				'Developed UI for a POC for Digital Readiness Analysis Tool to created a survey questionnaire for various categories using Angular, Material Design, HTML5, CSS3, JavaScript, API integration'
+				'Developed UI for a POC for Digital Readiness Analysis Tool to create a survey questionnaire for various categories using Angular, Material Design, HTML5, CSS3, JavaScript, API integration'
 			]
 		},
 		{
@@ -65,6 +65,21 @@
 		grid-gap: 10px;
 		grid-template-areas: 'name contact';
 		background-color: #eeeeee;
+	}
+	.profile-title {
+		position: fixed;
+		z-index: 999;
+		top: 20px;
+		left: 30vw;
+		width: 30vw;
+		box-shadow: 0 0 4px #999999;
+		padding: 10px;
+		text-align: center;
+		font-family: 'Trebuchet MS';
+		font-size: 24px;
+		background-color: navy;
+		color: lightcyan;
+		border-radius: 10px 10px 4px 4px;
 	}
 	.box {
 		box-shadow: 0 4px 2px navy;
@@ -164,6 +179,7 @@
 		</div>
 	</div>
 	<div class='content'>
+		<div class="profile-title">Senior Frontend Engineer</div>
 		<div class='left-panel'>
 			<div class='profile box'>
 				<h3 class='section-title'>Summary</h3>
