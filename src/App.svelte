@@ -61,13 +61,13 @@ let profiles = [
 		background: #adf;
 	}
 	.info {
+		box-sizing: border-box;
 		position: absolute;
 		top: 1vh;
 		left: 30vw;
-		height: 10vh;
 		width: 40vw;
 		border-radius: 20px 20px 4px 4px;
-		padding: 30px;
+		padding: 20px 30px;
 		box-shadow: 0 0 4px #999999;
 		background: linear-gradient(#0ef, #dff);
 		text-align: center;
@@ -135,7 +135,7 @@ let profiles = [
 	.exp {
 		position: absolute;
 		top: 24vh;
-		left: 10vw;
+		left: 8vw;
 		height: 66vh;
 		width: 80vw;
 		padding: 20px;
@@ -172,6 +172,7 @@ let profiles = [
 		<div class='info-title'>SRIKANT GUDI</div>
 		<div>Bengaluru, India</div>
 		<div>srikantgudi@gmail.com | +91-892-665-6336</div>
+		<h1>Senior Frontend Engineer</h1>
 	</div>
 	<div class="profile">
 		<div class="section-title">
