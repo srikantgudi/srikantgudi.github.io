@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
@@ -102,3 +103,10 @@ Then, from within your project folder:
 npm run build
 surge public my-project.surge.sh
 ```
+=======
+## Personal Info
+Click [here](https://srikantgudi.github.io) to view
+
+### Other links
+[Zoneclock](https://srikantgudi.github.io/zoneclock)
+>>>>>>> 59d3bb9d4f24590e7e67d1055dc86b84822533bc
