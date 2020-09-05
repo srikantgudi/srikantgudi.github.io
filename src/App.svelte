@@ -44,77 +44,16 @@
 	let curExp = expList[0];
 </script>
 
-<main id="my-app">
-	<div id="top-nav">
-		<div id='name'>
-			<div class='title'>
-				Srikant Gudi
-			</div>
-			<div>
-				Bengaluru, India
-			</div>
-		</div>
-		<div id='contact'>
-			<div class="mail">srikantgudi@gmail.com</div>
-			<div>+91 829-665-6336</div>
-		</div>
-	</div>
-	<div id="profile">
-		<div class='box'>
-			<h3>Summary</h3>
-			<ul>
-			{#each profiles as line}
-				<li>{line}</li>
-			{/each}
-			</ul>
-		</div>
-		<div class='box'>
-			<h3>Skills</h3>
-			{#each skills as skill}
-				<li>{skill}</li>
-			{/each}
-		</div>
-	</div>
-	<h3>Experience</h3>
-	<div id='workexp'>
-		<div class='exp-left'>
-			{#each expList as exp}
-				<div on:click={() => curExp = exp} class='exp-hdr-title'>{exp.header.org}</div>
-			{/each}
-		</div>
-		<div class='exp-detail'>
-			<div class='exp'>
-				<div class='exphdr'>
-					{curExp.header.dates} :: {curExp.header.jobTitle} - {curExp.header.org}
-				</div>
-				<div class='expcontent'>
-					<ul>
-						{#each curExp.content as line}
-							<li>{line}</li>
-						{/each}
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</main>
 <style>
 	* {
 		margin: 0;
 		font-family: Helvetica;
 	}
-	.expactive {
-		display: block;
-		background-color: #def;
-	}
-	.exphide {
-		display: none;
-	}
 	.bold {
 		font-weight: 600;
 	}
 	#my-app {
-		width: 90vw;
+		width: 96vw;
 		margin: 0 auto;
 		font-family: Helvetica;
 	}
@@ -128,7 +67,8 @@
 		background-color: #eeeeee;
 	}
 	.box {
-		box-shadow: 0 0 4px #999999;
+		box-shadow: 0 4px 2px navy;
+		border-radius: 0 0 4px 4px;
 	}
 	#name {
 		grid-area: name;
@@ -148,53 +88,124 @@
 	#contact .mail {
 		text-decoration: none;
 	}
-	#profile {
+	.profile, .skills {
+		margin-bottom: 10px;
+		border-radius: 0 0 4px 4px;
+	}
+	.content {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 20px;
-		margin: 10px auto;
+		grid-template-columns: 1fr 2fr;
+		grid-gap: 10px;
 	}
-	#profile > div {
-		padding: 8px 20px;
+	.left-panel {
 	}
-	#workexp {
-		box-shadow: 0 0 2px #333333;
-		display: grid;
-		grid-template-columns: 30vw 1fr;
-		height: 60vh
+	.right-panel {
 	}
-	.exp-left {
-		border-right: 1px solid #dddddd;
-		height: inherit;
-		overflow-y: auto;
-	}
-	.exp {
-		display: grid;
-		grid-template-rows: 40px 2fr;
-		grid-template-areas: 'exphdr'
-		'expcontent';
-		grid-gap: 4px;
-		margin: 10px auto;
-		font-size: 14px;
+	.workexp {
+		box-shadow: 0 0 4px olive;
+		margin-top: 10px;
 	}
 	.exp-hdr-title {
-		border-bottom: 1px solid #cccccc;
-		padding: 8px;
-	}
-	
-	.exphdr {
-		padding: 8px;
 		box-shadow: 0 0 4px #999999;
+		margin-bottom: 8px;
 	}
-	.exp-detail {
+	.org {
+		font-weight: 600;
+	}
+	.exp {
+		margin-bottom: 4px;
+		display: block;
+	}
+	.exphdr {
+		grid-area: exphdr;
+		background-color: #def;
+		padding: 4px 10px;
+		font-size: 14px;
+		font-weight: 600;
+		cursor: pointer;
+	}
+	.exphdr.activehdr {
+		box-shadow: 0 2px 8px #666;
+		background-color: #666;
+		color: lightcyan;
+	}
+	.expdetail {
+		grid-area: expdetail;
+		height: auto;
+		margin: 0 0 8px;
 		padding: 10px;
 	}
-	.expcontent {
-		grid-area: expcontent;
-		padding: 8px;
-		font-size: 16px;
-		transition: all 1s;
-		height: 100%;
-		overflow-y: auto;
+	.activehdr, .section-title {
+		background-color: lightblue;
+		color: navy;
+		padding: 4px 10px;
+	}
+	.section-title {
+		margin-top: 4px;
+	}
+	.profile-content {
+		padding: 10px;
 	}
 </style>
+
+<main id="my-app">
+	<div id="top-nav">
+		<div id='name'>
+			<div class='title'>
+				Srikant Gudi
+			</div>
+			<div>
+				Bengaluru, India
+			</div>
+		</div>
+		<div id='contact'>
+			<div class="mail">srikantgudi@gmail.com</div>
+			<div>+91 829-665-6336</div>
+		</div>
+	</div>
+	<div class='content'>
+		<div class='left-panel'>
+			<div class='profile box'>
+				<h3 class='section-title'>Summary</h3>
+				<div class='profile-content'>
+					<ul>
+					{#each profiles as line}
+						<li>{line}</li>
+					{/each}
+					</ul>
+				</div>
+			</div>
+			<div class='skills box'>
+				<h3 class='section-title'>Skills</h3>
+				<div class='profile-content'>
+					<ul>
+						{#each skills as skill}
+							<li>{skill}</li>
+						{/each}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class='right-panel'>
+			<h3 class='section-title'>Experience</h3>
+			<div class='workexp'>
+				{#each expList as exp}
+					<div class='exp' on:click={() => curExp = exp}>
+						<div class='exphdr' class:activehdr={curExp === exp}>
+							{exp.header.dates} :: {exp.header.jobTitle} - {exp.header.org}
+						</div>
+						{#if curExp === exp}
+							<div class='expdetail'>
+								<ul>
+									{#each curExp.content as line}
+										<li>{line}</li>
+									{/each}
+								</ul>
+							</div>
+						{/if}
+					</div>
+				{/each}
+			</div>
+		</div>
+	</div>
+</main>
