@@ -159,7 +159,7 @@
 		box-shadow: 0 0 2px #333333;
 		display: grid;
 		grid-template-columns: 30vw 1fr;
-		height: 32vw;
+		height: 32vh;
 	}
 	.exp-left {
 		border-right: 1px solid #dddddd;
