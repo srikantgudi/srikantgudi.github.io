@@ -195,9 +195,4 @@
 		height: 100%;
 		overflow-y: auto;
 	}
-	@media screen and (min-width: 512px) {
-		* {
-			font-size: 80%;
-		}
-	}
 </style>
