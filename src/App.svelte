@@ -1,6 +1,4 @@
 <script>
-	export const name;
-
 	let profiles = [
 		'Senior software professional with over 20 years of experience',
 	  '2005 - 2013: Web development experience using PHP, MySQL',
