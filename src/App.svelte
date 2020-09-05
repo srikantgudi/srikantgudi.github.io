@@ -48,7 +48,7 @@
 	<div id="top-nav">
 		<div id='name'>
 			<div class='title'>
-				Srikant Gudi
+				!! Srikant Gudi !!
 			</div>
 			<div>
 				Bengaluru, India
