@@ -159,7 +159,7 @@
 		box-shadow: 0 0 2px #333333;
 		display: grid;
 		grid-template-columns: 30vw 1fr;
-		height: 32vh;
+		height: 40vh;
 	}
 	.exp-left {
 		border-right: 1px solid #dddddd;
@@ -192,8 +192,12 @@
 		padding: 8px;
 		font-size: 16px;
 		transition: all 1s;
-		height: inherit;
+		height: 100%;
 		overflow-y: auto;
 	}
-
+	@media screen and (min-width: 512px) {
+		* {
+			font-size: 80%;
+		}
+	}
 </style>
