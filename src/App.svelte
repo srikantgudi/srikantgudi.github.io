@@ -48,7 +48,7 @@
 	<div id="top-nav">
 		<div id='name'>
 			<div class='title'>
-				!! Srikant Gudi !!
+				Srikant Gudi
 			</div>
 			<div>
 				Bengaluru, India
@@ -138,7 +138,7 @@
 		font-size: 30px;
 		font-weight: 600;
 		color: #00f;
-		text-shadow: 1px 2px 2px olive;
+		text-shadow: 1px 2px 2px ligheblue;
 	}
 	#contact {
 		grid-area: contact;
