@@ -191,10 +191,13 @@ let profiles = [
 		</div>
 		<div class="content">
 			<div>
-				<ul>
-					<li>JavaScript</li>
-					<li>HTML5</li>
-					<li>CSS3</li>
+				<ul class="bold">
+					<li>Angular</li>
+					<li>Svelte</li>
+					<li>Stencil</li>
+					<li>React</li>
+					<li>Vue</li>
+					<li>Nuxt</li>
 				</ul>
 				<ul>
 					<li>Bootstrap</li>
@@ -205,13 +208,13 @@ let profiles = [
 				</ul>
 			</div>
 			<div>
-				<ul class="bold">
-					<li>Angular</li>
-					<li>Svelte</li>
-					<li>Stencil</li>
-					<li>React</li>
-					<li>Vue</li>
-					<li>Nuxt</li>
+				<ul>
+					<li>JavaScript</li>
+					<li>HTML5</li>
+					<li>CSS3</li>
+					<li>NodeJS</li>
+					<li>MySql</li>
+					<li>Mongodb</li>
 				</ul>
 				<ul>
 					<li>Git</li>
