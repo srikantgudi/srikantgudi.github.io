@@ -100,9 +100,8 @@ let profiles = [
 		position: absolute;
 		top: 14vh;
 		left: 5vw;
-		height: 30vh;
 		width: 50vw;
-		padding: 20px;
+		padding: 10px;
 		border-radius: 20px 20px 8px 8px;
 		background-color: #def;
 		color: #666;
