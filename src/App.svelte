@@ -85,11 +85,14 @@ let profiles = [
 		font-size: 30px;
 		font-weight: 600;
 	}
-	.section-title {
+	figure {
+		box-shadow: 0 2px 2px #999;
+	}
+	figcaption {
 		background-color: #009;
 		color: #ffa;
-		padding: 10px 20px;
-		border-radius: 2px 2px 10px 10px;
+		padding: 4px 10px;
+		border-radius: 10px 10px 0 0;
 		font-size: 20px;
 		font-weight: 600;
 	}
@@ -106,10 +109,6 @@ let profiles = [
 		box-shadow: 0 0 4px #999999;
 		transition: all 1s;
 	}
-	.profile .text {
-		color: #333333;
-		font-size: 20px;
-	}
 	.profile:hover {
 		z-index: 9999;
 		box-shadow: 0 4px 20px #333333;
@@ -121,14 +120,14 @@ let profiles = [
 		right: 5vw;
 		min-height: 32vh;
 		width: 36vw;
-		padding: 20px;
+		padding: 10px;
 		border-radius: 20px 20px 8px 8px;
 		background-color: #def;
 		color: #666;
 		box-shadow: 0 0 4px #999999;
 		transition: all 1s;
 	}
-	.skills .content {
+	.skills-content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 4px;
@@ -202,80 +201,87 @@ let profiles = [
 		<h1>Senior Frontend Engineer</h1>
 	</div>
 	<div class="profile">
-		<div class="section-title">
-			Profile
-		</div>
-		<ul class='text'>
-			{#each profiles as line}
-				<li>{line}</li>
-			{/each}
-		</ul>
+		<figure>
+			<figcaption>
+				Profile
+			</figcaption>
+			<div>
+				<ul class='text'>
+					{#each profiles as line}
+						<li>{line}</li>
+					{/each}
+				</ul>
+			</div>
+		</figure>
 	</div>
 	
 	<div class="skills">
-		<div class="section-title">
-			Technical Skills
-		</div>
-		<div class="content">
-			<div>
-				<ul class="bold">
-					<li>Angular</li>
-					<li>Svelte</li>
-					<li>Stencil</li>
-					<li>React</li>
-					<li>Vue</li>
-					<li>Nuxt</li>
-				</ul>
-				<ul>
-					<li>Bootstrap</li>
-					<li>Angular Material</li>
-					<li>Material-UI</li>
-					<li>Vuetify</li>
-					<li>Buefy</li>
-				</ul>
+		<figure>
+			<figcaption>
+				Technical Skills
+			</figcaption>
+			<div class="skills-content">
+				<div>
+					<ul class="bold">
+						<li>Angular</li>
+						<li>Svelte</li>
+						<li>Stencil</li>
+						<li>React</li>
+						<li>Vue</li>
+						<li>Nuxt</li>
+					</ul>
+					<ul>
+						<li>Bootstrap</li>
+						<li>Angular Material</li>
+						<li>Material-UI</li>
+						<li>Vuetify</li>
+						<li>Buefy</li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li>JavaScript</li>
+						<li>HTML5</li>
+						<li>CSS3</li>
+						<li>NodeJS</li>
+						<li>MySql</li>
+						<li>Mongodb</li>
+					</ul>
+					<ul>
+						<li>Git</li>
+						<li>Bitbucket</li>
+						<li>Confluence</li>
+						<li>Visual Studio Code</li>
+						<li>IntelliJ</li>
+					</ul>
+				</div>
 			</div>
-			<div>
-				<ul>
-					<li>JavaScript</li>
-					<li>HTML5</li>
-					<li>CSS3</li>
-					<li>NodeJS</li>
-					<li>MySql</li>
-					<li>Mongodb</li>
-				</ul>
-				<ul>
-					<li>Git</li>
-					<li>Bitbucket</li>
-					<li>Confluence</li>
-					<li>Visual Studio Code</li>
-					<li>IntelliJ</li>
-				</ul>
-			</div>
-		</div>
+		</figure>
 	</div>
 	
 	<div class="exp">
-		<div class="section-title">
-			Experience
-		</div>
-		<div>
-			{#each expList as exp}
-				<div class='exp-box' on:mouseover={() => curExp = exp}>
-					<div class='exphdr' class:activehdr={curExp === exp}>
-						{exp.header.dates} :: {exp.header.jobTitle} - {exp.header.org}
-					</div>
-					{#if curExp === exp}
-						<div class='expdetail'>
-							<ul>
-								{#each curExp.content as line}
-									<li>{line}</li>
-								{/each}
-							</ul>
+		<figure>
+			<figcaption>
+				Experience
+			</figcaption>
+			<div>
+				{#each expList as exp}
+					<div class='exp-box' on:mouseover={() => curExp = exp}>
+						<div class='exphdr' class:activehdr={curExp === exp}>
+							{exp.header.dates} :: {exp.header.jobTitle} - {exp.header.org}
 						</div>
-					{/if}
-				</div>
-			{/each}
-		</div>
+						{#if curExp === exp}
+							<div class='expdetail'>
+								<ul>
+									{#each curExp.content as line}
+										<li>{line}</li>
+									{/each}
+								</ul>
+							</div>
+						{/if}
+					</div>
+				{/each}
+			</div>
+		</figure>
 	</div>
-
 </main>
