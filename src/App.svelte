@@ -71,10 +71,12 @@ let profiles = [
 		box-shadow: 0 0 4px #999999;
 		background: linear-gradient(#0ef, #dff);
 		text-align: center;
+		transition: all 1s;
 	}
 	.info:hover {
 		z-index: 999;
-		box-shadow: 0 4px 20px #333333;
+		box-shadow: 0 4px 20px #f9f9f9;
+		border-radius: 20px;
 	}
 	.info-title {
 		font-family: Georgia;
@@ -87,7 +89,7 @@ let profiles = [
 		background-color: #009;
 		color: #ffa;
 		padding: 10px 20px;
-		border-radius: 10px 10px 4px 4px;
+		border-radius: 2px 2px 10px 10px;
 		font-size: 20px;
 		font-weight: 600;
 	}
@@ -102,6 +104,7 @@ let profiles = [
 		background-color: #def;
 		color: #666;
 		box-shadow: 0 0 4px #999999;
+		transition: all 1s;
 	}
 	.profile .text {
 		color: #333333;
@@ -110,6 +113,7 @@ let profiles = [
 	.profile:hover {
 		z-index: 9999;
 		box-shadow: 0 4px 20px #333333;
+		border-radius: 25px 25px 40px 40px;
 	}
 	.skills {
 		position: absolute;
@@ -122,6 +126,7 @@ let profiles = [
 		background-color: #def;
 		color: #666;
 		box-shadow: 0 0 4px #999999;
+		transition: all 1s;
 	}
 	.skills .content {
 		display: grid;
@@ -131,6 +136,7 @@ let profiles = [
 	.skills:hover {
 		z-index: 9999;
 		box-shadow: 0 4px 20px #333333;
+		border-radius: 25px 25px 40px 40px;
 	}
 	.exp {
 		position: absolute;
@@ -143,11 +149,23 @@ let profiles = [
 		background-color: #def;
 		color: #666;
 		box-shadow: 0 4px 20px #333333;
+		transition: all 1s;
+	}
+	.exp:hover {
+		border-radius: 25px 25px 50px 50px;
+		background-color: lightcyan;
 	}
 	.exp-box {
 		display: grid;
 		grid-template-rows: auto 1fr;
 		grid-gap: 2px;
+		transition: all 1s;
+	}
+	.exp-box:hover {
+		border-radius: 20px;
+		background-color: #cccccc;
+		padding: 10px 30px;
+		box-shadow: 0 2px 20px #009;
 	}
 	.exphdr {
 		background-color: #999999;
@@ -155,6 +173,15 @@ let profiles = [
 		padding: 4px 10px;
 		font-size: 14px;
 		cursor: pointer;
+		transition: all 1s;
+	}
+	.exp-box:hover > .exphdr {
+		color: blue;
+		background-color: #ffa;
+		border-radius: 10px 10px 0 0;
+	}
+	.exp-box:hover > .expdetail {
+		border-radius: 0 0 15px 15px;
 	}
 	.expdetail {
 		background-color: #eeeeee;
