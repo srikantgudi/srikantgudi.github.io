@@ -1,4 +1,9 @@
 <script>
+import ResumeItem from "./ResumeItem.svelte";
+import Profile from "./Profile.svelte";
+import Skills from "./Skills.svelte";
+import WorkHistory from "./WorkHistory.svelte";
+
 let profiles = [
 		'Senior software professional with over 20 years of experience',
 	  '2005 - 2013: Web development experience using PHP, MySQL',
@@ -12,71 +17,47 @@ let profiles = [
 		'Git, Bitbucket, Confluence'
 	];
 	let opt = 1;
-
-	let expList = [
-		{
-			header: {
-				dates: '16-Jun-2016 to present',
-				jobTitle: 'Project Lead - System',
-				org: 'Mphasis, Bengaluru',
-			},
-			content: [
-				'Worked offshore in Bengaluru with a banking conglomerate on  projects in Angular and React',
-				'Worked onsite in Glasgow, UK with a banking conglomerate on Angular based projects',
-				'Worked offshore at client-side with Schneider Electric on Management Dashboard using Angular 1.x',
-				'Developed UI for a POC for Digital Readiness Analysis Tool to create a survey questionnaire for various categories using Angular, Material Design, HTML5, CSS3, JavaScript, API integration'
-			]
-		},
-		{
-			header: {
-				dates: '15-Aug-2015 to 14-Jan-2016',
-				jobTitle: 'Senior AngularJS Developer',
-				org: 'Pandera Solutions India Pvt Ltd, Bengaluru',
-			},
-			content: [
-				'Worked in Angular on various projects',
-				'Created sub-components for re-use',
-				'Interacted with client-side developers to understand the requirements',
-				'Integrated APIs in the frontend code'
-			]
-		},
-		{
-			header: {
-				dates: '20-Aug-2014 to 22-Jan-2015',
-				jobTitle: 'Senior Software Developer',
-				org: 'Basil Communications Pvt Ltd, Bengaluru',
-			},
-			content: [
-				'Created HTML mockups for various applications',
-				'Interacted with designers to understand the designs',
-				'Used Photoshop to slice images'
-			]
-		}
-	];
-	let curExp = expList[0];
 </script>
 
 <style>
 	:root {
-		background: #adf;
+		background: #eeeeee;
+	}
+	.appinfo-icon {
+		position: absolute;
+		top: 2em;
+		right: 20em;
+		font-style: italic;
+		font-weight: 600;
+		cursor: pointer;
+	}
+	.appinfo {
+		position: absolute;
+		top: 0.5em;
+		left: 0;
+		z-index: 999;
+		display: none;
+		transition: all 1s;
+		width: 12em;
+		padding: 4px 8px;
+		background-color: darkslateblue;
+		color: #f9f9f9;
+		box-shadow: 0 0 4px whitesmoke;
+	}
+	.appinfo-icon:hover > .appinfo {
+		display: block;
+		transform: translate(1em,1em);
 	}
 	.info {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		box-sizing: border-box;
-		position: absolute;
-		top: 1vh;
-		left: 30vw;
-		width: 40vw;
+		padding: 20px;
 		border-radius: 20px 20px 4px 4px;
-		padding: 20px 30px;
 		box-shadow: 0 0 4px #999999;
-		background: linear-gradient(#0ef, #dff);
-		text-align: center;
+		background: linear-gradient(#eeeeee, #cccccc);
 		transition: all 1s;
-	}
-	.info:hover {
-		z-index: 999;
-		box-shadow: 0 4px 20px #f9f9f9;
-		border-radius: 20px;
+		clear: both;
 	}
 	.info-title {
 		font-family: Georgia;
@@ -85,136 +66,82 @@ let profiles = [
 		font-size: 30px;
 		font-weight: 600;
 	}
-	figure {
-		box-shadow: 0 2px 2px #999;
+	.info-contact {
+		text-align: right;
 	}
-	figcaption {
-		background-color: #009;
-		color: #ffa;
-		padding: 4px 10px;
-		border-radius: 10px 10px 0 0;
+	.info-pos {
+		position: absolute;
+		top: 4em;
+		left: 15%;
+	}
+	.resume {
+		display: block;
+	}
+	:global(.card) {
+        border-radius: 8px 8px 0 0;
+		display: flex;
 		font-size: 20px;
-		font-weight: 600;
-	}
-	.profile {
-		position: absolute;
-		top: 14vh;
-		left: 5vw;
-		width: 50vw;
-		padding: 10px;
-		border-radius: 20px 20px 8px 8px;
-		background-color: #def;
-		color: #666;
 		box-shadow: 0 0 4px #999999;
-		transition: all 1s;
-	}
-	.profile:hover {
-		z-index: 9999;
-		box-shadow: 0 4px 20px #333333;
-		border-radius: 25px 25px 40px 40px;
-	}
-	.skills {
-		position: absolute;
-		top: 14vh;
-		right: 5vw;
-		min-height: 32vh;
-		width: 36vw;
-		padding: 10px;
-		border-radius: 20px 20px 8px 8px;
-		background-color: #def;
-		color: #666;
-		box-shadow: 0 0 4px #999999;
-		transition: all 1s;
-	}
-	.skills-content {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 4px;
-	}
-	.skills:hover {
-		z-index: 9999;
-		box-shadow: 0 4px 20px #333333;
-		border-radius: 25px 25px 40px 40px;
-	}
-	.exp {
-		position: absolute;
-		top: 24vh;
-		left: 8vw;
-		height: 66vh;
-		width: 80vw;
-		padding: 20px;
-		border-radius: 20px 20px 8px 8px;
-		background-color: #def;
-		color: #666;
-		box-shadow: 0 4px 20px #333333;
-		transition: all 1s;
-	}
-	.exp:hover {
-		border-radius: 25px 25px 50px 50px;
-		background-color: lightcyan;
-	}
-	.exp-box {
-		display: grid;
-		grid-template-rows: auto 1fr;
-		grid-gap: 2px;
-		transition: all 1s;
-	}
-	.exp-box:hover {
-		border-radius: 20px;
-		background-color: #cccccc;
-		padding: 10px 30px;
-		box-shadow: 0 2px 20px #009;
-	}
-	.exphdr {
-		background-color: #999999;
-		color: #f7f7f7;
 		padding: 4px 10px;
-		font-size: 14px;
-		cursor: pointer;
-		transition: all 1s;
-	}
-	.exp-box:hover > .exphdr {
-		color: blue;
-		background-color: #ffa;
-		border-radius: 10px 10px 0 0;
-	}
-	.exp-box:hover > .expdetail {
-		border-radius: 0 0 15px 15px;
-	}
-	.expdetail {
-		background-color: #eeeeee;
-		color: #333333;
-		padding: 4px 10px;
-		font-size: 14px;
-	}
-	.bold {
-		font-weight: 600;
+		margin-bottom: 4px;
 	}
 </style>
 
 <main>
 	<div class="info">
-		<div class='info-title'>SRIKANT GUDI</div>
-		<div>Bengaluru, India</div>
-		<div>srikantgudi@gmail.com | +91-892-665-6336</div>
-		<h1>Senior Frontend Engineer</h1>
-	</div>
-	<div class="profile">
-		<figure>
-			<figcaption>
-				Profile
-			</figcaption>
-			<div>
-				<ul class='text'>
-					{#each profiles as line}
-						<li>{line}</li>
-					{/each}
-				</ul>
+		<div>
+			<div class='info-title'>SRIKANT GUDI</div>
+			<div>Bengaluru, India</div>
+		</div>
+		<div class="info-contact">
+			<div>srikantgudi@gmail.com</div>
+			<div>+91-892-665-6336</div>
+			<div class="appinfo-icon">
+				[!]
+				<div class="appinfo">
+					This resume is developed using Svelte and SVG for graph!
+				</div>
 			</div>
-		</figure>
+		</div>
+	</div>
+	<div class="info-pos">
+		<svg height="40" width="70vw">
+			<text x="32%" y="25" font-family="Trebuchet MS" font-weight="600" font-size="24px">
+				Senior Frontend Engineer
+				<animate attributename="fill" values="lightblue;blue;navy;blue;lightblue" dur="10s" begin="0" repeatcount="indefinite" />
+			</text>
+		</svg>
+	</div>
+	<div class="resume">
+		<div>
+			<ResumeItem showContent={opt===1}>
+				<div slot="header" on:click={() => opt = 1}>
+					Profile
+				</div>
+				<div slot="content">
+					<Profile />
+				</div>
+			</ResumeItem>
+			<ResumeItem showContent={opt===2}>
+				<div slot="header" on:click={() => opt = 2}>
+					Technical Skills
+				</div>
+				<div slot="content">
+					<Skills />
+				</div>
+			</ResumeItem>
+			<ResumeItem showContent={opt===3}>
+				<div slot="header" on:click={() => opt = 3}>
+					Work Experience
+				</div>
+				<div slot="content">
+					<WorkHistory />
+				</div>
+			</ResumeItem>
+		</div>
 	</div>
 	
-	<div class="skills">
+	<!-- <div class="skills">
 		<figure>
 			<figcaption>
 				Technical Skills
@@ -282,5 +209,5 @@ let profiles = [
 				{/each}
 			</div>
 		</figure>
-	</div>
+	</div> -->
 </main>
