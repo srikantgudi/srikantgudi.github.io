@@ -48,13 +48,26 @@
     .exp {
         display: grid;
         grid-template-columns: 1fr 3fr;
+        grid-gap: 10px 20px;
+    }
+    .expdate {
+        box-shadow: 0 2px 4px #666666;
+        border-radius: 8px 8px 0 0;
+        padding: 5px 10px;
+        cursor: pointer;
+        background-color: lightblue;
+        margin-bottom: 4px;
+    }
+    .expdate.active {
+        background-color: darkslategrey;
+        color: #f9f9f9;
     }
 </style>
 
 <main class="exp">
     <div>
         {#each expList as exp}
-            <div on:click={() => curExp = exp}>{exp.header.dates}</div>
+            <div class="expdate" class:active={curExp === exp} on:click={() => curExp = exp}>{exp.header.dates}</div>
         {/each}
     </div>
     <div>
