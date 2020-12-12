@@ -43,22 +43,19 @@
 <style>
     .skills {
         display: block;
-        height: 12em;
-        overflow-y: auto;
+        height: 16em;
         padding: 10px;
     }
     .skill-names {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 10px;
+        display: flex;
         margin: 10px;
     }
     .skill-name {
-        display: flex;
         box-shadow: 0 0 4px #999999;
         padding: 4px;
         font-size: 12px;
         cursor: pointer;
+        font-family: Orbitron;
     }
     .skill-name.active {
         background-color: darkslategrey;
@@ -67,14 +64,17 @@
         font-weight: 600;
     }
     .skills-detail {
-        display: grid;
-        grid-template-columns: repeat(2,auto);
-        grid-gap: 10px;
-        margin: 0 20px;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
+        display: flex;
+        align-items: start;
+        padding: 0 10px;
+        flex-flow: row wrap;
         font-size: 14px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .skill {
+        width: 20em;
+        flex: 1;
     }
 </style>
 <div class="skills">
@@ -88,13 +88,14 @@
     </div>
     <div class="skills-detail">
         {#each selectedGroup.items as item}
-        <svg height="60" width="300">
-            <rect x="5" y="5" height="100" width="200" fill="transparent" stroke="blue" />
-            <text x="30%" y="23" font-weight="600" fill="blue" text-anchor="middle">{item.name}</text>
-            <rect x="5" y="30" height="100%" width="200" fill="#cccccc" />
-            <rect x="5" y="30" height="100%" width={item.rating * 20} fill="darkslateblue" />
-            <text x="210" y="45" font-size="14px">{item.rating}/10</text>
-        </svg>
+        <div class="skill">
+            <div>{item.name}</div>
+            <svg height="40" width="150">
+                <rect x="0" y="10" height="30" width="150" fill="transparent" stroke="blue" />
+                <rect x="0" y="10" height="30" width={item.rating * 15} fill="darkslateblue" stroke="blue" />
+                <text x="190" y="10">{item.rating}/10</text>
+            </svg>
+        </div>
         {/each}
     </div>
 </div>

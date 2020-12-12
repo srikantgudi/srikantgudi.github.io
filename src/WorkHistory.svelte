@@ -84,6 +84,7 @@
         background-color: lightblue;
         margin: 4px;
 		font-style: 14px;
+		font-family: Righteous;
     }
     .expdate.active {
         background-color: darkslategrey;
@@ -91,6 +92,7 @@
     }
 	.expdetail {
 		padding-left: 10%;
+		font-family: Montserrat;
 	}
 </style>
 

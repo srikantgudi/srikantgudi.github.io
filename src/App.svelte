@@ -59,6 +59,10 @@
 	:root {
 		background: #666666;
 	}
+	:html {
+		margin: 1em 2em;
+		width: auto!important; 
+	}
 	.info {
 		text-align: center;
 	}
@@ -82,15 +86,14 @@
 		background-color: darkslateblue;
 		color: #f9f9f9;
 		box-shadow: 0 0 4px whitesmoke;
-		font-family: cursive;
-		text-align: center;
+		font-family: Righteous;
 	}
 	.appinfo-icon:hover > .appinfo {
 		display: block;
 		transform: translate(1em,1em);
 	}
 	.page-title {
-		font-family: Georgia;
+		font-family: Righteous;
 		font-style: italic;
 		text-shadow: 1px 2px 2px navy;
 		font-size: 30px;
@@ -110,19 +113,44 @@
 	.note {
 		font-size: 12px;
 		font-style: italic;
+		font-family: Roboto;
 	}
 	.topnav {
 		background-color: aliceblue;
 		width: auto;
 		padding: 10px;
 	}
+	#pos {
+		font-weight: bold;
+		fill: darkslateblue;
+		font-family: Orbitron;
+		font-size: 20px;
+	}
+	#contact {
+		font-family: Ubuntu;
+		font-size: 12px;
+	}
+	#fullname {
+		text-transform: uppercase;
+	}
 </style>
 
 <main class="resume">
 	<div class="topnav box">
 		<div class="info">
-			<div id="fullname" class="page-title">Srikant Gudi</div>
-			<div>Bengaluru, India | srikantgudi@gmail.com | +91-829-665-6336</div>
+			<svg height="40" width="100%" class="page-title">
+				<text x="15%" y="60%" id="fullname">Srikant Gudi</text>
+				<text x="50%" y="50%" id="contact">Bengaluru, India | srikantgudi@gmail.com | +91-829-665-6336</text>
+			</svg>
+			<div id="pos" class="box">
+				<svg height="25" width="100%">
+					<rect x="0" y="0" width="100%" height="100%" fill="lightcyan" />
+					<text x="50%" y="70%" text-anchor="middle">
+						Senior Frontend Professional
+						<animate attributename="x" values="20%;60%;40%;80%;20%" begin="0" dur="10s" repeatcount="indefinite" />
+					</text>
+				</svg>
+			</div>
 		</div>
 		<div class="appinfo-icon">
 			[!]
@@ -130,15 +158,6 @@
 				This resume is developed using Svelte and SVG!
 			</div>
 		</div>
-	</div>
-	<div id="pos" class="box">
-		<svg height="25" width="100%">
-			<rect x="0" y="0" width="100%" height="100%" fill="lightcyan" />
-			<text x="50%" y="70%" font-weight="bold" fill="darkslateblue" text-anchor="middle">
-				Senior Frontend Professional
-				<animate attributename="x" values="20%;60%;40%;80%;20%" begin="0" dur="10s" repeatcount="indefinite" />
-			</text>
-		</svg>
 	</div>
 	<div class="resume">
 		<div>

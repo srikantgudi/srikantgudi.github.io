@@ -7,6 +7,13 @@
     ];
 </script>
 
+<style>
+    .text {
+        font-family: Montserrat;
+        font-size: 16px;
+    }
+</style>
+
 <div>
     <ul class='text'>
         {#each profiles as line}
