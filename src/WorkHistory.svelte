@@ -1,4 +1,5 @@
 <script>
+import ResumeItem from "./ResumeItem.svelte";
     let expList = [
 		{
 			header: {
@@ -72,18 +73,18 @@
 <style>
     .exp {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 3fr;
         grid-gap: 10px 20px;
     }
     .expdate {
-		display: inline-flex;
+		display: block;
         box-shadow: 0 2px 4px #666666;
         border-radius: 8px 8px 0 0;
         padding: 5px 10px;
         cursor: pointer;
         background-color: lightblue;
         margin: 4px;
-		font-style: 14px;
+		font-size: 12px;
 		font-family: Righteous;
     }
     .expdate.active {
@@ -93,23 +94,32 @@
 	.expdetail {
 		padding-left: 10%;
 		font-family: Montserrat;
+		height: inherit;
+		overflow-y: auto;
 	}
 </style>
 
-<main class="exp">
-    <div>
-        {#each expList as exp}
-			<div class="expdate" class:active={curExp === exp} 
-				on:click={() => curExp = exp}>{exp.header.dates}</div>
-        {/each}
-    </div>
-    <div class="expdetail">
-		<h3>{@html curExp.header.jobTitle}</h3>
-		<h4>Org: {@html curExp.header.org}</h4>
-        <ul>
-            {#each curExp.content as detail}
-            <li>{detail}</li>
-            {/each}
-        </ul>
-    </div>
-</main>
+<ResumeItem>
+	<div slot="header">
+		Work Experience
+	</div>
+	<dif slot="content">
+		<div class="exp">
+			<div id="datelinks">
+				{#each expList as exp}
+					<div class="expdate" class:active={curExp === exp} 
+						on:click={() => curExp = exp}>{exp.header.dates}</div>
+				{/each}
+			</div>
+			<div class="expdetail">
+				<h3>{@html curExp.header.jobTitle}</h3>
+				<h4>Org: {@html curExp.header.org}</h4>
+				<ul>
+					{#each curExp.content as detail}
+					<li>{detail}</li>
+					{/each}
+				</ul>
+			</div>
+		</div>
+	</dif>
+</ResumeItem>

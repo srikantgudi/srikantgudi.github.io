@@ -61,7 +61,7 @@
 	}
 	:html {
 		margin: 1em 2em;
-		width: auto!important; 
+		width: auto!important;
 	}
 	.info {
 		text-align: center;
@@ -76,8 +76,8 @@
 	}
 	.appinfo {
 		position: absolute;
-		top: 0.5em;
-		right: 0;
+		top: 1em;
+		right: 1em;
 		z-index: 999;
 		display: none;
 		transition: all 1s;
@@ -100,9 +100,17 @@
 		font-weight: 600;
 	}
 	.resume {
-		display: block;
+		position: absolute;
+		top: 9em;
+		left: 1em;
+		right: 1em;
+		height: 75vh;
+		display: grid;
+		padding: 4px 2em;
+		grid-template-columns: 1fr 3fr;
+		background-color: aliceblue;
 	}
-	:global(.card) {
+	.card {
         border-radius: 8px 8px 0 0;
 		display: flex;
 		font-size: 20px;
@@ -110,12 +118,21 @@
 		padding: 4px 10px;
 		margin-bottom: 4px;
 	}
-	.note {
-		font-size: 12px;
-		font-style: italic;
-		font-family: Roboto;
+	.card.active {
+		background-color: lightblue;
+		justify-content: right;
+		font-weight: 600;
+	}
+	.card.active:after {
+		content: '\20\bb';
+		padding-right: 10px;
 	}
 	.topnav {
+		position: fixed;
+		z-index: 999;
+		left: 0;
+		top: 0;
+		margin-bottom: 10em;
 		background-color: aliceblue;
 		width: auto;
 		padding: 10px;
@@ -135,7 +152,7 @@
 	}
 </style>
 
-<main class="resume">
+<main>
 	<div class="topnav box">
 		<div class="info">
 			<svg height="50" width="100%" class="page-title">
@@ -161,29 +178,20 @@
 	</div>
 	<div class="resume">
 		<div>
-			<ResumeItem showContent={opt===1}>
-				<div slot="header" on:click={() => opt = 1}>
-					Profile
-				</div>
-				<div slot="content">
-					<Profile />
-				</div>
-			</ResumeItem>
-			<ResumeItem showContent={opt===2}>
-				<div slot="header" on:click={() => opt = 2}>
-					Technical Skills <span class="note">(Click on each group to view details)</span>
-				</div>
-				<div slot="content">
+			<div class="card" class:active={opt === 1} on:click={() => opt = 1}>Profile</div>
+			<div class="card" class:active={opt === 2} on:click={() => opt = 2}>Technical Skills</div>
+			<div class="card" class:active={opt === 3} on:click={() => opt = 3}>Work Experience</div>
+		</div>
+		<div>
+			{#if opt===1}
+				<Profile />
+			{/if}
+			{#if opt===2}
 				<Skills />
-			</ResumeItem>
-			<ResumeItem showContent={opt===3}>
-				<div slot="header" on:click={() => opt = 3}>
-					Work Experience <span class="note">(Hover on the date to view details)</span>
-				</div>
-				<div slot="content">
-					<WorkHistory />
-				</div>
-			</ResumeItem>
+			{/if}
+			{#if opt===3}
+				<WorkHistory />
+			{/if}
 		</div>
 	</div>
 	

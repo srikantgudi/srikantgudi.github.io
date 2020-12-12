@@ -1,5 +1,4 @@
 <script>
-	export let showContent = false;
 	export let hdrbg = "darkslateblue";
 	export let hdrclr = "white";
 	export let fntclr = 'white';
@@ -30,10 +29,6 @@
         text-align: left;
 		background-color: whitesmoke;
 		padding: 10px;
-        display: none;
-	}
-    .item-content.active {
-        display: block;
     }
 </style>
 
@@ -41,7 +36,7 @@
 	<div class="item-header">
 		<slot name="header"></slot>
     </div>
-	<div class="item-content" class:active={showContent}>
+	<div class="item-content">
 		<slot name="content"></slot>
     </div>
 </main>
