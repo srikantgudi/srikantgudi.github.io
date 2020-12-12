@@ -68,8 +68,8 @@
 	}
 	.appinfo-icon {
 		position: absolute;
-		top: 2em;
-		right: 2em;
+		top: 1em;
+		right: 3em;
 		font-style: italic;
 		font-weight: 600;
 		cursor: pointer;
@@ -138,9 +138,9 @@
 <main class="resume">
 	<div class="topnav box">
 		<div class="info">
-			<svg height="40" width="100%" class="page-title">
-				<text x="15%" y="60%" id="fullname">Srikant Gudi</text>
-				<text x="50%" y="50%" id="contact">Bengaluru, India | srikantgudi@gmail.com | +91-829-665-6336</text>
+			<svg height="50" width="100%" class="page-title">
+				<text x="50%" y="60%" text-anchor="middle" id="fullname">Srikant Gudi</text>
+				<text x="50%" text-anchor="middle" y="90%" id="contact">Bengaluru, India | srikantgudi@gmail.com | +91-829-665-6336</text>
 			</svg>
 			<div id="pos" class="box">
 				<svg height="25" width="100%">
