@@ -170,9 +170,11 @@
 		<div class="appinfo-icon">
 			<svg height="60" width="60">
 				<circle r="15" cx="30" cy="30" fill="lightblue">
-					<animate attributeName="fill" values="navy;blue;lightcyan;blue;navy" begin="0" dur="5s" repeatCount="indefinite" />
 				</circle>
-				<text x="45" y="38" fill="lightcyan" font-size="20px">!</text>
+				<text x="25" y="38" fill="lightcyan" font-size="20px">
+					!
+					<animate attributeName="fill" values="navy;blue;lightcyan;blue;navy" begin="0" dur="5s" repeatCount="indefinite" />
+				</text>
 			</svg>
 			<div class="appinfo">
 				This resume is developed using Svelte and SVG!
