@@ -89,7 +89,7 @@
 	}
 	.appinfo-icon:hover > .appinfo {
 		display: block;
-		transform: translate(1em,1em);
+		transform: translate(-1em,1em);
 	}
 	.page-title {
 		font-family: Righteous;
@@ -136,9 +136,9 @@
 		padding: 10px;
 	}
 	#pos {
-		font-weight: bold;
-		fill: darkslateblue;
-		font-family: Orbitron;
+		font-weight: 600;
+		fill: blue;
+		font-family: Righteous;
 		font-size: 20px;
 	}
 	#contact {
@@ -160,15 +160,20 @@
 			<div id="pos" class="box">
 				<svg height="25" width="100%">
 					<rect x="0" y="0" width="100%" height="100%" fill="lightcyan" />
-					<text x="50%" y="70%" text-anchor="middle">
+					<text id="pos" x="50%" y="70%"  fill="blue" font-weight="600" text-anchor="middle">
 						Senior Frontend Professional
-						<animate attributename="x" values="20%;60%;40%;80%;20%" begin="0" dur="10s" repeatcount="indefinite" />
+						<animate attributeName="fill" values="lightblue;blue;navy;orange;navy;blue;lightblue" begin="0" dur="5s" repeatCount="indefinite" />
 					</text>
 				</svg>
 			</div>
 		</div>
 		<div class="appinfo-icon">
-			[!]
+			<svg height="60" width="60">
+				<circle r="15" cx="30" cy="30" fill="lightblue">
+					<animate attributeName="fill" values="navy;blue;lightcyan;blue;navy" begin="0" dur="5s" repeatCount="indefinite" />
+				</circle>
+				<text x="45" y="38" fill="lightcyan" font-size="20px">!</text>
+			</svg>
 			<div class="appinfo">
 				This resume is developed using Svelte and SVG!
 			</div>
