@@ -51,7 +51,7 @@
 			]
 		}
 	];
-	let opt = 2;
+	let opt = 1;
 	let selectedGroup = skills[0];
 </script>
 
