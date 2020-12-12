@@ -130,6 +130,7 @@
 		z-index: 999;
 		left: 0;
 		top: 0;
+		right: 0;
 		background-color: aliceblue;
 		width: auto;
 		padding: 10px;
