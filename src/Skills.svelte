@@ -42,11 +42,18 @@
 
 <style>
     .skills {
+        display: block;
+        height: 12em;
+        padding: 10px;
+    }
+    .skill-names {
         display: grid;
-        grid-template-columns: 1fr 3fr;
-        grid-gap: 4px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        margin: 10px;
     }
     .skill-name {
+        display: inline-flex;
         box-shadow: 0 0 4px #999999;
         padding: 4px;
         font-size: 18px;
@@ -55,23 +62,28 @@
     .skill-name.active {
         background-color: darkslategrey;
         color: white;
-        text-align: right;
+        text-align: center;
         text-transform: uppercase;
     }
     .skill-name.active:after {
-        content: '>>';
+        content: '\20\bb';
+    }
+    .skill-name.active:before {
+        content: '\ab\20';
     }
     .skills-detail {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 4px;
+        grid-template-columns: repeat(4,auto);
+        grid-gap: 10px;
+        align-items: center;
+        justify-content: center;
     }
 </style>
 <div class="skills">
-    <div>
+    <div class="skill-names">
         {#each skills as skill}
             <div class="skill-name" class:active={selectedGroup === skill} 
-                on:click={() => selectedGroup = skill}>
+                on:mouseover={() => selectedGroup = skill}>
                 {skill.group}
             </div>
         {/each}

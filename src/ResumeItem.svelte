@@ -1,5 +1,14 @@
 <script>
-    export let showContent = false;
+	export let showContent = false;
+	export let hdrbg = "darkslateblue";
+	export let hdrclr = "white";
+	export let fntclr = 'white';
+	export let hdrfntsize = '16';
+	$: cssVarStyles = `--hdrbg:${hdrbg};
+						--hdrclr:${hdrclr};
+						--clr:${fntclr};
+						--hdrfntsize:${hdrfntsize + 'px'};
+						`;
 </script>
 
 <style>
@@ -10,9 +19,10 @@
 	}
 	.item-header {
         cursor: pointer;
-		background-color: darkslateblue;
+		background-color: var(--hdrbg, skyblue);
         border-radius: 8px 8px 0 0;
-		color: white;
+		color: var(--hdrclr);
+		font-size: var(--hdrfntsize);
 		padding: 10px;
         text-align: left;
 	}
@@ -27,11 +37,11 @@
     }
 </style>
 
-<div class="item">
+<main class="item" style="{cssVarStyles}">
 	<div class="item-header">
 		<slot name="header"></slot>
     </div>
 	<div class="item-content" class:active={showContent}>
 		<slot name="content"></slot>
     </div>
-</div>
+</main>

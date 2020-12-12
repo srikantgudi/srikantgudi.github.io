@@ -39,6 +39,31 @@
 				'Interacted with designers to understand the designs',
 				'Used Photoshop to slice images'
 			]
+		},
+		{
+			header: {
+				dates: 'Apr-2014 to Jun-2014',
+				jobTitle: 'Senior AngularJS Developer (Remote work)',
+				org: 'Satsyil, VA, USA',
+			},
+			content: [
+				'Worked remotely as senior UI developer using AngularJS technology',
+				'Modified admin-side modules and screen layouts and created new ones as required'
+			]
+		},
+		{
+			header: {
+				dates: '23-Nov-2011 – 07-Mar-2014',
+				jobTitle: 'Senior Software Developer (Consultant)',
+				org: 'Tejas Systems / SUNSYSTEMS, Bengaluru :: Client: MModal Global Services Pvt Ltd',
+			},
+			content: [
+				'Environment: PHP, MySQL, Jquery, Fancybox, Fusioncharts, HTML, CSS (Bootstrap), AngularJS',
+				'modified client-side and admin-side scripts',
+				'created animated presentation of iPad application using Jquery and Jquery-cycle',
+				'created presentation of mobile application in Powerpoint',
+				'created UI for password management using AngularJS'
+			]
 		}
 	];
 	let curExp = expList[0];
@@ -47,31 +72,36 @@
 <style>
     .exp {
         display: grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 1fr;
         grid-gap: 10px 20px;
     }
     .expdate {
+		display: inline-flex;
         box-shadow: 0 2px 4px #666666;
         border-radius: 8px 8px 0 0;
         padding: 5px 10px;
         cursor: pointer;
         background-color: lightblue;
-        margin-bottom: 4px;
+        margin: 4px;
     }
     .expdate.active {
         background-color: darkslategrey;
         color: #f9f9f9;
     }
+	.expdetail {
+		padding-left: 10%;
+	}
 </style>
 
 <main class="exp">
     <div>
         {#each expList as exp}
-            <div class="expdate" class:active={curExp === exp} on:click={() => curExp = exp}>{exp.header.dates}</div>
+            <div class="expdate" class:active={curExp === exp} on:mouseover={() => curExp = exp}>{exp.header.dates}</div>
         {/each}
     </div>
-    <div>
-        <h3>{curExp.header.dates} :: {curExp.header.jobTitle} {curExp.header.org}</h3>
+    <div class="expdetail">
+		<h3>{@html curExp.header.jobTitle}</h3>
+		<h4>Org: {@html curExp.header.org}</h4>
         <ul>
             {#each curExp.content as detail}
             <li>{detail}</li>
