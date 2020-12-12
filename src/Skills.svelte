@@ -44,6 +44,7 @@
     .skills {
         display: block;
         height: 12em;
+        overflow-y: auto;
         padding: 10px;
     }
     .skill-names {
@@ -56,7 +57,7 @@
         display: inline-flex;
         box-shadow: 0 0 4px #999999;
         padding: 4px;
-        font-size: 18px;
+        font-size: 14px;
         cursor: pointer;
     }
     .skill-name.active {
@@ -73,10 +74,13 @@
     }
     .skills-detail {
         display: grid;
-        grid-template-columns: repeat(4,auto);
+        grid-template-columns: repeat(2,auto);
         grid-gap: 10px;
+        margin: 0 20px;
         align-items: center;
+        align-content: center;
         justify-content: center;
+        font-size: 14px;
     }
 </style>
 <div class="skills">
