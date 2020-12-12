@@ -83,6 +83,7 @@
         cursor: pointer;
         background-color: lightblue;
         margin: 4px;
+		font-style: 14px;
     }
     .expdate.active {
         background-color: darkslategrey;

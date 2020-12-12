@@ -54,23 +54,17 @@
         margin: 10px;
     }
     .skill-name {
-        display: inline-flex;
+        display: flex;
         box-shadow: 0 0 4px #999999;
         padding: 4px;
-        font-size: 14px;
+        font-size: 12px;
         cursor: pointer;
     }
     .skill-name.active {
         background-color: darkslategrey;
         color: white;
-        text-align: center;
-        text-transform: uppercase;
-    }
-    .skill-name.active:after {
-        content: '\20\bb';
-    }
-    .skill-name.active:before {
-        content: '\ab\20';
+        justify-content: center;
+        font-weight: 600;
     }
     .skills-detail {
         display: grid;
