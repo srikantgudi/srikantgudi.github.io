@@ -99,7 +99,8 @@
 <main class="exp">
     <div>
         {#each expList as exp}
-            <div class="expdate" class:active={curExp === exp} on:mouseover={() => curExp = exp}>{exp.header.dates}</div>
+			<div class="expdate" class:active={curExp === exp} 
+				on:click={() => curExp = exp}>{exp.header.dates}</div>
         {/each}
     </div>
     <div class="expdetail">
