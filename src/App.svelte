@@ -60,7 +60,6 @@
 		background: #666666;
 	}
 	:html {
-		margin: 1em 2em;
 		width: auto!important;
 	}
 	.info {
@@ -104,9 +103,8 @@
 		top: 9em;
 		left: 1em;
 		right: 1em;
-		height: 75vh;
 		display: grid;
-		padding: 4px 2em;
+		padding: 1em;
 		grid-template-columns: 1fr 3fr;
 		background-color: aliceblue;
 	}
@@ -132,7 +130,6 @@
 		z-index: 999;
 		left: 0;
 		top: 0;
-		margin-bottom: 10em;
 		background-color: aliceblue;
 		width: auto;
 		padding: 10px;
