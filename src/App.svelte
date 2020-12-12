@@ -57,7 +57,10 @@
 
 <style>
 	:root {
-		background: #eeeeee;
+		background: #666666;
+	}
+	.info {
+		text-align: center;
 	}
 	.appinfo-icon {
 		position: absolute;
@@ -104,27 +107,23 @@
 		padding: 4px 10px;
 		margin-bottom: 4px;
 	}
-	.skillsdetail {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-gap: 2px 0;
-	}
 	.note {
 		font-size: 12px;
 		font-style: italic;
 	}
+	.topnav {
+		background-color: aliceblue;
+		width: auto;
+		padding: 10px;
+	}
 </style>
 
-<main>
+<main class="resume">
 	<div class="topnav box">
-		<svg height="50" width="100%">
-			<text x="50%" y="45%" text-anchor="middle" id="fullname" class="page-title">Srikant Gudi
-				<animate attributename="fill" values="lightblue;blue;navy;blue;lightblue" begin="0" dur="10s" repeatcount="indefinite" />
-			</text>
-			<text x="50%" y="80%" text-anchor="middle" font-size="80%">
-				Bengaluru, India | srikantgudi@gmail.com | +91-829-665-6336
-			</text>
-		</svg>
+		<div class="info">
+			<div id="fullname" class="page-title">Srikant Gudi</div>
+			<div>Bengaluru, India | srikantgudi@gmail.com | +91-829-665-6336</div>
+		</div>
 		<div class="appinfo-icon">
 			[!]
 			<div class="appinfo">
@@ -156,25 +155,6 @@
 					Technical Skills <span class="note">(Click on each group to view details)</span>
 				</div>
 				<div slot="content">
-				<!-- 	<div class="skillsdetail">
-						{#each skills as item}
-							<ResumeItem showContent={selectedGroup===item} hdrfntsize="14" hdrclr="blue" fntclr='olive' hdrbg="lightblue">
-								<div slot="header" on:click={() => {selectedGroup=item}}>{item.group}</div>
-								<div slot="content">
-									{#each selectedGroup.items as skill}
-										<svg height="70" width="300">
-											<rect x="5" y="5" height="60" width="200" fill="transparent" stroke="blue" />
-											<text x="30%" y="23" font-weight="600" fill="blue" text-anchor="middle">{skill.name}</text>
-											<rect x="5" y="34" height="30" width="198" fill="#cccccc" />
-											<rect x="6" y="34" height="30" width={skill.rating * 20} fill="#999" />
-											<text x="210" y="50" font-size="14px">{skill.rating}/10</text>
-										</svg>
-									{/each}
-								</div>
-							</ResumeItem>
-						{/each}
-					</div>
-				</div> -->
 				<Skills />
 			</ResumeItem>
 			<ResumeItem showContent={opt===3}>
