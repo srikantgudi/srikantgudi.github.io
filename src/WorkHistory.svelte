@@ -98,7 +98,7 @@ import Panel from "./Panel.svelte";
 		<Panel hdrbg="grey" showcontent={curExp === exp}>
 			<div slot="header" on:click={() => curExp = exp}>
 				<div class="expdate" class:active={curExp === exp}>
-					{exp.header.dates}
+					{exp.header.dates} | {exp.header.jobTitle} | {exp.header.org}
 				</div>
 			</div>
 			<div slot="content">
