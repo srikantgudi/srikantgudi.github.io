@@ -3,7 +3,6 @@
 </svelte:head>
 
 <script>
-	import ResumeItem from "./ResumeItem.svelte";
 	import Profile from "./Profile.svelte";
 	import Skills from "./Skills.svelte";
 	import WorkHistory from "./WorkHistory.svelte";
@@ -199,74 +198,4 @@
 			{/if}
 		</div>
 	</div>
-	
-	<!-- <div class="skills">
-		<figure>
-			<figcaption>
-				Technical Skills
-			</figcaption>
-			<div class="skills-content">
-				<div>
-					<ul class="bold">
-						<li>Angular</li>
-						<li>Svelte</li>
-						<li>Stencil</li>
-						<li>React</li>
-						<li>Vue</li>
-						<li>Nuxt</li>
-					</ul>
-					<ul>
-						<li>Bootstrap</li>
-						<li>Angular Material</li>
-						<li>Material-UI</li>
-						<li>Vuetify</li>
-						<li>Buefy</li>
-					</ul>
-				</div>
-				<div>
-					<ul>
-						<li>JavaScript</li>
-						<li>HTML5</li>
-						<li>CSS3</li>
-						<li>NodeJS</li>
-						<li>MySql</li>
-						<li>Mongodb</li>
-					</ul>
-					<ul>
-						<li>Git</li>
-						<li>Bitbucket</li>
-						<li>Confluence</li>
-						<li>Visual Studio Code</li>
-						<li>IntelliJ</li>
-					</ul>
-				</div>
-			</div>
-		</figure>
-	</div>
-	
-	<div class="exp">
-		<figure>
-			<figcaption>
-				Experience
-			</figcaption>
-			<div>
-				{#each expList as exp}
-					<div class='exp-box' on:mouseover={() => curExp = exp}>
-						<div class='exphdr' class:activehdr={curExp === exp}>
-							{exp.header.dates} :: {exp.header.jobTitle} - {exp.header.org}
-						</div>
-						{#if curExp === exp}
-							<div class='expdetail'>
-								<ul>
-									{#each curExp.content as line}
-										<li>{line}</li>
-									{/each}
-								</ul>
-							</div>
-						{/if}
-					</div>
-				{/each}
-			</div>
-		</figure>
-	</div> -->
 </main>
