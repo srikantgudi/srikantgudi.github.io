@@ -1,5 +1,5 @@
 <script>
-import ResumeItem from "./ResumeItem.svelte";
+import Panel from "./Panel.svelte";
 
     let profiles = [
         'Senior software professional with over 20 years of experience',
@@ -16,7 +16,7 @@ import ResumeItem from "./ResumeItem.svelte";
     }
 </style>
 
-<ResumeItem>
+<Panel>
     <div slot="header">
         Profile
     </div>
@@ -27,4 +27,4 @@ import ResumeItem from "./ResumeItem.svelte";
             {/each}
         </ul>
     </div>
-</ResumeItem>
+</Panel>

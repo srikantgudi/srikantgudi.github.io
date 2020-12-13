@@ -1,5 +1,5 @@
 <script>
-import ResumeItem from "./ResumeItem.svelte";
+import Panel from "./Panel.svelte";
 
     let skills = [
 		{
@@ -38,56 +38,43 @@ import ResumeItem from "./ResumeItem.svelte";
 			]
 		}
 	];
-	let opt = 1;
 	let selectedGroup = skills[0];
 </script>
 
 <style>
     .skills {
         display: grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: repeat(3, auto);
         overflow-y: auto;
         overflow-x: hidden;
         padding: 10px;
     }
-    .skill-names {
-        margin: 10px;
-    }
-    .skill-name {
-        box-shadow: 0 0 4px #999999;
+    .skill-group {
         padding: 4px;
         font-size: 12px;
         cursor: pointer;
-        font-family: Orbitron;
+        font-family: Roboto;
     }
-    .skill-name.active {
-        background-color: darkslategrey;
+    .skill-group.active {
         color: white;
         justify-content: center;
         font-weight: 600;
-    }
-    .skills-detail {
-        display: flex;
-        align-items: center;
-        justify-content:center;
-        align-content: space-between;
-        padding: 0 10px;
-        flex-flow: row wrap;
-        font-size: 14px;
-        overflow-x: hidden;
+        font-family: Montserrat;
+        letter-spacing: 2px;
+        font-size: 18px;
     }
     .skill {
         width: 20em;
         flex: 1;
     }
 </style>
-<ResumeItem>
+<Panel>
     <div slot="header">
         Technical Skills
     </div>
     <div slot="content">
-        <div class="skills">
-            <div class="skill-names">
+        <div>
+            <!-- <div class="skill-names">
                 {#each skills as skill}
                     <div class="skill-name" class:active={selectedGroup === skill} 
                         on:click={() => selectedGroup = skill}>
@@ -106,7 +93,31 @@ import ResumeItem from "./ResumeItem.svelte";
                     </svg>
                 </div>
                 {/each}
-            </div>
+            </div> -->
+            {#each skills as skill}
+            <Panel hdrbg="#666666" showcontent={selectedGroup===skill}>
+                <div slot="header" on:click={() => selectedGroup=skill}>
+                    <div class="skill-group" class:active={selectedGroup === skill} 
+                        on:click={() => selectedGroup = skill}>
+                        {skill.group}
+                    </div>
+                </div>
+                <div slot="content">
+                    <div class="skills">
+                        {#each selectedGroup.items as item}
+                            <div class="skill">
+                                <div>{item.name}</div>
+                                <svg height="40" width="200">
+                                    <rect x="0" y="10" height="30" width="150" fill="transparent" stroke="blue" />
+                                    <rect x="0" y="10" height="30" width={item.rating * 15} fill="darkslateblue" stroke="blue" />
+                                    <text x="80%" y="70%">{item.rating}/10</text>
+                                </svg>
+                            </div>
+                        {/each}
+                    </div>
+                </div>
+            </Panel>
+            {/each}
         </div>
     </div>
-</ResumeItem>
+</Panel>

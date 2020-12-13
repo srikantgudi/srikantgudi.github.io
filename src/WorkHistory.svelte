@@ -1,5 +1,5 @@
 <script>
-import ResumeItem from "./ResumeItem.svelte";
+import Panel from "./Panel.svelte";
     let expList = [
 		{
 			header: {
@@ -80,31 +80,42 @@ import ResumeItem from "./ResumeItem.svelte";
 		display: block;
         box-shadow: 0 2px 4px #666666;
         border-radius: 8px 8px 0 0;
-        padding: 5px 10px;
+        padding: 2px 4px;
         cursor: pointer;
-        background-color: lightblue;
         margin: 4px;
 		font-size: 12px;
 		font-family: Righteous;
     }
     .expdate.active {
-        background-color: darkslategrey;
+		font-weight: 600;
+		font-size: 14px;
         color: #f9f9f9;
+		letter-spacing: 2px;
     }
-	.expdetail {
-		padding-left: 10%;
-		font-family: Montserrat;
-		height: inherit;
-		overflow-y: auto;
-	}
 </style>
 
-<ResumeItem>
+<Panel>
 	<div slot="header">
 		Work Experience
 	</div>
 	<dif slot="content">
-		<div class="exp">
+		{#each expList as exp}
+		<Panel hdrbg="grey" showcontent={curExp === exp}>
+			<div slot="header" on:click={() => curExp = exp}>
+				<div class="expdate" class:active={curExp === exp}>
+					{exp.header.dates}
+				</div>
+			</div>
+			<div slot="content">
+				<ul>
+					{#each curExp.content as detail}
+					<li>{detail}</li>
+					{/each}
+				</ul>
+			</div>
+		</Panel>
+		{/each}
+		<!-- <div class="exp">
 			<div id="datelinks">
 				{#each expList as exp}
 					<div class="expdate" class:active={curExp === exp} 
@@ -120,6 +131,6 @@ import ResumeItem from "./ResumeItem.svelte";
 					{/each}
 				</ul>
 			</div>
-		</div>
+		</div> -->
 	</dif>
-</ResumeItem>
+</Panel>
