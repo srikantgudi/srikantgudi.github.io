@@ -71,11 +71,6 @@ import Panel from "./Panel.svelte";
 </script>
 
 <style>
-    .exp {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        grid-gap: 10px 20px;
-    }
     .expdate {
 		display: block;
         box-shadow: 0 2px 4px #666666;
