@@ -71,34 +71,21 @@ import Panel from "./Panel.svelte";
 </script>
 
 <style>
-    .expdate {
-		display: block;
-        box-shadow: 0 2px 4px #666666;
-        border-radius: 8px 8px 0 0;
-        padding: 2px 4px;
-        cursor: pointer;
-        margin: 4px;
-		font-size: 12px;
-		font-family: Righteous;
-    }
-    .expdate.active {
-		font-weight: 600;
-		font-size: 14px;
-        color: #f9f9f9;
-		letter-spacing: 2px;
-    }
 </style>
 
 <Panel>
 	<div slot="header">
 		Work Experience
 	</div>
-	<dif slot="content">
+	<div slot="content">
 		{#each expList as exp}
-		<Panel hdrbg="grey" showcontent={curExp === exp}>
+		<Panel hdrbg="#333333" showcontent={curExp === exp}>
 			<div slot="header" on:click={() => curExp = exp}>
-				<div class="expdate" class:active={curExp === exp}>
-					{exp.header.dates} | {exp.header.jobTitle} | {exp.header.org}
+				<div class="sectiontitle">
+					{exp.header.dates} | {exp.header.jobTitle}
+				</div>
+				<div class="subtitle">
+					{exp.header.org}
 				</div>
 			</div>
 			<div slot="content">
@@ -110,22 +97,5 @@ import Panel from "./Panel.svelte";
 			</div>
 		</Panel>
 		{/each}
-		<!-- <div class="exp">
-			<div id="datelinks">
-				{#each expList as exp}
-					<div class="expdate" class:active={curExp === exp} 
-						on:click={() => curExp = exp}>{exp.header.dates}</div>
-				{/each}
-			</div>
-			<div class="expdetail">
-				<h3>{@html curExp.header.jobTitle}</h3>
-				<h4>Org: {@html curExp.header.org}</h4>
-				<ul>
-					{#each curExp.content as detail}
-					<li>{detail}</li>
-					{/each}
-				</ul>
-			</div>
-		</div> -->
-	</dif>
+	</div>
 </Panel>

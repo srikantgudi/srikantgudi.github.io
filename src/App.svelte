@@ -90,7 +90,7 @@
 		display: block;
 		transform: translate(-1em,1em);
 	}
-	.page-title {
+	:global(.page-title) {
 		font-family: Righteous;
 		font-style: italic;
 		text-shadow: 1px 2px 2px navy;
@@ -146,6 +146,15 @@
 	}
 	#fullname {
 		text-transform: uppercase;
+	}
+
+	:global(.sectiontitle) {
+		font-size: 20px;
+		height: auto;
+	}
+	:global(.subtitle) {
+		font-size: 14px;
+		height: auto;
 	}
 </style>
 

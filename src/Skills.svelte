@@ -45,6 +45,7 @@ import Panel from "./Panel.svelte";
     .skills {
         display: grid;
         grid-template-columns: repeat(3, auto);
+        grid-gap: 10px;
         overflow-y: auto;
         overflow-x: hidden;
         padding: 10px;
@@ -63,10 +64,6 @@ import Panel from "./Panel.svelte";
         letter-spacing: 2px;
         font-size: 18px;
     }
-    .skill {
-        width: 20em;
-        flex: 1;
-    }
 </style>
 <Panel>
     <div slot="header">
@@ -74,28 +71,8 @@ import Panel from "./Panel.svelte";
     </div>
     <div slot="content">
         <div>
-            <!-- <div class="skill-names">
-                {#each skills as skill}
-                    <div class="skill-name" class:active={selectedGroup === skill} 
-                        on:click={() => selectedGroup = skill}>
-                        {skill.group}
-                    </div>
-                {/each}
-            </div>
-            <div class="skills-detail">
-                {#each selectedGroup.items as item}
-                <div class="skill">
-                    <div>{item.name}</div>
-                    <svg height="40" width="200">
-                        <rect x="0" y="10" height="30" width="150" fill="transparent" stroke="blue" />
-                        <rect x="0" y="10" height="30" width={item.rating * 15} fill="darkslateblue" stroke="blue" />
-                        <text x="80%" y="70%">{item.rating}/10</text>
-                    </svg>
-                </div>
-                {/each}
-            </div> -->
             {#each skills as skill}
-            <Panel hdrbg="#666666" showcontent={selectedGroup===skill}>
+            <Panel hdrbg="#333333" showcontent={selectedGroup===skill}>
                 <div slot="header" on:click={() => selectedGroup=skill}>
                     <div class="skill-group" class:active={selectedGroup === skill} 
                         on:click={() => selectedGroup = skill}>
@@ -105,7 +82,7 @@ import Panel from "./Panel.svelte";
                 <div slot="content">
                     <div class="skills">
                         {#each selectedGroup.items as item}
-                            <div class="skill">
+                            <div>
                                 <div>{item.name}</div>
                                 <svg height="40" width="200">
                                     <rect x="0" y="10" height="30" width="150" fill="transparent" stroke="blue" />

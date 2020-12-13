@@ -9,8 +9,10 @@
 </script>
 <style>
 	.panel {
+		box-sizing: border-box;
 		box-shadow: 0 2px 4px #999999;
 		height: auto;
+		width: auto;
 		margin-bottom: 10px;
 	}
 	.hdr {
@@ -37,7 +39,7 @@
 <main class='panel' style={cssVarStyles}>
 	<div class="hdr" on:click>
 		<slot name="header">
-			<div class="title">
+			<div class="sectiontitle">
 				<slot name="header"></slot>
 			</div>
 			<div class="subtitle">
