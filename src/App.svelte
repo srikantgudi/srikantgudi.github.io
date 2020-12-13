@@ -161,8 +161,8 @@
 <main>
 	<div class="topnav box">
 		<div class="info">
-			<svg height="50" width="100%" class="page-title">
-				<text x="50%" y="60%" text-anchor="middle" id="fullname">Srikant Gudi</text>
+			<svg height="50" width="100%">
+				<text x="50%" y="60%" text-anchor="middle" class="page-title" id="fullname">Srikant Gudi</text>
 				<text x="50%" text-anchor="middle" y="90%" id="contact">Bengaluru, India | srikantgudi@gmail.com | +91-829-665-6336</text>
 			</svg>
 			<div id="pos" class="box">
