@@ -62,7 +62,6 @@
     flex: 1;
     min-width: 300px;
     overflow: hidden;
-    height: auto;
     margin: 0 10px 0 0;
     transition: all 0.5s ease-in;
     color: #999;
@@ -101,9 +100,6 @@
     :root {
       font-size: 0.8;
       overflow-y: auto;
-    }
-    .section {
-      height: auto;
     }
   }
 </style>
