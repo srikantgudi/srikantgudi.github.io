@@ -46,6 +46,9 @@
     box-shadow: 0 0 2px #666666;
     margin-bottom: 4px;
     padding: 0 4px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
   }
   .group-name {
     font-size: 16px;
@@ -69,7 +72,6 @@
   .skill-list {
     background-color: lightcyan;
     padding: 4px;
-    display: none;
     transition: all 1s ease-in;
   }
   .skill-list.active {
@@ -89,12 +91,8 @@
     <div>
       {#each skills as skill}
         <div class="skill-group">
-          <div
-            class="group-name"
-            on:click={() => (selectedGroup = skill.group)}>
-            {skill.group}
-          </div>
-          <div class="skill-list" class:active={selectedGroup === skill.group}>
+          <div class="group-name">{skill.group}</div>
+          <div class="skill-list">
             {#each skill.items as item}
               <div class="skill">
                 <span class="skill-name txt-right">{item.name}:</span>
