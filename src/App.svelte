@@ -100,6 +100,10 @@
   @media screen and (min-width: 480px) {
     :root {
       font-size: 0.8;
+      overflow-y: auto;
+    }
+    .section {
+      height: auto;
     }
   }
 </style>
