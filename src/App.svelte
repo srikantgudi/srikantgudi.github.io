@@ -54,13 +54,13 @@
     padding: 1em;
     height: 82vh;
     overflow-y: auto;
-    /* grid-template-columns: 1fr 3fr; */
     background-color: aliceblue;
   }
   .section {
     box-sizing: border-box;
     flex: 1;
     min-width: 300px;
+    height: auto;
     overflow: hidden;
     margin: 0 10px 0 0;
     transition: all 0.5s ease-in;
