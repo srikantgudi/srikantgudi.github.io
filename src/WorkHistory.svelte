@@ -97,6 +97,15 @@
   let curExp = expList[0]
 </script>
 
+<style>
+  @media only screen and (max-width: 719px) {
+    .sectiontitle,
+    .subtitle {
+      font-size: 90%;
+    }
+  }
+</style>
+
 <Panel>
   <div slot="header">Work Experience</div>
   <div slot="content">

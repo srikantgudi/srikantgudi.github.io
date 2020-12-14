@@ -52,7 +52,7 @@
     display: flex;
     flex-flow: row wrap;
     padding: 1em;
-    height: 82vh;
+    height: 75vh;
     overflow-y: auto;
     background-color: aliceblue;
   }
@@ -60,11 +60,12 @@
     box-sizing: border-box;
     flex: 1;
     min-width: 300px;
-    overflow: hidden;
     margin: 0 10px 0 0;
     transition: all 0.5s ease-in;
     color: #999;
     padding: 10px;
+    max-height: 32em;
+    overflow-y: auto;
   }
   .section.active {
     flex: 3;
@@ -95,9 +96,16 @@
   #fullname {
     text-transform: uppercase;
   }
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 1024px) {
     :root {
       font-size: 0.8;
+      overflow-y: auto;
+    }
+    .resume {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .section {
       overflow-y: auto;
     }
   }

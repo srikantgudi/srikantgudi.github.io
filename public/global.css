@@ -1,9 +1,17 @@
 :root {
-	margin: 0 1em;
-	font-family: Ubuntu;
-	font-size: 14px;
+  margin: 0 1em;
+  font-family: Ubuntu;
+  font-size: 14px;
+  overflow: hidden;
 }
-html, body {
-	position: relative;
-	height: 100%;
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+.sectiontitle {
+  font-size: 16px;
+}
+.subtitle {
+  font-size: 12px;
 }

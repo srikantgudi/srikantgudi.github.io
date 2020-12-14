@@ -21,7 +21,7 @@
     color: var(--hdrclr);
     padding: 4px 10px;
     border-radius: 4px 4px 0 0;
-    font-size: 20px;
+    font-size: 16px;
     height: auto;
     cursor: pointer;
   }
@@ -35,14 +35,10 @@
   .content.active {
     display: block;
   }
-  @media screen and (max-width: 479px) {
-    .hdr {
-      font-size: 70%;
-    }
-  }
-  @media screen and (min-width: 480px) and (max-width: 719px) {
-    .hdr {
-      font-size: 80%;
+  @media screen and (max-width: 719px) {
+    .hdr,
+    .content {
+      font-size: 12px;
     }
   }
 </style>
