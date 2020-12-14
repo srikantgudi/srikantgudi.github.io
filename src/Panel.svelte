@@ -40,7 +40,7 @@
       font-size: 70%;
     }
   }
-  @media screen and ((min-width: 480px) and (max-width: 719px)) {
+  @media screen and (min-width: 480px) and (max-width: 719px) {
     .hdr {
       font-size: 80%;
     }
