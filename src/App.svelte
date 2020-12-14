@@ -1,7 +1,3 @@
-<svelte:head>
-	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-</svelte:head>
-
 <script>
 	import Profile from "./Profile.svelte";
 	import Skills from "./Skills.svelte";
