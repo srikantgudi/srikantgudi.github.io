@@ -35,6 +35,16 @@
   .content.active {
     display: block;
   }
+  @media screen and (max-width: 479px) {
+    .hdr {
+      font-size: 70%;
+    }
+  }
+  @media screen and ((min-width: 480px) and (max-width: 719px)) {
+    .hdr {
+      font-size: 80%;
+    }
+  }
 </style>
 
 <main class="panel" style={cssVarStyles}>

@@ -8,7 +8,7 @@
         org: 'Mphasis, Bengaluru',
       },
       content: [
-        'Currently working as Lead developer in Design System with Schneider Electric',
+        'Currently working as Lead developer in Design System with Schneider Electric. Developed ',
         'Worked offshore in Bengaluru with a banking conglomerate on  projects in Angular and React',
         'Worked onsite in Glasgow, UK with a banking conglomerate on Angular based projects',
         'Developed UI for a POC for Digital Readiness Analysis Tool to create a survey questionnaire for various categories using Angular, Material Design, HTML5, CSS3, JavaScript, API integration',
@@ -96,10 +96,6 @@
   ]
   let curExp = expList[0]
 </script>
-
-<style>
-
-</style>
 
 <Panel>
   <div slot="header">Work Experience</div>

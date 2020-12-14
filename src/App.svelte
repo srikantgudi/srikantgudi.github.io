@@ -11,6 +11,9 @@
     background: #666666;
     overflow: hidden;
   }
+  :html {
+    background-color: aliceblue;
+  }
   .info {
     text-align: center;
   }
@@ -43,14 +46,14 @@
   .resume {
     box-sizing: border-box;
     position: absolute;
-    top: 7em;
+    top: 9em;
     left: 1em;
     right: 1em;
     display: flex;
     flex-flow: row wrap;
     padding: 1em;
     height: 82vh;
-    overflow: hidden;
+    overflow-y: auto;
     /* grid-template-columns: 1fr 3fr; */
     background-color: aliceblue;
   }
@@ -59,7 +62,7 @@
     flex: 1;
     min-width: 300px;
     overflow: hidden;
-    height: inherit;
+    height: auto;
     margin: 0 10px 0 0;
     transition: all 0.5s ease-in;
     color: #999;
@@ -93,6 +96,11 @@
   }
   #fullname {
     text-transform: uppercase;
+  }
+  @media screen and (min-width: 480px) {
+    :root {
+      font-size: 0.8;
+    }
   }
 </style>
 
