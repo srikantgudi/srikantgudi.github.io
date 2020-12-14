@@ -59,8 +59,7 @@
   .section {
     box-sizing: border-box;
     flex: 1;
-    min-width: 300px;
-    height: auto;
+    min-width: 300px;`
     overflow: hidden;
     margin: 0 10px 0 0;
     transition: all 0.5s ease-in;
