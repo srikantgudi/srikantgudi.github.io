@@ -65,7 +65,8 @@
     color: #999;
     padding: 10px;
     max-height: 32em;
-    overflow-y: auto;
+    overflow: hidden;
+    box-shadow: 0 0 2px #999999;
   }
   .section.active {
     flex: 3;
