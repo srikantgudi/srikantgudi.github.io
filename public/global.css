@@ -86,11 +86,14 @@ body {
   box-shadow: 0 2px 4px slategrey;
 }
 .exptitle {
-  font-family: Righteous
   background-color: lightgrey;
-  color: darkslateblue;
   font-size: 14px;
   padding: 10px;
+}
+.jobtitle {
+  color: darkslateblue;
+  font-family: Righteous;
+  font-size: 16px;
 }
 .txtright {
   text-align: right;

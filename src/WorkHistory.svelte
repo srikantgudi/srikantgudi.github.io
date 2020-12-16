@@ -43,8 +43,8 @@
 		{
 			header: {
 				dates: 'Apr-2014 to Jun-2014',
-				jobTitle: 'Senior AngularJS Developer (Remote work)',
-				org: 'Satsyil, VA, USA',
+				jobTitle: 'Senior AngularJS Developer',
+				org: 'Satsyil, VA, USA (Remote work)',
 			},
 			content: [
 				'Worked remotely as senior UI developer using AngularJS technology',
@@ -101,8 +101,13 @@
 	</div>
 	{#each expList as exp}
 		<div class="exp">
-			<div on:click={() => curExp = exp} class="exptitle">
-	      {exp.header.dates} | {exp.header.jobTitle} | {exp.header.org}
+			<div class="exptitle" on:click={() => curExp = exp}>
+				<div class="jobtitle">
+					{exp.header.dates} | {exp.header.jobTitle}
+        </div>
+				<div class="subtitle">
+					{exp.header.org}
+				</div>
 			</div>
 			{#if curExp === exp}
 			<div>
