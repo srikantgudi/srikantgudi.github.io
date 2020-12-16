@@ -64,33 +64,7 @@
 				'created presentation of mobile application in Powerpoint',
 				'created UI for password management using AngularJS'
 			]
-		},
-		{
-			header: {
-				dates: '12-Feb-2010 –22-Sep-2011',
-				jobTitle: 'Senior Software Engineer',
-				org: 'TechJini Solutions, Bengaluru',
-			},
-			content: [
-				'Environment: MySQL, PHP, HTML, CSS, Jquery, amChart',
-				'Projects worked on:',
-				'Coupons System (MySql, PHP, HTML, CSS, Jquery, HighCharts)',
-				'eLearning System (PHP [Symfony], MySql, HTML, CSS, Jquery, amCharts): Developed Quiz module. Developed reports including one using amCharts',
-				'Contest based application (PHP [Symfony], MySql, HTML, CSS, Jquery)'
-			]
-		},
-		{
-			header: {
-				dates: '25-Jul-2007 – 14-Mar-2009',
-				jobTitle: 'Senior Software Engineer',
-				org: 'TLI Software, Bengaluru',
-			},
-			content: [
-				'Environment:​ PHP, MySQL, HTML, CSS, Javascript, Jquery',
-				'Worked​ as Full-time resource (3 months on-site and 3 months offsite), with Computer Methods I​nternational Corp, Toronto, Canada (www.cmic.ca), on JasperReports',
-				'Developed web applications independently as per client requirements using PHP, MySql'
-			]
-		},
+		}
 	];
 	let curExp = expList[0];
 </script>

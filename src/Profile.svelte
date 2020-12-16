@@ -1,30 +1,16 @@
-<script>
-import Panel from "./Panel.svelte";
-
-    let profiles = [
-        'Senior software professional with over 20 years of experience',
-        '2005 - 2013: Web development experience using PHP, MySQL',
-        '2014 onwards into UI development. Skills used Angular, React, Svelte, Stencil, NodeJs, MySql',
-        'Can create wire-frames, POCs'
-    ];
-</script>
-
-<style>
-    .text {
-        font-family: Montserrat;
-        font-size: 16px;
-    }
-</style>
-
-<Panel>
-    <div slot="header">
+<div class="section">
+    <div class="sectiontitle">
         Profile
     </div>
-    <div slot="content">
-        <ul class='text'>
-            {#each profiles as line}
-                <li>{line}</li>
-            {/each}
-        </ul>
-    </div>
-</Panel>
+    <ul>
+        <li>
+            Senior software professional with over 20 years of experience in various technologies
+        </li>
+        <li>
+            From April 2014 into frontend development using Angular, Svelte, Stencil, React, VueJS, NodeJS
+        </li>
+        <li>
+            Can create POCs, presentations, and wireframes.
+        </li>
+    </ul>
+</div>

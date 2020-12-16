@@ -1,5 +1,5 @@
 <script>
-import Panel from "./Panel.svelte";
+    import Rategraph from './Rategraph.svelte';
 
     let skills = [
 		{
@@ -38,63 +38,38 @@ import Panel from "./Panel.svelte";
 			]
 		}
 	];
-	let selectedGroup = skills[0];
+	let groupId = 0;
+
+	const setGroupId = (n) => {
+		groupId = n;
+	}
 </script>
 
-<style>
-    .skills {
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        grid-gap: 10px;
-        overflow-y: auto;
-        overflow-x: hidden;
-        padding: 10px;
-    }
-    .skill-group {
-        padding: 4px;
-        font-size: 12px;
-        cursor: pointer;
-        font-family: Roboto;
-    }
-    .skill-group.active {
-        color: white;
-        justify-content: center;
-        font-weight: 600;
-        font-family: Montserrat;
-        letter-spacing: 2px;
-        font-size: 18px;
-    }
-</style>
-<Panel>
-    <div slot="header">
+
+<div class="section">
+    <div class="sectiontitle">
         Technical Skills
     </div>
-    <div slot="content">
-        <div>
-            {#each skills as skill}
-            <Panel hdrbg="#333333" showcontent={selectedGroup===skill}>
-                <div slot="header" on:click={() => selectedGroup=skill}>
-                    <div class="skill-group" class:active={selectedGroup === skill} 
-                        on:click={() => selectedGroup = skill}>
-                        {skill.group}
-                    </div>
+    <div class="skillgroups">
+        {#each skills as skill, idx}
+            <div class="skillgroup">
+                <div class="groupname" 
+                on:click={() => {setGroupId(idx);}}>
+                    {skill.group}
                 </div>
-                <div slot="content">
-                    <div class="skills">
-                        {#each selectedGroup.items as item}
-                            <div>
-                                <div>{item.name}</div>
-                                <svg height="40" width="200">
-                                    <rect x="0" y="10" height="30" width="150" fill="transparent" stroke="blue" />
-                                    <rect x="0" y="10" height="30" width={item.rating * 15} fill="darkslateblue" stroke="blue" />
-                                    <text x="80%" y="70%">{item.rating}/10</text>
-                                </svg>
+                {#if groupId === idx}
+                    <div class="skillslist">
+                        {#each skill.items as item}
+                            <div class="skill">
+                                <span class="txtright">
+                                    {item.name}: ({item.rating} / 10)
+                                </span>
+                                <span><Rategraph rating={item.rating} /></span>
                             </div>
                         {/each}
                     </div>
-                </div>
-            </Panel>
-            {/each}
-        </div>
+                {/if}
+            </div>
+        {/each}
     </div>
-</Panel>
+</div>
