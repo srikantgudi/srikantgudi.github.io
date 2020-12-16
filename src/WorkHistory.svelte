@@ -7,7 +7,7 @@
 				org: 'Mphasis, Bengaluru',
 			},
 			content: [
-                'Currently working as Lead developer in Design System with Schneider Electric',
+        'Currently working as Lead frontend developer with Schneider Electric',
 				'Worked offshore in Bengaluru with a banking conglomerate on  projects in Angular and React',
 				'Worked onsite in Glasgow, UK with a banking conglomerate on Angular based projects',
 				'Developed UI for a POC for Digital Readiness Analysis Tool to create a survey questionnaire for various categories using Angular, Material Design, HTML5, CSS3, JavaScript, API integration',
@@ -101,13 +101,8 @@
 	</div>
 	{#each expList as exp}
 		<div class="exp">
-			<div on:click={() => curExp = exp}>
-				<div class="exptitle">
-					{exp.header.dates} | {exp.header.jobTitle}
-					<div class="subtitle">
-						{exp.header.org}
-					</div>
-				</div>
+			<div on:click={() => curExp = exp} class="exptitle">
+	      {exp.header.dates} | {exp.header.jobTitle} | {exp.header.org}
 			</div>
 			{#if curExp === exp}
 			<div>

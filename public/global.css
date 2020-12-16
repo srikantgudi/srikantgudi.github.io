@@ -27,13 +27,29 @@ body {
   padding: 10px 20px;
   border-radius: 0 0 28px 28px;
 }
+.contact {
+  font-family: Montserrat;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(5, auto);
+}
+.contact-item {
+  max-width: 260px;
+}
 .pageTitle {
   font-size: 24px;
   text-transform: uppercase;
   font-weight: 600;
+  font-family: Righteous;
 }
 .pos {
   font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  font-family: Righteous;
+  color: darkslateblue;
 }
 .resume {
   box-shadow: 0 2px 10px #666666;
@@ -45,6 +61,7 @@ body {
   padding: 4px 0;
 }
 .section {
+  font-family: Montserrat;
   border-radius: 8px 8px 0 0;
   flex: 1;
   min-width: 300px;
@@ -69,6 +86,7 @@ body {
   box-shadow: 0 2px 4px slategrey;
 }
 .exptitle {
+  font-family: Righteous;
   background-color: lightgrey;
   color: darkslateblue;
   font-size: 14px;
