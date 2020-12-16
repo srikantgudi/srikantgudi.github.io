@@ -4,51 +4,7 @@
 	import Skills from "./Skills.svelte";
 	import WorkHistory from "./WorkHistory.svelte";
 
-	let profiles = [
-		'Senior software professional with over 20 years of experience',
-		'2005 - 2013: Web development experience using PHP, MySQL',
-		'2014 onwards into UI development. Skills used Angular, React, Svelte, Stencil, NodeJs, MySql',
-		'Can create wire-frames, POCs'
-	];
-	let skills = [
-		{
-			group: 'Web Technologies',
-			items: [
-				{name: 'HTML5', rating: 8},
-				{name: 'CSS3', rating: 8},
-				{name: 'JavaScript', rating: 8},
-			]
-		},
-		{
-			group: 'Frameworks/ Libraries',
-			items: [
-				{name: 'Angular', rating: 8},
-				{name: 'Svelte', rating: 8}, 
-				{name: 'Stencil', rating: 6},
-				{name: 'React', rating: 7},
-				{name: 'Vue', rating: 7},
-				{name: 'Nuxt', rating: 7},
-			]
-		},
-		{
-			group: 'Databases/ NoSQL',
-			items: [
-				{name: 'MySql', rating: 7},
-				{name: 'Mongodb', rating: 6},
-			]
-		},
-		{
-			group: 'Others',
-			items: [
-				{name: 'Git/ Bitbucket', rating: 7},
-				{name: 'Confluence', rating: 7},
-				{name: 'Visual Studio Code', rating: 8},
-				{name: 'IntelliJ', rating: 7}
-			]
-		}
-	];
-	let opt = 1;
-	let selectedGroup = skills[0];
+  let opt = 1
 </script>
 
 <div class="container">
