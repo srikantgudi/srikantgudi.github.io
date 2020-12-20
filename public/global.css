@@ -10,9 +10,6 @@ body {
 .sectiontitle {
   font-size: 16px;
 }
-.subtitle {
-  font-size: 12px;
-}
 .main {
   padding: 0 20px;
   font-family: ubuntu;
@@ -43,6 +40,9 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   font-family: Righteous;
+}
+.subtitle {
+  font-size: 12px;
 }
 .note {
   display: flex;
@@ -91,15 +91,28 @@ body {
   margin: 0 0 8px;
   box-shadow: 0 2px 4px slategrey;
 }
+.exp.active {
+	padding-bottom: 10px;
+}
 .exptitle {
   background-color: lightgrey;
   font-size: 14px;
   padding: 10px;
 }
+.exp-content {
+	display: none;
+	transition: all 1s;
+}
+.exp-content.active {
+	display: block;
+}
 .jobtitle {
   color: darkslateblue;
   font-family: Righteous;
   font-size: 16px;
+}
+.jobtitle.hilite {
+	font-weight: 600;
 }
 .txtright {
   text-align: right;

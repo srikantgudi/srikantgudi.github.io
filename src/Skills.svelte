@@ -14,7 +14,7 @@
 			group: 'Frameworks/ Libraries',
 			items: [
 				{name: 'Angular', rating: 8},
-				{name: 'Svelte', rating: 8}, 
+				{name: 'Svelte', rating: 8},
 				{name: 'Stencil', rating: 6},
 				{name: 'React', rating: 7},
 				{name: 'Vue', rating: 7},
@@ -45,31 +45,37 @@
 	}
 </script>
 
+<style>
+  dl.skills {
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    box-shadow: 0 2px 4px #999999;
+    margin-bottom: 2em;
+  }
+dt {
+  font-weight: bold;
+  background-color: skyblue;
+  padding: 4px;
+}
+li {
+  list-style: square;
+}
+</style>
 
-<div class="section">
-    <div class="sectiontitle">
-        Technical Skills
-    </div>
-    <div class="skillgroups">
-        {#each skills as skill, idx}
-            <div class="skillgroup">
-                <div class="groupname" 
-                on:click={() => {setGroupId(idx);}}>
-                    {skill.group}
-                </div>
-                {#if groupId === idx}
-                    <div class="skillslist">
-                        {#each skill.items as item}
-                            <div class="skill">
-                                <span class="txtright">
-                                    {item.name}: ({item.rating} / 10)
-                                </span>
-                                <span><Rategraph rating={item.rating} /></span>
-                            </div>
-                        {/each}
-                    </div>
-                {/if}
-            </div>
-        {/each}
-    </div>
-</div>
+<dl class="skills">
+	{#each skills as skill}
+		<dt>{skill.group}</dt>
+		<dd>
+			{#each skill.items as item}
+				<li>
+					<svg height="30" width="100">
+						<rect x="0" y="0" height="100%" width="100%" fill="lightgrey"/>
+						<rect x="0" y="0" height="100%" width={item.rating * 10} fill="grey"/>
+					</svg>
+					{item.name}
+			</li>
+			{/each}
+		</dd>
+	{/each}
+</dl>
