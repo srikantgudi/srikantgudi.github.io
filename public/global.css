@@ -45,7 +45,11 @@ body {
   font-family: Righteous;
 }
 .note {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
   text-align: center;
+  font-size: 12px;
 }
 .pos {
   font-size: 18px;

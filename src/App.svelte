@@ -11,7 +11,7 @@
 	<main class="main">
 		<Topnav />
 		<div class="note">
-			<small>Highlight over each section to see effect!</small>
+			Highlight over each section to see effect!
 		</div>
 		<div class="resume">
 			<Profile />
