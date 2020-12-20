@@ -14,7 +14,7 @@
 			group: 'Frameworks/ Libraries',
 			items: [
 				{name: 'Angular', rating: 8},
-				{name: 'Svelte', rating: 8},
+				{name: 'Svelte', rating: 7},
 				{name: 'Stencil', rating: 6},
 				{name: 'React', rating: 7},
 				{name: 'Vue', rating: 7},
@@ -55,12 +55,12 @@
         <dt class="groupname">{skill.group}</dt>
         <dd>
           {#each skill.items as item}
-            <li>
-              <svg height="30" width="100">
+            <li class="skill">
+              <svg height="30" width="150">
                 <rect x="0" y="0" height="100%" width="100%" fill="lightgrey"/>
-                <rect x="0" y="0" height="100%" width={item.rating * 10} fill="grey"/>
+                <rect x="0" y="0" height="100%" width={item.rating * 15} fill="grey"/>
               </svg>
-              {item.name}
+              <span class="skillname">{item.name}</span>
           </li>
           {/each}
         </dd>

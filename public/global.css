@@ -145,12 +145,17 @@ body {
   padding: 10px;
 }
 .skill {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  font-size: 12px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
   margin: 4px 0;
 }
-
+.skillname {
+  margin-left: 10px;
+}
+.skillname:before {
+  content: "\ab\20";
+}
 @media (max-width: 960px) {
   .grid {
     width: 100%;
