@@ -18,8 +18,8 @@ body {
   font-family: ubuntu;
 }
 .topnav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   box-shadow: 0 2px 10px #666666;
@@ -27,11 +27,16 @@ body {
   padding: 10px 20px;
   border-radius: 0 0 28px 28px;
 }
-.pos {
+.contact {
   font-family: Montserrat;
-  text-align: center;
-  box-shadow: 0 2px 8px #999999;
-  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(5, auto);
+}
+.contact-item {
+  max-width: 260px;
 }
 .pageTitle {
   font-size: 24px;
@@ -44,9 +49,6 @@ body {
   font-style: italic;
   font-family: Righteous;
   color: darkslateblue;
-}
-.note {
-  text-align: center;
 }
 .resume {
   box-shadow: 0 2px 10px #666666;
