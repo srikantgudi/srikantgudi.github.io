@@ -8,7 +8,7 @@
       <div>
         <svg height="30" width="auto">
           <text x="50%" y="20" class="pos" text-anchor="middle">
-            Senior Frontend Professional
+            Senior Front-end Professional
             <animate attributeName="fill"
               values="blue;lightblue;navy;lightblue;blue"
               begin="0" dur="10s" repeatCount="indefinite" />
