@@ -100,9 +100,7 @@ body {
 .exp {
   margin: 0 0 8px;
   box-shadow: 0 2px 4px slategrey;
-}
-.exp.active {
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 .exptitle {
   background-color: lightgrey;
@@ -110,11 +108,8 @@ body {
   padding: 10px;
 }
 .exp-content {
-	display: none;
-	transition: all 1s;
-}
-.exp-content.active {
 	display: block;
+  height: fit-content;
 }
 .jobtitle {
   color: darkslateblue;
@@ -161,12 +156,11 @@ body {
     width: 100%;
     flex-direction: column;
   }
-  .section {
-    height: 100vmin;
+  .profile, .skills, .section {
+    height: auto;
     overflow-y: auto;
   }
   .resume {
-    height: 100vmin;
     overflow-y: auto;
   }
 }
@@ -175,11 +169,9 @@ body {
     font-size: 16px;
   }
   .section {
-    height: 100vmin;
     overflow-y: auto;
   }
   .resume {
-    min-height: 100vmin;
     overflow-y: auto;
   }
 }

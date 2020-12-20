@@ -101,7 +101,7 @@
 	</div>
   {#each expList as exp}
   	<dl class="exp" class:active={curExp===exp}>
-  		<dt class="exptitle" on:click={() => curExp = exp}>
+  		<dt class="exptitle" on:mouseover={() => curExp = exp}>
   			<div class="jobtitle" class:hilite={curExp === exp}>
   				{exp.header.dates} | {exp.header.jobTitle}
   			</div>
@@ -109,7 +109,7 @@
   				{exp.header.org}
   			</div>
   		</dt>
-  		<dd class="exp-content" class:active={curExp === exp}>
+  		<dd class="exp-content">
   			<ul>
   				{#each exp.content as item}
   					<li>
