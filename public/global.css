@@ -10,6 +10,8 @@ body {
 .container {
   box-shadow: 0 0 20px cadetblue;
   border-radius: 4px;
+  max-height: 75vmax;
+  overflow-y: hidden;
 }
 .sectiontitle {
   font-size: 16px;
@@ -69,8 +71,8 @@ body {
   flex-wrap: wrap;
   background-color: slategrey;
   padding: 4px 0;
-  max-height: 100vmax;
-  overflow-y: auto;
+  height: 80vh;
+  overflow-y: hidden;
 }
 .section {
   font-family: Montserrat;
@@ -82,11 +84,11 @@ body {
   padding: 0 10px;
   background-color: whitesmoke;
   transition: all 0.5s ease-in-out;
-  overflow-y: auto;
+  max-height: 75vh;
+  overflow-y: hidden;
 }
 .section:hover {
   flex: 2;
-  height: 75vh;
   overflow-y: auto;
 }
 .sectiontitle {
@@ -160,11 +162,24 @@ body {
     flex-direction: column;
   }
   .section {
-    height: auto;
+    height: 100vmin;
+    overflow-y: auto;
+  }
+  .resume {
+    height: 100vmin;
+    overflow-y: auto;
   }
 }
 @media (max-width: 400px) {
   .pos {
     font-size: 16px;
+  }
+  .section {
+    height: 100vmin;
+    overflow-y: auto;
+  }
+  .resume {
+    min-height: 100vmin;
+    overflow-y: auto;
   }
 }
