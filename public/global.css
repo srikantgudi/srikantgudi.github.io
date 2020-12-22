@@ -7,11 +7,14 @@ html,
 body {
   position: relative;
 }
+.container {
+  box-shadow: 0 0 20px cadetblue;
+  border-radius: 4px;
+  max-height: 75vmax;
+  overflow-y: hidden;
+}
 .sectiontitle {
   font-size: 16px;
-}
-.subtitle {
-  font-size: 12px;
 }
 .main {
   padding: 0 20px;
@@ -44,6 +47,16 @@ body {
   font-weight: 600;
   font-family: Righteous;
 }
+.subtitle {
+  font-size: 12px;
+}
+.note {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  text-align: center;
+  font-size: 12px;
+}
 .pos {
   font-size: 18px;
   font-style: italic;
@@ -58,6 +71,8 @@ body {
   flex-wrap: wrap;
   background-color: slategrey;
   padding: 4px 0;
+  height: 80vh;
+  overflow-y: hidden;
 }
 .section {
   font-family: Montserrat;
@@ -69,10 +84,12 @@ body {
   padding: 0 10px;
   background-color: whitesmoke;
   transition: all 0.5s ease-in-out;
-  overflow-y: auto;
+  max-height: 75vh;
+  overflow-y: hidden;
 }
 .section:hover {
   flex: 2;
+  overflow-y: auto;
 }
 .sectiontitle {
   background-color: darkslategrey;
@@ -83,16 +100,24 @@ body {
 .exp {
   margin: 0 0 8px;
   box-shadow: 0 2px 4px slategrey;
+	padding-bottom: 20px;
 }
 .exptitle {
   background-color: lightgrey;
   font-size: 14px;
   padding: 10px;
 }
+.exp-content {
+	display: block;
+  height: fit-content;
+}
 .jobtitle {
   color: darkslateblue;
   font-family: Righteous;
   font-size: 16px;
+}
+.jobtitle.hilite {
+	font-weight: 600;
 }
 .txtright {
   text-align: right;
@@ -102,6 +127,7 @@ body {
   background-color: #333333;
   color: whitesmoke;
   padding: 4px 10px;
+  margin-bottom: 4px;
 }
 .skillgroups {
   display: block;
@@ -113,28 +139,44 @@ body {
   box-shadow: 0 2px 2px #999999;
   margin-bottom: 2px;
   cursor: pointer;
+  padding-bottom: 5px;
 }
 .skillslist {
   padding: 10px;
 }
 .skill {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  font-size: 12px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
   margin: 4px 0;
 }
-
+.skillname {
+  margin-left: 10px;
+}
+.skillname:before {
+  content: "\ab\20";
+}
 @media (max-width: 960px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
-  .section {
+  .profile, .skills, .section {
     height: auto;
+    overflow-y: auto;
+  }
+  .resume {
+    overflow-y: auto;
   }
 }
 @media (max-width: 400px) {
   .pos {
     font-size: 16px;
+  }
+  .section {
+    overflow-y: auto;
+  }
+  .resume {
+    overflow-y: auto;
   }
 }

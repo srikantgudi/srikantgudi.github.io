@@ -14,7 +14,7 @@
 			group: 'Frameworks/ Libraries',
 			items: [
 				{name: 'Angular', rating: 8},
-				{name: 'Svelte', rating: 8}, 
+				{name: 'Svelte', rating: 7},
 				{name: 'Stencil', rating: 6},
 				{name: 'React', rating: 7},
 				{name: 'Vue', rating: 7},
@@ -50,26 +50,20 @@
     <div class="sectiontitle">
         Technical Skills
     </div>
-    <div class="skillgroups">
-        {#each skills as skill, idx}
-            <div class="skillgroup">
-                <div class="groupname" 
-                on:click={() => {setGroupId(idx);}}>
-                    {skill.group}
-                </div>
-                {#if groupId === idx}
-                    <div class="skillslist">
-                        {#each skill.items as item}
-                            <div class="skill">
-                                <span class="txtright">
-                                    {item.name}: ({item.rating} / 10)
-                                </span>
-                                <span><Rategraph rating={item.rating} /></span>
-                            </div>
-                        {/each}
-                    </div>
-                {/if}
-            </div>
-        {/each}
-    </div>
+    <dl class="skillgroups">
+      {#each skills as skill}
+        <dt class="groupname">{skill.group}</dt>
+        <dd>
+          {#each skill.items as item}
+            <li class="skill">
+              <svg height="30" width="150">
+                <rect x="0" y="0" height="100%" width="100%" fill="lightgrey"/>
+                <rect x="0" y="0" height="100%" width={item.rating * 15} fill="grey"/>
+              </svg>
+              <span class="skillname">{item.name}</span>
+          </li>
+          {/each}
+        </dd>
+      {/each}
+    </dl>
 </div>
