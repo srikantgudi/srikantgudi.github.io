@@ -24,20 +24,4 @@
     <li>Master in Computer Management</li>
     <li>Bachelor of Commerce</li>
   </ul>
-  <div class="sectiontitle">Certifications:</div>
-  <ul>
-    <li>Brainbench Certifications in C++, COBOL, and Visual Basic</li>
-    <li>
-      <a
-        href="https://www.hackerrank.com/certificates/24b0d06ab4d8"
-        target="_blank">
-        HackerRank certification in Python (Basic)
-      </a>
-      <a
-        href="https://www.hackerrank.com/certificates/5371896c1aab"
-        target="_blank">
-        HackerRank certification in Python (Intermediate)
-      </a>
-    </li>
-  </ul>
 </div>
