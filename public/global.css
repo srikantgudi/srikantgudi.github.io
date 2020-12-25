@@ -87,7 +87,7 @@ body {
   max-height: 75vh;
   overflow-y: hidden;
 }
-.section:hover {
+.section:not(:nth-child(2)):hover {
   flex: 2;
   overflow-y: auto;
 }
