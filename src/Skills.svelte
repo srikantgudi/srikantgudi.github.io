@@ -1,48 +1,6 @@
 <script>
     import Rategraph from './Rategraph.svelte';
 
-    let skills = [
-		{
-			group: 'Web Technologies',
-			items: [
-				{name: 'HTML5', rating: 8},
-				{name: 'CSS3', rating: 8},
-				{name: 'JavaScript', rating: 8},
-			]
-		},
-		{
-			group: 'Frameworks/ Libraries',
-			items: [
-				{name: 'Angular', rating: 8},
-				{name: 'Svelte', rating: 7},
-				{name: 'Stencil', rating: 6},
-				{name: 'React', rating: 7},
-				{name: 'Vue', rating: 7},
-				{name: 'Nuxt', rating: 7},
-			]
-		},
-		{
-			group: 'Databases/ NoSQL',
-			items: [
-				{name: 'MySql', rating: 7},
-				{name: 'Mongodb', rating: 6},
-			]
-		},
-		{
-			group: 'Others',
-			items: [
-				{name: 'Git/ Bitbucket', rating: 7},
-				{name: 'Confluence', rating: 7},
-				{name: 'Visual Studio Code', rating: 8},
-				{name: 'IntelliJ', rating: 7}
-			]
-		}
-	];
-	let groupId = 0;
-
-	const setGroupId = (n) => {
-		groupId = n;
-	}
 </script>
 
 
@@ -51,19 +9,30 @@
         Technical Skills
     </div>
     <dl class="skillgroups">
-      {#each skills as skill}
-        <dt class="groupname">{skill.group}</dt>
-        <dd>
-          {#each skill.items as item}
-            <li class="skill">
-              <svg height="30" width="150">
-                <rect x="0" y="0" height="100%" width="100%" fill="lightgrey"/>
-                <rect x="0" y="0" height="100%" width={item.rating * 15} fill="grey"/>
-              </svg>
-              <span class="skillname">{item.name}</span>
-          </li>
-          {/each}
-        </dd>
-      {/each}
+      <svg height="400" width="400">
+				<circle r="30" cx="65" cy="70" fill="#dde" />
+				<text x="35" y="75" font-size="15">Angular</text>
+				<circle r="18" cx="120" cy="70" fill="lightblue" />
+				<text x="105" y="75" font-size="11" font-weight="300">React</text>
+				<circle r="22" cx="170" cy="70" fill="#def" />
+				<text x="156" y="75" font-size="14" font-weight="600" fill="blue">Vue</text>
+				<circle r="22" cx="218" cy="70" fill="#def" />
+				<text x="195" y="75" font-size="14" font-weight="600" fill="blue">Svelte</text>
+				<circle r="18" cx="270" cy="70" fill="#def" />
+				<text x="250" y="75" font-size="12" font-weight="600" fill="blue">Stencil</text>
+				<circle r="30" cx="65" cy="140" fill="#def" />
+				<text x="28" y="145" font-size="14" font-weight="600" fill="blue">JavaScript</text>
+				<circle r="25" cx="132" cy="140" fill="#def" />
+				<text x="108" y="145" font-size="14" font-weight="600" fill="blue">HTML5</text>
+				<circle r="25" cx="190" cy="140" fill="#def" />
+				<text x="170" y="145" font-size="14" fill="blue" font-weight="600">CSS3</text>
+				<circle r="25" cx="250" cy="140" fill="lightblue" />
+				<text x="228" y="145" font-size="12" font-weight="600" fill="blue">NodeJS</text>
+				
+				<circle r="18" cx="122" cy="200" fill="lightblue" />
+				<text x="100" y="205" font-size="14">MySQL</text>
+				<ellipse rx="20" ry="15" cx="180" cy="200" fill="#ddd" />
+				<text x="168" y="205" font-size="16">Git</text>
+			</svg>
     </dl>
 </div>
