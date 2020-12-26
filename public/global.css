@@ -87,7 +87,7 @@ body {
   max-height: 75vh;
   overflow-y: hidden;
 }
-.section:not(:nth-child(2)):hover {
+.section:hover {
   flex: 2;
   overflow-y: auto;
 }
@@ -100,7 +100,7 @@ body {
 .exp {
   margin: 0 0 8px;
   box-shadow: 0 2px 4px slategrey;
-	padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 .exptitle {
   background-color: lightgrey;
@@ -108,7 +108,7 @@ body {
   padding: 10px;
 }
 .exp-content {
-	display: block;
+  display: block;
   height: fit-content;
 }
 .jobtitle {
@@ -117,7 +117,7 @@ body {
   font-size: 16px;
 }
 .jobtitle.hilite {
-	font-weight: 600;
+  font-weight: 600;
 }
 .txtright {
   text-align: right;
@@ -154,14 +154,16 @@ body {
   margin-left: 10px;
 }
 .skillname:before {
-  content: "\ab\20";
+  content: '\ab\20';
 }
 @media (max-width: 960px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
-  .profile, .skills, .section {
+  .profile,
+  .skills,
+  .section {
     height: auto;
     overflow-y: auto;
   }
