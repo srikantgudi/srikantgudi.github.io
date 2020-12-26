@@ -10,7 +10,7 @@ body {
 .container {
   box-shadow: 0 0 20px cadetblue;
   border-radius: 4px;
-  max-height: 75vmax;
+  height: 96vmax;
   overflow-y: hidden;
 }
 .sectiontitle {
