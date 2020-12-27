@@ -180,7 +180,7 @@ li {
   flex: 1;
   font-size: 14px;
   box-shadow: 0 2px 2px #999999;
-  margin-bottom: 8px;
+  margin: 0 20px 8px;
   cursor: pointer;
   padding-bottom: 5px;
   border-radius: 0 0 10px 10px;
