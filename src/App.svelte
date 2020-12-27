@@ -27,7 +27,7 @@
           on:click={() => {
             opt = 2
           }}>
-          Technical Skills
+          Skills
         </button>
         <button
           class="sectiontitle link"
