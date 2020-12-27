@@ -1,26 +1,53 @@
 <script>
+  export let opt
   import Rating from './Rating.svelte'
   let name = 'Technical Skills'
   let skills = [
-    { name: 'Angular', level: 8 },
-    { name: 'Svelte', level: 7 },
-    { name: 'VueJS', level: 7 },
-    { name: 'React', level: 7 },
-    { name: 'Stencil', level: 6 },
-    { name: 'NodeJS', level: 6 },
-    { name: 'JavaScript', level: 8 },
-    { name: 'HTML5', level: 8 },
-    { name: 'CSS3', level: 7 },
-    { name: 'MySQL', level: 7 },
-    { name: 'MongoDB', level: 6 },
-    { name: 'SVG', level: 5 },
-    { name: 'Python', level: 4 },
+    {
+      group: 'Frameworks',
+      items: [
+        { name: 'Angular', level: 8 },
+        { name: 'Svelte', level: 7 },
+        { name: 'VueJS', level: 7 },
+        { name: 'React', level: 7 },
+        { name: 'Stencil', level: 6 },
+      ],
+    },
+    {
+      group: 'Web Skills',
+      items: [
+        { name: 'JavaScript', level: 8 },
+        { name: 'HTML5', level: 8 },
+        { name: 'CSS3', level: 7 },
+        { name: 'NodeJS', level: 6 },
+        { name: 'SVG', level: 5 },
+      ],
+    },
+    {
+      group: 'Databases/ NoSQL',
+      items: [
+        { name: 'MySQL', level: 7 },
+        { name: 'MongoDB', level: 6 },
+      ],
+    },
+    {
+      group: 'Others',
+      items: [
+        { name: 'Django', level: 5 },
+        { name: 'Python', level: 4 },
+      ],
+    },
   ]
 </script>
 
-<div class="section">
+<div class="section" class:active={opt === 2}>
   <div class="sectiontitle">Technical Skills</div>
   {#each skills as skill}
-    <Rating text={skill.name} level={skill.level} />
+    <div class="skillgroup">
+      <div class="groupname">{skill.group}</div>
+      {#each skill.items as item}
+        <Rating text={item.name} level={item.level} />
+      {/each}
+    </div>
   {/each}
 </div>

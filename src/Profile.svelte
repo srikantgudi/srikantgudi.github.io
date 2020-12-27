@@ -1,4 +1,7 @@
-<div class="section">
+<script>
+  export let opt;
+</script>
+<div class="section" class:active={opt === 1}>
   <div class="sectiontitle">Profile</div>
   <ul>
     <li>
@@ -19,9 +22,5 @@
     </li>
     <li>Can create POCs, presentations, and wireframes.</li>
   </ul>
-  <div class="sectiontitle">Academic Qualifications:</div>
-  <ul>
-    <li>Master in Computer Management</li>
-    <li>Bachelor of Commerce</li>
-  </ul>
+  
 </div>
