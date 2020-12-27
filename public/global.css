@@ -11,6 +11,7 @@ body {
   box-shadow: 0 0 20px cadetblue;
   border-radius: 4px;
   overflow-y: hidden;
+  height: 96vh;
 }
 .sectiontitle {
   font-size: 16px;
