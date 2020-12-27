@@ -10,8 +10,8 @@ body {
 .container {
   box-shadow: 0 0 20px cadetblue;
   border-radius: 4px;
-  overflow-y: hidden;
-  height: 96vh;
+  overflow-y: auto;
+  height: 100vh;
 }
 .sectiontitle {
   font-size: 16px;
@@ -104,12 +104,13 @@ body {
   flex: 1;
   min-width: 300px;
   box-shadow: 0 2px 4px slategrey;
-  margin: 4px 0;
+  margin: 4px 0 20px;
   background-color: whitesmoke;
   transition: all 0.5s ease-in-out;
   max-height: 75vh;
-  overflow-y: hidden;
+  overflow-y: auto;
   display: none;
+  padding-bottom: 20px;
 }
 ul {
   margin: 10px;
