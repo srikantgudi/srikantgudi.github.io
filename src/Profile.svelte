@@ -1,7 +1,6 @@
 <script>
-  export let opt;
 </script>
-<div class="section" class:active={opt === 1}>
+<div class="section">
   <div class="sectiontitle">Profile</div>
   <ul>
     <li>

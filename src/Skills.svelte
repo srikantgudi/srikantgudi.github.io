@@ -1,5 +1,4 @@
 <script>
-  export let opt
   import Rating from './Rating.svelte'
   let name = 'Technical Skills'
   let skills = [
@@ -40,7 +39,7 @@
   ]
 </script>
 
-<div class="section" class:active={opt === 2}>
+<div class="section">
   <div class="sectiontitle">Technical Skills</div>
   {#each skills as skill}
     <div class="skillgroup">

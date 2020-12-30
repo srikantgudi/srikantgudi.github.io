@@ -1,10 +1,12 @@
 <script>
+  import Master from './Master.svelte'
   import Topnav from './Topnav.svelte'
   import Profile from './Profile.svelte'
   import Skills from './Skills.svelte'
   import WorkHistory from './WorkHistory.svelte'
   import Academic from './Academic.svelte'
 
+  let comp = Profile
   let opt = 1
 </script>
 
@@ -15,42 +17,39 @@
       <div class="resumenav">
         <button
           class="sectiontitle link"
-          class:active={opt === 1}
+          class:active={comp === Profile}
           on:click={() => {
-            opt = 1
+            comp = Profile
           }}>
           Profile
         </button>
         <button
           class="sectiontitle link"
-          class:active={opt === 2}
+          class:active={comp === Skills}
           on:click={() => {
-            opt = 2
+            comp = Skills
           }}>
           Skills
         </button>
         <button
           class="sectiontitle link"
-          class:active={opt === 3}
+          class:active={comp === WorkHistory}
           on:click={() => {
-            opt = 3
+            comp = WorkHistory
           }}>
           Work History
         </button>
         <button
           class="sectiontitle link"
-          class:active={opt === 4}
+          class:active={comp === Academic}
           on:click={() => {
-            opt = 4
+            comp = Academic
           }}>
           Academic
         </button>
       </div>
-      <div class='resumecontent'>
-        <Profile {opt} />
-        <Skills {opt} />
-        <WorkHistory {opt} />
-        <Academic {opt} />
+      <div class="resumecontent">
+        <svelte:component this={comp} />
       </div>
     </div>
   </main>

@@ -1,5 +1,4 @@
 <script>
-  export let opt
   let expList = [
     {
       header: {
@@ -97,7 +96,7 @@
   let curExp = expList[0]
 </script>
 
-<div class="section" class:active={opt === 3}>
+<div class="section">
   <div class="sectiontitle">Work History</div>
   {#each expList as exp}
     <dl class="exp" class:active={curExp === exp}>
