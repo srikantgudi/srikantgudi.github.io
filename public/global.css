@@ -75,6 +75,16 @@ main {
 .exp {
   margin: 10px;
 }
+.exptitle {
+  background-color: lightskyblue;
+  font-size: 14px;
+  padding: 0 10px;
+}
+.exptitle.active {
+  background-color: darkslategrey;
+  color: whitesmoke;
+  padding: 0 20px;
+}
 summary.section {
   font-family: ubuntu;
   padding: 4px;
