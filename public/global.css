@@ -1,211 +1,91 @@
-:root {
-  margin: 0 1em;
-  font-family: Ubuntu;
-  font-size: 14px;
-  height: 100vh;
+main {
+  padding: 1em 4em;
 }
-html,
-body {
-  position: relative;
-  overflow: hidden;
+.info {
+  box-shadow: 0 0 4px teal;
+  padding: 1em;
+  margin-bottom: 1em;
 }
-.container {
-  box-shadow: 0 0 20px cadetblue;
-  border-radius: 4px;
-  height: 95vh;
-  overflow-y: hidden;
-}
-.main {
-  padding: 0 20px;
-  font-family: ubuntu;
-}
-.topnav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  box-shadow: 0 2px 10px #666666;
-  margin-bottom: 10px;
-  padding: 10px 20px;
-  border-radius: 0 0 28px 28px;
-}
-.navmenu {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-.menuitem {
-  cursor: pointer;
-  text-align: center;
-  width: 15em;
-  height:auto;
-  background-color: #ffe;
-  margin: 4px;
-  border-radius: 10px;
-  font-size: 20px;
-}
-.menuitem.active {
-  border-radius: 1em;
-  background-color: teal;
-  color: #ffe;
-  box-shadow: 0 0 10px #ffe;
-  font-size: 200%;
-  padding: 10px;
-}
-.menuitem.active:before {
-  content: '\20\ab\20';
-}
-.menuitem.active:after {
-  content: '\20\bb\20';
+.apptitle {
+  font-family: Righteous;
+  font-size: 2em;
 }
 .contact {
-  font-family: Montserrat;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-evenly;
-  grid-template-columns: repeat(5, auto);
-}
-.contact-item {
-  max-width: 260px;
-}
-.pageTitle {
-  font-size: 24px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-family: Righteous;
-}
-.subtitle {
-  font-size: 12px;
-}
-.note {
-  display: flex;
-  flex-direction: column;
-  height: 20px;
-  text-align: center;
-  font-size: 12px;
+  font-family: ubuntu;
+  margin: 0.2em 0;
 }
 .pos {
-  font-size: 18px;
+  font-family: Orbitron;
+  font-size: 1.5em;
   font-style: italic;
-  font-family: Righteous;
-  color: darkslateblue;
-}
-.resume {
-  box-shadow: 0 2px 10px #666666;
-  border-radius: 10px 10px 0 0;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  background-color: slategrey;
-  padding: 4px 0 2em;
-  height: inherit;
-  overflow-y: auto;
-  margin-bottom: 4em;
 }
 .section {
+  box-shadow: 0 0 4px #999999;
+  padding: 0.5em 1em;
   font-family: Montserrat;
-  border-radius: 8px 8px 0 0;
-  flex: 1;
-  min-width: 300px;
-  box-shadow: 0 2px 4px slategrey;
-  margin: 4px 0;
-  padding: 0 10px;
-  background-color: whitesmoke;
-  transition: all 0.5s ease-in-out;
-  height: 75vh;
-  overflow-y: hidden;
+  margin-bottom: 10px;
+  transition: all 0.5s ease-in;
 }
-.section:hover {
-  flex: 2;
-  overflow-y: auto;
+.current-section {
+  display: none;
+}
+.current-section.active {
+  display: block;
 }
 .sectiontitle {
+  font-size: 20px;
+  font-family: Orbitron;
+  cursor: pointer;
+}
+.sectiontitle.active {
   background-color: darkslategrey;
   color: whitesmoke;
-  font-size: 20px;
-  padding: 10px 20px;
+  padding: 0 20px;
 }
-.exp {
-  margin: 0 0 8px;
-  box-shadow: 0 2px 4px slategrey;
-	padding-bottom: 20px;
-}
-.exptitle {
-  background-color: lightgrey;
-  font-size: 14px;
-  padding: 10px;
-}
-.exp-content {
-	display: block;
-  height: fit-content;
-}
-.jobtitle {
-  color: darkslateblue;
-  font-family: Righteous;
-  font-size: 16px;
-}
-.jobtitle.hilite {
-	font-weight: 600;
-}
-.txtright {
-  text-align: right;
-}
-.groupname {
-  font-size: 16px;
-  background-color: #333333;
-  color: whitesmoke;
+.group {
+  background-color: #eeeeee;
   padding: 4px 10px;
-  margin-bottom: 4px;
-}
-.skillgroups {
-  display: block;
-  background-color: aliceblue;
-}
-.skillgroup {
-  font-size: 14px;
-  box-shadow: 0 2px 2px #999999;
-  margin-bottom: 2px;
+  margin-bottom: 10px;
   cursor: pointer;
-  padding-bottom: 5px;
 }
-.skillslist {
-  padding: 10px;
+.group.active {
+  background-color: #666666;
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: 120%;
+  letter-spacing: 2px;
+}
+.groupinfo {
+  display: none;
+}
+.groupinfo.active {
+  display: block;
 }
 .skill {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
-  font-size: 14px;
-  margin: 4px 0;
+  display: flex;
 }
 .skillname {
   text-align: right;
+  width: 8em;
 }
 .skillname:after {
-  content: "\20\bb\20";
+  content: '\20\bb\20';
+  margin-right: 1em;
 }
-@media (max-width: 960px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-  .profile, .skills, .section {
-    height: auto;
-    overflow-y: auto;
-  }
-  .resume {
-    overflow-y: auto;
-  }
+.exp {
+  margin: 10px;
 }
-@media (max-width: 400px) {
-  .pos {
-    font-size: 16px;
-  }
-  .section {
-    overflow-y: auto;
-  }
-  .resume {
-    overflow-y: auto;
-  }
+summary.section {
+  font-family: ubuntu;
+  padding: 4px;
+  background-color: lightgrey;
+  color: darkslategrey;
+}
+.subtitle {
+  font-size: 12px;
+  font-family: ubuntu;
+  margin-bottom: 10px;
+}
+.txtcenter {
+  text-align: center;
 }
