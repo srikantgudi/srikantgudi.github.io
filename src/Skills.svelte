@@ -1,5 +1,5 @@
 <script>
-    import Rategraph from './Rategraph.svelte';
+    import Stars from './Stars.svelte';
 
     let skills = [
 		{
@@ -55,13 +55,10 @@
         <dt class="groupname">{skill.group}</dt>
         <dd>
           {#each skill.items as item}
-            <li class="skill">
-              <svg height="30" width="150">
-                <rect x="0" y="0" height="100%" width="100%" fill="lightgrey"/>
-                <rect x="0" y="0" height="100%" width={item.rating * 15} fill="grey"/>
-              </svg>
+            <div class="skill">
               <span class="skillname">{item.name}</span>
-          </li>
+              <span><Stars nfill={item.rating} /></span>
+            </div>
           {/each}
         </dd>
       {/each}
