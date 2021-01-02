@@ -7,7 +7,7 @@
             Senior software professional with over 20 years of experience in various technologies
         </li>
         <li>
-            April 2014 onwards: Lead Front-end developer using Angular, Svelte, Stencil, React, NodeJS
+            April 2014 onwards: Lead Front-end developer using Angular, Svelte, Stencil, React, NodeJS, Gatsby
         </li>
         <li>
             Nov 2005 to March 2014: into Web development using PHP, MySQL, JQuery, JavaScript, HTML, CSS

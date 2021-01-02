@@ -8,6 +8,7 @@
 				{name: 'HTML5', rating: 8},
 				{name: 'CSS3', rating: 8},
 				{name: 'JavaScript', rating: 8},
+				{name: 'SVG', rating: 6},
 			]
 		},
 		{
@@ -18,7 +19,9 @@
 				{name: 'Stencil', rating: 6},
 				{name: 'React', rating: 7},
 				{name: 'Vue', rating: 7},
-				{name: 'Nuxt', rating: 7},
+				{name: 'NuxtJS', rating: 5},
+				{name: 'NextJS', rating: 5},
+				{name: 'Gatsby', rating: 5},
 			]
 		},
 		{
