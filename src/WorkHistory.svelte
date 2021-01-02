@@ -100,24 +100,23 @@
 		Work Experience
 	</div>
   {#each expList as exp}
-  	<dl class="exp" class:active={curExp===exp}>
-  		<dt class="exptitle" on:mouseover={() => curExp = exp}>
-  			<div class="jobtitle" class:hilite={curExp === exp}>
-  				{exp.header.dates} | {exp.header.jobTitle}
-  			</div>
-  			<div class="subtitle">
-  				{exp.header.org}
-  			</div>
+  	<dl class="exp">
+  		<dt on:click={() => curExp = exp} class="exptitle">
+        <div class="jobtitle">
+				  {exp.header.dates} | {exp.header.jobTitle} | {exp.header.org}
+        </div>
   		</dt>
-  		<dd class="exp-content">
-  			<ul>
+      {#if curExp === exp}
+			<dd>
+        <ul>
   				{#each exp.content as item}
   					<li>
   						{item}
   					</li>
   				{/each}
-  			</ul>
-  		</dd>
-  </dl>
+        </ul>
+			</dd>
+      {/if}
+    </dl>
   {/each}
 </div>
