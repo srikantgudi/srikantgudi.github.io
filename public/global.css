@@ -12,11 +12,8 @@ body {
 .container {
   box-shadow: 0 0 20px cadetblue;
   border-radius: 4px;
-  height: 100vh;
+  height: 95vh;
   overflow-y: hidden;
-}
-.sectiontitle {
-  font-size: 16px;
 }
 .main {
   padding: 0 20px;
@@ -52,9 +49,11 @@ body {
   background-color: teal;
   color: #ffe;
   box-shadow: 0 0 10px #ffe;
-  text-align: right;
   font-size: 200%;
   padding: 10px;
+}
+.menuitem.active:before {
+  content: '\20\ab\20';
 }
 .menuitem.active:after {
   content: '\20\bb\20';
@@ -99,9 +98,10 @@ body {
   justify-content: space-evenly;
   flex-wrap: wrap;
   background-color: slategrey;
-  padding: 4px 0;
-  height: 80vh;
-  overflow-y: hidden;
+  padding: 4px 0 2em;
+  height: inherit;
+  overflow-y: auto;
+  margin-bottom: 4em;
 }
 .section {
   font-family: Montserrat;
@@ -123,8 +123,8 @@ body {
 .sectiontitle {
   background-color: darkslategrey;
   color: whitesmoke;
-  font-size: 24px;
-  padding: 10px;
+  font-size: 20px;
+  padding: 10px 20px;
 }
 .exp {
   margin: 0 0 8px;

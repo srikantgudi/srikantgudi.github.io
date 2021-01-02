@@ -41,10 +41,10 @@
 			]
 		}
 	];
-	let groupId = 0;
+	let currGroup = skills[0].group;
 
-	const setGroupId = (n) => {
-		groupId = n;
+	const setGroup = (grp) => {
+		currGroup = grp;
 	}
 </script>
 
@@ -55,7 +55,8 @@
     </div>
     <dl class="skillgroups">
       {#each skills as skill}
-        <dt class="groupname">{skill.group}</dt>
+        <dt class="groupname" on:click={() => currGroup = skill.group}>{skill.group}</dt>
+        {#if currGroup === skill.group}
         <dd>
           {#each skill.items as item}
             <div class="skill">
@@ -64,6 +65,7 @@
             </div>
           {/each}
         </dd>
+        {/if}
       {/each}
     </dl>
 </div>
