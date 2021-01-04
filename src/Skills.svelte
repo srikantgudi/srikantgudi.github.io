@@ -1,7 +1,7 @@
 <script>
-    import Stars from './Stars.svelte';
-
-    let skills = [
+  import Stars from './Stars.svelte';
+  import Panel from './Panel.svelte';
+  let skills = [
 		{
 			group: 'Web Technologies',
 			items: [
@@ -48,11 +48,11 @@
 	}
 </script>
 
-
-<div class="section">
-    <div class="sectiontitle">
-        Technical Skills
-    </div>
+<Panel>
+  <div slot="title">
+    Technical Skills
+  </div>
+  <div slot="content">
     <dl class="skillgroups">
       {#each skills as skill}
         <dt class="groupname" on:click={() => currGroup = skill.group}>{skill.group}</dt>
@@ -68,4 +68,5 @@
         {/if}
       {/each}
     </dl>
-</div>
+  </div>
+</Panel>
