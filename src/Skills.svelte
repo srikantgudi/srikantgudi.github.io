@@ -53,11 +53,11 @@
     Technical Skills
   </div>
   <div slot="content">
-    <dl class="skillgroups">
-      {#each skills as skill}
+    {#each skills as skill}
+      <dl class="group" class:active={currGroup === skill.group}>
         <dt class="groupname" on:click={() => currGroup = skill.group}>{skill.group}</dt>
         {#if currGroup === skill.group}
-        <dd>
+        <dd class="groupinfo" class:active={currGroup === skill.group}>
           {#each skill.items as item}
             <div class="skill">
               <span class="skillname">{item.name}</span>
@@ -66,7 +66,7 @@
           {/each}
         </dd>
         {/if}
-      {/each}
-    </dl>
+      </dl>
+    {/each}
   </div>
 </Panel>

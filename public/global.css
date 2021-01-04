@@ -43,30 +43,36 @@ main {
   padding: 0 20px;
 }
 .group {
-  background-color: #eeeeee;
-  padding: 4px 10px;
-  margin-bottom: 10px;
+  padding: 4px;
   cursor: pointer;
 }
 .group.active {
-  background-color: #666666;
-  color: whitesmoke;
+  margin: 4px 10px;
   font-weight: 600;
   font-size: 120%;
   letter-spacing: 2px;
 }
+.groupname {
+  background-color: #666666;
+  color: whitesmoke;
+}
 .groupinfo {
+  margin: 10px auto 0;
+  background-color: whitesmoke;
   display: none;
+  width: 80%;
 }
 .groupinfo.active {
   display: block;
 }
 .skill {
   display: flex;
+  font-size: 12px;
+  padding: 2px 10px;
 }
 .skillname {
   text-align: right;
-  width: 8em;
+  width: 15em;
 }
 .skillname:after {
   content: '\20\bb\20';
@@ -103,4 +109,9 @@ summary.section {
 }
 .txtcenter {
   text-align: center;
+}
+@media screen and (max-width: 799px) {
+  .groupinfo {
+    width: 100%;
+  }
 }
