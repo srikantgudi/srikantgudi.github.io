@@ -29,7 +29,7 @@
     font-family: Montserrat;
     padding: 10px;
     height: auto;
-    font-size: 14px;
+    font-size: 16px;
     display: none;
     transition: all 1s;
   }

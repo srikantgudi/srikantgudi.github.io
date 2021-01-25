@@ -98,12 +98,6 @@
 </script>
 
 <style>
-  .expcontent {
-    display: none;
-  }
-  .expcontent.active {
-    display: block;
-  }
 </style>
 
 <Panel>
@@ -113,10 +107,11 @@
   <div slot="content">
     {#each expList as exp}
       <dl class="exp">
-        <dt on:click={() => curExp = exp} class="exptitle" class:active={curExp === exp}>
-          {exp.header.dates} | {exp.header.jobTitle} | {exp.header.org}
+        <dt on:click={() => curExp = exp} class="exptitle">
+          {exp.header.dates} | {exp.header.jobTitle}
+          <div>{exp.header.org}</div>
         </dt>
-        <dd class="expcontent" class:active={curExp === exp}>
+        <dd class="expcontent">
           <ul>
             {#each exp.content as item}
               <li>

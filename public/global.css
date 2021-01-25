@@ -46,28 +46,21 @@ main {
   padding: 4px;
   cursor: pointer;
 }
-.group.active {
-  margin: 4px 10px;
-  font-weight: 600;
-  font-size: 120%;
-  letter-spacing: 2px;
-}
 .groupname {
   background-color: #666666;
   color: whitesmoke;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 4px 10px;
 }
 .groupinfo {
   margin: 10px auto 0;
   background-color: whitesmoke;
-  display: none;
   width: 80%;
-}
-.groupinfo.active {
-  display: block;
 }
 .skill {
   display: flex;
-  font-size: 12px;
+  font-size: 16px;
   padding: 2px 10px;
 }
 .skillname {
@@ -83,7 +76,8 @@ main {
 }
 .exptitle {
   background-color: lightskyblue;
-  font-size: 12px;
+  font-family: Righteous;
+  font-size: 18px;
   padding: 4px 10px;
   margin-bottom: 4px;
   cursor: pointer;
@@ -95,6 +89,10 @@ main {
   font-weight: 600;
   font-size: 14px;
   font-family: ubuntu;
+}
+.expcontent {
+  display: block;
+  font-size: 16px;
 }
 summary.section {
   font-family: ubuntu;

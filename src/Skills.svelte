@@ -54,10 +54,9 @@
   </div>
   <div slot="content">
     {#each skills as skill}
-      <dl class="group" class:active={currGroup === skill.group}>
-        <dt class="groupname" on:click={() => currGroup = skill.group}>{skill.group}</dt>
-        {#if currGroup === skill.group}
-        <dd class="groupinfo" class:active={currGroup === skill.group}>
+      <dl class="group">
+        <dt class="groupname">{skill.group}</dt>
+        <dd class="groupinfo">
           {#each skill.items as item}
             <div class="skill">
               <span class="skillname">{item.name}</span>
@@ -65,7 +64,6 @@
             </div>
           {/each}
         </dd>
-        {/if}
       </dl>
     {/each}
   </div>
