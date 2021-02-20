@@ -26,9 +26,10 @@
     cursor: pointer;
   }
   .content {
+    font-family: Montserrat;
     padding: 10px;
     height: auto;
-    font-size: 14px;
+    font-size: 16px;
     display: none;
     transition: all 1s;
   }
@@ -45,14 +46,12 @@
 
 <main class="panel" style={cssVarStyles}>
   <div class="hdr" on:click>
-    <slot name="header">
-      <div class="sectiontitle">
-        <slot name="header" />
-      </div>
-      <div class="subtitle">
-        <slot name="subtitle" />
-      </div>
-    </slot>
+    <div class="sectiontitle">
+      <slot name="title" />
+    </div>
+    <div class="subtitle">
+      <slot name="subtitle" />
+    </div>
   </div>
   <div class="content" class:active={showcontent}>
     <slot name="content" />
