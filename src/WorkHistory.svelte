@@ -94,10 +94,7 @@
         'Developed web applications independently as per client requirements using PHP, MySql',
       ],
     },
-  ]
-  let curExp;
-  $: curExp = expList[0];
-  const isCurrExp = (exp) => curExp.header.jobTitle === exp.header.jobTitle;
+  ];
 </script>
 
 <Panel>
@@ -105,7 +102,7 @@
   <div slot="content">
   {#each expList as exp}
     <Panel hdrbg="#def" hdrclr="black" hdrfontsize="14px">
-      <div slot="title" class="exptitle" on:click={curExp = exp}>
+      <div slot="title" class="exptitle">
         {exp.header.dates} :: {exp.header.jobTitle} :: {exp.header.org}
       </div>
       <div slot="content">
