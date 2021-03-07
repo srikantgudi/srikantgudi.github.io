@@ -42,6 +42,7 @@
   font-family: Montserrat;
   padding: 4px;
   width: 30%;
+  text-align: center;
 }
 .position-title {
   font-family: Righteous;
