@@ -16,7 +16,7 @@
     <div class="resume">
       <div class="resumenav">
         <button
-          class="sectiontitle link"
+          class="resume-tab-title link"
           class:active={comp === Profile}
           on:click={() => {
             comp = Profile
@@ -24,7 +24,7 @@
           Profile
         </button>
         <button
-          class="sectiontitle link"
+          class="resume-tab-title link"
           class:active={comp === Skills}
           on:click={() => {
             comp = Skills
@@ -32,7 +32,7 @@
           Skills
         </button>
         <button
-          class="sectiontitle link"
+          class="resume-tab-title link"
           class:active={comp === WorkHistory}
           on:click={() => {
             comp = WorkHistory
@@ -40,7 +40,7 @@
           Work History
         </button>
         <button
-          class="sectiontitle link"
+          class="resume-tab-title link"
           class:active={comp === Academic}
           on:click={() => {
             comp = Academic

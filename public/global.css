@@ -23,7 +23,7 @@
     border-radius: 10px 10px 0 0;
 }
 
-.sectiontitle {
+.resume-tab-title {
     box-shadow: 0 0 4px #999999;
     border: 0;
     padding: 4px 10px;
@@ -32,15 +32,18 @@
     color: #999999;
     outline: none;
     margin-bottom: 10px;
+    font-family: Orbitron;
 }
 
-.sectiontitle:hover {
+.resume-tab-title:hover {
     cursor: pointer;
     color: #666666;
 }
 
-.sectiontitle.active {
-    color: #333333;
+.resume-tab-title.active {
+    background-color: navy;
+    color: beige;
+    font-style: italic;
 }
 
 .resumecontent {

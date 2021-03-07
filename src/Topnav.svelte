@@ -23,6 +23,7 @@
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 10px;
+  font-family: Orbitron;
 }
 .topnav {
   margin: 0 auto 10px;
@@ -44,5 +45,6 @@
 }
 .position-title {
   padding: 10px;
+  font-family: Righteous;
 }
 </style>
