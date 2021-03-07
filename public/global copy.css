@@ -1,0 +1,349 @@
+                                                                        :root {
+                                                                           margin: 0 1em;
+                                                                           font-family: Ubuntu;
+                                                                           font-size: 14px;
+                                                                       }
+                                                                       
+                                                                       html,
+                                                                       body {
+                                                                           position: relative;
+                                                                       }
+                                                                       
+                                                                       .container {
+                                                                           box-shadow: 0 0 20px cadetblue;
+                                                                           border-radius: 4px;
+                                                                           overflow-y: auto;
+                                                                       }
+                                                                       
+                                                                       .sectiontitle {
+                                                                           font-size: 16px;
+                                                                           margin-bottom: 2px;
+                                                                           border-radius: 10px 10px 0 0;
+                                                                       }
+                                                                       
+                                                                       .sectiontitle.active {
+                                                                           text-align: right;
+                                                                           font-style: italic;
+                                                                           font-family: Montserrat;
+                                                                           background-color: aliceblue;
+                                                                           color: cadetblue;
+                                                                       }
+                                                                       
+                                                                       .sectiontitle.active:after {
+                                                                           content: '\20\bb';
+                                                                       }
+                                                                       
+                                                                       .main {
+                                                                           padding: 0 20px;
+                                                                           font-family: ubuntu;
+                                                                           height: auto;
+                                                                           Ç
+                                                                       }
+                                                                       
+                                                                       .leftnav {
+                                                                           border: 5px solid cadetblue;
+                                                                           border-radius: 10px 10px 0 0;
+                                                                           background-color: transparent;
+                                                                       }
+                                                                       
+                                                                       .apptitle {
+                                                                           font-family: Righteous;
+                                                                           font-size: 2em;
+                                                                       }
+                                                                       
+                                                                       .contact {
+                                                                           font-family: ubuntu;
+                                                                           margin: 0.2em 0;
+                                                                       }
+                                                                       
+                                                                       .pos {
+                                                                           font-family: Orbitron;
+                                                                           font-size: 1.5em;
+                                                                           font-style: italic;
+                                                                           font-family: Righteous;
+                                                                           color: darkslateblue;
+                                                                       }
+                                                                       
+                                                                       .resume {
+                                                                           box-shadow: 0 2px 10px #666666;
+                                                                           border-radius: 10px 10px 0 0;
+                                                                           display: flex;
+                                                                           flex-direction: column;
+                                                                           background-color: slategrey;
+                                                                           padding: 4px 0;
+                                                                           overflow-y: hidden;
+                                                                           height: 78vh;
+                                                                       }
+                                                                       
+                                                                       .resumenav {
+                                                                           display: flex;
+                                                                           flex-wrap: wrap;
+                                                                           align-items: center;
+                                                                       }
+                                                                       
+                                                                       .resumecontent {
+                                                                           display: block;
+                                                                       }
+                                                                       
+                                                                       .section {
+                                                                           box-shadow: 0 0 4px #999999;
+                                                                           padding: 0.5em 1em;
+                                                                           font-family: Montserrat;
+                                                                           border-radius: 8px 8px 0 0;
+                                                                           flex: 1;
+                                                                           min-width: 300px;
+                                                                           box-shadow: 0 2px 4px slategrey;
+                                                                           margin: 4px 0 20px;
+                                                                           background-color: whitesmoke;
+                                                                           transition: all 0.5s ease-in-out;
+                                                                           max-height: 75vh;
+                                                                           overflow-y: auto;
+                                                                           padding-bottom: 20px;
+                                                                       }
+                                                                       
+                                                                       ul {
+                                                                           margin: 10px;
+                                                                       }
+                                                                       
+                                                                       ul li {
+                                                                           padding-right: 20px;
+                                                                           text-align: justify;
+                                                                       }
+                                                                       
+                                                                       .section.active {
+                                                                           display: block;
+                                                                           =======margin-bottom: 10px;
+                                                                           transition: all 0.5s ease-in;
+                                                                           >>>>>>>d588288053533535ab21ca4d28740b32e5058988
+                                                                       }
+                                                                       
+                                                                       .current-section {
+                                                                           display: none;
+                                                                       }
+                                                                       
+                                                                       .current-section.active {
+                                                                           display: block;
+                                                                       }
+                                                                       
+                                                                       .sectiontitle {
+                                                                           font-size: 20px;
+                                                                           font-family: Orbitron;
+                                                                           cursor: pointer;
+                                                                       }
+                                                                       
+                                                                       .sectiontitle.active {
+                                                                           background-color: darkslategrey;
+                                                                           color: whitesmoke;
+                                                                           <<<<<<< HEAD font-size: 16px;
+                                                                           padding: 0 10px;
+                                                                       }
+                                                                       
+                                                                       .exp {
+                                                                           margin: 0 0 8px;
+                                                                           box-shadow: 0 2px 4px slategrey;
+                                                                           padding-bottom: 20px;
+                                                                           =======padding: 0 20px;
+                                                                       }
+                                                                       
+                                                                       .group {
+                                                                           padding: 4px;
+                                                                           cursor: pointer;
+                                                                           >>>>>>>d588288053533535ab21ca4d28740b32e5058988
+                                                                       }
+                                                                       
+                                                                       .groupname {
+                                                                           background-color: #666666;
+                                                                           color: whitesmoke;
+                                                                           font-size: 18px;
+                                                                           font-weight: 600;
+                                                                           padding: 4px 10px;
+                                                                       }
+                                                                       
+                                                                       <<<<<<< HEAD .exp-content {
+                                                                           display: flex;
+                                                                           flex-direction: column;
+                                                                           height: fit-content;
+                                                                       }
+                                                                       
+                                                                       .exp-content ul,
+                                                                       li {
+                                                                           padding: 0;
+                                                                       }
+                                                                       
+                                                                       .jobtitle {
+                                                                           display: grid;
+                                                                           grid-template-areas: 'posdate''org';
+                                                                           align-items: flex-end;
+                                                                           color: darkslateblue;
+                                                                           font-family: Righteous;
+                                                                           =======.groupinfo {
+                                                                               margin: 10px auto 0;
+                                                                               background-color: whitesmoke;
+                                                                               width: 80%;
+                                                                           }
+                                                                           .skill {
+                                                                               display: grid;
+                                                                               grid-template-columns: 1fr 2fr;
+                                                                               >>>>>>>d588288053533535ab21ca4d28740b32e5058988 font-size: 16px;
+                                                                               padding: 2px 10px;
+                                                                           }
+                                                                           <<<<<<< HEAD .jobtitle.hilite {
+                                                                               font-weight: 600;
+                                                                           }
+                                                                           .txtright {
+                                                                               text-align: right;
+                                                                           }
+                                                                           .groupname {
+                                                                               font-size: 90%;
+                                                                               background-color: #333333;
+                                                                               color: whitesmoke;
+                                                                               padding: 4px 10px;
+                                                                               margin-bottom: 4px;
+                                                                               border-radius: 4px 4px 0 0;
+                                                                           }
+                                                                           .skillgroups {
+                                                                               display: block;
+                                                                               background-color: whitesmoke;
+                                                                           }
+                                                                           .skillgroup {
+                                                                               flex: 1;
+                                                                               font-size: 14px;
+                                                                               box-shadow: 0 2px 2px #999999;
+                                                                               margin: 0 20px 8px;
+                                                                               cursor: pointer;
+                                                                               padding-bottom: 5px;
+                                                                               border-radius: 0 0 10px 10px;
+                                                                               =======.skillname {
+                                                                                   text-align: right;
+                                                                               }
+                                                                               .skillname:after {
+                                                                                   content: '\20\bb\20';
+                                                                                   margin-right: 1em;
+                                                                               }
+                                                                               .exp {
+                                                                                   margin: 10px;
+                                                                               }
+                                                                               .exptitle {
+                                                                                   background-color: lightskyblue;
+                                                                                   font-family: Righteous;
+                                                                                   font-size: 18px;
+                                                                                   padding: 4px 10px;
+                                                                                   margin-bottom: 4px;
+                                                                                   cursor: pointer;
+                                                                               }
+                                                                               .exptitle.active {
+                                                                                   background-color: darkslategrey;
+                                                                                   color: whitesmoke;
+                                                                                   border-radius: 10px 10px 0 0;
+                                                                                   font-weight: 600;
+                                                                                   font-size: 14px;
+                                                                                   font-family: ubuntu;
+                                                                                   >>>>>>>d588288053533535ab21ca4d28740b32e5058988
+                                                                               }
+                                                                               .expcontent {
+                                                                                   display: block;
+                                                                                   font-size: 16px;
+                                                                               }
+                                                                               summary.section {
+                                                                                   font-family: ubuntu;
+                                                                                   padding: 4px;
+                                                                                   background-color: lightgrey;
+                                                                                   color: darkslategrey;
+                                                                               }
+                                                                               .subtitle {
+                                                                                   font-size: 12px;
+                                                                                   font-family: ubuntu;
+                                                                                   margin-bottom: 10px;
+                                                                               }
+                                                                               <<<<<<< HEAD .skillname:before {
+                                                                                   content: '\ab\20';
+                                                                               }
+                                                                               .link {
+                                                                                   cursor: pointer;
+                                                                                   =======.txtcenter {
+                                                                                       text-align: center;
+                                                                                       >>>>>>>d588288053533535ab21ca4d28740b32e5058988
+                                                                                   }
+                                                                                   @media screen and (max-width: 799px) {
+                                                                                       .groupinfo {
+                                                                                           width: 100%;
+                                                                                           <<<<<<< HEAD flex-direction: column;
+                                                                                       }
+                                                                                       .profile,
+                                                                                       .skills,
+                                                                                       .section {
+                                                                                           height: auto;
+                                                                                           overflow-y: auto;
+                                                                                       }
+                                                                                       .resume {
+                                                                                           overflow-y: auto;
+                                                                                       }
+                                                                                   }
+                                                                                   @media (max-width: 720px) {
+                                                                                       .pos {
+                                                                                           font-size: 16px;
+                                                                                       }
+                                                                                       .section {
+                                                                                           overflow-y: auto;
+                                                                                       }
+                                                                                       .resume {
+                                                                                           display: block;
+                                                                                           overflow-y: auto;
+                                                                                           =======>>>>>>>d588288053533535ab21ca4d28740b32e5058988
+                                                                                       }
+                                                                                       .resumenav {
+                                                                                           display: flex;
+                                                                                           flex-wrap: wrap;
+                                                                                           transform: scale(0.6);
+                                                                                       }
+                                                                                   }
+                                                                                   .resume {
+                                                                                       overflow-y: auto;
+                                                                                   }
+                                                                               }
+                                                                               @media (max-width: 720px) {
+                                                                                   .pos {
+                                                                                       font-size: 16px;
+                                                                                   }
+                                                                                   .section {
+                                                                                       overflow-y: auto;
+                                                                                   }
+                                                                                   .resume {
+                                                                                       display: block;
+                                                                                       overflow-y: auto;
+                                                                                       =======>>>>>>>d588288053533535ab21ca4d28740b32e5058988
+                                                                                   }
+                                                                                   .resumenav {
+                                                                                       display: flex;
+                                                                                       flex-wrap: wrap;
+                                                                                       transform: scale(0.6);
+                                                                                   }
+                                                                               }
+                                                                               flex-wrap: wrap;
+                                                                               transform: scale(0.6);
+                                                                           }
+                                                                       }
+                                                                       
+                                                                       .resume {
+                                                                           overflow-y: auto;
+                                                                       }
+                                                                   }
+                                                                   @media (max-width: 720px) {
+                                                                       .pos {
+                                                                           font-size: 16px;
+                                                                       }
+                                                                       
+                                                                       .section {
+                                                                           overflow-y: auto;
+                                                                       }
+                                                                       
+                                                                       .resume {
+                                                                           display: block;
+                                                                           overflow-y: auto;
+                                                                       }
+                                                                       
+                                                                       .resumenav {
+                                                                           display: flex;
+                                                                           flex-wrap: wrap;
+                                                                           transform: scale(0.6);
+                                                                       }

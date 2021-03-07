@@ -93,18 +93,17 @@
       ],
     },
   ]
-  let curExp = expList[0]
+  let curExp;
+  $: curExp = expList[0];
+  const isCurrExp = (exp) => curExp.header.jobTitle === exp.header.jobTitle;
 </script>
 
 <div class="section">
   <div class="sectiontitle">Work History</div>
   {#each expList as exp}
-    <dl class="exp" class:active={curExp === exp}>
-      <dt class="exptitle" on:mouseover={() => (curExp = exp)}>
-        <div class="jobtitle" class:hilite={curExp === exp}>
-          <span>{exp.header.dates} :: {exp.header.jobTitle}</span>
-          <span class="subtitle">{exp.header.org}</span>
-        </div>
+    <div class="exp">
+      <dt class="exptitle" on:click={curExp = exp}>
+        {exp.header.dates} :: {exp.header.jobTitle} :: {exp.header.org}
       </dt>
       <dd class="exp-content">
         <ul>
@@ -113,6 +112,6 @@
           {/each}
         </ul>
       </dd>
-    </dl>
+    </div>
   {/each}
 </div>

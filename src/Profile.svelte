@@ -1,7 +1,4 @@
-<script>
-</script>
 <div class="section">
-  <div class="sectiontitle">Profile</div>
   <ul>
     <li>
       Senior software professional with over 20 years of experience in various
