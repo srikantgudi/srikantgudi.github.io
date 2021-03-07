@@ -22,7 +22,7 @@
   font-size: 24px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 10px;
+  padding-top: 10px;
   font-family: Orbitron;
 }
 .topnav {
@@ -30,7 +30,6 @@
   background-color: #eeeeee;
   box-shadow: 0 4px 2px #999;
   border-radius: 0 0 20px 20px;
-  padding: 10px 20px;
 }
 .contact {
   display: flex;
@@ -45,7 +44,6 @@
   width: 30%;
 }
 .position-title {
-  padding: 10px;
   font-family: Righteous;
 }
 @media screen and (max-width: 480px) {
@@ -53,7 +51,6 @@
     font-size: 90%;
   }
   .topnav {
-    padding: 10px 0;
   }
   .pageTitle {
     font-size: 100%;
