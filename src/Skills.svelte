@@ -1,4 +1,5 @@
 <script>
+  import Panel from './Panel.svelte';
   import Rating from './Rating.svelte'
   let name = 'Technical Skills'
   let skills = [
@@ -39,14 +40,16 @@
   ]
 </script>
 
-<div class="section">
-  <div class="sectiontitle">Technical Skills</div>
-  {#each skills as skill}
-    <div class="skillgroup">
-      <div class="groupname">{skill.group}</div>
-      {#each skill.items as item}
-        <Rating text={item.name} level={item.level} />
-      {/each}
-    </div>
-  {/each}
-</div>
+<Panel>
+  <div slot="title">Technical Skills</div>
+  <div slot="content">
+    {#each skills as skill}
+      <div class="skillgroup">
+        <div class="skillgroupname">{skill.group}</div>
+        {#each skill.items as item}
+          <Rating text={item.name} level={item.level} />
+        {/each}
+      </div>
+    {/each}
+  </div>
+</Panel>

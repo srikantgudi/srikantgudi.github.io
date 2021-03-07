@@ -1,4 +1,6 @@
 <script>
+  import Panel from './Panel.svelte';
+
   let expList = [
     {
       header: {
@@ -98,20 +100,22 @@
   const isCurrExp = (exp) => curExp.header.jobTitle === exp.header.jobTitle;
 </script>
 
-<div class="section">
-  <div class="sectiontitle">Work History</div>
+<Panel>
+  <div slot="title">Work History</div>
+  <div slot="content">
   {#each expList as exp}
-    <div class="exp">
-      <dt class="exptitle" on:click={curExp = exp}>
+    <Panel hdrbg="#def" hdrclr="black" hdrfontsize="14px">
+      <div slot="title" class="exptitle" on:click={curExp = exp}>
         {exp.header.dates} :: {exp.header.jobTitle} :: {exp.header.org}
-      </dt>
-      <dd class="exp-content">
+      </div>
+      <div slot="content">
         <ul>
           {#each exp.content as item}
             <li>{item}</li>
           {/each}
         </ul>
-      </dd>
-    </div>
+      </div>
+    </Panel>
   {/each}
-</div>
+  </div>
+</Panel>

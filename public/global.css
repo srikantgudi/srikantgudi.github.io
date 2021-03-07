@@ -1,97 +1,36 @@
 .container {
-    margin: 1em 4em;
-    font-family: Roboto;
+    width: 60vw;
+    margin: 0 auto;
+    font-family: Montserrat;
+    font-size: 16px;
 }
 
-.resume {
-    display: flex;
-    flex-flow: column;
-    gap: 10px;
-    box-sizing: border-box;
-    padding: 10px 20px;
-    box-shadow: 0 -4px 12px #999999;
-    height: 72vh;
-    border-radius: 20px 20px 0 0;
-    overflow: hidden;
-}
-
-.resumenav {
-    display: flex;
-    gap: 10px;
-    background-color: darkgrey;
-    padding: 10px;
-    border-radius: 10px 10px 0 0;
-}
-
-.resume-tab-title {
+.resume-section {
     box-shadow: 0 0 4px #999999;
-    border: 0;
-    padding: 4px 10px;
-    font-size: 20px;
     border-radius: 10px 10px 0 0;
-    color: #999999;
-    outline: none;
-    margin-bottom: 10px;
+}
+
+.sectiontitle {
+    border-radius: 4px;
     font-family: Orbitron;
-}
-
-.resume-tab-title:hover {
-    cursor: pointer;
-    color: #666666;
-}
-
-.resume-tab-title.active {
-    background-color: navy;
-    color: beige;
-    font-style: italic;
-}
-
-.resumecontent {
-    border-radius: 10px 10px 0 0;
-    padding: 10px 20px;
-    background-color: #f0f0f0;
-    height: 65vh;
-    overflow-y: auto;
-}
-
-.exp {
     padding: 10px;
-    background-color: #dddddd;
     border-radius: 10px 10px 0 0;
+    letter-spacing: 2px;
+    background-color: #666666;
+    color: #f9f9f9;
     margin-bottom: 10px;
 }
 
-.exptitle {
-    background-color: #666666;
-    padding: 5px;
-    border-radius: 0 2px 10px 10px;
-    color: whitesmoke;
-    font-size: 14px;
+.skillgroup {
+    padding: 10px;
+    margin: 0 10px 10px;
+    box-shadow: 0 0 4px #999999;
+    border-radius: 10px 10px 0 0;
 }
 
-@media screen and (max-width:480px) {
-    .resume {
-        height: auto;
-    }
-    .resumenav {
-        flex-flow: column;
-        padding: 0 4px;
-        margin: 0;
-    }
-    .resume-tab-title {
-        font-size: 80%;
-        padding: 0;
-        margin: 0;
-    }
-    .exp {
-        font-size: 60%;
-        font-weight: 400;
-        padding: 0;
-    }
-    ul {
-        padding: 0 4px;
-        font-weight: 100;
-        font-size: 12px;
-        margin: 0;
-    }
+.skillgroupname {
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 4px #999999;
+    padding: 10px;
+    background-color: aliceblue;
 }

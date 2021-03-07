@@ -1,10 +1,12 @@
 <script>
   export let hdrbg = 'darkslategrey'
   export let hdrclr = 'whitesmoke'
+  export let hdrfontsize = '16px'
   export let showcontent = true
   $: cssVarStyles = `
 			--hdrbg:${hdrbg};
 			--hdrclr:${hdrclr};
+      --hdrfont:${hdrfontsize};
 		`
 </script>
 
@@ -14,14 +16,15 @@
     box-shadow: 0 2px 4px #999999;
     height: auto;
     width: auto;
+    border-radius: 10px 10px 0 0;
     margin-bottom: 10px;
   }
   .hdr {
     background-color: var(--hdrbg);
     color: var(--hdrclr);
     padding: 4px 10px;
-    border-radius: 4px 4px 0 0;
-    font-size: 16px;
+    border-radius: 10px 10px 0 0;
+    font-size: var(--hdrfont);
     height: auto;
     cursor: pointer;
   }
@@ -46,7 +49,7 @@
 
 <main class="panel" style={cssVarStyles}>
   <div class="hdr" on:click>
-    <div class="sectiontitle">
+    <div>
       <slot name="title" />
     </div>
     <div class="subtitle">

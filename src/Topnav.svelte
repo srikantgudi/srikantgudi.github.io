@@ -14,7 +14,7 @@
           begin="0" dur="10s" repeatCount="indefinite" />
       </text>
     </svg>
-</div>
+  </div>
 </div>
 
 <style>
@@ -36,11 +36,11 @@
   flex-flow: row wrap;
   align-items: center;
   gap: 10px;
-  width: 60vw;
   margin: 0 auto;
 }
 .contact-item {
-  padding: 10px;
+  font-family: Montserrat;
+  padding: 4px;
   width: 30%;
 }
 .position-title {
