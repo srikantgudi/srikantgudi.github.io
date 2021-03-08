@@ -1,6 +1,8 @@
 <script>
+  import {mainOpt} from './store';
   import Panel from './Panel.svelte';
-  import Rating from './Rating.svelte'
+  import Rating from './Rating.svelte';
+  
   let name = 'Technical Skills'
   let skills = [
     {
@@ -38,14 +40,15 @@
       ],
     },
   ]
+  let currGroup = skills[0].group;
 </script>
 
-<Panel>
-  <div slot="title">Technical Skills</div>
+<Panel showcontent={$mainOpt === 'skills'}>
+  <div slot="title" on:click={() => {$mainOpt = 'skills'}}>Technical Skills</div>
   <div slot="content">
     {#each skills as skill}
-      <div class="skillgroup">
-        <div class="skillgroupname">{skill.group}</div>
+      <div class="skillgroupname" on:click={() => {currGroup = skill.group}}>{skill.group}</div>
+      <div class="skillgroup" class:active={currGroup === skill.group}>
         {#each skill.items as item}
           <Rating text={item.name} level={item.level} />
         {/each}

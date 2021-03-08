@@ -1,4 +1,6 @@
 <script>
+  import {mainOpt} from './store';
+
   import Master from './Master.svelte'
   import Topnav from './Topnav.svelte'
   import Profile from './Profile.svelte'
@@ -13,9 +15,9 @@
 <div class="container">
   <main class="main">
     <Topnav />
-    <Profile />
-    <Skills />
-    <WorkHistory />
-    <Academic />
+    <Profile selected={$mainOpt === 'profile'} />
+    <Skills selected={$mainOpt === 'skills'} />
+    <WorkHistory selected={$mainOpt === 'exp'} />
+    <Academic selected={$mainOpt === 'qual'} />
   </main>
 </div>

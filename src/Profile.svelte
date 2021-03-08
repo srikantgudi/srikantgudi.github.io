@@ -1,9 +1,10 @@
 <script>
+  import {mainOpt} from './store';
   import Panel from './Panel.svelte';
 </script>
 
-<Panel showcontent>
-  <div slot="title">Profile</div>
+<Panel showcontent={$mainOpt === 'profile'}>
+  <div slot="title" on:click={() => {$mainOpt = 'profile'}}>Profile</div>
   <div slot="content">
     <ul>
       <li>

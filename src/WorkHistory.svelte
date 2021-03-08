@@ -1,6 +1,7 @@
 <script>
+  import {mainOpt} from './store';
   import Panel from './Panel.svelte';
-
+  
   let expList = [
     {
       header: {
@@ -95,24 +96,52 @@
       ],
     },
   ];
+  let curExpIdx = 0;
+  let curExp = {};
+  $: curExp = expList[curExpIdx];
 </script>
 
-<Panel>
-  <div slot="title">Work History</div>
+<style>
+  button {
+    outline: 0;
+    cursor: pointer;
+  }
+  button.exp {
+    background-image: linear-gradient(lightgrey, whitesmoke,lightgrey);
+    border: none;
+    padding: 2px;
+    box-shadow: 0 0 4px #999999;
+    margin: 0 8px 8px;
+  }
+  button.exp.active {
+    background-image: linear-gradient(lightblue, skyblue);
+  }
+  .exp-title {
+    background-color: navy;
+    color: #ffa;
+    padding: 8px;
+  }
+  .exp-text {
+    height: 100px;
+    overflow-y: auto;
+  }
+</style>
+
+<Panel showcontent={$mainOpt === 'exp'}>
+  <div slot="title" on:click={() => {$mainOpt = 'exp'}}>Work History</div>
   <div slot="content">
-  {#each expList as exp}
-    <Panel hdrbg="#def" hdrclr="black" hdrfontsize="14px">
-      <div slot="title" class="exptitle">
-        {exp.header.dates} :: {exp.header.jobTitle} :: {exp.header.org}
-      </div>
-      <div slot="content">
-        <ul>
-          {#each exp.content as item}
-            <li>{item}</li>
-          {/each}
-        </ul>
-      </div>
-    </Panel>
-  {/each}
+    <div>
+      {#each expList as exp, idx}
+        <button on:click={() => {curExpIdx = idx}} class="exp" class:active={curExpIdx === idx}>{exp.header.dates}</button>
+      {/each}
+    </div>
+    <div class="exp-title">
+      {curExp.header.dates} | {curExp.header.org} | {curExp.header.jobTitle}
+    </div>
+    <div class="exp-text">
+      {#each curExp.content as text}
+      <div>* {text}</div>
+      {/each}
+    </div>
   </div>
 </Panel>

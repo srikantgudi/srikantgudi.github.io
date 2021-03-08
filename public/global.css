@@ -26,6 +26,11 @@
     margin: 0 10px 10px;
     box-shadow: 0 0 4px #999999;
     border-radius: 10px 10px 0 0;
+    display: none;
+}
+
+.skillgroup.active {
+    display: block;
 }
 
 .skillgroupname {

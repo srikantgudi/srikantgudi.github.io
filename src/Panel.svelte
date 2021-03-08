@@ -31,7 +31,8 @@
   .content {
     font-family: Montserrat;
     padding: 10px;
-    height: auto;
+    max-height: 20em;
+    overflow-y: auto;
     font-size: 16px;
     display: none;
     transition: all 1s;
