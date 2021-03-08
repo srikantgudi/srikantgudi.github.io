@@ -6,14 +6,7 @@
     <div class="contact-item">+91-829-665-6336</div>
   </div>
   <div class="position-title">
-    <svg height="30" width="auto">
-      <text id="postitle" x="20px" y="20" class="pos" font-size="20px">
-        Senior Frontend Professional
-        <animate attributeName="fill"
-          values="blue;lightblue;navy;lightblue;blue"
-          begin="0" dur="10s" repeatCount="indefinite" />
-      </text>
-    </svg>
+    Senior Frontend Professional
   </div>
 </div>
 
@@ -46,8 +39,10 @@
 }
 .position-title {
   font-family: Righteous;
+  font-weight: 600;
+  text-align: center;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 670px) {
   #postitle {
     font-size: 90%;
   }
@@ -65,6 +60,9 @@
   .contact-item {
     font-size: 80%;
     width: 100%;
+  }
+  .position-title {
+    font-size: 70%;
   }
 }
 </style>
