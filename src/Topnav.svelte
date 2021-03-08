@@ -7,7 +7,7 @@
   </div>
   <div class="position-title">
     <svg height="30" width="auto">
-      <text id="postitle" x="50%" y="20" class="pos" text-anchor="middle" font-size="20px">
+      <text id="postitle" x="20px" y="20" class="pos" font-size="20px">
         Senior Frontend Professional
         <animate attributeName="fill"
           values="blue;lightblue;navy;lightblue;blue"
