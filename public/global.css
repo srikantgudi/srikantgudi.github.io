@@ -39,3 +39,14 @@
     padding: 10px;
     background-color: aliceblue;
 }
+
+.tab-btn {
+    font-family: Orbitron;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: 20%;
+    border: none;
+    box-shadow: 0 0 4px #666666;
+    border-radius: 4px;
+    cursor: pointer;
+}

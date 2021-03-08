@@ -47,12 +47,14 @@
   <div slot="title" on:click={() => {$mainOpt = 'skills'}}>Technical Skills</div>
   <div slot="content">
     {#each skills as skill}
-      <div class="skillgroupname" on:click={() => {currGroup = skill.group}}>{skill.group}</div>
-      <div class="skillgroup" class:active={currGroup === skill.group}>
-        {#each skill.items as item}
-          <Rating text={item.name} level={item.level} />
-        {/each}
-      </div>
+      <Panel hdrbg="lightblue" hdrclr="#333333">
+        <div slot="title">{skill.group}</div>
+        <div slot="content">
+          {#each skill.items as item}
+            <Rating text={item.name} level={item.level} />
+          {/each}
+        </div>
+      </Panel>
     {/each}
   </div>
 </Panel>

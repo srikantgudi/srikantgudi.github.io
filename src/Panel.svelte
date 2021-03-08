@@ -31,8 +31,8 @@
   .content {
     font-family: Montserrat;
     padding: 10px;
-    max-height: 20em;
     overflow-y: auto;
+    height: 70%;
     font-size: 16px;
     display: none;
     transition: all 1s;
@@ -40,17 +40,24 @@
   .content.active {
     display: block;
   }
+  .title {
+    font-family: Orbitron;
+  }
+  subtitle {
+    font-size: 14px;
+  }
   @media screen and (max-width: 719px) {
     .hdr,
     .content {
       font-size: 12px;
+      height: 50%;
     }
   }
 </style>
 
 <main class="panel" style={cssVarStyles}>
   <div class="hdr" on:click>
-    <div>
+    <div class="title">
       <slot name="title" />
     </div>
     <div class="subtitle">

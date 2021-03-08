@@ -10,7 +10,7 @@
         org: 'Mphasis, Bengaluru',
       },
       content: [
-        'Currently working as Lead frontend developer with Schneider Electric',
+        'Currently working as Lead frontend developer with Schneider Electric using Svelte. Created web components using StencilJS',
         'Worked offshore in Bengaluru with a banking conglomerate on  projects in Angular and React',
         'Worked onsite in Glasgow, UK with a banking conglomerate on Angular based projects',
         'Developed UI for a POC for Digital Readiness Analysis Tool to create a survey questionnaire for various categories using Angular, Material Design, HTML5, CSS3, JavaScript, API integration',
@@ -107,14 +107,15 @@
     cursor: pointer;
   }
   button.exp {
-    background-image: linear-gradient(lightgrey, whitesmoke,lightgrey);
+    background-color: lightgrey;
     border: none;
     padding: 2px;
     box-shadow: 0 0 4px #999999;
     margin: 0 8px 8px;
   }
   button.exp.active {
-    background-image: linear-gradient(lightblue, skyblue);
+    background-color: #666666;
+    color: whitesmoke;
   }
   .exp-title {
     background-color: navy;
@@ -122,26 +123,34 @@
     padding: 8px;
   }
   .exp-text {
-    height: 100px;
+    height: fit-content;
     overflow-y: auto;
+    padding: 1vh 2vw;
+  }
+  li {
+    list-style-type: square;
   }
 </style>
 
-<Panel showcontent={$mainOpt === 'exp'}>
+<Panel showcontent={$mainOpt === 'workhist'}>
   <div slot="title" on:click={() => {$mainOpt = 'exp'}}>Work History</div>
   <div slot="content">
-    <div>
-      {#each expList as exp, idx}
-        <button on:click={() => {curExpIdx = idx}} class="exp" class:active={curExpIdx === idx}>{exp.header.dates}</button>
-      {/each}
-    </div>
-    <div class="exp-title">
-      {curExp.header.dates} | {curExp.header.org} | {curExp.header.jobTitle}
-    </div>
-    <div class="exp-text">
-      {#each curExp.content as text}
-      <div>* {text}</div>
-      {/each}
-    </div>
+    {#each expList as exp, idx}
+      <Panel>
+        <div slot="title">
+          {curExp.header.jobTitle} :: {curExp.header.dates}
+        </div>
+        <div slot="subtitle">
+          {curExp.header.org}
+        </div>
+        <div slot="content" class="exp-text">
+          <ul>
+            {#each curExp.content as text}
+              <li>{text}</li>
+            {/each}
+          </ul>
+        </div>
+      </Panel>
+    {/each}
   </div>
 </Panel>
