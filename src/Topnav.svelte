@@ -16,7 +16,6 @@
   display: flex;
   flex-flow: row;
   align-items: center;
-  height: 30px;
   justify-content: center;
   font-family: sans-serif;
   font-size:10px;
@@ -49,8 +48,8 @@
 }
 .contact-item {
   font-family: Montserrat;
-  padding: 4px;
-  width: 30%;
+  margin: 4px;
+  min-width: 25%;
   text-align: center;
 }
 .position-title {

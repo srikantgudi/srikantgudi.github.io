@@ -3,10 +3,12 @@
   export let hdrclr = 'whitesmoke'
   export let hdrfontsize = '16px'
   export let showcontent = true
+  export let contentheight = 'auto'
   $: cssVarStyles = `
 			--hdrbg:${hdrbg};
 			--hdrclr:${hdrclr};
       --hdrfont:${hdrfontsize};
+      --contentheight:${contentheight}
 		`
 </script>
 
@@ -32,7 +34,7 @@
     font-family: Montserrat;
     padding: 10px;
     overflow-y: auto;
-    height: 70%;
+    max-height: var(--contentheight);
     font-size: 16px;
     display: none;
     transition: all 1s;
@@ -43,8 +45,8 @@
   .title {
     font-family: Orbitron;
   }
-  subtitle {
-    font-size: 14px;
+  .subtitle {
+    font-size: 12px;
   }
   @media screen and (max-width: 719px) {
     .hdr,

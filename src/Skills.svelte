@@ -40,7 +40,6 @@
       ],
     },
   ]
-  let currGroup = skills[0].group;
 </script>
 
 <Panel>

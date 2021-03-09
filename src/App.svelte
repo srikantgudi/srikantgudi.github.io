@@ -32,20 +32,21 @@
     width: 100%;
     margin: 0 auto;
     background-color: whitesmoke;
-    height: 100%;
-    overflow-y: auto;
+    overflow: hidden;
   }
 	.content {
 		box-shadow: 0 0 4px #999;
 		display: flex;
-		height: inherit;
+		gap: 10px;
 	}
 	.component {
 		flex: 1;
 		overflow: hidden;
+		height: 75vh;
 		transition: all 0.5s;
 		opacity: 0.6;
 		margin-bottom: 1em;
+		box-shadow: 0 0 4px #999999;
 	}
 	.component:hover {
 		flex: 3;
