@@ -12,6 +12,21 @@
 
 	<script defer src='/build/bundle.js'></script>
 	<link href='//fonts.googleapis.com/css?family=Ubuntu|Orbitron|Roboto|Montserrat|Righteous' rel='stylesheet' type='text/css'>
+
+	<style>
+		@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: "portrait") {
+			html {
+				transform: rotate(-90deg);
+				transform-origin: left top;
+				width: 100vh;
+				height: 100vw;
+				overflow-x: hidden;
+				position: absolute;
+				top: 100%;
+				left: 0;
+			}
+		}
+	</style>
 </head>
 
 <body>

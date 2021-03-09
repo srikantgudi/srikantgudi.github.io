@@ -43,7 +43,7 @@
   let currGroup = skills[0].group;
 </script>
 
-<Panel showcontent={$mainOpt === 'skills'}>
+<Panel>
   <div slot="title" on:click={() => {$mainOpt = 'skills'}}>Technical Skills</div>
   <div slot="content">
     {#each skills as skill}

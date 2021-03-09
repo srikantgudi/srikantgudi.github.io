@@ -3,7 +3,7 @@
   import Panel from './Panel.svelte';
 </script>
 
-<Panel showcontent={$mainOpt === 'profile'}>
+<Panel>
   <div slot="title" on:click={() => {$mainOpt = 'profile'}}>Profile</div>
   <div slot="content">
     <Panel hdrbg="#eeeeee" hdrclr="#666">

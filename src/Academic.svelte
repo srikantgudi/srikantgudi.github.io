@@ -4,7 +4,7 @@
   
 </script>
 
-<Panel showcontent={$mainOpt === 'qual'}>
+<Panel>
   <div slot="title" on:click={() => {$mainOpt='qual'}}>Academic Qualifications:</div>
   <div slot="content">
     <ul>

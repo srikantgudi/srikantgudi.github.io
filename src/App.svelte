@@ -1,9 +1,11 @@
 <script>
   import {mainOpt} from './store';
+	import Topnav from './Topnav.svelte';
 	import Profile from './Profile.svelte';
 	import Skills from './Skills.svelte';
 	import WorkHistory from './WorkHistory.svelte';
-	
+	import Academic from './Academic.svelte';
+
 	let name = 'world';
 	let tabs = [
 		{key: 'profile', label: 'Profile', component: Profile},
@@ -25,12 +27,31 @@
   }
 
   #app {
-    width: 80%;
+		display: flex;
+		flex-flow: column;
+    width: 100%;
     margin: 0 auto;
     background-color: whitesmoke;
     height: 100%;
-    overflow: hidden;
+    overflow-y: auto;
   }
+	.content {
+		box-shadow: 0 0 4px #999;
+		display: flex;
+		height: inherit;
+	}
+	.component {
+		flex: 1;
+		overflow: hidden;
+		transition: all 0.5s;
+		opacity: 0.6;
+		margin-bottom: 1em;
+	}
+	.component:hover {
+		flex: 3;
+		overflow-y: auto;
+		opacity: 1;
+	}
 	.topnav {
 		display: flex;
 		align-items: center;
@@ -71,6 +92,9 @@
 			padding: 0 10px;
 			overflow: unset;
 		}
+		#app {
+			height: auto;
+		}
 		.btn-nav {
 			display: flex;
 			height: 30px;
@@ -82,28 +106,22 @@
       font-size: 8px;
       width: 30%;
     }
+		.content {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 10px;	
+		}
+		.component {
+			height: 50vh;
+		}
 	}
 </style>
 <div id="app">
-  <div class="topnav">
-    <div class="title">
-      Srikant Gudi
-    </div>
-    <div class="contact-item">
-      Bengaluru, India | +91 829 665 6336 | srikantgudi@gmail.com
-    </div>
-    <div class="position-title">
-      Senior Frontend Engineer
-    </div>
-  </div>
-  <div class="btn-nav">
-    {#each tabs as tab}
-    <button class="tab-btn" on:click={() => setComp(tab)}>
-      {tab.label}
-    </button>
-    {/each}
-  </div>
-  <div class="content">
-    <svelte:component this={curComp} />
-  </div>
+  <Topnav />
+	<div class="content">
+		<div class="component"><Profile /></div>
+		<div class="component"><Skills /></div>
+		<div class="component"><WorkHistory /></div>
+		<div class="component"><Academic /></div>
+	</div>
 </div>

@@ -132,7 +132,7 @@
   }
 </style>
 
-<Panel showcontent={$mainOpt === 'workhist'}>
+<Panel>
   <div slot="title" on:click={() => {$mainOpt = 'exp'}}>Work History</div>
   <div slot="content">
     {#each expList as exp, idx}
