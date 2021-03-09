@@ -138,14 +138,14 @@
     {#each expList as exp, idx}
       <Panel>
         <div slot="title">
-          {curExp.header.jobTitle} :: {curExp.header.dates}
+          {exp.header.jobTitle} :: {exp.header.dates}
         </div>
         <div slot="subtitle">
-          {curExp.header.org}
+          {exp.header.org}
         </div>
         <div slot="content" class="exp-text">
           <ul>
-            {#each curExp.content as text}
+            {#each exp.content as text}
               <li>{text}</li>
             {/each}
           </ul>
