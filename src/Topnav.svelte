@@ -1,13 +1,11 @@
 <div class="topnav">
-  <div class="pageTitle">Srikant Gudi</div>
+  <div class="topnav-title">Srikant Gudi</div>
   <div class="contact">
     <div class="contact-item">Bengaluru, India</div>
     <div class="contact-item">srikantgudi@gmail.com</div>
-    <div class="contact-item">+91-829-665-6336</div>
+    <div class="contact-item">+91 829 665 6336</div>
   </div>
-  <div class="position-title">
-    Senior Frontend Professional
-  </div>
+  <div class="position-title">Senior Frontend Engineer</div>
 </div>
 <div class="note">(Hover on each section to see effect)</div>
 
@@ -28,35 +26,47 @@
   padding-top: 10px;
   font-family: Orbitron;
 }
-.topnav {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: 0 auto 10px;
-  padding: 10px;
-  width: 90vw;
-  background-color: #eeeeee;
-  box-shadow: 0 4px 2px #999;
-  border-radius: 0 0 20px 20px;
-}
-.contact {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  gap: 10px;
-  margin: 0 auto;
-}
-.contact-item {
-  font-family: Montserrat;
-  margin: 4px;
-  min-width: 25%;
-  text-align: center;
-}
-.position-title {
-  font-family: Righteous;
-  font-weight: 600;
-  text-align: center;
-}
+
+  .topnav {
+    box-shadow: 0 0 4px #999;
+    min-height: 4em;
+    margin: 0 1em;
+    padding: 10px;
+    background: linear-gradient(lightblue, aliceblue, lightblue);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+  }
+  .topnav-title {
+    font-family: Righteous;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: navy;
+  }
+  .contact {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat;
+    text-align: center;
+  }
+  .contact-item {
+    min-width: 27vw;
+    cursor: pointer;
+  }
+  .position-title {
+    text-transform: uppercase;
+    font-family: Orbitron;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    color: blue;
+  }
 @media screen and (max-width: 480px) {
   #postitle {
     font-size: 90%;

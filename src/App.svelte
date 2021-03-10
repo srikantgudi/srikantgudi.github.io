@@ -1,7 +1,6 @@
 <script>
   import Topnav from "./Topnav.svelte";
   import Profile from "./Profile.svelte";
-  import Profile2 from "./Profile2.svelte";
   import Skills from "./Skills.svelte";
   import WorkHistory from "./WorkHistory.svelte";
   import Academic from "./Academic.svelte";
@@ -10,15 +9,7 @@
 </script>
 
 <div id="app">
-  <div class="topnav">
-    <div class="topnav-title">Srikant Gudi</div>
-    <div class="contact">
-      <div class="contact-item">Bengaluru, India</div>
-      <div class="contact-item">srikantgudi@gmail.com</div>
-      <div class="contact-item">+91 829 665 6336</div>
-    </div>
-    <div class="position-title">Senior Frontend Engineer</div>
-  </div>
+  <Topnav />
 
   <div class="content">
     <div
@@ -66,10 +57,7 @@
     >
       <div class="tab-btn">Academic</div>
       <div class="content-text" class:active={contentId === 3}>
-        <ul>
-          <li>Master in Computer Management</li>
-          <li>Bachelor of Commerce</li>
-        </ul>
+        <Academic />
       </div>
     </div>
   </div>
@@ -88,46 +76,6 @@
     height: 96vh;
   }
 
-  .topnav {
-    box-shadow: 0 0 4px #999;
-    min-height: 4em;
-    margin: 0 1em;
-    padding: 10px;
-    background: linear-gradient(lightblue, aliceblue, lightblue);
-    border-radius: 0 0 10px 10px;
-    display: flex;
-    align-items: center;
-    flex-flow: column;
-    justify-content: center;
-  }
-  .topnav-title {
-    font-family: Righteous;
-    font-size: 28px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: navy;
-  }
-  .contact {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    font-family: Montserrat;
-    text-align: center;
-  }
-  .contact-item {
-    min-width: 27vw;
-    cursor: pointer;
-  }
-  .position-title {
-    text-transform: uppercase;
-    font-family: Orbitron;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-align: center;
-    color: blue;
-  }
   .content {
     display: flex;
     align-items: center;
