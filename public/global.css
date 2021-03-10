@@ -1,15 +1,3 @@
-.container {
-    width: 100%;
-    margin: 0 auto;
-    font-family: Montserrat;
-    font-size: 16px;
-}
-
-.resume-section {
-    box-shadow: 0 0 4px #999999;
-    border-radius: 10px 10px 0 0;
-}
-
 .sectiontitle {
     border-radius: 4px;
     font-family: Orbitron;
@@ -19,18 +7,6 @@
     background-color: #666666;
     color: #f9f9f9;
     margin-bottom: 10px;
-}
-
-.skillgroup {
-    padding: 10px;
-    margin: 0 10px 10px;
-    box-shadow: 0 0 4px #999999;
-    border-radius: 10px 10px 0 0;
-    display: none;
-}
-
-.skillgroup.active {
-    display: block;
 }
 
 .skillgroupname {
