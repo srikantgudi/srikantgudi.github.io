@@ -132,25 +132,20 @@
   }
 </style>
 
-<Panel>
-  <div slot="title" on:click={() => {$mainOpt = 'exp'}}>Work History</div>
-  <div slot="content">
-    {#each expList as exp, idx}
-      <Panel>
-        <div slot="title">
-          {exp.header.jobTitle} :: {exp.header.dates}
-        </div>
-        <div slot="subtitle">
-          {exp.header.org}
-        </div>
-        <div slot="content" class="exp-text">
-          <ul>
-            {#each exp.content as text}
-              <li>{text}</li>
-            {/each}
-          </ul>
-        </div>
-      </Panel>
-    {/each}
-  </div>
-</Panel>
+<div>
+  {#each expList as exp, idx}
+    <div class="job-title">
+      {exp.header.jobTitle} :: {exp.header.dates}
+    </div>
+    <div class="org-name">
+      {exp.header.org}
+    </div>
+    <div class="exp-text">
+      <ul>
+        {#each exp.content as text}
+          <li>{text}</li>
+        {/each}
+      </ul>
+    </div>
+  {/each}
+</div>
