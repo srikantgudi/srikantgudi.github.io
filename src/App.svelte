@@ -171,10 +171,15 @@
     background-color: aliceblue;
   }
   @media screen and (max-width: 719px) {
-    .tab, .tab-content {
+    .tab {
       width: 100%;
       margin: 0 0 10px;
       height: auto;
+    }
+    .tab-content {
+      width: 100vw;
+      height: auto;
+      padding-bottom: 10px;
     }
   }
 </style>
