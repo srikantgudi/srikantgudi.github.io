@@ -120,7 +120,7 @@
     font-family: Roboto;
     box-shadow: 0 0 4px #999;
     margin: 0 1em;
-    background: linear-gradient(whitesmoke, #eef);
+    background: linear-gradient(lightblue, navy);
     height: 96vh;
   }
 
