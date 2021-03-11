@@ -177,7 +177,6 @@
       height: auto;
     }
     .tab-content {
-      width: 100vw;
       height: auto;
       padding-bottom: 10px;
     }
