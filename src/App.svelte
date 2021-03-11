@@ -98,7 +98,8 @@
     box-shadow: 0 0 4px #999;
     margin: 0 1em;
     background: linear-gradient(lightblue, navy);
-    height: 96vh;
+    min-height: 94vh;
+    padding-bottom: 20px;
   }
 
   .content {

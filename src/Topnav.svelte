@@ -9,23 +9,6 @@
 </div>
 
 <style>
-.note {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: center;
-  font-family: sans-serif;
-  font-size:10px;
-  font-style:italic;
-}
-.pageTitle {
-  font-size: 24px;
-  text-transform: uppercase;
-  text-align: center;
-  padding-top: 10px;
-  font-family: Orbitron;
-}
-
   .topnav {
     box-shadow: 0 0 4px #999;
     min-height: 4em;

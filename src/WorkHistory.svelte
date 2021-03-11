@@ -102,26 +102,6 @@
 </script>
 
 <style>
-  button {
-    outline: 0;
-    cursor: pointer;
-  }
-  button.exp {
-    background-color: lightgrey;
-    border: none;
-    padding: 2px;
-    box-shadow: 0 0 4px #999999;
-    margin: 0 8px 8px;
-  }
-  button.exp.active {
-    background-color: #666666;
-    color: whitesmoke;
-  }
-  .exp-title {
-    background-color: navy;
-    color: #ffa;
-    padding: 8px;
-  }
   .exp-text {
     height: fit-content;
     overflow-y: auto;
