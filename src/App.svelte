@@ -14,7 +14,7 @@
   <Topnav />
 
   <div class="content">
-    <div class="tabs">
+    <!-- <div class="tabs">
       <div class="tab" class:active={curTab === 1}>
         <div class="title-nav">
           <div
@@ -84,6 +84,26 @@
           <WorkHistory />
         </div>
       </div>
+    </div> -->
+    <div class="tabs">
+      <div class="tab">
+        <div class="tab-title">Profile</div>
+        <div class="tab-content">
+          <Profile />
+        </div>
+      </div>
+      <div class="tab">
+        <div class="tab-title">Skills</div>
+        <div class="tab-content">
+          <Skills />
+        </div>
+      </div>
+      <div class="tab">
+        <div class="tab-title">Work History</div>
+        <div class="tab-content">
+          <WorkHistory />
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -115,7 +135,19 @@
     margin: 0 auto;
   }
   .tab {
-    min-width: 20vw;
+    flex: 1;
+    width: 30vw;
+    box-shadow: 0 0 4px #eeeeee;
+    height: 75vh;
+    transition: all 0.5s;
+  }
+  .tab:hover {
+    flex: 3;
+  }
+  .tab:hover > .tab-title {
+    color: white;
+    background: linear-gradient(lightblue,navy) no-repeat;
+    border-radius: 10px 10px 0 0;
   }
   .tab.active {
     position: absolute;
@@ -152,8 +184,9 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 4px lightcyan;
+    background: linear-gradient(blue,lightblue,blue) no-repeat;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     padding: 10px;
   }
   .tab-title.current {
@@ -172,14 +205,16 @@
     float: right;
   }
   .tab-content {
-    display: none;
-  }
-  .tab-content.active {
-    display: block;
-    height: 50vh;
-    margin: 10px 0;
-    overflow-y: auto;
+    height: 64vh;
+    overflow: hidden;
     padding: 10px 20px;
+    opacity: 0.5;
+    background-color: #ddeeff;
+  }
+  
+  .tab:hover > .tab-content {
+    opacity: 1;
+    overflow-y: auto;
   }
   @media screen and (max-width: 719px) {
     .tab {
