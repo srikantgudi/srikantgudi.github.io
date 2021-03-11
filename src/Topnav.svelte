@@ -7,7 +7,6 @@
   </div>
   <div class="position-title">Senior Frontend Engineer</div>
 </div>
-<div class="note">(Hover on each section to see effect)</div>
 
 <style>
 .note {
