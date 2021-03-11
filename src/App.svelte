@@ -159,7 +159,7 @@
     position: relative;
     top: 1em;
     height: 4em;
-    background: linear-gradient(lightblue, darkblue);
+    background: linear-gradient(lightblue, blue);
     border-radius: 10px;
     color: beige;
     justify-content: center;
