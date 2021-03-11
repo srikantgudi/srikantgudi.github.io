@@ -2,8 +2,8 @@
   import {mainOpt} from './store';
   import Panel from './Panel.svelte';
 </script>
-<div>
-  <h3>About me</h3>
+<div class="panel">
+  <div class="sectiontitle">About me</div>
   <ul>
     <li>
       Senior software professional with over 20 years of experience in various
@@ -23,7 +23,7 @@
     </li>
     <li>Can create POCs, presentations, and wireframes.</li>
   </ul>
-  <h3>Academic</h3>
+  <div class="sectiontitle">Academic</div>
   <div>
     <ul>
       <li>Master in Computer Management</li>

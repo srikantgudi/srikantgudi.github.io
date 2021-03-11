@@ -4,12 +4,12 @@
   
 </script>
 
-<Panel>
-  <div slot="title" on:click={() => {$mainOpt='qual'}}>Academic Qualifications:</div>
-  <div slot="content">
+<div>
+  <div class="sectiontitle">Academic Qualifications:</div>
+  <div>
     <ul>
       <li>Master in Computer Management</li>
       <li>Bachelor of Commerce</li>
     </ul>
   </div>
-</Panel>
+</div>

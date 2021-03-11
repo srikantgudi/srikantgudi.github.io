@@ -84,29 +84,6 @@
           <WorkHistory />
         </div>
       </div>
-      <div class="tab" class:active={curTab === 4}>
-        <div class="title-nav">
-          <div
-            class="tab-title"
-            class:current={curTab === 4}
-            on:click={() => {
-              curTab = 4;
-            }}
-          >
-            Academic
-          </div>
-          <button
-            class="close-btn"
-            class:active={curTab === 4}
-            on:click={() => {
-              curTab = 0;
-            }}>&times;</button
-          >
-        </div>
-        <div class="tab-content" class:active={curTab === 4}>
-          <Academic />
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -175,6 +152,8 @@
     justify-content: center;
     box-shadow: 0 2px 4px lightcyan;
     cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
   }
   .tab-title.current {
     font-size: 24px;
@@ -199,6 +178,7 @@
     height: 50vh;
     margin: 10px 0;
     overflow-y: auto;
+    padding: 10px 20px;
   }
   @media screen and (max-width: 719px) {
     .tab {

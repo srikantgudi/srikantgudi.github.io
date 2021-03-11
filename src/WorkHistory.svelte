@@ -126,6 +126,7 @@
     height: fit-content;
     overflow-y: auto;
     padding: 1vh 2vw;
+    box-shadow: 0 2px 2px #999999;
   }
   li {
     list-style-type: square;
@@ -134,7 +135,7 @@
 
 <div>
   {#each expList as exp, idx}
-    <div class="job-title">
+    <div class="sectiontitle">
       {exp.header.jobTitle} :: {exp.header.dates}
     </div>
     <div class="org-name">

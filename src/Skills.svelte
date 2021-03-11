@@ -44,17 +44,16 @@
 
 <style>
   .skillgroup {
-    padding: 1vh 2vw
-  }
-  .skillpanel {
-    padding: 0 4vw;
+    padding: 1vh 2vw;
+    box-shadow: 0 2px 4px #999999;
+    margin-bottom: 10px;
   }
 </style>
 
-<div class="skillpanel">
+<div style="padding: 0 4vw;">
   {#each skills as skill}
     <div>
-      <div class="skillgroupname">{skill.group}</div>
+      <div class="sectiontitle">{skill.group}</div>
       <div class="skillgroup">
         {#each skill.items as item}
           <Rating text={item.name} level={item.level} />
