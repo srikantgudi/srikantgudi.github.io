@@ -146,37 +146,8 @@
   }
   .tab:hover > .tab-title {
     color: white;
-    background: linear-gradient(lightblue,navy) no-repeat;
+    background: linear-gradient(lightblue, navy) no-repeat;
     border-radius: 10px 10px 0 0;
-  }
-  .tab.active {
-    position: absolute;
-    z-index: 9999;
-    top: 20vh;
-    left: 10vw;
-    height: 70vh;
-    width: 80vw;
-    margin: auto;
-    padding: 0 0 10px;
-    background: linear-gradient(lightblue, lightcyan);
-  }
-  .title-nav {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 10px;
-    align-items: center;
-    padding: 20px;
-    position: relative;
-    top: 1em;
-    height: 4em;
-    background: linear-gradient(lightblue, blue);
-    border-radius: 10px;
-    color: beige;
-    justify-content: center;
-  }
-  .tab.active > .title-nav {
-    top: 0;
-    border-radius: 10px 10px 20px 20px;
   }
   .tab-title {
     font-size: 18px;
@@ -184,37 +155,20 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 4px lightcyan;
-    background: linear-gradient(blue,lightblue,blue) no-repeat;
+    background: linear-gradient(blue, lightblue, blue) no-repeat;
     cursor: pointer;
     border-radius: 0 0 10px 10px;
     padding: 10px;
-  }
-  .tab-title.current {
-    font-size: 24px;
-    color: whitesmoke;
-    padding: 10px 20px;
-  }
-  .close-btn {
-    cursor: pointer;
-    display: none;
-    height: 40px;
-    width: 40px;
-  }
-  .close-btn.active {
-    display: block;
-    float: right;
   }
   .tab-content {
     height: 64vh;
     overflow: hidden;
     padding: 10px 20px;
-    opacity: 0.5;
-    background-color: #ddeeff;
+    background-color: #cccccc;
   }
-  
   .tab:hover > .tab-content {
-    opacity: 1;
     overflow-y: auto;
+    background-color: aliceblue;
   }
   @media screen and (max-width: 719px) {
     .tab {

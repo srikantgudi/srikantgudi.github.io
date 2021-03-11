@@ -1,5 +1,12 @@
+<script>
+  import Academic from "./Academic.svelte";
+  import App from "./App.svelte";
+</script>
+
 <div class="topnav">
-  <div class="topnav-title">Srikant Gudi</div>
+  <div class="topnav-title">Srikant Gudi
+    <a href="https://www.linkedin.com/in/srikantgudi-blr/" target="_new" ><img height="16" src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="IN" /></a>
+  </div>
   <div class="contact">
     <div class="contact-item">Bengaluru, India</div>
     <div class="contact-item">srikantgudi@gmail.com</div>
@@ -49,28 +56,25 @@
     text-align: center;
     color: blue;
   }
-@media screen and (max-width: 480px) {
-  #postitle {
-    font-size: 90%;
+  @media screen and (max-width: 480px) {
+    .topnav {
+      display: flex;
+      flex-flow: column;
+      width: 90%;
+      text-align: center;
+    }
+    .contact {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+    .contact-item {
+      font-size: 80%;
+      width: 100%;
+    }
+    .position-title {
+      font-size: 70%;
+    }
   }
-  .topnav {
-    display: flex;
-    flex-flow: column;
-    width: 90%;
-    text-align: center;
-  }
-  .contact, .pageTitle {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 0;
-  }
-  .contact-item {
-    font-size: 80%;
-    width: 100%;
-  }
-  .position-title {
-    font-size: 70%;
-  }
-}
 </style>
