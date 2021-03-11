@@ -6,58 +6,106 @@
   import Academic from "./Academic.svelte";
 
   let contentId = 1;
+  let zoomTab = false;
+  let curTab = 0;
 </script>
 
 <div id="app">
   <Topnav />
 
   <div class="content">
-    <div
-      class="content-item"
-      on:click={() => {
-        contentId = 1;
-      }}
-      class:active={contentId === 1}
-    >
-      <div class="tab-btn">Profile</div>
-      <div class="content-text" class:active={contentId === 1}>
-        <Profile />
+    <div class="tabs">
+      <div class="tab" class:active={curTab === 1}>
+        <div class="title-nav">
+          <div
+            class="tab-title"
+            class:current={curTab === 1}
+            on:click={() => {
+              curTab = 1;
+            }}
+          >
+            Profile
+          </div>
+          <button
+            class="close-btn"
+            class:active={curTab === 1}
+            on:click={() => {
+              curTab = 0;
+            }}>&times;</button
+          >
+        </div>
+        <div class="tab-content" class:active={curTab === 1}>
+          <Profile />
+        </div>
       </div>
-    </div>
-    <div
-      class="content-item"
-      on:click={() => {
-        contentId = 2;
-      }}
-      class:active={contentId === 2}
-    >
-      <div class="tab-btn">Technical Skills</div>
-      <div class="content-text" class:active={contentId === 2}>
-        <Skills />
+      <div class="tab" class:active={curTab === 2}>
+        <div class="title-nav">
+          <div
+            class="tab-title"
+            class:current={curTab === 2}
+            on:click={() => {
+              curTab = 2;
+            }}
+          >
+            Technical Skills
+          </div>
+          <button
+            class="close-btn"
+            class:active={curTab === 2}
+            on:click={() => {
+              curTab = 0;
+            }}>&times;</button
+          >
+        </div>
+        <div class="tab-content" class:active={curTab === 2}>
+          <Skills />
+        </div>
       </div>
-    </div>
-    <div
-      class="content-item"
-      on:click={() => {
-        contentId = 3;
-      }}
-      class:active={contentId === 3}
-    >
-      <div class="tab-btn">Work History</div>
-      <div class="content-text" class:active={contentId === 3}>
-        <WorkHistory />
+      <div class="tab" class:active={curTab === 3}>
+        <div class="title-nav">
+          <div
+            class="tab-title"
+            class:current={curTab === 3}
+            on:click={() => {
+              curTab = 3;
+            }}
+          >
+            Work History
+          </div>
+          <button
+            class="close-btn"
+            class:active={curTab === 3}
+            on:click={() => {
+              curTab = 0;
+            }}>&times;</button
+          >
+        </div>
+        <div class="tab-content" class:active={curTab === 3}>
+          <WorkHistory />
+        </div>
       </div>
-    </div>
-    <div
-      class="content-item"
-      on:click={() => {
-        contentId = 4;
-      }}
-      class:active={contentId === 4}
-    >
-      <div class="tab-btn">Academic</div>
-      <div class="content-text" class:active={contentId === 3}>
-        <Academic />
+      <div class="tab" class:active={curTab === 4}>
+        <div class="title-nav">
+          <div
+            class="tab-title"
+            class:current={curTab === 4}
+            on:click={() => {
+              curTab = 4;
+            }}
+          >
+            Academic
+          </div>
+          <button
+            class="close-btn"
+            class:active={curTab === 4}
+            on:click={() => {
+              curTab = 0;
+            }}>&times;</button
+          >
+        </div>
+        <div class="tab-content" class:active={curTab === 4}>
+          <Academic />
+        </div>
       </div>
     </div>
   </div>
@@ -82,49 +130,84 @@
     margin: 10px 15px;
     gap: 10px;
   }
-  .content-item {
-    flex: 1;
-    border-radius: 10px 10px 4px 4px;
-    margin-top: 20px;
-    padding: 0 20px;
+  .tabs {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1vw 1vh;
+    margin: 0 auto;
+  }
+  .tab {
+    min-width: 20vw;
+  }
+  .tab.active {
+    position: absolute;
+    z-index: 9999;
+    top: 20vh;
+    left: 10vw;
+    height: 70vh;
+    width: 80vw;
+    margin: auto;
+    padding: 0 0 10px;
+    background: linear-gradient(lightblue, lightcyan);
+  }
+  .title-nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    top: 1em;
+    height: 4em;
+    background: linear-gradient(lightblue, darkblue);
+    border-radius: 10px;
+    color: beige;
+    justify-content: center;
+  }
+  .tab.active > .title-nav {
+    top: 0;
+    border-radius: 10px 10px 20px 20px;
+  }
+  .tab-title {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px lightcyan;
+    cursor: pointer;
+  }
+  .tab-title.current {
+    font-size: 24px;
+    color: whitesmoke;
+    padding: 10px 20px;
+  }
+  .close-btn {
+    cursor: pointer;
+    display: none;
+    height: 40px;
+    width: 40px;
+  }
+  .close-btn.active {
+    display: block;
+    float: right;
+  }
+  .tab-content {
+    display: none;
+  }
+  .tab-content.active {
     display: block;
     height: 50vh;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 0 4px #999;
-    transition: all 0.5s ease-in-out;
-  }
-  .content-item:hover {
-    flex: 3;
-    height: 70vh;
-    margin-top: 0;
+    margin: 10px 0;
     overflow-y: auto;
-    border-radius: 20px 20px 10px 10px;
-    box-shadow: 0 2px 10px #666666;
-  }
-  .content-item:hover > .tab-btn {
-    background-color: lightcyan;
-    color: navy;
-    border-radius: 20px 20px 4px 4px;
-    font-family: Orbitron;
-    font-size: 20px;
-    text-align: center;
   }
   @media screen and (max-width: 719px) {
-    #app {
-      height: auto;
-    }
-    .position-title {
-      font-size: 90%;
-      font-weight: 600;
-    }
-    .content {
-      flex-flow: column;
-      align-items: flex-start;
-      overflow-y: auto;
-    }
-    .content-item {
+    .tab {
       width: 100%;
+      margin: 0 0 10px;
+    }
+    .tab.active {
+      width: 100vw;
+      left: 0;
     }
   }
 </style>
