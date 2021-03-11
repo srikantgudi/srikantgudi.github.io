@@ -42,11 +42,20 @@
   ]
 </script>
 
-<div>
+<style>
+  .skillgroup {
+    padding: 1vh 2vw
+  }
+  .skillpanel {
+    padding: 0 4vw;
+  }
+</style>
+
+<div class="skillpanel">
   {#each skills as skill}
     <div>
       <div class="skillgroupname">{skill.group}</div>
-      <div>
+      <div class="skillgroup">
         {#each skill.items as item}
           <Rating text={item.name} level={item.level} />
         {/each}
