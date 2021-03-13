@@ -3,30 +3,6 @@
   import Profile from "./Profile.svelte";
   import Skills from "./Skills.svelte";
   import WorkHistory from "./WorkHistory.svelte";
-
-  let contentId = 1;
-  let zoomTab = false;
-  let tabs = [
-    {tab: 'Profile', comp: Profile},
-    {tab: 'Technical Skills', comp: Skills},
-    {tab: 'Work Experience', comp: WorkHistory},
-    {tab: 'Acacemic', comp: Academic}
-  ];
-  let curTab;
-  let tabIdx = 0;
-  let prevTab;
-  let nextTab;
-
-  $: curTab = tabs[tabIdx];
-  $: ntabs = tabs.length;
-  $: nextTab = (tabIdx === ntabs - 1 ? '' : tabs[tabIdx+1].tab)
-  $: prevTab = (tabIdx === 0 ? '' : tabs[tabIdx-1].tab)
-  
-  const goTab = (delta) => {
-    tabIdx += delta;
-    if (tabIdx < 0) {tabIdx = 0}
-    if (tabIdx > ntabs-1) {tabIdx = ntabs-1}
-  }
 </script>
 
 <div id="app">
