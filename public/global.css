@@ -12,6 +12,8 @@
 }
 .inner-content-body {
     padding: 0 4vw;
+    font-family: Montserrat;
+    line-height: 24px;
 }
 .sectionsubtitle {
     background-color: #999999;
