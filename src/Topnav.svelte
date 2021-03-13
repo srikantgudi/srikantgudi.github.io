@@ -37,7 +37,7 @@
   }
   .contact {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     align-items: center;
     justify-content: center;
     font-family: Montserrat;
