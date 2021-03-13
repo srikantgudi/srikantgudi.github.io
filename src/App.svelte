@@ -31,25 +31,24 @@
 </script>
 
 <div id="app">
-  <Topnav />
-
   <div class="container">
-    <button disabled={tabIdx === 0} class="navbtn" on:click={() => goTab(-1)}>{prevTab}</button>
+    <Topnav />
     <div class="content">
-      <div class="sectiontitle center">{curTab.tab}</div>
       <div class="content-body">
-        <svelte:component this={tabs[tabIdx].comp} />
+        <Profile />
+        <Skills />
+        <WorkHistory />
+        <Academic />
       </div>
     </div>
-    <button disabled={tabIdx === ntabs-1} class="navbtn next" on:click={() => goTab(1)}>{nextTab}</button>
-    </div>
+  </div>
 </div>
 
 <style>
   :root {
     background: linear-gradient(aliceblue, lightblue, aliceblue) no-repeat;
     height: 99%;
-    overflow: hidden;
+    overflow-y: hidden;
   }
   #app {
     font-family: Roboto;
@@ -70,45 +69,20 @@
   }
   .content {
     box-sizing: border-box;
-    width: 80vw;
     height: 70;
     overflow: hidden;
     margin: 0 auto;
     display: flex;
     flex-flow: column;
     gap: 4px;
-    padding: 10px;
     background: linear-gradient(aliceblue,lightblue,aliceblue);
     border-radius: 10px 10px 8px 8px;
   }
   .content-body {
     box-sizing: border-box;
-    height: 60vh;
+    height: 70vh;
     margin: 10px;
     overflow-y: auto;
-  }
-  .center {
-    text-align: center;
-    justify-content: center;
-  }
-  .navbtn {
-    border-radius: 40% 40% 0 0;
-    height: 2em;
-    width: 100%;
-    cursor: pointer;
-    margin: 0 auto;
-    position: relative;
-    border: none;
-    font-size: 24px;
-    background: linear-gradient(#999999, #cccccc);
-    color: #666666;
-  }
-  .navbtn.next {
-    border-radius: 0 0 40% 40%;
-    background: linear-gradient(#cccccc,#999999);
-  }
-  .navbtn:disabled {
-    cursor: not-allowed;
   }
   @media screen and (max-width: 719px) {
     .content {

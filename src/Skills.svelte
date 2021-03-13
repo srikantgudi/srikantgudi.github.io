@@ -50,6 +50,7 @@
   }
 </style>
 
+<div class="sectiontitle">Technical Skills</div>
 <div style="padding: 0 4vw;">
   {#each skills as skill}
     <div>

@@ -118,6 +118,7 @@
   }
 </style>
 
+<div class="sectiontitle">Work History</div>
 <div>
   {#each expList as exp, idx}
     <div class="sectionsubtitle">

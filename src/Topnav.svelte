@@ -19,8 +19,7 @@
   .topnav {
     box-shadow: 0 0 4px #999;
     min-height: 4em;
-    margin: 0 1em;
-    padding: 10px;
+    min-width: 100%;
     background: linear-gradient(lightblue, aliceblue, lightblue);
     border-radius: 0 0 10px 10px;
     display: flex;

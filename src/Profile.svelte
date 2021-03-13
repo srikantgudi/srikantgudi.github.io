@@ -3,6 +3,7 @@
   import Panel from './Panel.svelte';
 </script>
 <div class="panel">
+  <div class="sectiontitle">Profile</div>
   <div class="sectionsubtitle">About me</div>
   <ul>
     <li>
