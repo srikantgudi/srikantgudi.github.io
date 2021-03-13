@@ -71,7 +71,7 @@
   .content {
     box-sizing: border-box;
     width: 80vw;
-    height: 60vh;
+    height: 70;
     overflow: hidden;
     margin: 0 auto;
     display: flex;
@@ -83,7 +83,7 @@
   }
   .content-body {
     box-sizing: border-box;
-    height: 50vh;
+    height: 60vh;
     margin: 10px;
     overflow-y: auto;
   }
