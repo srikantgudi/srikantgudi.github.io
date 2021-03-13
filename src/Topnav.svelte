@@ -29,7 +29,7 @@
   }
   .topnav-title {
     font-family: Righteous;
-    font-size: 2;
+    font-size: 32px;
     font-weight: 400;
     text-transform: uppercase;
     color: navy;
