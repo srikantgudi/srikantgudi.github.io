@@ -111,5 +111,10 @@
     cursor: not-allowed;
   }
   @media screen and (max-width: 719px) {
+    .content {
+      width: 100%;
+      margin: 0 0 10px;
+      height: auto;
+    }
   }
 </style>
