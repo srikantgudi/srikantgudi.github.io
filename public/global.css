@@ -10,6 +10,9 @@
     color: #f9f9f9;
     margin-bottom: 8px;
 }
+.inner-content-body {
+    padding: 0 4vw;
+}
 .sectionsubtitle {
     background-color: #999999;
     color: #f9f9f9;

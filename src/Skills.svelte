@@ -51,7 +51,7 @@
 </style>
 
 <div class="sectiontitle">Technical Skills</div>
-<div style="padding: 0 4vw;">
+<div class="inner-content-body">
   {#each skills as skill}
     <div>
       <div class="sectionsubtitle">{skill.group}</div>

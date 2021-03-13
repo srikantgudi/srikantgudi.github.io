@@ -119,7 +119,7 @@
 </style>
 
 <div class="sectiontitle">Work History</div>
-<div>
+<div class="inner-content-body">
   {#each expList as exp, idx}
     <div class="sectionsubtitle">
       {exp.header.jobTitle} :: {exp.header.dates}
