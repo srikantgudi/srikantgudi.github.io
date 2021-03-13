@@ -69,7 +69,7 @@
   }
   .content {
     box-sizing: border-box;
-    height: 70;
+    height: 80vh;
     overflow: hidden;
     margin: 0 auto;
     display: flex;
