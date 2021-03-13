@@ -120,7 +120,7 @@
 
 <div>
   {#each expList as exp, idx}
-    <div class="exp-title">
+    <div class="sectionsubtitle">
       {exp.header.jobTitle} :: {exp.header.dates}
     </div>
     <div class="org-name">

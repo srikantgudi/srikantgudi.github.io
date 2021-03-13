@@ -7,111 +7,40 @@
 
   let contentId = 1;
   let zoomTab = false;
-  let curTab = 0;
+  let tabs = [
+    {tab: 'Profile', comp: Profile},
+    {tab: 'Technical Skills', comp: Skills},
+    {tab: 'Work Experience', comp: WorkHistory},
+    {tab: 'Acacemic', comp: Academic}
+  ];
+  let curTab;
+  let tabIdx = 0;
+  $: curTab = tabs[tabIdx];
+  $: ntabs = tabs.length;
+  $: prevTab = tabIdx === 0 ? '' : tabs[tabIdx-1].tab;
+  $: nextTab = tabIdx < ntabs-1 ? tabs[tabIdx+1].tab : '';
 </script>
 
 <div id="app">
   <Topnav />
 
-  <div class="content">
-    <!-- <div class="tabs">
-      <div class="tab" class:active={curTab === 1}>
-        <div class="title-nav">
-          <div
-            class="tab-title"
-            class:current={curTab === 1}
-            on:click={() => {
-              curTab = 1;
-            }}
-          >
-            Profile
-          </div>
-          <button
-            class="close-btn"
-            class:active={curTab === 1}
-            on:click={() => {
-              curTab = 0;
-            }}>&times;</button
-          >
-        </div>
-        <div class="tab-content" class:active={curTab === 1}>
-          <Profile />
-        </div>
-      </div>
-      <div class="tab" class:active={curTab === 2}>
-        <div class="title-nav">
-          <div
-            class="tab-title"
-            class:current={curTab === 2}
-            on:click={() => {
-              curTab = 2;
-            }}
-          >
-            Technical Skills
-          </div>
-          <button
-            class="close-btn"
-            class:active={curTab === 2}
-            on:click={() => {
-              curTab = 0;
-            }}>&times;</button
-          >
-        </div>
-        <div class="tab-content" class:active={curTab === 2}>
-          <Skills />
-        </div>
-      </div>
-      <div class="tab" class:active={curTab === 3}>
-        <div class="title-nav">
-          <div
-            class="tab-title"
-            class:current={curTab === 3}
-            on:click={() => {
-              curTab = 3;
-            }}
-          >
-            Work History
-          </div>
-          <button
-            class="close-btn"
-            class:active={curTab === 3}
-            on:click={() => {
-              curTab = 0;
-            }}>&times;</button
-          >
-        </div>
-        <div class="tab-content" class:active={curTab === 3}>
-          <WorkHistory />
-        </div>
-      </div>
-    </div> -->
-    <div class="tabs">
-      <div class="tab">
-        <div class="tab-title">Profile</div>
-        <div class="tab-content">
-          <Profile />
-        </div>
-      </div>
-      <div class="tab">
-        <div class="tab-title">Skills</div>
-        <div class="tab-content">
-          <Skills />
-        </div>
-      </div>
-      <div class="tab">
-        <div class="tab-title">Work History</div>
-        <div class="tab-content">
-          <WorkHistory />
-        </div>
+  <div class="container">
+    <button disabled={tabIdx === 0} class="navbtn" on:click={() => {tabIdx--}}>{prevTab}</button>
+    <div class="content">
+      <div class="sectiontitle center">{curTab.tab}</div>
+      <div class="content-body">
+        <svelte:component this={tabs[tabIdx].comp} />
       </div>
     </div>
-  </div>
+    <button class="navbtn next" on:click={() => {tabIdx++}}>{nextTab}</button>
+    </div>
 </div>
 
 <style>
   :root {
     background: linear-gradient(aliceblue, lightblue, aliceblue) no-repeat;
-    height: 100%;
+    height: 99%;
+    overflow: hidden;
   }
   #app {
     font-family: Roboto;
@@ -119,56 +48,55 @@
     margin: 0 1em;
     background: linear-gradient(lightblue, navy);
     min-height: 94vh;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
-  .content {
-    display: flex;
+  .container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     align-items: center;
-    margin: 10px 15px;
     gap: 10px;
+    width: 80vw;
+    margin: 10px auto;
   }
-  .tabs {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 1vw 1vh;
-    margin: 0 auto;
-  }
-  .tab {
-    flex: 1;
-    width: 30vw;
-    box-shadow: 0 0 4px #eeeeee;
-    height: 75vh;
-    transition: all 0.5s;
-  }
-  .tab:hover {
-    flex: 3;
-  }
-  .tab:hover > .tab-title {
-    color: white;
-    background: linear-gradient(lightblue, navy) no-repeat;
-    border-radius: 10px 10px 0 0;
-  }
-  .tab-title {
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 4px lightcyan;
-    background: linear-gradient(blue, lightblue, blue) no-repeat;
-    cursor: pointer;
-    border-radius: 0 0 10px 10px;
-    padding: 10px;
-  }
-  .tab-content {
-    height: 64vh;
+  .content {
+    box-sizing: border-box;
+    width: 80vw;
+    height: 60vh;
     overflow: hidden;
-    padding: 10px 20px;
-    background-color: #cccccc;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    gap: 4px;
+    padding: 10px;
+    background: linear-gradient(aliceblue,lightblue,aliceblue);
+    border-radius: 10px 10px 8px 8px;
   }
-  .tab:hover > .tab-content {
+  .content-body {
+    box-sizing: border-box;
+    height: 50vh;
+    margin: 10px;
     overflow-y: auto;
-    background-color: aliceblue;
+  }
+  .center {
+    text-align: center;
+    justify-content: center;
+  }
+  .navbtn {
+    border-radius: 40% 40% 0 0;
+    height: 2em;
+    width: 100%;
+    cursor: pointer;
+    margin: 0 auto;
+    position: relative;
+    border: none;
+    font-size: 24px;
+    background: linear-gradient(#999999, #cccccc);
+    color: #666666;
+  }
+  .navbtn.next {
+    border-radius: 0 0 40% 40%;
+    background: linear-gradient(#cccccc,#999999);
   }
   @media screen and (max-width: 719px) {
     .tab {

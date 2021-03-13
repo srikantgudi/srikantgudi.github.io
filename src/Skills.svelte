@@ -53,7 +53,7 @@
 <div style="padding: 0 4vw;">
   {#each skills as skill}
     <div>
-      <div class="sectiontitle">{skill.group}</div>
+      <div class="sectionsubtitle">{skill.group}</div>
       <div class="skillgroup">
         {#each skill.items as item}
           <Rating text={item.name} level={item.level} />
