@@ -41,7 +41,7 @@
         <svelte:component this={tabs[tabIdx].comp} />
       </div>
     </div>
-    <button class="navbtn next" on:click={() => goTab(1)}>{nextTab}</button>
+    <button disabled={tabIdx === ntabs-1} class="navbtn next" on:click={() => goTab(1)}>{nextTab}</button>
     </div>
 </div>
 
