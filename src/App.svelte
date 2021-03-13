@@ -3,16 +3,49 @@
   import Profile from "./Profile.svelte";
   import Skills from "./Skills.svelte";
   import WorkHistory from "./WorkHistory.svelte";
+
+  let msg = '';
+  let comps = [
+    {name: 'Profile', comp: Profile},
+    {name: 'Technical Skills', comp: Skills},
+    {name: 'Work History', comp: WorkHistory}
+  ];
+  let idx = 0;
+  let currComp = comps[0].comp;
+  let lastIdx;
+  $: lastIdx = comps.length - 1;
+
+  
+  $: {
+    currComp = comps[idx].comp;
+  }
+  
+  const goComp = (delta) => {
+    idx += delta
+    if (idx > lastIdx) {
+      idx = 0
+    } else if (idx < 0) {
+      idx = lastIdx
+    }
+  }
+  
 </script>
 
 <div id="app">
   <div class="container">
     <Topnav />
+
     <div class="content">
       <div class="content-body">
-        <Profile />
-        <Skills />
-        <WorkHistory />
+        <button disabled={idx === 0} class="nav-btn" on:click={() => goComp(-1)}>
+          &laquo;
+        </button>
+        <div class="component">
+          <svelte:component this={currComp} />
+        </div>
+        <button disabled={idx === lastIdx} class="nav-btn next" on:click={() => goComp(1)}>
+          &raquo;
+        </button>
       </div>
     </div>
   </div>
@@ -55,11 +88,28 @@
   .content-body {
     box-sizing: border-box;
     height: 70vh;
+    width: 60vw;
     margin: 10px;
-    overflow-y: auto;
+    overflow: hidden;
+  }
+  .component {
+    height: 60vh;
+    overflow: hidden;
+    margin: 4px 20px;
+    padding: 10px;
+    box-shadow: 0 0 2px #999999;
+  }
+  .nav-btn {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    border: none;
+    font-size: 18px;
+  }
+  .nav-btn.next {
+    border-radius: 0 0 10px 10px;
   }
   @media screen and (max-width: 719px) {
-    .content {
+    .content-body  {
       width: 100%;
       margin: 0 0 10px;
       height: auto;

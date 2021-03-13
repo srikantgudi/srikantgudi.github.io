@@ -112,6 +112,8 @@
     padding: 1vh 2vw;
     box-shadow: 0 2px 2px #999999;
     margin-bottom: 10px;
+    font-family: Montserrat;
+    line-height: 24px;
   }
   li {
     list-style-type: square;
