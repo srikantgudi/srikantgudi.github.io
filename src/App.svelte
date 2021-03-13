@@ -20,13 +20,13 @@
 
   $: curTab = tabs[tabIdx];
   $: ntabs = tabs.length;
+  $: nextTab = (tabIdx === ntabs - 1 ? '' : tabs[tabIdx+1].tab)
+  $: prevTab = (tabIdx === 0 ? '' : tabs[tabIdx-1].tab)
   
   const goTab = (delta) => {
     tabIdx += delta;
     if (tabIdx < 0) {tabIdx = 0}
     if (tabIdx > ntabs-1) {tabIdx = ntabs-1}
-    prevTab = (tabIdx === 0 ? '' : tabs[tabIdx-1])
-    nextTab = (tabIdx === ntabs - 1 ? '' : tabs[tabIdx+1])
   }
 </script>
 
@@ -34,7 +34,7 @@
   <Topnav />
 
   <div class="container">
-    <button disabled={tabIdx === 0} class="navbtn" on:click={() => goTab(-1)>{prevTab}</button>
+    <button disabled={tabIdx === 0} class="navbtn" on:click={() => goTab(-1)}>{prevTab}</button>
     <div class="content">
       <div class="sectiontitle center">{curTab.tab}</div>
       <div class="content-body">
@@ -106,6 +106,9 @@
   .navbtn.next {
     border-radius: 0 0 40% 40%;
     background: linear-gradient(#cccccc,#999999);
+  }
+  .navbtn:disabled {
+    cursor: not-allowed;
   }
   @media screen and (max-width: 719px) {
     .tab {
