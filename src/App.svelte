@@ -15,24 +15,33 @@
   ];
   let curTab;
   let tabIdx = 0;
+  let prevTab;
+  let nextTab;
+
   $: curTab = tabs[tabIdx];
   $: ntabs = tabs.length;
-  $: prevTab = tabIdx === 0 ? '' : tabs[tabIdx-1].tab;
-  $: nextTab = tabIdx < ntabs-1 ? tabs[tabIdx+1].tab : '';
+  
+  const goTab = (delta) => {
+    tabIdx += delta;
+    if (tabIdx < 0) {tabIdx = 0}
+    if (tabIdx > ntabs-1) {tabIdx = ntabs-1}
+    prevTab = (tabIdx === 0 ? '' : tabs[tabIdx-1])
+    nextTab = (tabIdx === ntabs - 1 ? '' : tabs[tabIdx+1])
+  }
 </script>
 
 <div id="app">
   <Topnav />
 
   <div class="container">
-    <button disabled={tabIdx === 0} class="navbtn" on:click={() => {tabIdx--}}>{prevTab}</button>
+    <button disabled={tabIdx === 0} class="navbtn" on:click={() => goTab(-1)>{prevTab}</button>
     <div class="content">
       <div class="sectiontitle center">{curTab.tab}</div>
       <div class="content-body">
         <svelte:component this={tabs[tabIdx].comp} />
       </div>
     </div>
-    <button class="navbtn next" on:click={() => {tabIdx++}}>{nextTab}</button>
+    <button class="navbtn next" on:click={() => goTab(1)}>{nextTab}</button>
     </div>
 </div>
 
@@ -47,7 +56,7 @@
     box-shadow: 0 0 4px #999;
     margin: 0 1em;
     background: linear-gradient(lightblue, navy);
-    min-height: 94vh;
+    min-height: 97vh;
     padding-bottom: 10px;
   }
 
