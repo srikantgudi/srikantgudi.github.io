@@ -29,10 +29,11 @@
   }
   .topnav-title {
     font-family: Righteous;
-    font-size: 28px;
+    font-size: 2;
     font-weight: 400;
     text-transform: uppercase;
     color: navy;
+    letter-spacing: 2px;
   }
   .contact {
     display: flex;
