@@ -3,7 +3,6 @@
   import Profile from "./Profile.svelte";
   import Skills from "./Skills.svelte";
   import WorkHistory from "./WorkHistory.svelte";
-  import Academic from "./Academic.svelte";
 
   let contentId = 1;
   let zoomTab = false;
@@ -38,7 +37,6 @@
         <Profile />
         <Skills />
         <WorkHistory />
-        <Academic />
       </div>
     </div>
   </div>
