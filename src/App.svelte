@@ -5,86 +5,62 @@
   import WorkHistory from "./WorkHistory.svelte";
 
   let components = [
+    {name: 'Info', comp: Topnav},
     {name: 'Profile', comp: Profile},
     {name: 'Technical Skills', comp: Skills},
     {name: 'Work History', comp: WorkHistory}
   ]
-  let currComp = components[0]; 
+  let currComp = components[0].comp;
+  let curIdx = 0;
+
+  const goComp = (delta) => {
+    curIdx += delta;
+    if (curIdx < 0) {
+      curIdx = components.length - 1;
+    } else if (curIdx > (components.length -1)) {
+      curIdx = 0;
+    }
+    currComp = components[curIdx].comp;
+  }
 </script>
 
 <div id="app">
-  <div class="container">
-    <Topnav />
-
-    <div class="content">
-      <nav>
-        {#each components as comp}
-          <button class="nav-btn" on:click={() => {currComp = comp}} 
-            class:hilite={currComp === comp}>{comp.name}</button>
-        {/each}
-      </nav>
-      <div class="content-body">
-        <div class="section-title">{currComp.name}</div>
-        <svelte:component this={currComp.comp} />
-      </div>
-    </div>
+  <div class="buttons-bar">
+    <button class="nav-btn" on:click={() => goComp(-1)}>&lt;</button>
+    <button class="nav-btn next" on:click={() => goComp(1)}>&gt;</button>
+  </div>
+  <div class="content-title">{components[curIdx].name}</div>
+  <div class="content">
+    <svelte:component this={currComp} />
   </div>
 </div>
 
 <style>
-  :root {
-    background: linear-gradient(aliceblue, lightblue, aliceblue) no-repeat;
-    height: 99%;
-    overflow-y: hidden;
-  }
   #app {
-    font-family: Roboto;
-    box-shadow: 0 0 4px #999;
-    margin: 0 1em;
-    background: linear-gradient(lightblue, navy);
-    min-height: 97vh;
-    padding-bottom: 10px;
+    width: 80vw;
+    height: 90vh;
+    margin: 4vh auto;
+    padding-top: 2vmin;
+    box-shadow: 0 0 4px mavy;
+    background: linear-gradient(lightblue,lightcyan,lightblue);
   }
-
-  .content {
-    box-sizing: border-box;
-    height: 80vh;
-    overflow: hidden;
+  .buttons-bar {
     display: flex;
-    flex-flow: column;
-    background: linear-gradient(aliceblue,lightblue,aliceblue);
-  }
-  .content-body {
-    box-sizing: border-box;
-    height: 70vmax;
-    font-size: 3vmin;
-    width: inherit;
-    margin: 1vh 1vw;
-    padding: 1vh 1vw;
-    overflow: hidden;
-  }
-  nav {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin: 1vw;
-    gap: 1vw;
   }
   .nav-btn {
-    border-radius: 10px 10px 0 0;
-    border: none;
-    padding: 1vh 1vw;
-    width: inherit;
-    font-size: 3vmin;
+    flex: 1;
+    height: 6vmax;
+  }
+  .content {
+    height: 75vmax;
+    overflow-y: auto;
+    font-family: Momtserrat;
+  }
+  .content-title {
+    font-size: 4vmax;
     font-family: Orbitron;
-    cursor: pointer;
-  }
-  .nav-btn.hilite {
-    background-color: lightcyan;
-  }
-  .section-title {
-    background: linear-gradient(lightgrey, darkgrey) no-repeat;
-    padding: 2vmin 4vmin;
-    margin: 0 0 1vmax;
-    font-size: 3vmin;
+    display: flex;
+    justify-content: center;
+    margin: 1vmin;
   }
 </style>

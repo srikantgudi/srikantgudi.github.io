@@ -97,30 +97,20 @@
     },
   ];
   let curExpIdx = 0;
-  let curExp = {};
   $: curExp = expList[curExpIdx];
 </script>
 
 <style>
-  .exp-title {
-    background: linear-gradient(lightblue,lightgrey) no-repeat;
-    padding: 10px;
-  }
-  .exp-text {
-    height: fit-content;
-    overflow-y: auto;
-    padding: 1vh 2vw;
-    box-shadow: 0 2px 2px #999999;
-    margin-bottom: 10px;
-    font-family: Montserrat;
-    line-height: 1.2;
-  }
   li {
     list-style-type: square;
   }
+  .org-name {
+    font-size: 2vmax;
+    font-family: Montserrat;
+  }
 </style>
 
-<div class="inner-content-body">
+<div>
   {#each expList as exp, idx}
     <div class="sectiontitle">
       {exp.header.jobTitle} :: {exp.header.dates}
@@ -128,7 +118,7 @@
     <div class="org-name">
       {exp.header.org}
     </div>
-    <div class="exp-text">
+    <div class="content-text">
       <ul>
         {#each exp.content as text}
           <li>{text}</li>
