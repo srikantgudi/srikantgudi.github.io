@@ -101,15 +101,7 @@
 </script>
 
 <style>
-  li {
-    list-style-type: square;
-  }
-  .org-name {
-    font-size: 2vmax;
-    font-family: Montserrat;
-  }
 </style>
-
 <div>
   {#each expList as exp, idx}
     <div class="sectiontitle">
@@ -118,7 +110,7 @@
     <div class="org-name">
       {exp.header.org}
     </div>
-    <div class="content-text">
+    <div>
       <ul>
         {#each exp.content as text}
           <li>{text}</li>

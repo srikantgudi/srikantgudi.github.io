@@ -1,12 +1,3 @@
-<style>
-  ul {
-    margin: 1vh 4vmin;
-  }
-  .content {
-    font-family: Montserrat;
-    font-size: 3vmax;
-  }
-</style>
 <div>
   <div class="sectiontitle">About me</div>
   <div class="content-text">

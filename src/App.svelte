@@ -5,7 +5,7 @@
   import WorkHistory from "./WorkHistory.svelte";
 
   let components = [
-    {name: 'Info', comp: Topnav},
+    {name: 'Personal Info', comp: Topnav},
     {name: 'Profile', comp: Profile},
     {name: 'Technical Skills', comp: Skills},
     {name: 'Work History', comp: WorkHistory}
@@ -25,42 +25,16 @@
 </script>
 
 <div id="app">
-  <div class="buttons-bar">
-    <button class="nav-btn" on:click={() => goComp(-1)}>&lt;</button>
-    <button class="nav-btn next" on:click={() => goComp(1)}>&gt;</button>
-  </div>
-  <div class="content-title">{components[curIdx].name}</div>
-  <div class="content">
-    <svelte:component this={currComp} />
+  <div class="container">
+    <div class="nav-buttons-bar">
+    </div>
+    <div class="content-title">
+      <button class="nav-btn" on:click={() => goComp(-1)}>&lt;</button>
+      <div>{components[curIdx].name}</div>
+      <button class="nav-btn next" on:click={() => goComp(1)}>&gt;</button>
+    </div>
+    <div class="content">
+      <svelte:component this={currComp} />
+    </div>
   </div>
 </div>
-
-<style>
-  #app {
-    width: 80vw;
-    height: 90vh;
-    margin: 4vh auto;
-    padding-top: 2vmin;
-    box-shadow: 0 0 4px mavy;
-    background: linear-gradient(lightblue,lightcyan,lightblue);
-  }
-  .buttons-bar {
-    display: flex;
-  }
-  .nav-btn {
-    flex: 1;
-    height: 6vmax;
-  }
-  .content {
-    height: 75vmax;
-    overflow-y: auto;
-    font-family: Momtserrat;
-  }
-  .content-title {
-    font-size: 4vmax;
-    font-family: Orbitron;
-    display: flex;
-    justify-content: center;
-    margin: 1vmin;
-  }
-</style>

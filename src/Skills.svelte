@@ -29,6 +29,10 @@
   .skillgroup:last-child {
     border-bottom: none;
   }
+  .skillname {
+    font-size: 1vmax;
+    font-family: Montserrat;
+  }
   @media screen and (max-width: 420px) {
     .skills {
       display: block;;
@@ -41,7 +45,7 @@
   {#each skills as skill}
     <div class="skillgroup">
       <div class="sectiontitle">{skill.group}:</div>
-      <div class="content-text">{skill.items}</div>
+      <div class="skillname">{skill.items}</div>
     </div>
   {/each}
 </div>

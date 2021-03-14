@@ -1,7 +1,23 @@
+#app {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+    background: linear-gradient(lightblue,whitesmoke,lightblue);
+}
+.container {
+    display: flex;
+    flex-flow: column;
+    width: 80vw;
+    margin: 0 auto;
+    overflow: hidden;
+    height: inherit;
+    margin: auto;
+}
 .sectiontitle {
     border-radius: 4px;
     font-family: Orbitron;
-    font-size: 1vmax;
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.5;
     padding: 10px;
@@ -11,37 +27,36 @@
     color: #f9f9f9;
     margin-bottom: 8px;
 }
-.inner-content-body {
-    padding: 0 4vw;
+
+.content {
+    font-size: 1vmax;
     font-family: Montserrat;
-    line-height: 24px;
-    height: 60vh;
+    height: 75vh;
+    width: 70vw;
+    margin: 0 auto;
     overflow-y: auto;
 }
-.sectionsubtitle {
-    background-color: #999999;
-    color: #f9f9f9;
-    padding: 1vmin 1vmax;
-    margin-bottom: 8px;
+.content-title {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    font-family: Orbitron;
+    font-size: 3vmax;
+    text-align: center;
+    box-shadow: 0 0 4px #cccccc;
+    margin-bottom: 10px;
+    background: linear-gradient(lightgrey,whitesmoke);
 }
-
-.org-name {
-    background-color: #cccccc;
-    padding: 4px 20px;
+.nav-buttons-bar {
+    display: flex;
+    width: inherit;
+    margin-bottom: 10px;
 }
-
-.job-title {
-    background-color: slategrey;
-    color: beige;
-    padding: 8px;
-    border-radius: 8px 8px 0 0;
-}
-button {
+.nav-btn {
+    flex: 1;
+    height: 4vmax;
+    width: 12vmin;
+    font-size: 3vmax;
     cursor: pointer;
-}
-.content-text {
-    font-size: 2vmax;
-    font-family: Montserrat;
 }
 @media screen and (max-width: 420px) {
     .skilla {
@@ -49,5 +64,9 @@ button {
     }
     .skillgroup {
         width: 100%;
+    font-size: 1vmax;
+    }
+    .content-text {
+        font-size: 2vmax;
     }
 }
