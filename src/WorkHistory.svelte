@@ -113,17 +113,16 @@
     box-shadow: 0 2px 2px #999999;
     margin-bottom: 10px;
     font-family: Montserrat;
-    line-height: 24px;
+    line-height: 1.2;
   }
   li {
     list-style-type: square;
   }
 </style>
 
-<div class="sectiontitle">Work History</div>
 <div class="inner-content-body">
   {#each expList as exp, idx}
-    <div class="sectionsubtitle">
+    <div class="sectiontitle">
       {exp.header.jobTitle} :: {exp.header.dates}
     </div>
     <div class="org-name">

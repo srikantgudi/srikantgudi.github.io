@@ -18,8 +18,9 @@
 <style>
   .topnav {
     box-shadow: 0 0 4px #999;
-    min-height: 4em;
+    min-height: 6em;
     min-width: 100%;
+    padding: 1vmax;
     background: linear-gradient(lightblue, aliceblue, lightblue);
     border-radius: 0 0 10px 10px;
     display: flex;
@@ -29,7 +30,7 @@
   }
   .topnav-title {
     font-family: Righteous;
-    font-size: 32px;
+    font-size: 2vmax;
     font-weight: 400;
     text-transform: uppercase;
     color: navy;

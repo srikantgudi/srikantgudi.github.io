@@ -4,31 +4,12 @@
   import Skills from "./Skills.svelte";
   import WorkHistory from "./WorkHistory.svelte";
 
-  let msg = '';
-  let comps = [
+  let components = [
     {name: 'Profile', comp: Profile},
     {name: 'Technical Skills', comp: Skills},
     {name: 'Work History', comp: WorkHistory}
-  ];
-  let idx = 0;
-  let currComp = comps[0].comp;
-  let lastIdx;
-  $: lastIdx = comps.length - 1;
-
-  
-  $: {
-    currComp = comps[idx].comp;
-  }
-  
-  const goComp = (delta) => {
-    idx += delta
-    if (idx > lastIdx) {
-      idx = 0
-    } else if (idx < 0) {
-      idx = lastIdx
-    }
-  }
-  
+  ]
+  let currComp = components[0]; 
 </script>
 
 <div id="app">
@@ -36,16 +17,15 @@
     <Topnav />
 
     <div class="content">
+      <nav>
+        {#each components as comp}
+          <button class="nav-btn" on:click={() => {currComp = comp}} 
+            class:hilite={currComp === comp}>{comp.name}</button>
+        {/each}
+      </nav>
       <div class="content-body">
-        <button disabled={idx === 0} class="nav-btn" on:click={() => goComp(-1)}>
-          &laquo;
-        </button>
-        <div class="component">
-          <svelte:component this={currComp} />
-        </div>
-        <button disabled={idx === lastIdx} class="nav-btn next" on:click={() => goComp(1)}>
-          &raquo;
-        </button>
+        <div class="section-title">{currComp.name}</div>
+        <svelte:component this={currComp.comp} />
       </div>
     </div>
   </div>
@@ -66,53 +46,45 @@
     padding-bottom: 10px;
   }
 
-  .container {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    align-items: center;
-    gap: 10px;
-    width: 80vw;
-    margin: 10px auto;
-  }
   .content {
     box-sizing: border-box;
     height: 80vh;
     overflow: hidden;
-    margin: 0 auto;
     display: flex;
     flex-flow: column;
-    gap: 4px;
     background: linear-gradient(aliceblue,lightblue,aliceblue);
-    border-radius: 10px 10px 8px 8px;
   }
   .content-body {
     box-sizing: border-box;
-    height: 70vh;
-    width: 60vw;
-    margin: 10px;
+    height: 70vmax;
+    font-size: 3vmin;
+    width: inherit;
+    margin: 1vh 1vw;
+    padding: 1vh 1vw;
     overflow: hidden;
   }
-  .component {
-    height: 60vh;
-    overflow: hidden;
-    margin: 4px 20px;
-    padding: 10px;
-    box-shadow: 0 0 2px #999999;
+  nav {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 1vw;
+    gap: 1vw;
   }
   .nav-btn {
-    width: 100%;
     border-radius: 10px 10px 0 0;
     border: none;
-    font-size: 18px;
+    padding: 1vh 1vw;
+    width: inherit;
+    font-size: 3vmin;
+    font-family: Orbitron;
+    cursor: pointer;
   }
-  .nav-btn.next {
-    border-radius: 0 0 10px 10px;
+  .nav-btn.hilite {
+    background-color: lightcyan;
   }
-  @media screen and (max-width: 719px) {
-    .content-body  {
-      width: 100%;
-      margin: 0 0 10px;
-      height: auto;
-    }
+  .section-title {
+    background: linear-gradient(lightgrey, darkgrey) no-repeat;
+    padding: 2vmin 4vmin;
+    margin: 0 0 1vmax;
+    font-size: 3vmin;
   }
 </style>

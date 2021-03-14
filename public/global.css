@@ -1,8 +1,9 @@
 .sectiontitle {
     border-radius: 4px;
     font-family: Orbitron;
-    font-size: 18px;
-    font-weight: 600;;
+    font-size: 1vmax;
+    font-weight: 600;
+    line-height: 1.5;
     padding: 10px;
     border-radius: 10px 10px 0 0;
     letter-spacing: 1px;
@@ -14,30 +15,16 @@
     padding: 0 4vw;
     font-family: Montserrat;
     line-height: 24px;
-    max-height: 55vh;
+    height: 60vh;
     overflow-y: auto;
 }
 .sectionsubtitle {
     background-color: #999999;
     color: #f9f9f9;
-    padding: 10px 20px;
+    margin: 1vmin 2vmax;
+    padding: 1vmin 1vmax;
 }
-.skills {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 10px;
-}
-.skillgroup {
-    min-width: 20vw;
-    box-shadow: 0 2px 0 #999999;
-    margin-bottom: 10px;
-}
-.skillgroup:last-child {
-    border-bottom: none;
-}
-.grouptitle {
-    background-color: whitesmoke;
-}
+
 .org-name {
     background-color: #cccccc;
     padding: 4px 20px;
@@ -49,19 +36,8 @@
     padding: 8px;
     border-radius: 8px 8px 0 0;
 }
-
-.tab-btn {
-    font-family: Orbitron;
-    font-size: 14px;
-    letter-spacing: 1px;
-    padding: 8px;
-    border: none;
-    box-shadow: 0 0 4px #666666;
-    border-radius: 0 0 20px 20px;
+button {
     cursor: pointer;
-    margin-bottom: 8px;
-    background-color: slategrey;
-    color: white;
 }
 @media screen and (max-width: 420px) {
     .skilla {

@@ -38,8 +38,8 @@
     //   ],
     // },
 
-    {group: 'Frameworks', items: 'Anguiar, Svelte, VueJS, React, Stencil'},
-    {group: 'Web Skills', items: 'JavaScript/TypeScript, HTML5, CSS3, SVG'},
+    {group: 'Frameworks', items: 'Angular, Svelte, VueJS, React, Stencil'},
+    {group: 'Web Skills', items: 'JavaScrip, TypeScript, HTML5, CSS3, SVG'},
     {group: 'Libraries', items: 'Bootstrap, Angular-Material, React-UI, Vuetify, Buefy'},
     {group: 'Agile Methodology', items: 'Scrum, Sprint, JIRA, GIT, Confluence'},
     {group: 'Operating Systems', items: 'Windows, MacOS, Linux (Ubuntu, Mint)'},
@@ -49,14 +49,41 @@
   ]
 </script>
 
-<div class="sectiontitle">Technical Skills</div>
-<div class="inner-content-body">
-  <div class="skills">
-    {#each skills as skill}
-      <div class="skillgroup">
-        <div class="grouptitle">{skill.group}:</div>
-        <div>{skill.items}</div>
-      </div>
-    {/each}
-  </div>
+<style>
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    height: 50vmin;
+    overflow-y: auto;
+  }
+  .skillgroup {
+    width: inherit;
+    box-shadow: 0 2px 0 #999999;
+    margin-bottom: 1vmax;
+    padding: 1vmax;
+  }
+  .skillgroup:last-child {
+    border-bottom: none;
+  }
+  .grouptitle {
+    background-color: whitesmoke;
+    padding: 5px;
+    margin: 0 0 0.5vmax;
+  }
+  @media screen and (max-width: 420px) {
+    .skills {
+      display: block;;
+      height: inherit;
+    }
+  }
+</style>
+
+<div class="skills">
+  {#each skills as skill}
+    <div class="skillgroup">
+      <div class="grouptitle">{skill.group}:</div>
+      <div>{skill.items}</div>
+    </div>
+  {/each}
 </div>
