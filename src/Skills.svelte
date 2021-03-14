@@ -22,16 +22,20 @@
   }
   .skillgroup {
     width: inherit;
-    box-shadow: 0 2px 0 #999999;
+    box-shadow: 0 2px 4px #999999;
     margin-bottom: 1vmax;
-    padding: 1vmax;
+    padding: 5px;
   }
-  .skillgroup:last-child {
-    border-bottom: none;
+  .skillgrouptitle {
+    box-sizing: border-box;
+    background-color: #cccccc;
+    border-radius: 0 0 4px 4px;
+    padding: 5px;
   }
   .skillname {
-    font-size: 1vmax;
     font-family: Montserrat;
+    font-size: 16px;
+    padding: 5px;
   }
   @media screen and (max-width: 420px) {
     .skills {
@@ -44,7 +48,7 @@
 <div class="skills">
   {#each skills as skill}
     <div class="skillgroup">
-      <div class="sectiontitle">{skill.group}:</div>
+      <div class="skillgrouptitle">{skill.group}:</div>
       <div class="skillname">{skill.items}</div>
     </div>
   {/each}

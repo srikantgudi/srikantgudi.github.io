@@ -5,10 +5,9 @@
   import WorkHistory from "./WorkHistory.svelte";
 
   let components = [
-    {name: 'Personal Info', comp: Topnav},
-    {name: 'Profile', comp: Profile},
-    {name: 'Technical Skills', comp: Skills},
-    {name: 'Work History', comp: WorkHistory}
+    {key: 'profile', name: 'Profile', comp: Profile},
+    {key: 'skills', name: 'Technical Skills', comp: Skills},
+    {key: 'exp', name: 'Work History', comp: WorkHistory}
   ]
   let currComp = components[0].comp;
   let curIdx = 0;
@@ -25,16 +24,15 @@
 </script>
 
 <div id="app">
-  <div class="container">
-    <div class="nav-buttons-bar">
-    </div>
-    <div class="content-title">
-      <button class="nav-btn" on:click={() => goComp(-1)}>&lt;</button>
-      <div>{components[curIdx].name}</div>
-      <button class="nav-btn next" on:click={() => goComp(1)}>&gt;</button>
-    </div>
-    <div class="content">
-      <svelte:component this={currComp} />
-    </div>
+  <Topnav />
+  <div class="menubar">
+    {#each components as component}
+    <button class="menuitem" class:active={currComp === component.comp} on:click={() => {currComp = component.comp}}>
+      {component.name}
+    </button>
+    {/each}
+  </div>
+  <div class="content">
+    <svelte:component this={currComp} />
   </div>
 </div>
