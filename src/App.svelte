@@ -111,6 +111,13 @@
 		box-shadow: 0 2px 20px #999999;
 		border-radius: 0 0 10px 10px
 	}
+	.resume-content {
+		opacity: 0.5;
+		transition: all 1s;
+	}
+	.resume-content:hover {
+		opacity: 1;
+	}
 	.list {
 		padding: 10px 20px;
 	}
@@ -219,7 +226,7 @@
 		<div class="sectiontitle grad-dark space-around">
 			&laquo; PROFILE &raquo;
 		</div>
-		<div class="box profile">
+		<div class="box profile resume-content">
 			<ul>
 				{#each data.profile as text}
 				<li>{text}</li>
@@ -231,7 +238,7 @@
 		<div class="sectiontitle grad-dark space-around">
 			&laquo; TECHNICAL SKILLS &raquo;
 		</div>
-		<div class="box list">
+		<div class="box list resume-content">
 			<div class="skills">
 				{#each data.skills as text}
 				<div class="skill">{text}</div>
@@ -244,7 +251,7 @@
 		<div class="sectiontitle grad-dark space-around">
 			&laquo; WORK EXPERIENCE &raquo;
 		</div>
-		<div class="box list">
+		<div class="box list resume-content">
 			{#each data.exp as item}
 				<div class="exp box">
 					<div class="jobtitle">
