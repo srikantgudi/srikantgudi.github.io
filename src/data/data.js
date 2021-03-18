@@ -17,7 +17,7 @@ export const data = {
 		"Scrum, Sprint, JIRA, GIT, Confluence",
 		"VS Code, IntelliJ, Nodepad++",
 		"Windows, MacOS, Linux (Ubuntu, Mint)",
-		"Python-Django, Cansandra"
+		"Python-Django, Casandra"
 	],
 	exp: [
 		{
