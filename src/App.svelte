@@ -154,12 +154,6 @@
 		text-align: center;
     	font-family: Montserrat;
 		font-size: 1.2vw;
-		opacity: 0.7;
-		transition: all 0.5s;
-	}
-	.expdetail:hover {
-		opacity: 1;
-		font-weight: 600;
 	}
 	@media screen and (max-width: 720px) {
 		.pagetitle {
