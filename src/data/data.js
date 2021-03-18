@@ -4,7 +4,10 @@ export const data = {
 		"From April 2014 into frontend development using Angular, Svelte, Stencil, React, VueJS, NodeJS",
 		"Nov 2005 to March 2014: into Web development using PHP, MySQL, JQuery, JavaScript, HTML, CSS",
 		"Prior to Nov 2005: Application development using FoxPro, Visual Basic, PowerBuilder",
-		"Can create POCs, presentations, and wireframes"
+		"Made COBOL programs Y2K compliant from June 1998 to September 1999 for Associated Cement Companies, Mumbai",
+		"Able to create POCs, presentations, and wireframes",
+		"Can mentor juniors and freshers",
+		"Can conduct trainings in the known technologies"
 	],
 	academic: [
 		"Master in Computer Management",
