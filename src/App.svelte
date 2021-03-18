@@ -42,7 +42,7 @@
 		display: flex;
 		flex-flow: column;
 		gap: 10px;
-		transition: all 0.5s;
+		transition: all 1s;
 	}
 	.grad-lite {
 		background: linear-gradient(lightcyan,lightblue);
@@ -116,6 +116,7 @@
 		transition: all 1s;
 	}
 	.resume-content:hover {
+		font-weight: 600;
 		opacity: 1;
 	}
 	.list {
@@ -148,19 +149,25 @@
 		flex-flow: column;
 		padding: 10px;
 	}
-  .jobtitle {
-    font-family: Montserrat;
-	font-size: 1.5vw;
-    background-color: darkslategrey;
-    padding: 4px 10px;
-    color: whitesmoke;
-    border-radius: 10px 10px 0 0;
-  }
+	.jobtitle {
+		font-family: Montserrat;
+		font-size: 1.5vw;
+		background-color: darkslategrey;
+		padding: 4px 10px;
+		color: whitesmoke;
+		border-radius: 10px 10px 0 0;
+	}
 	.expdetail {
 		padding: 10px;
 		text-align: center;
     	font-family: Montserrat;
 		font-size: 1.2vw;
+		opacity: 0.7;
+		transition: all 0.5s;
+	}
+	.expdetail:hover {
+		opacity: 1;
+		font-weight: 600;
 	}
 	@media screen and (max-width: 720px) {
 		.pagetitle {
