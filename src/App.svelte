@@ -94,8 +94,14 @@
 		font-size: 12px;
 	}
 	.skills {
-    font-family: Roboto;
-    font-size: 14px;
+		display: flex;
+		flex-flow: row wrap;
+		font-family: Roboto;
+		font-size: 14px;
+	}
+	.skill {
+		min-width: 100px;
+		box-shadow: 0 0 4px #999;
 	}
 	.exp {
 		display: flex;
@@ -187,11 +193,9 @@
 		</div>
 		<div class="box list">
 			<div class="skills">
-				<ul>
-					{#each data.skills as text}
-					<li>{text}</li>
-					{/each}
-				</ul>
+				{#each data.skills as text}
+				<div class="skill">{text}</div>
+				{/each}
 			</div>
 		</div>
 	</div>
