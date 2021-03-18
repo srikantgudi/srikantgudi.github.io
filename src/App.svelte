@@ -1,5 +1,9 @@
+<svelte:window on:resize={winResize} />
 <script>
 	import { data } from './data/data.js'
+	const winResize = e => {
+		console.log('win-resize: e', e);
+	}
 </script>
 <style>
 	#app {
@@ -24,7 +28,7 @@
 	}
 	.grad-dark {
 		background: linear-gradient(grey, darkslategrey);
-		color: whitesmoke;
+		color: whitesmoke!important;
 	}
 	.round-border-top {
 		border-radius: 10px 10px 0 0;
@@ -38,8 +42,8 @@
 		padding: 10px;
 	}
 	.name {
-    font-family: Righteous;
-    letter-spacing: 1px;
+		font-family: Righteous;
+		letter-spacing: 1px;
 		font-weight: 600;
 		text-transform: uppercase;
 		font-size: 24px;
@@ -70,10 +74,10 @@
 		background-color: lightblue;
 		border-radius: 20px 20px 0 0;
 	}
-  .profile {
-    font-family: Roboto;
-    font-size: 14px;
-  }
+	.profile {
+		font-family: Roboto;
+		font-size: 14px;
+	}
 	.contacts {
 		display: flex;
 		align-items: center;
@@ -94,14 +98,21 @@
 		font-size: 12px;
 	}
 	.skills {
-		display: flex;
-		flex-flow: row wrap;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		font-family: Roboto;
 		font-size: 14px;
+		padding: 10px;
 	}
 	.skill {
-		min-width: 100px;
+		transition: all 1s;
+		min-width: 22%;
 		box-shadow: 0 0 4px #999;
+		text-align: center;
+		padding: 4px;
+		margin: 0 4px 4px 0;
+		font-size: 14px;
+		border-radius: 4px;
 	}
 	.exp {
 		display: flex;
@@ -120,7 +131,7 @@
 		text-align: center;
     font-family: Roboto;
 	}
-	@media screen and (max-width: 840px) {
+	@media screen and (max-width: 720px) {
 		.pagetitle {
 			height: auto;
 			padding: 10px;
@@ -143,6 +154,10 @@
 		.positiontitle {
 			font-size: 8px;
 			letter-spacing: 0;
+		}
+		.skills {
+			grid-template-columns: 1fr 1fr;
+			font-size: 90%;
 		}
 	}
 </style>
@@ -176,7 +191,7 @@
 		</div>
 	</div>
 	<div>
-		<div class="sectiontitle grad-lite">
+		<div class="sectiontitle grad-dark">
 			PROFILE
 		</div>
 		<div class="box profile">
@@ -188,7 +203,7 @@
 		</div>
 	</div>
 	<div>
-		<div class="sectiontitle grad-lite">
+		<div class="sectiontitle grad-dark">
 			TECHNICAL SKILLS
 		</div>
 		<div class="box list">
@@ -201,7 +216,7 @@
 	</div>
 	
 	<div>
-		<div class="sectiontitle grad-lite">
+		<div class="sectiontitle grad-dark">
 			WORK EXPERIENCE
 		</div>
 		<div class="box list">

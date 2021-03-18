@@ -11,13 +11,13 @@ export const data = {
 		"Bachelor of Commerce"
 	],
 	skills: [
-		"Angular, Svelte, VueJS, React, Stencil",
-		"JavaScript, TypeScript, HTML5, CSS3, SVG",
-		"Bootstrap, Angular-Material, React-UI, Vuetify, Buefy",
-		"Scrum, Sprint, JIRA, GIT, Confluence",
-		"VS Code, IntelliJ, Nodepad++",
-		"Windows, MacOS, Linux (Ubuntu, Mint)",
-		"Python-Django, Casandra"
+		"Angular", "Svelte", "VueJS", "React", "Stencil",
+		"JavaScript", "TypeScript", "HTML5", "CSS3", "SVG",
+		"Bootstrap", "Angular-Material", "React-UI", "Vuetify", "Buefy",
+		"Scrum", "Sprint", "JIRA", "GIT", "Confluence",
+		"VS Code", "IntelliJ", "Nodepad++",
+		"Windows", "MacOS", "Linux",
+		"Python-Django", "Casandra"
 	],
 	exp: [
 		{
