@@ -6,7 +6,7 @@ export const data = {
 		"Prior to Nov 2005: Application development using FoxPro, Visual Basic, PowerBuilder",
 		"Made COBOL programs Y2K compliant from June 1998 to September 1999 for Associated Cement Companies, Mumbai",
 		"Working knowledge of Python-Django, MongoDB",
-		"Proficient in VueJS, web components using StencilJS, creating RESTful APIs based on MySQL, MongoDB",
+		"Proficient in VueJS, creating web components using StencilJS, creating RESTful APIs based on MySQL, MongoDB",
 		"Proficient in creating POCs, presentations, and wireframes",
 		"Can conduct trainings in the known technologies",
 		"Can mentor juniors and freshers"
