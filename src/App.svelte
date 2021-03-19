@@ -82,7 +82,7 @@
 	.name {
 		font-family: Righteous;
 		font-weight: 600;
-		font-size: 4vw;
+		font-size: 3vw;
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		color: #1d3557;
@@ -92,7 +92,7 @@
 		to {color: #03045e;}
 	}
 	.positiontitle {
-		font-size: 3vw;
+		font-size: 2vw;
 		font-family: Ubuntu;
 		font-weight: 600;
 		padding: 1vw 1vh;
