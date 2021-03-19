@@ -92,7 +92,7 @@
 		to {color: #03045e;}
 	}
 	.positiontitle {
-		font-size: 2em;
+		font-size: 3vw;
 		font-family: 'Comic Sans MS';
 		font-weight: 600;
 		padding: 1vw 1vh;
@@ -205,7 +205,6 @@
 			padding: 0;
 		}
 		.positiontitle {
-			font-size: 4px;
 			font-weight: 400;
 			padding: 4px;
 		}
