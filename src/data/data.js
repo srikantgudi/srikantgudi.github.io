@@ -28,7 +28,7 @@ export const data = {
 			jobTitle: 'Project Lead - System',
 			org: 'Mphasis, Bengaluru',
 			technology: 'Angular, React, NodeJS, MySQL, Svelte, Stencil, HTML5, JavaScript, CSS3',
-			items: [
+			content: [
 				'Currently working as Lead frontend developer with Schneider Electric using Svelte. Created web components using StencilJS',
 				'Worked offshore in Bengaluru with a banking conglomerate on projects in Angular and React',
 				'Worked onsite in Glasgow, UK with a banking conglomerate on Angular based projects',
@@ -42,36 +42,68 @@ export const data = {
 			jobTitle: 'Senior AngularJS Developer',
 			org: 'Pandera Solutions, Bengaluru',
 			technology: 'Angular-1.x, HTML5, JavaScript, CSS3',
+			content: [
+				'Worked in Angular on various projects',
+				'Created sub-components for re-use',
+				'Interacted with client-side developers to understand the requirements',
+				'Integrated APIs in the frontend code',
+			],
 		},
 		{
 			dates: '20-Aug-2014 to 22-Jan-2015',
 			jobTitle: 'Senior Software Developer',
 			org: 'Basil Communications, Bengaluru',
 			technology: 'HTML5, JavaScript, CSS3',
+			content: [
+				'Created HTML mockups for various applications',
+				'Interacted with designers to understand the designs',
+				'Used Photoshop to slice images',
+			],
 		},
 		{
 			dates: 'Apr-2014 to Jun-2014',
 			jobTitle: 'Senior AngularJS Developer',
 			org: 'Satsyil, VA, USA (Remote work)',
 			technology: 'Angular-1.x, HTML5, JavaScript, CSS3',
+			content: [
+				'Worked remotely as senior UI developer using AngularJS technology',
+				'Modified admin-side modules and screen layouts and created new ones as required',
+			],
 		},
 		{
 			dates: '23-Nov-2011 – 07-Mar-2014',
 			jobTitle: 'Senior Software Developer (Consultant)',
 			org: 'Tejas Systems / SUNSYSTEMS, Bengaluru :: Client: MModal Global Services',
 			technology: 'PHP, MySQL, jQuery, HTML5, JavaScript, CSS3, Angular-1.x',
+			content: [
+				'Modified client-side and admin-side scripts',
+				'Created animated presentation of iPad application using Jquery and Jquery-cycle',
+				'Created presentation of mobile application in Powerpoint',
+				'Created UI for password management using AngularJS',
+			],
 		},
 		{
 			dates: '12-Feb-2010 –22-Sep-2011',
 			jobTitle: 'Senior Software Engineer',
 			org: 'TechJini Solutions, Bengaluru',
 			technology: 'PHP, MySQL, jQuery, HTML5, JavaScript, CSS3, am-charts',
+			content: [
+				'Projects worked on:',
+				'Coupons System (MySql, PHP, HTML, CSS, Jquery, HighCharts)',
+				'eLearning System (PHP [Symfony], MySql, HTML, CSS, Jquery, amCharts): Developed Quiz module. Developed reports including one using amCharts',
+				'Contest based application (PHP [Symfony], MySql, HTML, CSS, Jquery)',
+			],
 		},
 		{
 			dates: '25-Jul-2007 – 14-Mar-2009',
 			jobTitle: 'Senior Software Engineer',
 			org: 'TLI Software, Bengaluru',
 			technology: 'PHP, MySQL, jQuery, HTML5, JavaScript, CSS3',
+			content: [
+				'Environment:​ PHP, MySQL, HTML, CSS, Javascript, Jquery',
+				'Worked​ as Full-time resource (3 months on-site and 3 months offsite), with Computer Methods I​nternational Corp, Toronto, Canada (www.cmic.ca), on JasperReports',
+				'Developed web applications independently as per client requirements using PHP, MySql',
+			],
 		},
 	]
 };

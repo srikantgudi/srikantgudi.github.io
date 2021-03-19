@@ -168,6 +168,18 @@
 		flex-flow: column;
 		padding: 10px;
 	}
+	.expdetail {
+		padding: 10px;
+		text-align: left;
+		margin-left: 10vw;
+    	font-family: Ubuntu;
+	}
+	.expdetail > .details {
+		display: flex;
+		justify-content: flex-start;
+		text-align: left;
+		width: 40vw;
+	}
 	.jobtitle {
 		font-family: Montserrat;
 		font-size: 1.5vw;
@@ -175,11 +187,6 @@
 		padding: 4px 10px;
 		color: whitesmoke;
 		border-radius: 10px 10px 0 0;
-	}
-	.expdetail {
-		padding: 10px;
-		text-align: center;
-    	font-family: Ubuntu;
 	}
 	@media screen and (max-width: 720px) {
 		.info {
@@ -288,6 +295,16 @@
 						<div>
 							Technologies used: {item.technology}
 						</div>	
+						<div class="details">
+							<details>
+								<summary>Details</summary>
+								<ul>
+									{#each item.content as text}
+									<li>{text}</li>
+									{/each}
+								</ul>
+							</details>
+						</div>
 					</div>
 				</div>
 			{/each}
