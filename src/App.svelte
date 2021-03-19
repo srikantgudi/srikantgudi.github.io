@@ -195,9 +195,6 @@
 		.sectiontitle {
 			font-size: 90%;
 		}
-		.name {
-			font-size: 80%;
-		}
 		.edu-list, .list {
 			width: 100%;
 			font-size: 8px;
