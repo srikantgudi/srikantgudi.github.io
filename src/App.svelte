@@ -80,11 +80,11 @@
 		padding: 10px;
 	}
 	.name {
-		font-family: Syncopate;
+		font-family: Georgia;
 		font-weight: 600;
 		font-size: 4vw;
 		letter-spacing: 1px;
-		text-transform: capitalize;
+		text-transform: uppercase;
 		color: #1d3557;
 	}
 	@keyframes animPositionTitle {
