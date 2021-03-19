@@ -18,11 +18,12 @@
 	}
 	.info {
 		position: absolute;
-		top: 1em;
+		top: 2em;
 		display: flex;
 		flex-flow: column;
+		align-items: center;
 		box-shadow: 0 2px 4px #023e8a;
-		padding: 10px;
+		padding: 4px;
 		border-radius: 50%;
 		transition: all 0.5s;
 		background: linear-gradient(#90e0ef,#caf0f8,#90e0ef);
@@ -34,7 +35,10 @@
 	}
 	.infobtn {
 		cursor: pointer;
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		width: 1em;
 		border-radius: 50%;
 	}
 	.infobtn.hide {
@@ -64,29 +68,39 @@
 		background: linear-gradient(grey, darkslategrey);
 		color: whitesmoke!important;
 	}
+	.profile {
+		font-family: 'Helvetica Neue';
+	}
 	.pagetitle {
 		height: 3em;
-		background: linear-gradient(lightblue,blue);
+		background: linear-gradient(#023e8a,#caf0f8,#023e8a);
 		color: whitesmoke;
 		border-radius: 1em;
 		text-align: center;
 		padding: 10px;
 	}
 	.name {
-		font-family: Righteous;
-		font-size: 2vw;
+		font-family: Herculanum;
+		font-weight: 600;
+		font-size: 4vw;
 		letter-spacing: 1px;
-		text-transform: uppercase;
+		text-transform: capitalize;
+		color: #1d3557;
+	}
+	@keyframes animPositionTitle {
+		from {color: beige;}
+		to {color: #03045e;}
 	}
 	.positiontitle {
-		font-size: 1.8vw;
+		font-size: 2em;
 		font-family: 'Comic Sans MS';
 		font-weight: 600;
-		padding: 10px;
-		margin: 0 4vw;
-		background: linear-gradient(lightblue,blue);
-		color: lightcyan;
+		padding: 1vw 1vh;
+		margin: 10px 10vw;
+		background: linear-gradient(#343a40,#dee2e6,#343a40);
+		color: #6d6875;
 		border-radius: 1em;
+		animation: animPositionTitle 5s ease-in-out infinite reverse;
 	}
 	.space-around {
 		display: flex;
@@ -98,14 +112,15 @@
 		flex-flow: column;
 		margin-top: 10px;
 		font-size: 1.8vw;
-		font-family: Verdana;
+		font-family: Orbitron;
+		letter-spacing: 2px;
 		color: navy;
 		padding: 2vh 2vw;
 		background-color: lightblue;
 		border-radius: 20px 20px 0 0;
 	}
 	.profile {
-		font-family: Montserrat;
+		font-family: Ubuntu;
 		line-height: 1.5;
 		padding: 1em;
 		transition: all 1s;
@@ -144,9 +159,8 @@
 		text-align: center;
 		padding: 4px;
 		margin: 0 4px 4px 0;
-		font-family: Montserrat;
-		font-size: 16px;
-		font-weight: 600;
+		font-family: Ubuntu;
+		font-size: 18px;
 		border-radius: 4px;
 	}
 	.exp {
@@ -165,9 +179,15 @@
 	.expdetail {
 		padding: 10px;
 		text-align: center;
-    	font-family: Montserrat;
+    	font-family: Ubuntu;
 	}
 	@media screen and (max-width: 720px) {
+		.info {
+			top: 5vh;
+			margin-left: 1em;
+			padding: 2px;
+			font-size: 10px;
+		}
 		.pagetitle {
 			height: auto;
 			padding: 10px;
@@ -180,18 +200,20 @@
 		}
 		.edu-list, .list {
 			width: 100%;
-			font-size: 12px;
+			font-size: 8px;
+			font-family: sans-serif;
 			padding: 0;
 		}
 		.positiontitle {
-			font-size: 8px;
-			letter-spacing: 0;
+			font-size: 4px;
+			font-weight: 400;
+			padding: 4px;
 		}
 		.skills {
 			grid-template-columns: 1fr 1fr;
 			line-height: 1.1;
 		}
-		.skill {
+		.skill, .edu {
 			font-size: 10px;
 		}
 	}
@@ -203,7 +225,7 @@
 				Srikant Gudi
 			</div>
 			<div class="info" class:active={showInfo} on:click={() => {showInfo = true}}>
-				<div class="infobtn" class:hide={showInfo} >??</div>
+				<div class="infobtn" class:hide={showInfo} >&quest;</div>
 				<div class="info-content" class:active={showInfo}>
 					<div class="contact-item">
 						Bengaluru, India 
@@ -224,7 +246,7 @@
 		</div>
 		
 		<div class="positiontitle space-around">
-			SENIOR FRONTEND ENGINEER
+			Senior Front-end Engineer
 		</div>
 	</div>
 	<div>
