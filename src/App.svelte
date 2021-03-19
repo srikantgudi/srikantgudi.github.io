@@ -58,7 +58,7 @@
 		font-family: Orbitron;
 		position: relative;
 		top: 6vh;
-		font-size: 20px;
+		font-size: 1vw;
 		text-align: center;
 		transition: all 1s;
 		background-color: #999;
@@ -81,7 +81,7 @@
 	}
 	.panel:hover > .panel-header {
 		letter-spacing: 3px;
-		font-size: 18px;
+		font-size: 1.5vw;
 		font-weight: 600;
 		top: 0;
 		border-radius: 10px 10px 0 0;
