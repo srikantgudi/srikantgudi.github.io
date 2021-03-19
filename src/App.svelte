@@ -96,7 +96,7 @@
 		font-family: 'Comic Sans MS';
 		font-weight: 600;
 		padding: 1vw 1vh;
-		margin: 10px 10vw;
+		margin: 1vh 4vw;
 		background: linear-gradient(#343a40,#dee2e6,#343a40);
 		color: #6d6875;
 		border-radius: 1em;
