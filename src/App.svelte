@@ -171,14 +171,14 @@
 	.expdetail {
 		padding: 10px;
 		text-align: left;
-		margin-left: 10vw;
+		margin-left: 5vw;
     	font-family: Ubuntu;
 	}
 	.expdetail > .details {
 		display: flex;
 		justify-content: flex-start;
 		text-align: left;
-		width: 40vw;
+		width: 45vw;
 	}
 	.jobtitle {
 		font-family: Montserrat;
