@@ -31,6 +31,7 @@ export const data = {
 			content: [
 				'Currently working as Lead frontend developer with Schneider Electric using Svelte. Created web components using StencilJS',
 				'Worked offshore in Bengaluru with a banking conglomerate on projects in Angular and React',
+				'Worked with a client in financial domain using Angular relating to trading securities',
 				'Worked onsite in Glasgow, UK with a banking conglomerate on Angular based projects',
 				'Developed UI for a POC for Digital Readiness Analysis Tool to create a survey questionnaire for various categories using Angular, Material Design, HTML5, CSS3, JavaScript, API integration',
 				'Developed UI for client in Insurance domain using React, Material-UI, HTML5, CSS3, JavaScript, IndexedDB',
