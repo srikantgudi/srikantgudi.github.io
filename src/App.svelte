@@ -80,7 +80,7 @@
 		padding: 10px;
 	}
 	.name {
-		font-family: Georgia;
+		font-family: Righteous;
 		font-weight: 600;
 		font-size: 4vw;
 		letter-spacing: 1px;
