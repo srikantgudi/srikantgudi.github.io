@@ -187,14 +187,14 @@
 			margin-left: 1em;
 			padding: 2px 0 4px;
 			font-size: 12px;
-			height: fit-content;
+			height: auto;
 		}
 		.pagetitle {
 			height: auto;
 			padding: 10px;
 		}
 		.sectiontitle {
-			font-size: 90%;
+			font-size: 80%;
 		}
 		.edu-list, .list {
 			width: 100%;
