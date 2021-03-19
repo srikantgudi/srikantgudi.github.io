@@ -185,7 +185,8 @@
 		.info {
 			top: 5vh;
 			margin-left: 1em;
-			font-size: 90%;
+			padding: 2px 0 4px;
+			font-size: 12px;
 			height: fit-content;
 		}
 		.pagetitle {
