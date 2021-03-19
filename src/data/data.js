@@ -1,13 +1,15 @@
 export const data = {
 	profile: [
 		"Senior software professional with over 20 years of experience in various technologies",
-		"From April 2014 into frontend development using Angular, Svelte, Stencil, React, VueJS, NodeJS",
-		"Nov 2005 to March 2014: into Web development using PHP, MySQL, JQuery, JavaScript, HTML, CSS",
+		"Currently into frontend development using Angular, Svelte, Stencil, React, NodeJS From April 2014",
+		"Into Web development using PHP, MySQL, JQuery, JavaScript, HTML, CSS from Nov 2005 to March 2014",
 		"Prior to Nov 2005: Application development using FoxPro, Visual Basic, PowerBuilder",
 		"Made COBOL programs Y2K compliant from June 1998 to September 1999 for Associated Cement Companies, Mumbai",
-		"Able to create POCs, presentations, and wireframes",
-		"Can mentor juniors and freshers",
-		"Can conduct trainings in the known technologies"
+		"Working knowledge of Python-Django, MongoDB",
+		"Proficient in VueJS, creating RESTful APIs based on MySQL, MongoDB",
+		"Proficient in creating POCs, presentations, and wireframes",
+		"Can conduct trainings in the known technologies",
+		"Can mentor juniors and freshers"
 	],
 	academic: [
 		"Master in Computer Management",
