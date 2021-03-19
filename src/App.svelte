@@ -93,7 +93,7 @@
 	}
 	.positiontitle {
 		font-size: 3vw;
-		font-family: 'Comic Sans MS';
+		font-family: Ubuntu;
 		font-weight: 600;
 		padding: 1vw 1vh;
 		margin: 1vh 4vw;
