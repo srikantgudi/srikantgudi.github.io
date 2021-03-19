@@ -3,6 +3,7 @@
 	const winResize = e => {
 		console.log('win-resize: e', e);
 	}
+	let showInfo = false;
 </script>
 <style>
 	#app {
@@ -18,31 +19,42 @@
 	.info {
 		position: absolute;
 		top: 1em;
-		margin-left: 2em;
 		display: flex;
 		flex-flow: column;
-		box-shadow: 0 2px 4px #999;
+		box-shadow: 0 2px 4px #023e8a;
 		padding: 10px;
-		border-radius: 1em 1em 0 0;
+		border-radius: 50%;
 		transition: all 0.5s;
-		background: lightcyan;
+		background: linear-gradient(#90e0ef,#caf0f8,#90e0ef);
 		color: navy;
+	}
+	.info.active {
+		box-shadow: 0 2px 14px #457b9d;
+		border-radius: 10%;
 	}
 	.infobtn {
 		cursor: pointer;
 		display: block;
+		border-radius: 50%;
+	}
+	.infobtn.hide {
+		display: none;
+	}
+	.infoclose {
+		cursor: pointer;
+		border: none;
+		border-radius: 50%;
+		background-color: lightgrey;
 	}
 	.info-content {
 		display: none;
 	}
-	.info:hover > .infobtn {
-		display: none;
-	}
-	.info:hover > .info-content {
+	.info-content.active {
 		display: flex;
 		flex-flow: column;
 		gap: 10px;
 		transition: all 1s;
+		height: 15vh;
 	}
 	.grad-lite {
 		background: linear-gradient(lightcyan,lightblue);
@@ -94,14 +106,12 @@
 	}
 	.profile {
 		font-family: Montserrat;
-		font-size: 1.2vw;
 		line-height: 1.5;
 		padding: 1em;
+		transition: all 1s;
 	}
-	.contacts {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+	.profile:hover {
+		font-weight: 600;
 	}
 	.contact-item {
 		min-width: 30%;
@@ -116,6 +126,9 @@
 	}
 	.edu {
 		font-size: 12px;
+	}
+	.edu:nth-child(n+1):before {
+		content: '\bb\20';
 	}
 	.skills {
 		display: grid;
@@ -153,16 +166,15 @@
 		padding: 10px;
 		text-align: center;
     	font-family: Montserrat;
-		font-size: 1.2vw;
 	}
 	@media screen and (max-width: 720px) {
 		.pagetitle {
 			height: auto;
 			padding: 10px;
 		}
-    .sectiontitle, .subsectiontitle {
-      font-size: 90%;
-    }
+		.sectiontitle {
+			font-size: 90%;
+		}
 		.name {
 			font-size: 80%;
 		}
@@ -171,18 +183,16 @@
 			font-size: 12px;
 			padding: 0;
 		}
-		.contacts {
-			flex-flow: column;
-			font-size: 70%;
-		}
 		.positiontitle {
 			font-size: 8px;
 			letter-spacing: 0;
 		}
 		.skills {
-			grid-template-columns: 1fr;
-			font-size: 90%;
+			grid-template-columns: 1fr 1fr;
 			line-height: 1.1;
+		}
+		.skill {
+			font-size: 10px;
 		}
 	}
 </style>
@@ -192,25 +202,27 @@
 			<div class="name">
 				Srikant Gudi
 			</div>
-			<div class="edu-list">
-				<span class="edu" title="Master in Computer Management">M.C.M.</span>
-				<span class="edu" title="Bachelor of Commerce">B.Com.</span>
+			<div class="info" class:active={showInfo} on:click={() => {showInfo = true}}>
+				<div class="infobtn" class:hide={showInfo} >??</div>
+				<div class="info-content" class:active={showInfo}>
+					<div class="contact-item">
+						Bengaluru, India 
+						<button class="infoclose" on:click|stopPropagation={() => {showInfo=false}}>&times;</button>
+					</div>
+					<div class="contact-item">
+						srikantgudi@gmail.com
+					</div>
+					<div class="contact-item">
+						+91 829 665 6336
+					</div>
+					<div class="edu-list">
+						<div class="edu">Master in Computer Management</div>
+						<div class="edu">Bachelor of Commerce</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="info">
-			<div class="infobtn">??</div>
-			<div class="info-content">
-				<div class="contact-item">
-					Bengaluru, India
-				</div>
-				<div class="contact-item">
-					srikantgudi@gmail.com
-				</div>
-				<div class="contact-item">
-					+91 829 665 6336
-				</div>
-			</div>
-		</div>
+		
 		<div class="positiontitle space-around">
 			SENIOR FRONTEND ENGINEER
 		</div>
