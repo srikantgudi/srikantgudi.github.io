@@ -1,83 +1,111 @@
 <script>
 	import { data } from './data/data.js'
+	const winResize = e => {
+		console.log('win-resize: e', e);
+	}
+	let showInfo = false;
 </script>
-
 <style>
-	.container {
-		width: 90vw;
-		height: 96vh;
+	#app {
+		width: 60vw;
+		height: auto;
 		margin: 0 auto;
-		overflow: hidden;
-	}
-	.pageheader {
-		background: linear-gradient(lightblue,blue);
-		border-radius: 1.5vw 1.5vw 0 0;
-		margin-bottom: 8px;
-	}
-	.pagetitle {
-		display: flex;
 		padding: 10px;
-		flex-flow: row;
-		justify-content: center;
-		color: whitesmoke;
-		font-size: 3vw;
-		font-family:  Righteous;
-		text-transform: uppercase;
-		font-weight:600;
+		background: linear-gradient(lightblue,lightcyan,lightblue);
+		color: navy;
+		line-height: 1.2;
+		font-family: Montserrat;
 	}
 	.info {
 		position: absolute;
-		z-index: 999;
-		top: 1vh;
-		left: 5vw;
-		width: 2vw;
-		height: 2vh;
+		top: 2em;
 		display: flex;
-		overflow: hidden;
 		flex-flow: column;
 		align-items: center;
-		padding: 10px;
-		box-shadow: 0 0 4px #fff;
-		background: linear-gradient(lightblue,lightblue);
+		box-shadow: 0 2px 4px #023e8a;
+		padding: 4px;
+		border-radius: 50%;
 		transition: all 0.5s;
-		border-radius: 40%;
+		background: linear-gradient(#90e0ef,#caf0f8,#90e0ef);
+		color: navy;
 	}
-	.info:hover {
-		width: fit-content;
-		height: fit-content;
-		line-height: 1.5;
-		top: 2vh;
-		left: 6vw;
-		cursor: pointer;
-	}
-	.infobtn {
-		display: block;
-		cursor: pointer;
-	}
-	.info:hover {
+	.info.active {
+		box-shadow: 0 2px 14px #457b9d;
 		border-radius: 10%;
 	}
-	.info:hover > .infobtn {
+	.infobtn {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		width: 1em;
+		border-radius: 50%;
+	}
+	.infobtn.hide {
 		display: none;
 	}
-	.infotext {
-		display: none;
-		font-size: 1.2vw;
+	.infoclose {
+		cursor: pointer;
+		border: none;
+		border-radius: 50%;
+		background-color: lightgrey;
 	}
-	.info:hover > .infotext {
-		display: block;
-		width: fit-content;
-		height: fit-content;
+	.info-content {
+		display: none;
+	}
+	.info-content.active {
+		display: flex;
+		flex-flow: column;
+		gap: 10px;
+		transition: all 1s;
+		height: 15vh;
+	}
+	.grad-lite {
+		background: linear-gradient(lightcyan,lightblue);
+		color: navy;
+	}
+	.grad-dark {
+		background: linear-gradient(grey, darkslategrey);
+		color: whitesmoke!important;
+	}
+	.profile {
+		font-family: 'Helvetica Neue';
+	}
+	.pagetitle {
+		height: 3em;
+		background: linear-gradient(#023e8a,#caf0f8,#023e8a);
+		color: whitesmoke;
+		border-radius: 1em;
+		text-align: center;
+		padding: 10px;
+	}
+	.name {
+		font-family: Righteous;
+		font-weight: 600;
+		font-size: 3vw;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: #1d3557;
+	}
+	@keyframes animPositionTitle {
+		from {color: beige;}
+		to {color: #03045e;}
 	}
 	.positiontitle {
-		font-family: 'Comic Sans MS';
-		font-size: 1.5vw;
+		font-size: 2vw;
+		font-family: Ubuntu;
+		font-weight: 600;
+		padding: 1vw 1vh;
+		margin: 1vh 4vw;
+		background: linear-gradient(#343a40,#dee2e6,#343a40);
+		color: #6d6875;
+		border-radius: 1em;
+		animation: animPositionTitle 5s ease-in-out infinite reverse;
+	}
+	.space-around {
 		display: flex;
-		width: 70%;
-		margin: 0 auto;
-		margin-bottom: 10px;
 		justify-content: space-around;
-		background: linear-gradient(#6b705c,#ffe8d6,#6b705c);
+		align-items: center;
 	}
 	.sectiontitle {
 		display: flex;
@@ -91,79 +119,54 @@
 		background-color: lightblue;
 		border-radius: 20px 20px 0 0;
 	}
-	.content {
-		padding: 10px;
-		display: flex;
-		flex-flow: column;
-		height: 90%;
-	}
-	.panel {
-		box-shadow: 0 0 8px #666666;
-		border-radius: 30%;
-		width: 50%;
-		height: 20%;
-		margin: 0 auto;
-		padding: 1%;
-		display: flex;
-		flex-flow: column;
-		align-items: center;
-		justify-content: space-around;
+	.profile {
+		font-family: Ubuntu;
+		line-height: 1.5;
+		padding: 1em;
 		transition: all 1s;
 	}
-	.panel-header {
-		box-shadow: 0 0 4px #999;
-		padding: 4px;
-		width: 70%;
+	.profile:hover {
+		font-weight: 600;
+	}
+	.contact-item {
+		min-width: 30%;
 		text-align: center;
-		transition: all 1s;
-		border-radius: 10px;
-		background-color: #eeeeee;
-		font-size: 2vw;
 	}
-	.panel:hover {
-		border-radius: 10px 10px 0 0;
-		width: 70%;
-		height: 50%;
-		box-shadow: 0 4px 12px #009;
-		background: linear-gradient(#0096c7,#caf0f8,#0096c7);
+	.box {
+		box-shadow: 0 2px 20px #999999;
+		border-radius: 0 0 10px 10px
 	}
-	.panel-content {
-		width: 60%;
-		opacity: 0.3;
-		height: 4vh;
-		overflow: hidden;
-		transition: all 1s;
+	.list {
+		padding: 10px 20px;
 	}
-	.panel:hover > .panel-header {
-		width: 90%;
-		font-size: 1.5vw;
-		margin: 0 auto;
-		background: linear-gradient(#457b9d,#a8dadc,#457b9d);
-		border-radius: 10px 10px 4px 4px;
-		padding: 2%;
+	.edu {
+		font-size: 12px;
 	}
-	.panel:hover > .panel-content {
-		width: 80%;
-		height: 30vh;
-		overflow-y: auto;
-		opacity: 1;
-		font-size: 100%;
+	.edu:nth-child(n+1):before {
+		content: '\bb\20';
 	}
 	.skills {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		font-family: Roboto;
+		font-size: 14px;
 		padding: 10px;
 	}
 	.skill {
 		transition: all 1s;
-		width: auto;
+		min-width: 22%;
 		box-shadow: 0 0 4px #999;
 		text-align: center;
 		padding: 4px;
 		margin: 0 4px 4px 0;
-		font-family: Helvetica;
-		font-size: 1vw;
+		font-family: Ubuntu;
+		font-size: 18px;
 		border-radius: 4px;
+	}
+	.exp {
+		display: flex;
+		flex-flow: column;
+		padding: 10px;
 	}
 	.expdetail {
 		padding: 10px;
@@ -171,122 +174,140 @@
 		margin-left: 5vw;
     	font-family: Ubuntu;
 	}
+	.expdetail > .details {
+		display: flex;
+		justify-content: flex-start;
+		text-align: left;
+		width: 45vw;
+	}
 	.jobtitle {
 		font-family: Montserrat;
-		font-size: 1vw;
+		font-size: 1.5vw;
 		background-color: darkslategrey;
 		padding: 4px 10px;
 		color: whitesmoke;
 		border-radius: 10px 10px 0 0;
 	}
-	.details {
-		width: 70%;
-		margin: 0 auto;
-	}
-	@media screen and (min-width: 721px) {
-		.skills {
-			grid-template-columns: 1fr 1fr;
-		}
-		.skill {
-			font-size: 1.5vw;
-		}
-		.panel-content {
-			font-size: 3vw;
-		}
-	}
 	@media screen and (max-width: 720px) {
+		.info {
+			top: 5vh;
+			margin-left: 1em;
+			padding: 2px 0 4px;
+			font-size: 12px;
+			height: auto;
+		}
+		.pagetitle {
+			height: auto;
+			padding: 10px;
+		}
+		.sectiontitle {
+			font-size: 80%;
+		}
+		.edu-list, .list {
+			width: 100%;
+			font-size: 8px;
+			font-family: sans-serif;
+			padding: 0;
+		}
+		.positiontitle {
+			font-weight: 400;
+			padding: 4px;
+		}
 		.skills {
 			grid-template-columns: 1fr 1fr;
+			line-height: 1.1;
 		}
-		.skill {
-			font-size: 2vw;
-		}
-		.panel-content {
-			font-size: 2vw;
-		}
-	}
-	@media screen and (max-width: 420px) {
-		.skills {
-			grid-template-columns: 1fr;
-		}
-		.skill {
-			font-size: 1vw;
+		.skill, .edu {
+			font-size: 10px;
 		}
 	}
 </style>
-
-<div class="container">
-	<div class="pageheader">
-		<div class="pagetitle">Srikant Gudi</div>
-		<div class="info">
-			<div class="infobtn">
-				??
+<div id="app" class="grad-app">
+	<div class="topnav grad-lite">
+		<div class="pagetitle">
+			<div class="name">
+				Srikant Gudi
 			</div>
-			<div class="infotext">
-				<div>
-					srikantgudi@gmail.com
-				</div>
-				<div>
-					+91 829 665 6336
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="positiontitle">
-		SENIOR FRONTEND PROFESSIONAL
-	</div>
-	<div class="content">
-		<div class="panel">
-			<div class="panel-header">
-				PROFILE
-			</div>
-			<div class="panel-content">
-				<ul><li>Senior software professional with over 20 years of experience in various technologies</li><li>Currently into frontend development using Angular, Svelte, Stencil, React, NodeJS From April 2014</li><li>Working knowledge of Python-Django, MongoDB</li><li>Proficient in VueJS, creating web components using StencilJS, creating RESTful APIs based on MySQL, MongoDB</li><li>Proficient in creating POCs, prototypes, presentations, and wireframes</li><li>Can conduct trainings in the known technologies</li><li>Can mentor juniors and freshers</li><li>Interested in frontend architechture, providing solutions as independent developer</li></ul>
-			</div>
-		</div>
-		<div class="panel">
-			<div class="panel-header">
-				TECHNICAL SKILLS
-			</div>
-			<div class="panel-content">
-				<div class="skills">
-					{#each data.skills as skill}
-					<div class="skill">{skill}</div>
-					{/each}
-				</div>
-			</div>
-		</div>
-		<div class="panel">
-			<div class="panel-header">
-				WORK HISTORY
-			</div>
-			<div class="panel-content">
-				{#each data.exp as item}
-					<div class="exp box">
-						<div class="jobtitle">
-							{item.jobTitle} :: {item.dates} &raquo;
-						</div>
-						<div class="expdetail">
-							<div>
-								{item.org}
-							</div>
-							<div>
-								Technologies used: {item.technology}
-							</div>	
-							<div class="details">
-								<details>
-									<summary>Details</summary>
-									<ul>
-										{#each item.content as text}
-										<li>{text}</li>
-										{/each}
-									</ul>
-								</details>
-							</div>
-						</div>
+			<div class="info" class:active={showInfo} on:click={() => {showInfo = true}}>
+				<div class="infobtn" class:hide={showInfo} >&quest;</div>
+				<div class="info-content" class:active={showInfo}>
+					<div class="contact-item">
+						Bengaluru, India 
+						<button class="infoclose" on:click|stopPropagation={() => {showInfo=false}}>&times;</button>
 					</div>
+					<div class="contact-item">
+						srikantgudi@gmail.com
+					</div>
+					<div class="contact-item">
+						+91 829 665 6336
+					</div>
+					<div class="edu-list">
+						<div class="edu">Master in Computer Management</div>
+						<div class="edu">Bachelor of Commerce</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="positiontitle space-around">
+			Senior Front-end Engineer
+		</div>
+	</div>
+	<div>
+		<div class="sectiontitle grad-dark space-around">
+			&laquo; PROFILE &raquo;
+		</div>
+		<div class="box profile">
+			<ul>
+				{#each data.profile as text}
+				<li>{text}</li>
+				{/each}
+			</ul>
+		</div>
+	</div>
+	<div>
+		<div class="sectiontitle grad-dark space-around">
+			&laquo; TECHNICAL SKILLS &raquo;
+		</div>
+		<div class="box list">
+			<div class="skills">
+				{#each data.skills as text}
+				<div class="skill">{text}</div>
 				{/each}
 			</div>
+		</div>
+	</div>
+	
+	<div>
+		<div class="sectiontitle grad-dark space-around">
+			&laquo; WORK EXPERIENCE &raquo;
+		</div>
+		<div class="box list">
+			{#each data.exp as item}
+				<div class="exp box">
+					<div class="jobtitle">
+						{item.jobTitle} :: {item.dates} &raquo;
+					</div>
+					<div class="expdetail">
+						<div>
+							{item.org}
+						</div>
+						<div>
+							Technologies used: {item.technology}
+						</div>	
+						<div class="details">
+							<details>
+								<summary>Details</summary>
+								<ul>
+									{#each item.content as text}
+									<li>{text}</li>
+									{/each}
+								</ul>
+							</details>
+						</div>
+					</div>
+				</div>
+			{/each}
 		</div>
 	</div>
 </div>
