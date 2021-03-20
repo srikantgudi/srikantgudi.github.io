@@ -79,6 +79,18 @@
 		justify-content: space-around;
 		background: linear-gradient(#6b705c,#ffe8d6,#6b705c);
 	}
+	.sectiontitle {
+		display: flex;
+		flex-flow: column;
+		margin-top: 10px;
+		font-size: 1.8vw;
+		font-family: Orbitron;
+		letter-spacing: 2px;
+		color: navy;
+		padding: 2vh 2vw;
+		background-color: lightblue;
+		border-radius: 20px 20px 0 0;
+	}
 	.content {
 		padding: 10px;
 		display: flex;
@@ -152,6 +164,24 @@
 		font-family: Helvetica;
 		font-size: 1vw;
 		border-radius: 4px;
+	}
+	.expdetail {
+		padding: 10px;
+		text-align: left;
+		margin-left: 5vw;
+    	font-family: Ubuntu;
+	}
+	.jobtitle {
+		font-family: Montserrat;
+		font-size: 1vw;
+		background-color: darkslategrey;
+		padding: 4px 10px;
+		color: whitesmoke;
+		border-radius: 10px 10px 0 0;
+	}
+	.details {
+		width: 70%;
+		margin: 0 auto;
 	}
 	@media screen and (min-width: 721px) {
 		.skills {
