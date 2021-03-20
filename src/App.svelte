@@ -204,7 +204,7 @@
 			padding: 0;
 		}
 		.profile {
-			font-size: 1.2vw;
+			font-size: 2vw;
 		}
 		.positiontitle {
 			font-weight: 400;
