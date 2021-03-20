@@ -131,7 +131,7 @@
 		padding: 10px;
 		text-align: left;
 		margin-left: 5vw;
-    	font-family: Ubuntu;
+    	font-family: Montserrat;
 	}
 	.expdetail > .details {
 		display: flex;
@@ -177,12 +177,6 @@
 		display: flex;
 		flex-flow: column;
 		padding: 10px;
-	}
-	.expdetail {
-		padding: 10px;
-		text-align: left;
-		margin-left: 5vw;
-    	font-family: Ubuntu;
 	}
 	.expdetail > .details {
 		display: flex;
@@ -296,7 +290,7 @@
 	</div>
 	<div class="content-body" class:active={curTab === 3}>
 		{#each data.exp as item}
-			<div class="exp box">
+			<div class="box">
 				<div class="jobtitle">
 					{item.jobTitle} :: {item.dates} &raquo;
 				</div>
