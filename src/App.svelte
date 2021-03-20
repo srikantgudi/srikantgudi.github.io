@@ -68,12 +68,9 @@
 		background: linear-gradient(grey, darkslategrey);
 		color: whitesmoke!important;
 	}
-	.profile {
-		font-family: 'Helvetica Neue';
-	}
 	.pagetitle {
 		height: 3em;
-		background: linear-gradient(#023e8a,#caf0f8,#023e8a);
+		background: linear-gradient(#61a5c2,#a9d6e5,#61a5c2);
 		color: whitesmoke;
 		border-radius: 1em;
 		text-align: center;
@@ -85,7 +82,7 @@
 		font-size: 3vw;
 		letter-spacing: 1px;
 		text-transform: uppercase;
-		color: #1d3557;
+		color: #014f86;
 	}
 	@keyframes animPositionTitle {
 		from {color: beige;}
@@ -93,11 +90,11 @@
 	}
 	.positiontitle {
 		font-size: 2vw;
-		font-family: Ubuntu;
+		font-family: Orbitron;
 		font-weight: 600;
 		padding: 1vw 1vh;
 		margin: 1vh 4vw;
-		background: linear-gradient(#343a40,#dee2e6,#343a40);
+		background: linear-gradient(#b7b7a4,#fff1e6,#b7b7a4);
 		color: #6d6875;
 		border-radius: 1em;
 		animation: animPositionTitle 5s ease-in-out infinite reverse;
@@ -120,13 +117,10 @@
 		border-radius: 20px 20px 0 0;
 	}
 	.profile {
-		font-family: Ubuntu;
+		font-family: Montserrat;
 		line-height: 1.5;
 		padding: 1em;
 		transition: all 1s;
-	}
-	.profile:hover {
-		font-weight: 600;
 	}
 	.contact-item {
 		min-width: 30%;
@@ -159,7 +153,7 @@
 		text-align: center;
 		padding: 4px;
 		margin: 0 4px 4px 0;
-		font-family: Ubuntu;
+		font-family: Montserrat;
 		font-size: 18px;
 		border-radius: 4px;
 	}
@@ -250,7 +244,7 @@
 		</div>
 		
 		<div class="positiontitle space-around">
-			Senior Front-end Engineer
+			Senior Frontend Engineer
 		</div>
 	</div>
 	<div>
