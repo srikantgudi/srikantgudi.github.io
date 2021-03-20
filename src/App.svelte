@@ -203,6 +203,9 @@
 			font-family: sans-serif;
 			padding: 0;
 		}
+		.profile {
+			font-size: 1vw;
+		}
 		.positiontitle {
 			font-weight: 400;
 			padding: 4px;
