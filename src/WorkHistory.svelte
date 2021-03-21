@@ -101,13 +101,10 @@
 </script>
 
 <style>
-  .org-name {
-    font-size: 1vw;
+  .org-name, .exp-period {
+    font-size: 14px;
   }
   @media screen and (max-width: 639px) {
-		.org-name, .exp-period {
-			font-size: 2vw;
-		}
   }
 </style>
 <div>
