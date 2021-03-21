@@ -128,6 +128,9 @@
 			flex-flow: column;
 			justify-content: space-around;
 		}
+		.content {
+			height: 65vmax;
+		}
 		.page-title, .position-title {
 			font-size: 1.2vw;
 		}
