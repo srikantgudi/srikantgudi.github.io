@@ -2,7 +2,7 @@
     box-sizing: border-box;
     background: linear-gradient(#0cf,lightcyan);
     height: 96vh;
-    margin: 0 1vw;
+    margin: 0 10vw;
     overflow: hidden;
 }
 .sectiontitle {
@@ -42,7 +42,7 @@
 }
 @media screen and (max-width: 720px) {
     #app {
-        margin: 0;
+        margin: 0 1vw;
         padding: 0 1vw;
     }
     .content {
