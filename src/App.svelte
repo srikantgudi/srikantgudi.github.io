@@ -11,7 +11,7 @@
 		'workexp': {title: 'Work History', comp: WorkHistory},
 	};
 	let showContact = false;
-	let compKey = 'profile';
+	let compKey = 'skills';
 	let curComp = Profile;
 	$: curComp = comps[compKey].comp;
 </script>
