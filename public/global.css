@@ -7,10 +7,10 @@
 }
 .sectiontitle {
     box-sizing: border-box;
-    font-size: 1.2vw;
+    font-size: 16px;
     background-color: darkslategrey;
     color: whitesmoke;
-    padding: 1vh 8vw;
+    padding: 1vh 2vw;
     border-radius: 0 0 10px 10px;
 }
 .content {
