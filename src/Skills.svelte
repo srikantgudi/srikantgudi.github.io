@@ -14,7 +14,7 @@
     min-width: 30%;
     box-shadow: 0 2px 2px #666666;
     margin-bottom: 1vmax;
-    border-radius: 10px 10px 0 0;
+    border-radius: 30px 10px 30px 0;
     padding: 1vh 0;
   }
   .groupname {
@@ -24,7 +24,7 @@
     padding: 1vh 2vw;
     font-size: 16px;
     font-family: Montserrat;
-    border-radius: 0 0 4px 4px;
+    border-radius: 30px 0 4px 4px;
   }
   .skillname {
     font-family: Montserrat;
