@@ -1,17 +1,5 @@
 <script>
   import {data} from './data/data';
-  
-  let name = 'Technical Skills'
-  let skills = [
-    {group: 'Frameworks', items: 'Angular, Svelte, VueJS, React, Stencil'},
-    {group: 'Web Skills', items: 'JavaScrip, TypeScript, HTML5, CSS3, SVG'},
-    {group: 'Libraries', items: 'Bootstrap, Angular-Material, React-UI, Vuetify, Buefy'},
-    {group: 'Agile Methodology', items: 'Scrum, Sprint, JIRA, GIT, Confluence'},
-    {group: 'Operating Systems', items: 'Windows, MacOS, Linux (Ubuntu, Mint)'},
-    {group: 'Coding Tools', items: 'VS Code, IntelliJ, Nodepad++'},
-    {group: 'Others', items: 'Python-Django, Cansandra'},
-    {group: 'Online coding', items: 'StackBlitz, CodeSandbox'},
-  ]
 </script>
 
 <style>
@@ -30,7 +18,8 @@
   }
   .groupname {
     background: linear-gradient(#123456,#654321);
-    padding: 1vh 1vw;
+    padding: 1vh 3vw;
+    font-size: 14px;
     color: white;
     border-radius: 0 0 10px 10px;
   }

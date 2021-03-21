@@ -23,13 +23,13 @@ export const data = {
 		{group: 'Libraries', items: [
 			"Bootstrap", "Angular-Material", "React-UI", "Vuetify", "Buefy",
 		]},
-		{group: 'Agile Methodology', items: [
+		{group: 'Agile', items: [
 			"Scrum", "Sprint", "JIRA", "GIT", "Confluence",
 		]},
 		{group: 'Coding Tools', items: [
 			"VS Code", "IntelliJ", "Nodepad++", "StackBlitz", "CodeSandbox"
 		]},
-		{group: 'Operating Systems', items: [
+		{group: 'O / S', items: [
 			"Windows", "MacOS", "Linux",
 		]},
 		{group: 'Secondary Skills', items: [
