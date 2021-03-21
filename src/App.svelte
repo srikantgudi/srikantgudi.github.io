@@ -1,319 +1,185 @@
 <script>
-	import { data } from './data/data.js'
-	const winResize = e => {
-		console.log('win-resize: e', e);
-	}
-	let showInfo = false;
-	let curTab = 1;
+	import Profile from './Profile.svelte';
+	import Skills from './Skills.svelte';
+	import WorkHistory from './WorkHistory.svelte';
+	import Academic from './Academic.svelte';
+	
+	let name = 'Srikant Gudi';
+	let comps = {
+		'profile': {title: 'Profile', comp: Profile},
+		'skills': {title: 'Technical Skills', comp: Skills},
+		'workexp': {title: 'Work History', comp: WorkHistory},
+	};
+	let showContact = false;
+	let compKey = 'profile';
+	let curComp = Profile;
+	$: curComp = comps[compKey].comp;
 </script>
+
 <style>
-	.container {
-		margin: 0 20%;
+	.compnav {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		margin: 10px 0;
+		background: linear-gradient(lightcyan,lightblue,lightcyan);
+		padding: 5px;
+	}
+	.compbtn {
+		border: none;
 		padding: 10px;
-		height: 90vh;
-		transition: all 1s ease-in;
-		border-radius: 10px 10px 0 0;
-		box-shadow: 0 4px 10px #666666;
-		overflow: hidden;
+		border-radius: 4px;
+		box-shadow: 0 2px 4px #003;
+		margin: 0 4px 4px 0;
+		display: none;
+		cursor: pointer;
+		font-family: Montserrat;
+		font-size: 1.5vw;
+		font-weight: 600;
+		background: linear-gradient(lightgrey,whitesmoke,grey);
+	}
+	.compbtn.show {
+		display: block;
+		min-width: 30%;
+	}
+	.contact-btn {
+		border-radius: 50%;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		position: absolute;
+		top: 1vh;
+		left: 25%;
+		display: block;
+	}
+	.contact-btn:hide {
+		display: none;
+	}
+	.contact-info {
+		display: none;
+		width: fit-content;
+		height: fit-content;
+		transition: all 1s;
+	}
+	.contact-info.active {
+		display: flex;
+		flex-flow: column;
+		position: absolute;
+		top: 1vh;
+		left: 25%;
+		border-radius: 2vw 2vh;
+		box-shadow: 0 2px 2px #333333;
+		background: linear-gradient(lightblue,lightcyan);
+	}
+	.contact-item {
+		font-size: 18px;
+		margin: 4px;
+		min-width: 30%;
+	}
+	.page-title {
+		font-size: 3vw;
+		font-weight: 600;
+		font-family: Righteous;
+		text-transform: uppercase;
+		text-shadow: 4px -2px 10px teal;
+		color: navy;
+		padding: 1vh 5vw;
+		border-radius: 20px 20px 0 0;
+		box-shadow: 0 2px 10px #009;
+		background: linear-gradient(lightblue,lightcyan);
+	}
+	.position-title {
+		font-family: Orbitron;
+		font-weight: 600;
+		font-size: 1.5vw;
+		margin: 1vh 10vw;
+		padding: 10px;
+		border-radius: 20px 20px 0 0;
+		box-shadow: 0 2px 10px #009;
+		background: linear-gradient(lightcyan,lightblue);
+	}
+	.topnav {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		justify-content: space-around;
+	}
+	@keyframes letterspace {
+		from {letter-spacing: 1px; color: #333;}
+		to {letter-spacing:10px; color: #ddd;}
+	}
+	.cur-comp {
+		box-sizing: border-box;
+		font-family: monospace;
+		font-size: 2vw;
+		letter-spacing: 2px;
+		font-weight: 600;
+		display: flex;
+		justify-content: space-around;
+		animation: letterspace 2s ease-in infinite alternate-reverse;
 	}
 	.content {
-		background: lightcyan;
-		padding: 10px;
-		overflow: hidden;
-		width: 60vw;
-		margin: 0 auto;
-	}
-	.content-body {
-		height: 5vh;
-		transition: all 1s;
-		opacity: 0.3;
-		padding: 10px;
-		overflow: hidden;
-		font-family: Montserrat;
-	}
-	.content-body.active {
-		opacity: 1;
-		height: 30vh;
+		box-sizing: border-box;
+		padding: 1vh 1vw;
+		margin: 2vh 10vw;
+		box-shadow: 0 0 4vw;
+		border-radius: 10px;
+		max-height: 50vh;
 		overflow-y: auto;
+		transition: all 1s ease-in;
 	}
-	.sectiontitle {
-		box-shadow: 0 0 4px #999999;
-		background: darkslategrey;
-		color: whitesmoke;
-		font-size: 3vw;
-		padding: 10px;
-		display: flex;
-		border-radius: 30px 30px 0 0;
-		justify-content: space-around;
-	}
-	.pageheader {
-		text-align: center;
-		margin-bottom: 10px;
-	}
-	.name {
-		font-size: 1vw;
-	}
-	.info {
-		position: absolute;
-		top: 2em;
-		font-family: Montserrat;
-		display: flex;
-		flex-flow: column;
-		align-items: center;
-		box-shadow: 0 2px 4px #023e8a;
-		padding: 4px;
-		border-radius: 50%;
-		transition: all 0.5s;
-		background: linear-gradient(#90e0ef,#caf0f8,#90e0ef);
-		color: navy;
-	}
-	.info.active {
-		box-shadow: 0 2px 14px #457b9d;
-		border-radius: 10%;
-	}
-	.infobtn {
+	.close-btn {
+		width: 30px;
 		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		width: 1em;
-		border-radius: 50%;
+		border-radius: 2vw 2vh;
 	}
-	.infobtn.hide {
-		display: none;
-	}
-	.infoclose {
-		cursor: pointer;
-		border: none;
-		border-radius: 50%;
-		background-color: lightgrey;
-	}
-	.info-content {
-		display: none;
-	}
-	.info-content.active {
-		display: flex;
-		flex-flow: column;
-		gap: 10px;
-		transition: all 1s;
-		height: 15vh;
-	}
-	.name {
-		font-family: Righteous;
-		font-weight: 600;
-		font-size: 3vw;
-		letter-spacing: 1px;
-		text-transform: uppercase;
-		color: #014f86;
-	}
-	@keyframes animPositionTitle {
-		0% {color: #03045e;font-size: 2vw;}
-		/* 25% {color: #023e8a;font-size: 1.5vw;} */
-		50% {color: #caf0f8;font-size: 1vw;}
-		/* 75% {color: #023e8a;font-size: 1.5vw;} */
-		100% {color: #03045e;font-size: 2vw;}
-	}
-	.positiontitle {
-		display: flex;
-		justify-content: space-around;
-		letter-spacing: 1px;
-		font-size: 1.5vw;
-		font-family: 'Comic Sans MS';
-		font-weight: 600;
-		padding: 10px;
-		margin: 1vh 4vw;
-		background: linear-gradient(#b7b7a4,#fff1e6,#b7b7a4);
-		color: #6d6875;
-		border-radius: 1em;
-		animation: animPositionTitle 5s ease-in-out infinite reverse;
-	}
-	.expdetail {
-		padding: 10px;
-		text-align: left;
-		margin-left: 5vw;
-    	font-family: Montserrat;
-	}
-	.expdetail > .details {
-		display: flex;
-		justify-content: flex-start;
-		text-align: left;
-		width: 45vw;
-		margin: 0 auto;
-	}
-	.sectiontitle {
-		display: flex;
-		flex-flow: column;
-		margin-top: 10px;
-		font-size: 1.8vw;
-		font-family: Orbitron;
-		letter-spacing: 2px;
-		color: navy;
-		padding: 2vh 2vw;
-		background-color: lightblue;
-		border-radius: 20px 20px 0 0;
-	}
-	.box {
-		box-shadow: 0 2px 20px #999999;
-		border-radius: 0 0 10px 10px
-	}
-	.skills {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		font-family: Roboto;
-		font-size: 14px;
-		padding: 10px;
-	}
-	.skill {
-		transition: all 1s;
-		min-width: 22%;
-		box-shadow: 0 2px 2px #999;
-		text-align: center;
-		margin: 0 4px 4px 0;
-		font-family: Montserrat;
-		font-size: 18px;
-		border-radius: 4px;
-	}
-	.exp {
-		display: flex;
-		flex-flow: column;
-		padding: 10px;
-	}
-	.expdetail > .details {
-		display: flex;
-		justify-content: flex-start;
-		text-align: left;
-		width: 45vw;
-	}
-	.jobtitle {
-		font-family: Montserrat;
-		font-size: 1.5vw;
-		background-color: darkslategrey;
-		padding: 4px 10px;
-		color: whitesmoke;
-		border-radius: 10px 10px 0 0;
-	}
-	@media screen and (max-width: 480px) {
-		.skills {
-			grid-template-columns: 1fr 1fr 1fr;
-			line-height: 1.1;
+	@media screen and (max-width: 639px) {
+		#app {
+			margin: 0 2vw;
 		}
-	}
-
-	@media screen and (max-width: 720px) {
-		.info {
-			top: 5vh;
-			margin-left: 1em;
-			padding: 2px 0 4px;
-			font-size: 12px;
-			height: auto;
-		}
-		.pageheader {
-			height: auto;
-			font-size: vw;
-			padding: 10px;
-		}
-		.sectiontitle {
-			font-size: 80%;
-		}
-		.edu-list, .list {
+		.content {
+			margin: 0 4vw;
 			width: 100%;
-			font-size: 8px;
-			font-family: sans-serif;
-			padding: 0;
 		}
-		.profile {
-			font-size: 2vw;
+		.topnav {
+			flex-flow: column;
+			justify-content: space-around;
 		}
-		.positiontitle {
-			font-weight: 400;
-			padding: 4px;
+		.contact-btn, .contact-info.active {
+			left: 5vw;
 		}
-		.skills {
-			grid-template-columns: 1fr 1fr;
-			line-height: 1.1;
-		}
-		.skill, .edu {
-			font-size: 10px;
+		.contact-item {
+			font-size: 12px;
 		}
 	}
 </style>
 
-<div class="container">
-	<div class="pageheader">
-		<div class="name">SRIKANT GUDI</div>
+<div id="app">
+	<button class="contact-btn" on:click={() => {showContact=true}} class:hide={showContact}>
+		?
+	</button>
+	<div class="contact-info" class:active={showContact}>
+		<button class="close-btn" on:click={() => {showContact = false}}>
+			&times;
+		</button>
+		<div class="contact-item">Bengaluru, India</div>
+		<div class="contact-item">srikantgudi@gmail.com</div>
+		<div class="contact-item">+91 829 665 6336</div>
 	</div>
-	<div class="positiontitle">
-		Senior Frontend Professional
-	</div>
-	<div class="info" class:active={showInfo} on:click={() => {showInfo = true}}>
-		<div class="infobtn" class:hide={showInfo} >&quest;</div>
-		<div class="info-content" class:active={showInfo}>
-			<div class="contact-item">
-				Bengaluru, India 
-				<button class="infoclose" on:click|stopPropagation={() => {showInfo=false}}>&times;</button>
-			</div>
-			<div class="contact-item">
-				srikantgudi@gmail.com
-			</div>
-			<div class="contact-item">
-				+91 829 665 6336
-			</div>
-			<div class="edu-list">
-				<div class="edu">Master in Computer Management</div>
-				<div class="edu">Bachelor of Commerce</div>
-			</div>
+	<div class="topnav">
+		<div class="page-title">{name}</div>
+		<div class="position-title" >
+			Senior Frontend Professional
 		</div>
 	</div>
-	<div class="sectiontitle" on:click={() => {curTab=1}}>
-		Profile
+	<div class="compnav">
+		{#each Object.keys(comps) as key}
+		<button class="compbtn" class:show={key !== compKey} on:click={() => {compKey=key}}>{comps[key].title}</button>
+		{/each}	
 	</div>
-	<div class="content-body" class:active={curTab === 1}>
-		<ul>
-			{#each data.profile as text}
-			<li>{text}</li>
-			{/each}
-		</ul>
-	</div>
-	<div class="sectiontitle" on:click={() => {curTab=2}}>
-		Technical Skills
-	</div>
-	<div class="content-body" class:active={curTab === 2}>
-		<div class="skills">
-			{#each data.skills as text}
-			<div class="skill">{text}</div>
-			{/each}
-		</div>
-	</div>
-	
-	<div class="sectiontitle" on:click={() => {curTab=3}}>
-		Work History
-	</div>
-	<div class="content-body" class:active={curTab === 3}>
-		{#each data.exp as item}
-			<div class="box">
-				<div class="jobtitle">
-					{item.jobTitle} :: {item.dates} &raquo;
-				</div>
-				<div class="expdetail">
-					<div>
-						{item.org}
-					</div>
-					<div>
-						Technologies used: {item.technology}
-					</div>	
-					<div class="details">
-						<details>
-							<summary>Details</summary>
-							<ul>
-								{#each item.content as text}
-								<li>{text}</li>
-								{/each}
-							</ul>
-						</details>
-					</div>
-				</div>
-			</div>
-		{/each}
+
+	<div class="cur-comp">{comps[compKey].title}</div>
+	<div class="content">
+		<svelte:component this={comps[compKey].comp} />
 	</div>
 </div>
-

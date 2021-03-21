@@ -1,5 +1,5 @@
 <script>
-  import SkillLevel from './SkillLevel.svelte';
+  import {data} from './data/data';
   
   let name = 'Technical Skills'
   let skills = [
@@ -18,38 +18,44 @@
   .skills {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 0 10px;
+    height: auto;
   }
   .skillgroup {
-    width: inherit;
-    box-shadow: 0 2px 4px #999999;
+    min-width: 30%;
+    box-shadow: 0 2px 2px #666666;
     margin-bottom: 1vmax;
-    padding: 5px;
+    border-radius: 10px 10px 0 0;
+    padding: 1vh 0;
   }
-  .skillgrouptitle {
-    box-sizing: border-box;
-    background-color: #cccccc;
-    border-radius: 0 0 4px 4px;
-    padding: 5px;
+  .groupname {
+    background: linear-gradient(#123456,#654321);
+    padding: 1vh 1vw;
+    color: white;
+    border-radius: 0 0 10px 10px;
   }
   .skillname {
     font-family: Montserrat;
-    font-size: 16px;
-    padding: 5px;
+    font-size: 14px;
+    padding-left: 2vw;
+    line-height: 1.5;
   }
   @media screen and (max-width: 420px) {
     .skills {
-      display: block;;
-      height: inherit;
+      grid-template-columns: 1fr 1fr;
     }
   }
 </style>
 
 <div class="skills">
-  {#each skills as skill}
+  {#each data.skills as skill}
     <div class="skillgroup">
-      <div class="skillgrouptitle">{skill.group}:</div>
-      <div class="skillname">{skill.items}</div>
+      <div class="groupname">
+        {skill.group}
+      </div>
+      {#each skill.items as skillname}
+        <div class="skillname">{skillname}</div>
+      {/each}
     </div>
   {/each}
 </div>

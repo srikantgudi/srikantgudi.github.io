@@ -1,8 +1,10 @@
 #app {
-    background: linear-gradient(lightblue,lightcyan,lightblue);
+    box-sizing: border-box;
+    background: linear-gradient(#0cf,lightcyan);
     height: 96vh;
     width: 90vw;
     margin: auto;
+    padding: 0 10vw;
     overflow: hidden;
 }
 .menubar {
@@ -23,8 +25,13 @@
     font-family: Orbitron;
     cursor: pointer;
 }
-.menuitem.active {
-    background: linear-gradient(#666666,#cccccc,#999999);
+.sectiontitle {
+    box-sizing: border-box;
+    font-size: 1.2vw;
+    background-color: darkslategrey;
+    color: whitesmoke;
+    padding: 1vh 1vw;
+    border-radius: 0 0 20px 20px;
 }
 .content {
     margin: 0 1vmax;
@@ -33,26 +40,43 @@
     padding: 1vmin;
     box-shadow: 0 0 4px #999999;
     font-family: Montserrat;
+    background-color: whitesmoke;
 }
 .exp-title {
     background: linear-gradient(#666666,whitesmoke,#999999);
     color: navy;
+    font-size: 1.5vw;
     font-weight: 600;
     padding: 10px;
     border-radius: 10px 10px 0 0;
 }
+.exp-period {
+    font-size: 1.2vw;
+}
 .org-name {
+    border-radius: 10px 10px 0 0;
     background-color: #dddddd;
     padding: 5px 10px;
+    font-size: 1vw;
+    margin: 0 1vw;
 }
 @media screen and (max-width: 480px) {
-    .content {
-        height: 60vmax;
+    #app {
+        margin: 0 2vw;
     }
-    .exp-title, .org-name {
+    .content {
+        margin: 0 4vw;
+        width: 100%;
+    }
+    .topnav {
+        flex-flow: column;
+        justify-content: space-around;
+    }
+    .contact-btn, .contact-info.active {
+        left: 5vw;
+    }
+    .contact-item {
         font-size: 12px;
     }
-    .skillname {
-        font-size: 14px;
-    }
+}
 }

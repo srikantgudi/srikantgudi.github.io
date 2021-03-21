@@ -104,10 +104,11 @@
 </style>
 <div>
   {#each expList as exp, idx}
-    <div class="exp-title">
-      {exp.header.jobTitle} :: {exp.header.dates}
+    <div class="sectiontitle">
+      {exp.header.jobTitle} &raquo; <span class="exp-period">{exp.header.dates}</span>
     </div>
     <div class="org-name">
+       
       {exp.header.org}
     </div>
     <div>

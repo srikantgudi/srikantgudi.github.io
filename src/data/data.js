@@ -14,13 +14,27 @@ export const data = {
 		"Bachelor of Commerce"
 	],
 	skills: [
-		"Angular", "Svelte", "VueJS", "React", "Stencil",
-		"JavaScript", "TypeScript", "HTML5", "CSS3", "SVG",
-		"Bootstrap", "Angular-Material", "React-UI", "Vuetify", "Buefy",
-		"Scrum", "Sprint", "JIRA", "GIT", "Confluence",
-		"VS Code", "IntelliJ", "Nodepad++",
-		"Windows", "MacOS", "Linux",
-		"Python-Django", "Casandra"
+		{group: 'Frontend', items: [
+			"Angular", "Svelte", "VueJS", "React", "Stencil",
+		]},
+		{group: 'Web Skills', items: [
+			"JavaScript", "TypeScript", "HTML5", "CSS3", "SVG",
+		]},
+		{group: 'Libraries', items: [
+			"Bootstrap", "Angular-Material", "React-UI", "Vuetify", "Buefy",
+		]},
+		{group: 'Agile Methodology', items: [
+			"Scrum", "Sprint", "JIRA", "GIT", "Confluence",
+		]},
+		{group: 'Coding Tools', items: [
+			"VS Code", "IntelliJ", "Nodepad++", "StackBlitz", "CodeSandbox"
+		]},
+		{group: 'Operating Systems', items: [
+			"Windows", "MacOS", "Linux",
+		]},
+		{group: 'Secondary Skills', items: [
+			"Python-Django", "Casandra"
+		]}
 	],
 	exp: [
 		{
