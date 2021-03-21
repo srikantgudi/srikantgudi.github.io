@@ -37,6 +37,7 @@ a {
 .contact-info {
     font-family: Roboto;
     font-size: 1vw;
+    text-align: right;
 }
 .sectiontitle {
     font-family: Orbitron;
