@@ -2,9 +2,8 @@
     box-sizing: border-box;
     background: linear-gradient(#0cf,lightcyan);
     height: 96vh;
-    width: 90vw;
-    margin: auto;
-    padding: 0 10vw;
+    margin: 0 1vw;
+    padding: 0 5vw;
     overflow: hidden;
 }
 .menubar {
@@ -62,7 +61,8 @@
 }
 @media screen and (max-width: 480px) {
     #app {
-        margin: 0 2vw;
+        margin: 0;
+        padding: 0 1vw;
     }
     .content {
         margin: 0 4vw;

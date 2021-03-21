@@ -121,7 +121,7 @@
 	.content {
 		box-sizing: border-box;
 		padding: 1vh 1vw;
-		margin: 2vh 10vw;
+		margin: 2vh 5vw;
 		box-shadow: 0 0 4vw;
 		border-radius: 10px;
 		max-height: 50vh;
@@ -134,11 +134,8 @@
 		border-radius: 2vw 2vh;
 	}
 	@media screen and (max-width: 639px) {
-		#app {
-			margin: 0 2vw;
-		}
 		.content {
-			margin: 0 4vw;
+			margin: 0;
 			width: 100%;
 		}
 		.topnav {
