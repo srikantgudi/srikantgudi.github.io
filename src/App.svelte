@@ -143,6 +143,9 @@
 		.contact-item {
 			font-size: 12px;
 		}
+		.org-name {
+			font-size: 2vw;
+		}
 	}
 </style>
 

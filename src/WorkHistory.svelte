@@ -101,6 +101,14 @@
 </script>
 
 <style>
+  .org-name {
+    font-size: 1vw;
+  }
+  @media screen and (max-width: 639px) {
+		.org-name, .exp-period {
+			font-size: 2vw;
+		}
+  }
 </style>
 <div>
   {#each expList as exp, idx}
@@ -108,7 +116,6 @@
       {exp.header.jobTitle} &raquo; <span class="exp-period">{exp.header.dates}</span>
     </div>
     <div class="org-name">
-       
       {exp.header.org}
     </div>
     <div>
