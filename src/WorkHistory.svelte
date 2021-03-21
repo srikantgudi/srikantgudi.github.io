@@ -121,6 +121,7 @@
     flex-flow: column;
     height: auto;
     margin: 1vh 4vw;
+    box-shadow: 0 2px 2px #999999;
   }
   .details {
     margin: 1vh 4vw;
@@ -132,7 +133,11 @@
     font-size: 110%;
     transition: all 1s;
     background-color: lightcyan;
-    border-radius: 0 0 30px 30px;
+    border-radius: 30px;
+  }
+  .exp:hover > .job-title {
+    border-radius: 30px 30px 0 0;
+    padding-left: 2vw;
   }
   @media screen and (max-width: 639px) {
   }
