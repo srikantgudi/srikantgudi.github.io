@@ -81,6 +81,9 @@ a {
     .content {
         margin: 0;
     }
+    .content-text {
+        font-size: 14px;
+    }
     .resume-section {
         margin: 0 10px;
         padding: 0;

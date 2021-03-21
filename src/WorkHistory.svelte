@@ -140,6 +140,9 @@
     padding-left: 2vw;
   }
   @media screen and (max-width: 639px) {
+    .details {
+      font-size: 14px;
+    }
   }
 </style>
 
