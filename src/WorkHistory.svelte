@@ -127,14 +127,21 @@
     font-family: Montserrat;
     font-size: 1vw;
   }
+  .exp:hover {
+    box-shadow: 0 0 10px #666666;
+    font-size: 110%;
+    transition: all 1s;
+    background-color: lightcyan;
+    border-radius: 0 0 30px 30px;
+  }
   @media screen and (max-width: 639px) {
   }
 </style>
 
 <div class="resume-section">
   <div class="sectiontitle">WORK EXPERIENCE</div>
-  <div class="exp">
-    {#each expList as exp, idx}
+  {#each expList as exp, idx}
+    <div class="exp">
       <div class="job-title">
         {exp.header.jobTitle} &raquo; <span class="exp-period">{exp.header.dates}</span>
       </div>
@@ -142,15 +149,12 @@
         {exp.header.org}
       </div>
       <div class="details">
-        <details>
-          <summary>Details:</summary>
-          <ul>
-            {#each exp.content as text}
-              <li>{text}</li>
-            {/each}
-          </ul>
-        </details>
+        <ul>
+          {#each exp.content as text}
+            <li>{text}</li>
+          {/each}
+        </ul>
       </div>
-    {/each}
-  </div>
+    </div>
+  {/each}
 </div>
