@@ -77,7 +77,7 @@
 		min-width: 30%;
 	}
 	.page-title {
-		font-size: 3vw;
+		font-size: 30px;
 		font-weight: 600;
 		font-family: Righteous;
 		text-transform: uppercase;
@@ -91,7 +91,7 @@
 	.position-title {
 		font-family: Orbitron;
 		font-weight: 600;
-		font-size: 1.5vw;
+		font-size: 24px;
 		margin: 1vh 10vw;
 		padding: 10px;
 		border-radius: 20px 20px 0 0;
@@ -131,20 +131,20 @@
 		.content {
 			height: 65vmax;
 		}
-		.page-title, .position-title {
-			font-size: 1.2vw;
+		.page-title {
+			font-size: 16px;
+		}
+		.position-title {
+			font-size: 10px;
 		}
 		.compbtn {
-			font-size: 1.5vw;
+			font-size: 16px;
 		}
 		.contact-btn, .contact-info.active {
 			left: 5vw;
 		}
 		.contact-item {
 			font-size: 12px;
-		}
-		.org-name {
-			font-size: 2vw;
 		}
 	}
 </style>
