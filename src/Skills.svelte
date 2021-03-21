@@ -37,7 +37,7 @@
   }
   @media screen and (max-width: 420px) {
     .skills {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
     }
   }
 </style>
