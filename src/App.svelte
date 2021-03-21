@@ -128,6 +128,12 @@
 			flex-flow: column;
 			justify-content: space-around;
 		}
+		.page-title, .position-title {
+			font-size: 1.2vw;
+		}
+		.compbtn {
+			font-size: 1.5vw;
+		}
 		.contact-btn, .contact-info.active {
 			left: 5vw;
 		}
