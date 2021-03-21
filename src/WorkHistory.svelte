@@ -104,23 +104,53 @@
   .org-name, .exp-period {
     font-size: 14px;
   }
+  .job-title {
+    font-family: Montserrat;
+    background-color: #495057;
+    color: #f8f9fa;
+    padding: 10px;
+  }
+  .org-name {
+    font-family: Montserrat;
+    box-shadow: 0 0 4px #495057;
+    padding: 1vh 2vw;
+  }
+
+  .exp {
+    display: flex;
+    flex-flow: column;
+    height: auto;
+    margin: 1vh 4vw;
+  }
+  .details {
+    margin: 1vh 4vw;
+    font-family: Montserrat;
+    font-size: 1vw;
+  }
   @media screen and (max-width: 639px) {
   }
 </style>
-<div>
-  {#each expList as exp, idx}
-    <div class="sectiontitle">
-      {exp.header.jobTitle} &raquo; <span class="exp-period">{exp.header.dates}</span>
-    </div>
-    <div class="org-name">
-      {exp.header.org}
-    </div>
-    <div>
-      <ul>
-        {#each exp.content as text}
-          <li>{text}</li>
-        {/each}
-      </ul>
-    </div>
-  {/each}
+
+<div class="resume-section">
+  <div class="sectiontitle">WORK EXPERIENCE</div>
+  <div class="exp">
+    {#each expList as exp, idx}
+      <div class="job-title">
+        {exp.header.jobTitle} &raquo; <span class="exp-period">{exp.header.dates}</span>
+      </div>
+      <div class="org-name">
+        {exp.header.org}
+      </div>
+      <div class="details">
+        <details>
+          <summary>Details:</summary>
+          <ul>
+            {#each exp.content as text}
+              <li>{text}</li>
+            {/each}
+          </ul>
+        </details>
+      </div>
+    {/each}
+  </div>
 </div>
