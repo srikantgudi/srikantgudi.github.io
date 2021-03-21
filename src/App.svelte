@@ -106,17 +106,18 @@
 	}
 	@keyframes letterspace {
 		from {letter-spacing: 1px; color: #333;}
-		to {letter-spacing:10px; color: #ddd;}
+		to {letter-spacing:5px; color: #ddd;}
 	}
 	.cur-comp {
 		box-sizing: border-box;
 		font-family: monospace;
-		font-size: 2vw;
+		font-size: 14px;
 		letter-spacing: 2px;
 		font-weight: 600;
 		display: flex;
 		justify-content: space-around;
 		animation: letterspace 2s ease-in infinite alternate-reverse;
+		margin: 10px 0;
 	}
 	.close-btn {
 		width: 30px;
