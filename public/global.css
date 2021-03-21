@@ -1,3 +1,7 @@
+html {
+    background: linear-gradient(#468faf,#a9d6e5,#468faf) repeat-y;
+    height: 60vh;
+}
 #app {
     box-sizing: border-box;
     margin: 0 10vw;
