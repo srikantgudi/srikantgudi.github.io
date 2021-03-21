@@ -127,6 +127,13 @@
     margin: 1vh 4vw;
     font-family: Montserrat;
     font-size: 1vw;
+    height: 4vh;
+    opacity: 0.4;
+    overflow-y: hidden;
+  }
+  .details.show {
+    height: auto;
+    opacity: 1;
   }
   .exp:hover {
     box-shadow: 0 0 10px #666666;
@@ -149,14 +156,14 @@
 <div class="resume-section">
   <div class="sectiontitle">WORK EXPERIENCE</div>
   {#each expList as exp, idx}
-    <div class="exp">
+    <div class="exp" on:click={() => {curExpIdx = idx}}>
       <div class="job-title">
         {exp.header.jobTitle} &raquo; <span class="exp-period">{exp.header.dates}</span>
       </div>
       <div class="org-name">
         {exp.header.org}
       </div>
-      <div class="details">
+      <div class="details" class:show={curExpIdx === idx}>
         <ul>
           {#each exp.content as text}
             <li>{text}</li>
