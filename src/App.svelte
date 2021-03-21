@@ -118,26 +118,12 @@
 		justify-content: space-around;
 		animation: letterspace 2s ease-in infinite alternate-reverse;
 	}
-	.content {
-		box-sizing: border-box;
-		padding: 1vh 1vw;
-		margin: 2vh 5vw;
-		box-shadow: 0 0 4vw;
-		border-radius: 10px;
-		max-height: 50vh;
-		overflow-y: auto;
-		transition: all 1s ease-in;
-	}
 	.close-btn {
 		width: 30px;
 		cursor: pointer;
 		border-radius: 2vw 2vh;
 	}
 	@media screen and (max-width: 639px) {
-		.content {
-			margin: 0;
-			width: 100%;
-		}
 		.topnav {
 			flex-flow: column;
 			justify-content: space-around;
