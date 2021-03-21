@@ -130,7 +130,7 @@
 			justify-content: space-around;
 		}
 		.content {
-			height: 65vmax;
+			height: 60vh;
 		}
 		.page-title {
 			font-size: 16px;
