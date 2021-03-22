@@ -66,9 +66,8 @@ a {
     padding-bottom: 1vh;
 }
 .contact-item {
-    font-family: Roboto;
+    font-family: montserrat;
     font-size: 2vw;
-    text-align: right;
     color: darkslategrey;
 }
 .nav-btn {
