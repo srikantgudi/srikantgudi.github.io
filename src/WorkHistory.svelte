@@ -28,7 +28,6 @@
   .details {
     margin: 1vh 4vw;
     font-family: Montserrat;
-    font-size: 1vw;
   }
   .exp:hover {
     box-shadow: 0 0 10px #666666;
@@ -45,7 +44,6 @@
 </style>
 
 <div class="resume-section">
-  <div class="sectiontitle">WORK EXPERIENCE</div>
   {#each data.exp as exp, idx}
     <div class="exp">
       <div class="job-title">

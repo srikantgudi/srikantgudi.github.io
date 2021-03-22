@@ -17,60 +17,102 @@ html {
     border-radius: 20px 20px 4px 4px;
 }
 .page-title {
-    font-size: 2vw;
+    font-size: 4vw;
     font-family: Righteous;
-    color: #e9ecef;
     text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+.position-title {
+    font-size: 2vw;
+    font-family: Orbitron;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1vh;
 }
 a {
-    color: #e9ecef;
+    color: darkslategrey;
+}
+.center {
+    text-align: center;
+    padding: 1vh 1vw;
+}
+.btnnav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 10vh;
+}
+.resume {
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    width: 80vw;
+    height: 98vh;
+    overflow-y: auto;
+    margin: auto;
+}
+.edu {
+    font-size: 1.5vw;
+    font-family: Montserrat;
+}
+.current {
+    padding: 10px 20px;
+    height: 60vh;
+    overflow-y: auto;
 }
 .resume-section {
     box-shadow: 0 2px 2px olive;
     margin: 0 1vw;
     border-radius: 20px 20px 4px 4px;
-    background-color: #e9ecef;
     padding-bottom: 1vh;
 }
-.position-title {
-    font-size: 1.2vw;
-    font-family: Orbitron;
-    color: #e9ecef;
-    text-transform: uppercase;
-}
-.contact-info {
+.contact-item {
     font-family: Roboto;
-    font-size: 1vw;
+    font-size: 2vw;
     text-align: right;
+    color: darkslategrey;
+}
+.nav-btn {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    height: 10vh;
+    font-size: 2vw;
 }
 .sectiontitle {
     font-family: Orbitron;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #343a40;
-    color: #fff3b0;
-    letter-spacing: 1px;
-    padding: 2vh 2vw;
-    margin: 2vh 1vw;
-    border-radius: 10px 10px 0 0;
+    background: linear-gradient(#def,lightgrey);
+    font-size: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    margin-bottom: 10px;
+    border-radius: 0 0 10px 10px;
 }
 .subsection {
     margin: 1vh 5vw;
 }
 .subsectiontitle {
     font-family: Montserrat;
-    font-size: 16px;
-    box-shadow: 0 2px 0 #999999;
-    padding: 1vh 1vw;
+    background: linear-gradient(#fed,lightgrey);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    justify-content: center;
+    margin: 0 3vw;
+    border-radius: 10px 10px 0 0;
 }
 .content-text {
     font-family: Montserrat;
-    font-size: 1.2vw;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 640px) {
     #app {
         height: auto;
         margin: 0;
+    }
+    .sectiontitle {
+        font-size: 16px;
     }
     .page-title {
         font-size: 18px;

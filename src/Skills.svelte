@@ -43,7 +43,6 @@
 </style>
 
 <div class="resume-section">
-  <div class="sectiontitle">TECHNICAL SKILLS</div>
   <div class="skills">
     {#each data.skills as skill}
       <div class="skillgroup">

@@ -1,28 +1,44 @@
 <script>
+	import Info from './Info.svelte';
 	import Profile from './Profile.svelte';
 	import Skills from './Skills.svelte';
 	import WorkHistory from './WorkHistory.svelte';
+	let name = 'world';
+	
+	let pages = [
+		{'title': 'INFO', comp: Info},
+		{'title': 'PROFILE', comp: Profile},
+		{'title': 'TECHNICAL SKILLS', comp: Skills},
+		{'title': 'WORK EXPERIENCE', comp: WorkHistory}
+	];
+	let current = 0, lastPage = pages.length - 1;
+	
+	const goPage = (n) => {
+		current += n
+		if (current < 0) {
+			current = lastPage
+		} else if (current > lastPage) {
+			current = 0
+		}
+	}
 </script>
-<div id="app">
-	<div class="topnav">
-		<div>
-			<div class="page-title">Srikant Gudi</div>
-			<div class="position-title" >
-				Senior Frontend Professional
-			</div>
-		</div>
-		<div class="contact-info">
-			<div class="contact-item">Bengaluru, India</div>
-			<div class="contact-item">srikantgudi@gmail.com</div>
-			<div class="contact-item">+91 829 665 6336</div>
-			<div class="contact-item"><a href="https://www.linkedin.com/in/srikantgudi-blr" target="_blank">LinkedIN Profile</a></div>
-			<div class="contact-item">Skype: srikantgudi</div>
-		</div>
-	</div>
 
-	<div class="content">
-		<Profile />
-		<Skills />
-		<WorkHistory />
+<div class="resume">
+	<div class="btnnav">
+		<button class="nav-btn" on:click={() => {goPage(-1)}}>
+			&laquo;
+		</button>
+		<button class="nav-btn" on:click={() => {goPage(1)}}>
+			&raquo;
+		</button>
+	</div>
+	<div class="sectiontitle">
+		{pages[current].title}
+	</div>
+	<div class="current">
+		<svelte:component this={pages[current].comp} />
+	</div>
+	<div class="btnnav">
+		
 	</div>
 </div>
