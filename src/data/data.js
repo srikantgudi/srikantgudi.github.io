@@ -1,13 +1,10 @@
 export const data = {
 	profile: [
-		"Senior software professional with over 20 years of experience in various technologies",
-		"Currently into frontend development using Angular, Svelte, Stencil, React, NodeJS From April 2014",
-		"Working knowledge of Python-Django, MongoDB",
-		"Proficient in VueJS, creating web components using StencilJS, creating RESTful APIs based on MySQL, MongoDB",
-		"Proficient in creating POCs, prototypes, presentations, and wireframes",
-		"Can conduct trainings in the known technologies",
-		"Can mentor juniors and freshers",
-		"Interested in frontend architechture, providing solutions as independent developer"
+		'Senior software professional with over 20 years of experience in various technologies',
+		'Currently into frontend development using Angular, Svelte, Stencil, React, NodeJS From April 2014',
+		'Working knowledge of Python-Django, MongoDB. Proficient in VueJS, creating web components using StencilJS, creating RESTful APIs based on MySQL, MongoDB. Proficient in creating POCs, prototypes, presentations, and wireframes',
+		'Can conduct trainings in the known technologies. Can mentor juniors and freshers',
+		'Interested in frontend architechture, providing solutions as independent developer'
 	],
 	academic: [
 		"Master in Computer Management",
@@ -54,7 +51,7 @@ export const data = {
 		},
 		{
 			dates: '15-Aug-2015 to 14-Jan-2016',
-			jobTitle: 'Senior AngularJS Developer',
+			jobTitle: 'Frontend AngularJS Developer',
 			org: 'Pandera Solutions, Bengaluru',
 			technology: 'Angular-1.x, HTML5, JavaScript, CSS3',
 			content: [
@@ -66,7 +63,7 @@ export const data = {
 		},
 		{
 			dates: '20-Aug-2014 to 22-Jan-2015',
-			jobTitle: 'Senior Software Developer',
+			jobTitle: 'Senior UI Developer',
 			org: 'Basil Communications, Bengaluru',
 			technology: 'HTML5, JavaScript, CSS3',
 			content: [
