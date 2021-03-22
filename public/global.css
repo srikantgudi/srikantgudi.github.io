@@ -51,7 +51,7 @@ a {
     margin: auto;
 }
 .edu {
-    font-size: 16px;
+    font-size: 20px;
     font-family: Montserrat;
 }
 .current {
@@ -67,7 +67,7 @@ a {
 }
 .contact-item {
     font-family: montserrat;
-    font-size: 1vw;
+    font-size: 20px;
 }
 .nav-btn {
     display: block;
