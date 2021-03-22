@@ -38,7 +38,7 @@ export const data = {
 			dates: '16-Jun-2016 to present',
 			jobTitle: 'Project Lead - System',
 			org: 'Mphasis, Bengaluru',
-			technology: 'Angular, React, NodeJS, MySQL, Svelte, Stencil, HTML5, JavaScript, CSS3',
+			technology: 'Angular, React, Svelte, Stencil, VueJS, NodeJS, MySQL, HTML5, JavaScript, CSS3',
 			content: [
 				'Currently working as Lead frontend developer with Schneider Electric using Svelte. Created web components using StencilJS',
 				'Worked offshore in Bengaluru with a banking conglomerate on projects in Angular and React',

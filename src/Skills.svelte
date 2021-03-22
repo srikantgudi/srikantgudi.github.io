@@ -24,7 +24,7 @@
     padding: 1vh 2vw;
     font-size: 16px;
     font-family: Montserrat;
-    border-radius: 30px 0 4px 4px;
+    border-radius: 10px 0 4px 4px;
   }
   .skillname {
     font-family: Montserrat;
