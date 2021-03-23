@@ -78,7 +78,7 @@
 	}
 	@media screen and (max-width: 960px) {
 		.page {
-			padding-top: 20px;
+			padding: 20px 0;
 			height: auto;
 			margin: 0;
 		}
