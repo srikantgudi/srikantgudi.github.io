@@ -129,7 +129,7 @@
 			<div class="profile-details">
 				<ul>
 					<li>20+ years total experience</li>
-					<li>6 years into Frontend development.</li>
+					<li>Since April 2014 into Frontend development using latest frameworks.</li>
 					<li>Proficient in Angular, Svelte, React, VueJS, Stencil, NodeJS, MySQL</li>
 					<li>Can create prototypes, presentations, wireframes</li>
 					<li>Interested in newer frontend technologies</li>
