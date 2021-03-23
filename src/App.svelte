@@ -77,8 +77,19 @@
 		width: 50%;
 	}
 	@media screen and (max-width: 960px) {
-		.page, .content {
+		.page {
+			padding-top: 20px;
 			height: auto;
+			margin: 0;
+		}
+		.title {
+			font-size: 20px;
+		}
+		.position-title {
+			font-size: 14px;
+		}
+		.contact-details {
+			font-size: 10px;
 		}
 		.topnav {
 			align-items: flex-start;
