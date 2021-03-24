@@ -19,7 +19,7 @@
 <style>
 	.page {
 		box-shadow: 0 2px 4px #999999;
-		margin: 0 10%;		
+		margin: 0 20%;		
 		background: linear-gradient(to bottom,beige 90%, olive);
 	}
 	.topnav {
