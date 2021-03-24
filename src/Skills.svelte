@@ -1,14 +1,14 @@
 <script>
   import {data} from './data/data';
+  import SkillLevel from './SkillLevel.svelte'
+
+  let skills = data.skills;
 </script>
 
 <style>
   .skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0 10px;
-    height: auto;
     margin: 1vh 4vw;
+    overflow-y: auto;
   }
   .skillgroup {
     min-width: 30%;
@@ -35,24 +35,12 @@
   .skillname::before {
     content: '\bb\20';
   }
-  @media screen and (max-width: 420px) {
-    .skills {
-      grid-template-columns: 1fr;
-    }
-  }
 </style>
 
 <div class="resume-section">
-  <div class="skills">
-    {#each data.skills as skill}
-      <div class="skillgroup">
-        <div class="groupname">
-          {skill.group}
-        </div>
-        {#each skill.items as skillname}
-          <div class="skillname">{skillname}</div>
-        {/each}
-      </div>
+  <div>
+    {#each Object.keys(skills) as skill}
+      <SkillLevel text={skill} level={skills[skill]} />
     {/each}
   </div>
 </div>

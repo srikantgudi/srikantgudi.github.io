@@ -1,5 +1,5 @@
 <script>
-  export let text = 'testing text'
+  export let text = ''
   export let level = 1
   let levels = [
     '5%',

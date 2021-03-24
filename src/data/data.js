@@ -10,29 +10,18 @@ export const data = {
 		"Master in Computer Management",
 		"Bachelor of Commerce"
 	],
-	skills: [
-		{group: 'Frontend', items: [
-			"Angular", "Svelte", "VueJS", "React", "Stencil",
-		]},
-		{group: 'Web Skills', items: [
-			"JavaScript", "TypeScript", "HTML5", "CSS3", "SVG",
-		]},
-		{group: 'Libraries', items: [
-			"Bootstrap", "Angular-Material", "React-UI", "Vuetify", "Buefy",
-		]},
-		{group: 'Agile', items: [
-			"Scrum", "Sprint", "JIRA", "GIT", "Confluence",
-		]},
-		{group: 'Coding Tools', items: [
-			"VS Code", "IntelliJ", "Nodepad++", "StackBlitz", "CodeSandbox"
-		]},
-		{group: 'O / S', items: [
-			"Windows", "MacOS", "Linux",
-		]},
-		{group: 'Secondary Skills', items: [
-			"Python-Django", "Casandra"
-		]}
-	],
+	skills: {
+		"Angular": 8,
+		"Svelte": 8,
+		"VueJS": 7.5,
+		"React": 7,
+		"StencilJS": 6,
+		"JavaScript": 8,
+		"TypeScript": 8,
+		"HTML5": 8,
+		"CSS3":7.5,
+		"SVG": 6
+	},
 	exp: [
 		{
 			dates: '16-Jun-2016 to present',

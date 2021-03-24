@@ -1,7 +1,8 @@
 <script>
 	import Dialog from './Dialog.svelte';
 	import WorkHistory from './WorkHistory.svelte';
-	import Skills from './Skills.svelte';
+	import SkillLevel from './SkillLevel.svelte'
+	import { data } from './data/data';
 
 	let name = 'world';
 	let showDetailExp = false;
@@ -18,8 +19,7 @@
 <style>
 	.page {
 		box-shadow: 0 2px 4px #999999;
-		height: 96vh;
-		margin: 0 15vw;		
+		margin: 0 10%;		
 		background: linear-gradient(to bottom,beige 90%, olive);
 	}
 	.topnav {
@@ -32,7 +32,7 @@
 	}
 	.content {
 		display: flex;
-		flex-flow: row wrap;
+		flex-flow: column;
 	}
 	.title {
 		font-family: Roboto;
@@ -52,7 +52,6 @@
 		flex-flow: column;
 		margin: 10px 10px 0;
 		padding: 1%;
-		height: 35vh;
 		font-size: 14px;
 		box-shadow: 0 2px 2px #666666;
 		background: linear-gradient(to bottom, #eeeeee 70%, #ddd);
@@ -85,10 +84,11 @@
 		color: #ffffff;
 	}
 	.skills {
-		width: 40%;
+		
 	}
 	.exp {
-		width: 50%;
+		padding: 10px;
+		margin: 10px;
 	}
 	
 	:global(.icon-btn) {
@@ -125,11 +125,13 @@
 			padding: 0 10px;
 		}
 		.content {
+			display: flex;
 			flex-flow: column;
 		}
 		.panel {
 			width: auto;
 			height: auto;
+			transition: all 1s eas-in-out;
 		}
 		.contact-details, .profile-details {
 			font-size: 14px;
@@ -151,7 +153,7 @@
 		</div>
 	</div>
 	<div class="content">
-		<div class="panel profile">
+		<div class="panel">
 			<div class="sectiontitle">
 				Profile
 			</div>
@@ -166,7 +168,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="panel contact">
+		<div class="panel">
 			<div class="sectiontitle">
 				Contact Details
 			</div>
@@ -185,35 +187,29 @@
 				</div>
 			</div>
 		</div>
-		<div class="panel skills">
+		<div class="panel">
 			<div class="sectiontitle">
-				Technical Skills | <span class="icon-btn" on:click={() => detailSkills()} title="Show details">?</span>
+				Technical Skills
 			</div>
-			<ul>
-				<li>Angular, Svelte, Vue, React, Stencil, Nodejs</li>
-				<li>JavaScript, TypeScript, HTML5, CSS3, JSON, AJAX</li>
-				<li>MySQL, MongoDB</li>
-				<li>GIT, BitBucket, Scrum, Sprint</li>
-				<li>Windows, MacOS, Linux</li>
-			</ul>
+			<div>
+				{#each Object.keys(data.skills) as skill}
+				<SkillLevel width={390} ht={30} text={skill} level={data.skills[skill]} />
+				{/each}
+			</div>
 		</div>
 		<div class="panel exp">
 			<div class="sectiontitle">
-				Work Experience | <span class="icon-btn" on:click={() => detailWorkExp()} title="Show details">?</span>
+				Work Experience
 			</div>
-			<ul>
-				<li>June 2016 to present: Working as Project Lead with Mphasis, Bengaluru. Technologies worked with Angular,Svelte,React</li>
-				<li>2014 onwards Frontend development with Angular, React, HTML5, JavaScript</li>
-				<li>Conducted training in VueJS</li>
-				<li>Nov 2005 to March 2014 - web development using PHP (including Zend and Symfony) </li>
-			</ul>
+			<div>
+				{#each data.exp as exp}
+				<div class="panel">
+					<div class="job-title">{exp.dates} :: {exp.jobTitle}</div>
+					<div class="org-name">{exp.org}</div>
+					<div class="org-name">{exp.technology}</div>
+				</div>
+				{/each}
+			</div>
 		</div>
 	</div>
-	<Dialog opendialog={showDetailSkills} on:click={() => {showDetailSkills=false}} label="Technical Skills">
-		<Skills />
-	</Dialog>
-
-	<Dialog opendialog={showDetailExp} on:click={() => {showDetailExp=false}} label="Work Experience">
-		<WorkHistory />
-	</Dialog>
 </div>
