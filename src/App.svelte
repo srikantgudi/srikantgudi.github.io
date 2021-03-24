@@ -193,7 +193,7 @@
 			</div>
 			<div>
 				{#each Object.keys(data.skills) as skill}
-				<SkillLevel width={390} ht={30} text={skill} level={data.skills[skill]} />
+				<SkillLevel width={400} ht={30} text={skill} level={data.skills[skill]} />
 				{/each}
 			</div>
 		</div>
