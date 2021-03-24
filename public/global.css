@@ -4,7 +4,7 @@
 .page {
     margin: 1% 20%;
     padding: 1% 2%;
-    background: linear-gradient(lavender,lightblue);
+    background: linear-gradient(#ede0d4,#f1faee) repeat-y;
     min-height: 90vh;
     display: flex;
     flex-flow: column;
@@ -16,14 +16,13 @@
 .title {
     font-family: Roboto;
     font-weight: 600;
-    font-size: 2vw;
     background: linear-gradient(#457b9d,#a8dadc,#457b9d);
     padding: 1vh 10vw;
     border-radius: 20px 0 20px;
 }
 .position-title {
     font-family: Orbitron;
-    font-size: 3vw;
+    font-size: 1.2vw;
     letter-spacing: 1px;
     font-weight: 600;
 }
@@ -45,19 +44,19 @@
     font-family: Montserrat;
 }
 .profile-item {
-    text-indent: -16px;
-    margin-left: 24px;
-    font-size: 1.2em;
+    text-indent: -14px;
+    margin-left: 18px;
+    font-size: 14px;
 }
 .profile-item:before {
     content: '\bb\20';
 }
 .section-title {
     text-align: center;
-    font-size: 2vw;
+    font-size: 18px;
     font-weight: 600;
     background: linear-gradient(#457b9d,#a8dadc,#457b9d);
-    padding: 2% 0;
+    padding: 1% 0;
     margin: 1% 0;
     border-radius: 20px 20px 0 80px;
     color: navy;
@@ -79,7 +78,6 @@
     padding: 0 10px 20px;
     margin: 10px 0;
 }
-
 .job-title {
     font-family: Montserrat;
     background-color: #495057;
@@ -96,47 +94,37 @@
         flex-flow: column;
     }
     .profile-item {
-        font-size: 14px;
+        font-size: 12px;
         text-indent: -10px;
         margin-left: 18px;
     }
 }
-.org-name, .exp-period {
-    font-size: 14px;
-  }
-  .org-name {
-    font-family: Montserrat;
-    box-shadow: 0 0 4px #495057;
-    padding: 1vh 2vw;
-  }
 
-  .exp {
-    display: flex;
-    flex-flow: column;
-    height: auto;
-    margin: 1vh 4vw;
-  }
-
-  @media screen and (min-width: 960px) {
-      .contact-item, .profile-item {
-          font-size: 20px;
-      }
-      .topnav {
-          display: block;
-          flex-flow: column;
-          text-align: center;
-      }
-      .topnav-panel {
-          width: 90%;
-      }
-      .title {
-          box-shadow: 0 2px 0 #999999;
-          margin: 10px auto;
-          font-size: 20px;
-      }
-      .position-title {
-          width: 100%;
-          font-size: 100%;
-          letter-spacing: 0;
-      }
-  }
+@media screen and (min-width: 960px) {
+    .contact-item, .profile-item {
+        font-size: 20px;
+    }
+    .topnav {
+        display: block;
+        flex-flow: column;
+        text-align: center;
+    }
+    .topnav-panel {
+        width: 90%;
+    }
+    .title {
+        box-shadow: 0 2px 0 #999999;
+        margin: 10px auto;
+        font-size: 2vw;
+    }
+    .position-title {
+        width: 100%;
+        font-size: 100%;
+        letter-spacing: 0;
+    }
+    .profile-item {
+        font-size: 14px;
+        text-indent: -10px;
+        margin-left: 14px;
+    }
+}
