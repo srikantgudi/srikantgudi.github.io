@@ -10,7 +10,8 @@
     font-family: Montserrat;
     background-color: #495057;
     color: #f8f9fa;
-    padding: 10px;
+    padding: 1vh 2vw;
+    margin: 0;
   }
   .org-name {
     font-family: Montserrat;
@@ -28,6 +29,7 @@
   .details {
     margin: 1vh 4vw;
     font-family: Montserrat;
+    font-size: 16px;
   }
   .exp:hover {
     box-shadow: 0 0 10px #666666;
@@ -40,6 +42,12 @@
     .details {
       font-size: 14px;
     }
+    .exp {
+      margin: 10px;
+    }
+    .job-title {
+      font-size: 14px;
+    }
   }
 </style>
 
@@ -48,7 +56,7 @@
     <div class="exp">
       <div class="job-title">
         {exp.jobTitle}
-        <div class="exp-period">&raquo; {exp.dates}</div>
+        <div class="exp-period">{exp.dates}</div>
       </div>
       <div class="org-name">
         {exp.org}

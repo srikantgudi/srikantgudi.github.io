@@ -1,5 +1,18 @@
 <script>
+	import Dialog from './Dialog.svelte';
+	import WorkHistory from './WorkHistory.svelte';
+	import Skills from './Skills.svelte';
+
 	let name = 'world';
+	let showDetailExp = false;
+	let showDetailSkills = false;
+
+	const detailSkills = () => {
+		showDetailSkills = true;
+	}
+	const detailWorkExp = () => {
+		showDetailExp = true;
+	}
 </script>
 
 <style>
@@ -61,6 +74,7 @@
 		font-size: 14px;
 	}
 	.sectiontitle {
+		display: flex;
 		font-family: Roboto;
 		font-size: 18px;
 		text-transform: uppercase;
@@ -75,6 +89,21 @@
 	}
 	.exp {
 		width: 50%;
+	}
+	
+	:global(.icon-btn) {
+		border: none;
+		box-shadow: 0 2px 0 #999999;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		border-radius: 50%;
+		width: 24px;
+		height: 24px;
+		margin: 0 10px;
+		cursor: pointer;
+		background-color: lightgrey;
+		color: #333333;
 	}
 	@media screen and (max-width: 960px) {
 		.page {
@@ -158,7 +187,7 @@
 		</div>
 		<div class="panel skills">
 			<div class="sectiontitle">
-				Technical Skills
+				Technical Skills | <span class="icon-btn" on:click={() => detailSkills()} title="Show details">?</span>
 			</div>
 			<ul>
 				<li>Angular, Svelte, Vue, React, Stencil, Nodejs</li>
@@ -170,7 +199,7 @@
 		</div>
 		<div class="panel exp">
 			<div class="sectiontitle">
-				Work Experience
+				Work Experience | <span class="icon-btn" on:click={() => detailWorkExp()} title="Show details">?</span>
 			</div>
 			<ul>
 				<li>June 2016 to present: Working as Project Lead with Mphasis, Bengaluru. Technologies worked with Angular,Svelte,React</li>
@@ -180,4 +209,11 @@
 			</ul>
 		</div>
 	</div>
+	<Dialog opendialog={showDetailSkills} on:click={() => {showDetailSkills=false}} label="Technical Skills">
+		<Skills />
+	</Dialog>
+
+	<Dialog opendialog={showDetailExp} on:click={() => {showDetailExp=false}} label="Work Experience">
+		<WorkHistory />
+	</Dialog>
 </div>
