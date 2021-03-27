@@ -255,7 +255,17 @@
 		<div class="speciality">
 			<small>
 				Specialized in:
-                 &bull; Frontend development using Angular, Svelte, VueJS, React, Stencil, NodeJS
+				<ul>
+					<li>
+						Frontend development using Angular, Svelte, VueJS, React
+					</li>
+					<li>
+						Web components using Stencil and Vanilla JavaScript	
+					</li>
+					<li>
+						API development using NodeJS
+					</li>
+				</ul>
 			</small>
 		</div>
 		<div class="contact">
