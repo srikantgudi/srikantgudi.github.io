@@ -71,12 +71,6 @@
 	</script>
 
 <style>
-	img {
-		padding: 0;
-		margin: 20px 1em;
-		box-shadow: 0 0 10px beige;
-		border-radius: 30%;
-	}
 	#app {
 		display: flex;
 		flex-flow: column;
@@ -86,7 +80,6 @@
 		background: linear-gradient(#a5a58d,#a5a58d, #a5a58d) repeat-y 50% 30%;
 	}
 	.topnav {
-		border-radius: 10% 30%;
 		background: linear-gradient(#023e8a,#90e0ef);
 		padding: 0 3em;
 		margin: 2em;
@@ -103,9 +96,6 @@
 		font-weight: 600;
 		font-family: Montserrat;
 		text-shadow: 1px -4px 4px #ade8f4;
-	}
-	.fname {
-		font-weight: 600;
 	}
 	.position-title {
 		display: flex;
@@ -146,14 +136,23 @@
 		box-shadow: 0 0 4px #999;
 		transition: all 1s;
 		box-shadow: 0 2px 12px #009;
-		border-radius: 20px 20px 0 0;
 		background: linear-gradient(#bde0fe,#a2d2ff);
+	}
+	.content:hover {
+		width: 80%;
+		font-weight: 600;
+		border-radius: 20px 20px 10px 10px;
+	}
+	.content:hover > .section-title {
+		border-radius: 10px 10px 40% 40%;
+	}
+	.content:hover > .content-details {
+		border-radius: 20% 20% 0 0;
 	}
 	.content-details {
 		padding: 20px;
 		box-shadow: 0 2px 10px;
 		transition: all 1s;
-		border-radius: 20px 20px 0 0;
 		background-color: #f0efeb;
 	}
 	.profile-item {
@@ -178,8 +177,6 @@
 		font-family: Orbitron;
 		background: linear-gradient(#457b9d,#a8dadc,#457b9d);
 		padding: 1% 0;
-		margin: 1% 0;
-		border-radius: 0 0 30% 30%;
 		color: navy;
 		transition: all 1s;
 	}
@@ -187,14 +184,13 @@
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-around;
-		gap: 20px;
 	}
 	.skill, .exp {
 		width: 15em;
 		box-shadow: 0 2px 10px;
 		padding: 10px;
 		margin: 10px;
-		border-radius: 10px 10px 4px 4px;
+		border-radius: 10px;
 	}
 	.exp {
 		font-family: Ubuntu;
