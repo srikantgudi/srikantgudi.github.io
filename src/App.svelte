@@ -260,7 +260,7 @@
 						Frontend development using Angular, Svelte, VueJS, React
 					</li>
 					<li>
-						Web components using Stencil and Vanilla JavaScript	
+						Web components development using Stencil and Vanilla JavaScript	
 					</li>
 					<li>
 						API development using NodeJS
