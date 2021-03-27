@@ -221,7 +221,7 @@
 			margin-top: 10px;
 		}
 		.position-title {
-			font-size: 1.2em;
+			font-size: 4vw;
 			display: flex;
 			justify-content: space-around;
 		}
