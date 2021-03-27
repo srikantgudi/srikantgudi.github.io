@@ -254,7 +254,8 @@
 		</div>
 		<div class="speciality">
 			<small>
-				Specialized in Angular, Svelte, VueJS, React, Stencil, NodeJS
+				Specialized in:
+                 &bull; Frontend development using Angular, Svelte, VueJS, React, Stencil, NodeJS
 			</small>
 		</div>
 		<div class="contact">
