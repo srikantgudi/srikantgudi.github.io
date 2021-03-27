@@ -160,6 +160,7 @@
 		margin-left: 18px;
 		font-size: 1.2vw;
 		transition: all 1s;
+		font-family: Montserrat;
 	}
 	.profile-item:before {
 		content: '\bb\20';
@@ -294,7 +295,11 @@
 			PROFILE
 		</div>
 		<div class="content-details">
-			<div class="profile-item">Senior software professional with over 20 years of experience in various technologies </div><div class="profile-item">Currently into frontend development using Angular, Svelte, Stencil, React, NodeJS From April 2014 </div><div class="profile-item">Working knowledge of Python-Django, MongoDB. Proficient in VueJS, creating web components using StencilJS, creating RESTful APIs based on MySQL, MongoDB. Proficient in creating POCs, prototypes, presentations, and wireframes </div><div class="profile-item">Can conduct trainings in the known technologies. Can mentor juniors and freshers </div><div class="profile-item">Interested in frontend architechture, providing solutions as independent developer </div>
+			<div class="profile-item">Senior software professional with over 20 years of experience in various technologies </div>
+			<div class="profile-item">Currently into frontend development using Angular, Svelte, Stencil, React, NodeJS From April 2014 </div>
+			<div class="profile-item">Working knowledge of Python-Django, MongoDB. Proficient in VueJS, creating web components using StencilJS, creating RESTful APIs based on MySQL, MongoDB.</div>
+			<div class="profile-item">Proficient in creating POCs, prototypes, presentations, and wireframes </div>
+			<div class="profile-item">Can conduct trainings in the known technologies. Can mentor juniors and freshers </div><div class="profile-item">Interested in frontend architechture, providing solutions as independent developer </div>
 		</div>
 	</div>
 	
