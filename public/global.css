@@ -13,8 +13,9 @@
     background: linear-gradient(lightblue,lightcyan);
 }
 .page-title {
-    font-family: Righteous;
+    font-family: Ubuntu;
     font-size: 4vmax;
+    font-weight: 600;
     color: navy;
 }
 .position-title {
