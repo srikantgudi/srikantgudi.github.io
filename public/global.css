@@ -46,6 +46,16 @@
     color: navy;
     background: linear-gradient(lightblue,lightcyan);
 }
+.profile-content {
+    margin: 1vmin 6vmin;
+}
+.profile-li {
+    text-indent: -10px;
+    margin-left: 20px;
+}
+.profile-li:before {
+    content: '\bb\20';
+}
 .section-content {
     font-family: Roboto;
     font-size: 3vmin;

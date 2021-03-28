@@ -5,9 +5,13 @@
   PROFILE
 </div>
 <div class="section-content">
-  {#each data.profile as text}
-  <div>
-    {text}
+  <div class="profile-content">
+    {#each data.profile as text}
+    <div>
+      <div class="profile-li">
+        {text}
+      </div>
+    </div>
+    {/each}
   </div>
-  {/each}
 </div>
