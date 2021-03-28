@@ -1,8 +1,10 @@
 export const data = {
 	profile: [
-		'Senior software professional with over 20 years of experience in various technologies',
-		'Currently into frontend development using Angular, Svelte, Stencil, React, NodeJS From April 2014',
-		'Working knowledge of Python-Django, MongoDB. Proficient in VueJS, creating web components using StencilJS, creating RESTful APIs based on MySQL, MongoDB. Proficient in creating POCs, prototypes, presentations, and wireframes',
+		'Senior software professional with extensive experience in various technologies',
+		'Frontend developer using Angular, Svelte, Stencil, React, NodeJS From April 2014.',
+		'Proficient in VueJS, creating web components using StencilJS, creating RESTful APIs',
+		'Proficient in creating POCs, prototypes, presentations, and wireframes',
+		'Working knowledge of Python-Django, MongoDB.',
 		'Can conduct trainings in the known technologies. Can mentor juniors and freshers',
 		'Interested in frontend architechture, providing solutions as independent developer'
 	],
@@ -11,27 +13,13 @@ export const data = {
 		"Bachelor of Commerce"
 	],
 	skills: [
-		{group: 'Frontend', items: [
-			"Angular", "Svelte", "VueJS", "React", "Stencil",
-		]},
-		{group: 'Web Skills', items: [
-			"JavaScript", "TypeScript", "HTML5", "CSS3", "SVG",
-		]},
-		{group: 'Libraries', items: [
-			"Bootstrap", "Angular-Material", "React-UI", "Vuetify", "Buefy",
-		]},
-		{group: 'Agile', items: [
-			"Scrum", "Sprint", "JIRA", "GIT", "Confluence",
-		]},
-		{group: 'Coding Tools', items: [
-			"VS Code", "IntelliJ", "Nodepad++", "StackBlitz", "CodeSandbox"
-		]},
-		{group: 'O / S', items: [
-			"Windows", "MacOS", "Linux",
-		]},
-		{group: 'Secondary Skills', items: [
-			"Python-Django", "Casandra"
-		]}
+		"Angular", "Svelte", "VueJS", "React", "Stencil",
+		"JavaScript", "TypeScript", "HTML5", "CSS3", "SVG",
+		"Bootstrap", "Angular-Material", "React-UI", "Vuetify", "Buefy",
+		"Scrum", "Sprint", "JIRA", "GIT", "Confluence",
+		"VS Code", "IntelliJ", "StackBlitz", "CodeSandbox",
+		"Windows", "MacOS", "Linux",
+		"Python-Django", "Casandra"
 	],
 	exp: [
 		{

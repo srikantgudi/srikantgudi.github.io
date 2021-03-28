@@ -1,137 +1,107 @@
-html {
-    background: linear-gradient(#468faf,#a9d6e5,#468faf) repeat-y;
-    height: 60vh;
-}
-#app {
-    box-sizing: border-box;
-    margin: 0 10vw;
-    overflow: hidden;
+.resume {
+    background: lightgrey;
+    margin: 1vh 4vw;
+    padding: 1vh 4vw;
 }
 .topnav {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    box-shadow: 0 0 4px #999999;
-    padding: 1vh 2vw;
-    background-color: #01497c;
-    color: #e9ecef;
-    border-radius: 20px 20px 4px 4px;
+    padding: 1vh 1vw;
+    display: flex;
+    margin-bottom: 1em;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(lightblue,lightcyan);
 }
 .page-title {
-    font-size: 4vw;
     font-family: Righteous;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 1vh;
+    font-size: 4vmax;
+    color: navy;
 }
 .position-title {
-    font-size: 2vw;
     font-family: Orbitron;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 1vh;
+    font-size: 2vmax;
+    color: navy;
 }
-a {
-    color: darkslategrey;
-}
-.center {
-    text-align: center;
-    padding: 1vh 1vw;
-}
-.btnnav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 10vh;
-}
-.resume {
-    display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
-    width: 80vw;
-    height: 98vh;
-    overflow-y: auto;
-    margin: auto;
-}
-.edu {
-    font-size: 20px;
-    font-family: Montserrat;
-}
-.current {
-    padding: 10px 20px;
-    height: 60vh;
-    overflow-y: auto;
-}
-.resume-section {
-    box-shadow: 0 2px 2px olive;
-    margin: 0 1vw;
-    border-radius: 20px 20px 4px 4px;
-    padding-bottom: 1vh;
+.contacts {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: lightcyan;
+    margin: 2vmin 1vmax;
+    padding: 2vmin 1vmax;
 }
 .contact-item {
-    font-family: montserrat;
-    font-size: 20px;
+    font-family: Roboto;
+    font-size: 3vmin;
+    color: navy;
 }
-.nav-btn {
-    display: block;
-    width: 50%;
-    margin: 0 auto;
-    height: 10vh;
-    font-size: 2vw;
-}
-.sectiontitle {
+.section-title {
+    display: flex;
+    align-items: center;
     font-family: Orbitron;
-    background: linear-gradient(#def,lightgrey);
-    font-size: 3vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 10vh;
-    margin-bottom: 10px;
-    border-radius: 0 0 10px 10px;
+    font-size: 2vmax;
+    padding: 2vmin 2vmax;
+    color: navy;
+    background: linear-gradient(lightblue,lightcyan);
 }
-.subsection {
-    margin: 1vh 5vw;
+.section-content {
+    font-family: Roboto;
+    font-size: 3vmin;
+    padding: 2vmax;
 }
-.subsectiontitle {
-    font-family: Montserrat;
-    background: linear-gradient(#fed,lightgrey);
-    font-size: 20px;
+.skills {
     display: flex;
-    align-items: center;
-    height: 8vh;
-    justify-content: center;
-    margin: 0 3vw;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 0 10px;
+    height: auto;
+    margin: 1vmax 3vmax;
+}
+.skillname {
+    font-family: Roboto;
+    font-size: 3vmin;
+    padding: 1vh 2vw;
+    background: #6c757d;
+    margin: 4px 1em;
+    color: aliceblue;
+    border-radius: 1vmax;
+}
+.skillname::before {
+    content: '\bb\20';
+}
+.work-hist {
+    margin: 1vmin 1vmax;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.exp {
+    min-width: 30vmax;
+    padding: 0 1vmin;
+    box-shadow: 0 1vmin 1vmin #999;
+    margin: 1vmin;
+    background-color: whitesmoke;
     border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    text-align: center;
 }
-.content-text {
+.job-title {
+    background-color: darkslategrey;
+    color: aliceblue;
+    font-size: 2vmin;
+}
+.org-name {
+    font-size: 2vmin;
+}
+.job-title, .org-name {
+    padding: 1vmin 1vmax;
     font-family: Montserrat;
 }
-@media screen and (max-width: 640px) {
-    #app {
-        height: auto;
-        margin: 0;
-    }
-    .sectiontitle {
-        font-size: 16px;
-    }
-    .page-title {
-        font-size: 18px;
-    }
-    .position-title {
-        font-size: 12px;
-    }
-    .content {
-        margin: 0;
-    }
-    .content-text {
-        font-size: 14px;
-    }
-    .resume-section {
-        margin: 0 10px;
-        padding: 0;
-    }
-    .subsection {
-        margin: 1vh 1vw;
-    }
-    .contact-item {
-        font-size: 16px;
-    }
+.technologies {
+    padding: 1vmin 1vmax;
+    font-family: Roboto;
+    font-size: 2vmin;
 }
