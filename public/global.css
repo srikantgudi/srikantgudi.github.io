@@ -105,7 +105,7 @@
     text-align: center;
 }
 .job-title {
-    background: linear-gradient(to right ,#123456,#ddddcc);
+    background: linear-gradient(to right ,#123456,#168aad,#123456);
     color: aliceblue;
     font-size: 2vmin;
     display: flex;
