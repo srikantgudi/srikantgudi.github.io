@@ -15,7 +15,7 @@
 <div class="section-title">
   TECHNICAL SKILLS
 </div>
-<div class="resume-section">
+<div class="section-content">
   <div class="skills">
     {#each data.skills as skill}
       <div class="skillname">

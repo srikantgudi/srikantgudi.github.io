@@ -1,5 +1,4 @@
 .resume {
-    background: lightgrey;
     margin: 1vh 4vw;
     padding: 1vh 4vw;
 }
@@ -22,6 +21,7 @@
     font-family: Orbitron;
     font-size: 2vmax;
     color: navy;
+    letter-spacing: 2px;
 }
 .contacts {
     display: flex;
@@ -40,11 +40,21 @@
 .section-title {
     display: flex;
     align-items: center;
-    font-family: Orbitron;
+    font-family: Roboto;
+    font-weight: 600;
     font-size: 2vmax;
     padding: 2vmin 2vmax;
     color: navy;
-    background: linear-gradient(lightblue,lightcyan);
+    border-radius: 0 0 10% 10%;
+    background: linear-gradient(to right ,#ddddcc,#123456);
+}
+.section-content {
+    font-family: Ubuntu;
+    font-size: 3vmin;
+    padding: 2vmax;
+    margin: 4px 0;
+    border-radius: 10% 10% 0 0;
+    background: linear-gradient(to left,#def,whitesmoke);
 }
 .profile-content {
     margin: 1vmin 6vmin;
@@ -55,11 +65,6 @@
 }
 .profile-li:before {
     content: '\bb\20';
-}
-.section-content {
-    font-family: Roboto;
-    font-size: 3vmin;
-    padding: 2vmax;
 }
 .skills {
     display: flex;
@@ -85,11 +90,11 @@
     margin: 1vmin 1vmax;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    gap: 10px;
+    justify-content: center;
 }
 .exp {
-    min-width: 30vmax;
-    padding: 0 1vmin;
+    padding: 0;
     box-shadow: 0 1vmin 1vmin #999;
     margin: 1vmin;
     background-color: whitesmoke;
@@ -100,9 +105,11 @@
     text-align: center;
 }
 .job-title {
-    background-color: darkslategrey;
+    background: linear-gradient(to right ,#123456,#ddddcc);
     color: aliceblue;
     font-size: 2vmin;
+    display: flex;
+    align-items: flex-start;
 }
 .org-name {
     font-size: 2vmin;
@@ -115,4 +122,14 @@
     padding: 1vmin 1vmax;
     font-family: Roboto;
     font-size: 2vmin;
+}
+@media screen and (min-width: 600px) and (max-width: 1096px) {
+    .work-hist {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 599px) {
+    .work-hist {
+        grid-template-columns: 1fr;
+    }
 }
