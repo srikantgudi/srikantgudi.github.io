@@ -2,7 +2,7 @@ export const data = {
 	profile: [
 		'Senior software professional with extensive experience in various technologies',
 		'Frontend developer using Angular, Svelte, Stencil, React, NodeJS From April 2014.',
-		'Proficient in VueJS, creating web components using StencilJS, creating RESTful APIs',
+		'Proficient in VueJS, creating web components using StencilJS and Vanilla JavaScript, creating RESTful APIs using Nodejs',
 		'Proficient in creating POCs, prototypes, presentations, and wireframes',
 		'Working knowledge of Python-Django, MongoDB.',
 		'Can conduct trainings in the known technologies. Can mentor juniors and freshers',
