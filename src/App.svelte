@@ -4,6 +4,9 @@
 	let name = 'world';
 	let winwid;
 	let tab=2;
+	const toggleTab = (ptab) => {
+		tab = tab === ptab ? 0 : ptab;
+	}
 </script>
 <svelte:window bind:innerWidth={winwid} />
 <style>
@@ -84,6 +87,7 @@
 		top: 15vh;
 		left: 10vw;
 		width: 40vw;
+		height: 40vh;
 		overflow-y: hidden;
 		background-color: whitesmoke;
 		transform: scale(0.7);
@@ -92,6 +96,7 @@
 	}
 	.profile.active {
 		z-index: 999;
+		overflow-y: auto;
 		transform: scale(1);
 		opacity: 1;
 		background-color: whitesmoke;
@@ -113,6 +118,7 @@
 		overflow-y: auto;
 		z-index: 999;
 		height: 65vh;
+		width: 60vw;
 		transform: scale(1);
 	}
 	.skill {
@@ -199,7 +205,7 @@
 			Senior FrontEnd Professional
 		</div>
 	</div>
-	<div class="panel contact" class:active={tab===1} on:click={() => tab=1}>
+	<div class="panel contact" class:active={tab===1} on:click={() => toggleTab(1)}>
 		<div class="panel-header">
 			Contact details
 		</div>
@@ -220,7 +226,7 @@
 		</div>
 	</div>
 	<div class="aboutme">
-		<div class="panel profile"  class:active={tab===2} on:click={() => tab=2}>
+		<div class="panel profile"  class:active={tab===2} on:click={() => toggleTab(2)}>
 			<div class="panel-header">
 				PROFILE
 			</div>
@@ -233,7 +239,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="panel skills"  class:active={tab===3} on:click={() => tab=3}>
+	<div class="panel skills"  class:active={tab===3} on:click={() => toggleTab(3)}>
 		<div class="panel-header">
 			TECHNICAL SKILLS
 		</div>
@@ -245,7 +251,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="panel works"  class:active={tab===4} on:click={() => tab=4}>
+	<div class="panel works"  class:active={tab===4} on:click={() => toggleTab(4)}>
 		<div class="panel-header">
 			WORK EXPERIENCE
 		</div>
