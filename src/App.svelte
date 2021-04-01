@@ -91,7 +91,7 @@
 		top: 15vh;
 		left: 10vw;
 		width: 40vw;
-		height: 40vh;
+		height: 50vh;
 		overflow-y: hidden;
 		background-color: whitesmoke;
 		transform: scale(0.7);
