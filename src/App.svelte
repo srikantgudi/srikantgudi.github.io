@@ -3,7 +3,7 @@
   	import {data} from './data/data';
 	let name = 'world';
 	let winwid;
-	let tab=2;
+	let tab=3;
 	const toggleTab = (ptab) => {
 		tab = tab === ptab ? 0 : ptab;
 	}
@@ -30,7 +30,7 @@
 	.info {
 		position: absolute;
 		top: 5vh;
-		left: 20vw;
+		left: 5vw;
 		height: 11vh;
 		display: flex;
 		flex-flow: column;
@@ -43,13 +43,17 @@
 		opacity: 1;
 		text-align: center;
 		border-radius: 20px;
+		transform: scale(0.7);
+	}
+	.info.active {
+		transform: scale(1);
 	}
 	.contact {
 		font-size: 1vw;
 		position: absolute;
 		top: 4vh;
 		font-size: 12px;
-		right: 20vw;
+		right: 5vw;
 		padding: 1vh 2vw;
 		transform: scale(0.5);
 		opacity: 0.5;
@@ -135,8 +139,7 @@
 	.works {
 		position: absolute;
 		top: 40vh;
-		left: 10vw;
-		right: 15vw;
+		right: 10vw;
 		height: 40vh;
 		margin: 0 5vw;
 		overflow-y: hidden;
@@ -148,7 +151,6 @@
 	}
 	.works.active {
 		z-index: 999;
-		left: 5vw;
 		height:60vh;
 		transform: scale(1);
 		opacity: 1;
@@ -197,7 +199,7 @@
 	<div class="topnav">
 		Hover on each section to see the animation effect!
 	</div>
-	<div class="info">
+	<div class="info" class:active={tab===1} on:click={() => toggleTab(1)}>
 		<div class="title">
 			SRIKANT GUDI
 		</div>
@@ -205,7 +207,7 @@
 			Senior FrontEnd Professional
 		</div>
 	</div>
-	<div class="panel contact" class:active={tab===1} on:click={() => toggleTab(1)}>
+	<div class="panel contact" class:active={tab===2} on:click={() => toggleTab(2)}>
 		<div class="panel-header">
 			Contact details
 		</div>
@@ -226,7 +228,7 @@
 		</div>
 	</div>
 	<div class="aboutme">
-		<div class="panel profile"  class:active={tab===2} on:click={() => toggleTab(2)}>
+		<div class="panel profile"  class:active={tab===3} on:click={() => toggleTab(3)}>
 			<div class="panel-header">
 				PROFILE
 			</div>
@@ -239,7 +241,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="panel skills"  class:active={tab===3} on:click={() => toggleTab(3)}>
+	<div class="panel skills"  class:active={tab===4} on:click={() => toggleTab(4)}>
 		<div class="panel-header">
 			TECHNICAL SKILLS
 		</div>
@@ -251,7 +253,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="panel works"  class:active={tab===4} on:click={() => toggleTab(4)}>
+	<div class="panel works"  class:active={tab===5} on:click={() => toggleTab(5)}>
 		<div class="panel-header">
 			WORK EXPERIENCE
 		</div>
