@@ -3,6 +3,7 @@
   	import {data} from './data/data';
 	let name = 'world';
 	let winwid;
+	let tab=2;
 </script>
 <svelte:window bind:innerWidth={winwid} />
 <style>
@@ -53,7 +54,7 @@
 		text-align: center;
 		line-height: 1.5;
 	}
-	.contact:hover {
+	.contact.active {
 		font-size: 14px;
 		z-index: 999;
 		background-color: whitesmoke;
@@ -89,7 +90,7 @@
 		transition: all 1s;
 		opacity: 0.4;
 	}
-	.profile:hover {
+	.profile.active {
 		z-index: 999;
 		transform: scale(1);
 		opacity: 1;
@@ -108,7 +109,7 @@
 		transform: scale(0.7);
 		transition: all 1s;
 	}
-	.skills:hover {
+	.skills.active {
 		overflow-y: auto;
 		z-index: 999;
 		height: 65vh;
@@ -139,11 +140,10 @@
 		font-size: 12px;
 		transition: all 1s;
 	}
-	.works:hover {
+	.works.active {
 		z-index: 999;
-		top: 17vh;
 		left: 5vw;
-		height:82vh;
+		height:60vh;
 		transform: scale(1);
 		opacity: 1;
 		overflow-y: auto;
@@ -151,8 +151,6 @@
 	}
 	.panel {
 		box-shadow: 0 0 2px #999;
-	}
-	.panel:hover {
 		box-shadow: 0 2px 12px #666666;
 	}
 	.panel-header {
@@ -201,7 +199,7 @@
 			Senior FrontEnd Professional
 		</div>
 	</div>
-	<div class="panel contact">
+	<div class="panel contact" class:active={tab===1} on:click={() => tab=1}>
 		<div class="panel-header">
 			Contact details
 		</div>
@@ -222,7 +220,7 @@
 		</div>
 	</div>
 	<div class="aboutme">
-		<div class="panel profile">
+		<div class="panel profile"  class:active={tab===2} on:click={() => tab=2}>
 			<div class="panel-header">
 				PROFILE
 			</div>
@@ -235,7 +233,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="panel skills">
+	<div class="panel skills"  class:active={tab===3} on:click={() => tab=3}>
 		<div class="panel-header">
 			TECHNICAL SKILLS
 		</div>
@@ -247,7 +245,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="panel works">
+	<div class="panel works"  class:active={tab===4} on:click={() => tab=4}>
 		<div class="panel-header">
 			WORK EXPERIENCE
 		</div>
