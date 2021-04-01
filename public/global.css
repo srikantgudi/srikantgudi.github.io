@@ -3,12 +3,17 @@
     padding: 1vh 4vw;
 }
 .topnav {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 1vh 1vw;
     display: flex;
-    margin-bottom: 1em;
     flex-flow: column;
     align-items: center;
     justify-content: space-around;
+    box-shadow: 0 10px 20px #def;
     background: linear-gradient(lightblue,lightcyan);
 }
 .page-title {
@@ -29,13 +34,17 @@
     align-items: center;
     justify-content: space-around;
     background-color: lightcyan;
-    margin: 2vmin 1vmax;
     padding: 2vmin 1vmax;
 }
 .contact-item {
     font-family: Roboto;
     font-size: 3vmin;
     color: navy;
+    min-width: 20vw;
+}
+.resume-content {
+    position: relative;
+    top: 10vh;
 }
 .section-title {
     display: flex;
@@ -124,6 +133,10 @@
     font-size: 2vmin;
 }
 @media screen and (min-width: 600px) and (max-width: 1096px) {
+    .resume-content {
+        position: fixed;
+        top: 1em;
+    }
     .work-hist {
         grid-template-columns: 1fr 1fr;
     }

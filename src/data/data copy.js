@@ -12,25 +12,15 @@ export const data = {
 		"Master in Computer Management",
 		"Bachelor of Commerce"
 	],
-	skills: {
-		primary: [
-			{name: "Angular", rating: 7.5, clr: "#00e"},
-			{name: "Svelte", rating: 7.5, clr: "#00e"},
-			{name: "VueJS", rating: 7.5, clr:"#00c"},
-			{name: "React", rating: 7, clr: "#00c"},
-			{name: "Stencil", rating: 6, clr: "#00c"},
-			{name: "JavaScript", rating: 7, clr: "#09c"},
-			{name: "TypeScript", rating: 7, clr: "#09c"},
-			{name: "HTML5", rating: 8, clr: "#099"},
-			{name: "CSS3", rating: 8, clr: "#099"},
-			{name: "SVG", rating: 7, clr: "#f9a"},
-			{name: "Django", rating: 6, clr: "#999"},
-			{name: "Casandra", rating: 6, clr: "#123456"},
-			{name: "Windows",  rating: 8},
-			{name: "MacOS", rating: 8},
-			{name: "Linux", rating: 8},
-		]
-	},
+	skills: [
+		"Angular", "Svelte", "VueJS", "React", "Stencil",
+		"JavaScript", "TypeScript", "HTML5", "CSS3", "SVG",
+		"Bootstrap", "Angular-Material", "React-UI", "Vuetify", "Buefy",
+		"Scrum", "Sprint", "JIRA", "GIT", "Confluence",
+		"VS Code", "IntelliJ", "StackBlitz", "CodeSandbox",
+		"Windows", "MacOS", "Linux",
+		"Python-Django", "Casandra"
+	],
 	exp: [
 		{
 			dates: '16-Jun-2016 to present',
