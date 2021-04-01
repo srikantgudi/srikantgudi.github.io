@@ -140,7 +140,7 @@
 	.works {
 		position: absolute;
 		top: 40vh;
-		right: 10vw;
+		right: 5vw;
 		height: 40vh;
 		margin: 0 5vw;
 		overflow-y: hidden;
