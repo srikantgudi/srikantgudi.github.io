@@ -133,6 +133,7 @@
 		gap: 10px;
 	}
 	.skills-list {
+		margin-left: 2vw;
 		display: grid;
 		grid-template-columns: repeat(5,1fr);
 	}
