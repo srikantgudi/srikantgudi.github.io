@@ -197,7 +197,7 @@
 </style>
 <div class="resume">
 	<div class="topnav">
-		Hover on each section to see the animation effect!
+		Click / tap on each section to see the animation effect!
 	</div>
 	<div class="info" class:active={tab===1} on:click={() => toggleTab(1)}>
 		<div class="title">
