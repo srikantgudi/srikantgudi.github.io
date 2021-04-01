@@ -19,6 +19,7 @@ export const data = {
 			{name: "VueJS", rating: 7.5, clr:"#00c"},
 			{name: "React", rating: 7, clr: "#00c"},
 			{name: "Stencil", rating: 6, clr: "#00c"},
+			{name: "NodeJS", rating: 7, clr: "#2dc"},
 			{name: "JavaScript", rating: 7, clr: "#09c"},
 			{name: "TypeScript", rating: 7, clr: "#09c"},
 			{name: "HTML5", rating: 8, clr: "#099"},
