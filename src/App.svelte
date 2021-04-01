@@ -71,7 +71,7 @@
 	.title {
 		font-size: 3vw;
 		font-family: Georgia;
-		font-weight: 600;
+		font-style: italic;
 		color: navy;
 	}
 	.positiontitle {
