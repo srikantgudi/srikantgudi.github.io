@@ -43,7 +43,7 @@
 	.contact {
 		font-size: 1vw;
 		position: absolute;
-		top: 3vh;
+		top: 4vh;
 		font-size: 12px;
 		right: 20vw;
 		padding: 1vh 2vw;
