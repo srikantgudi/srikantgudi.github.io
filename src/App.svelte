@@ -117,6 +117,7 @@
 		background-color: whitesmoke;
 		transform: scale(0.7);
 		transition: all 1s;
+		opacity: 0.4;
 	}
 	.skills.active {
 		overflow-y: auto;
@@ -124,6 +125,7 @@
 		height: 65vh;
 		width: 60vw;
 		transform: scale(1);
+		opacity: 1;
 	}
 	.skill {
 		display: grid;
