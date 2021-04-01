@@ -53,7 +53,7 @@
 		position: absolute;
 		top: 4vh;
 		font-size: 12px;
-		right: 5vw;
+		right: 15vw;
 		padding: 1vh 2vw;
 		transform: scale(0.5);
 		opacity: 0.5;
