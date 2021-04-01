@@ -3,7 +3,7 @@
   	import {data} from './data/data';
 	let name = 'world';
 	let winwid;
-	let tab=3;
+	let tab=0;
 	const toggleTab = (ptab) => {
 		tab = tab === ptab ? 0 : ptab;
 	}
@@ -45,8 +45,9 @@
 		border-radius: 20px;
 		transform: scale(0.7);
 	}
-	.info.active {
+	.info:hover, .info.active {
 		transform: scale(1);
+		z-index: 999;
 	}
 	.contact {
 		font-size: 1vw;
@@ -61,7 +62,7 @@
 		text-align: center;
 		line-height: 1.5;
 	}
-	.contact.active {
+	.contact:hover, .contact.active {
 		font-size: 14px;
 		z-index: 999;
 		background-color: whitesmoke;
@@ -98,7 +99,7 @@
 		transition: all 1s;
 		opacity: 0.4;
 	}
-	.profile.active {
+	.profile:hover, .profile.active {
 		z-index: 999;
 		overflow-y: auto;
 		transform: scale(1);
@@ -118,7 +119,7 @@
 		transform: scale(0.7);
 		transition: all 1s;
 	}
-	.skills.active {
+	.skills:hover, .skills.active {
 		overflow-y: auto;
 		z-index: 999;
 		height: 65vh;
@@ -150,7 +151,7 @@
 		font-size: 12px;
 		transition: all 1s;
 	}
-	.works.active {
+	.works:hover, .works.active {
 		z-index: 999;
 		height:60vh;
 		transform: scale(1);
