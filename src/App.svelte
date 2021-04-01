@@ -51,6 +51,7 @@
 		opacity: 0.5;
 		transition: all 1s;
 		text-align: center;
+		line-height: 1.5;
 	}
 	.contact:hover {
 		font-size: 14px;
