@@ -1,6 +1,6 @@
 <script>
 	import Rating from './Rating.svelte';
-  	import {data} from './data';
+  	import {data} from './data/data';
 	let name = 'world';
 </script>
 
