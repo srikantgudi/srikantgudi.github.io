@@ -25,9 +25,11 @@ export const data = {
 			{name: "HTML5", rating: 8, clr: "#099"},
 			{name: "CSS3", rating: 8, clr: "#099"},
 			{name: "SVG", rating: 7, clr: "#f9a"},
-			{name: "Django", rating: 6, clr: "#999"},
 			{name: "MySQL", rating: 7, clr: "#123456"},
+		],
+		secondary: [
 			{name: "MongoDB", rating: 6, clr: "#123456"},
+			{name: "Django", rating: 6, clr: "#999"},
 			{name: "Cassandra", rating: 6, clr: "#123456"},
 			{name: "Windows",  rating: 8},
 			{name: "MacOS", rating: 8},

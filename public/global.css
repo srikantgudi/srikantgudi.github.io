@@ -1,148 +1,105 @@
 .resume {
-    margin: 1vh 4vw;
-    padding: 1vh 4vw;
+    margin: 0 10vw;
+    box-shadow: 0 2px 4px #666666;
+    padding: 10px;
+    font-family: 'Arial Rounded MT Bold';
+    background: linear-gradient(#666,#ddd,#666,#ccc,#666) repeat-y;
 }
 .topnav {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 1vh 1vw;
     display: flex;
     flex-flow: column;
     align-items: center;
+    padding: 1vh 1vw;
     justify-content: space-around;
-    box-shadow: 0 10px 20px #def;
-    background: linear-gradient(lightblue,lightcyan);
+    background: linear-gradient(lightcyan, lightgrey)
 }
-.page-title {
-    font-family: Ubuntu;
-    font-size: 4vmax;
+.title {
+    box-sizing: border-box;
+    font-size: 2vw;
+    font-family: 'Arial Rounded MT Bold';
+    font-weight: 600;
+    color: aliceblue;
+    text-align: center;
+    padding: 4vh 4vw;
+    background: linear-gradient(lightblue,navy);
+    width: 100%;
+}
+.positiontitle {
+    font-size: 1.5vw;
+    font-family: 'comic sans ms';
     font-weight: 600;
     color: navy;
-}
-.position-title {
-    font-family: Orbitron;
-    font-size: 2vmax;
-    color: navy;
-    letter-spacing: 2px;
 }
 .contacts {
     display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+    margin: 0 1vw;
     justify-content: space-around;
-    background-color: lightcyan;
-    padding: 2vmin 1vmax;
 }
 .contact-item {
-    font-family: Roboto;
-    font-size: 3vmin;
-    color: navy;
-    min-width: 20vw;
+    font-size: 1vw;
+    width: 40vw;
+    margin: 1vh 1vw;
+    text-align: center;
 }
-.resume-content {
-    position: relative;
-    top: 10vh;
+.panel {
+    padding: 1vh 3vw;
+    margin: 1vh 2vw;
+    box-shadow: 0 2px 2px #666666;
+    background: linear-gradient(whitesmoke, aliceblue);
+    margin-bottom: 2vh;
 }
-.section-title {
-    display: flex;
-    align-items: center;
-    font-family: Roboto;
-    font-weight: 600;
-    font-size: 2vmax;
-    padding: 2vmin 2vmax;
-    color: navy;
-    border-radius: 0 0 10% 10%;
-    background: linear-gradient(to right ,#ddddcc,#123456);
+.panel-title {
+    font-size: 1.5vw;
+    background: linear-gradient(to right, lightcyan, lightgrey);
+    padding: 2vh 1vw;
 }
-.section-content {
-    font-family: Ubuntu;
-    font-size: 3vmin;
-    padding: 2vmax;
-    margin: 4px 0;
-    border-radius: 10% 10% 0 0;
-    background: linear-gradient(to left,#def,whitesmoke);
+.content-item {
+    padding: 1vh 3vw;
+    border-left: 4px solid lightblue;
+    box-shadow: 0 1px 1px #999;
+    margin: 4px 10px;
+    font-size: 1vw;
 }
-.profile-content {
-    margin: 1vmin 6vmin;
-}
-.profile-li {
-    text-indent: -10px;
-    margin-left: 20px;
-}
-.profile-li:before {
+.content-item:before {
     content: '\bb\20';
+    text-indent: -5px;
+    margin-left: -12px;
 }
 .skills {
     display: flex;
     flex-flow: row wrap;
+    padding: 1vh 1vw 0 2vw;
     justify-content: space-around;
-    gap: 0 10px;
-    height: auto;
-    margin: 1vmax 3vmax;
 }
-.skillname {
-    font-family: Roboto;
-    font-size: 3vmin;
-    padding: 1vh 2vw;
-    background: #6c757d;
-    margin: 4px 1em;
-    color: aliceblue;
-    border-radius: 1vmax;
+.skill {
+    padding: 4px;
+    margin: 1vh 1vw;
+    box-shadow: 0 2px 4px blue;
+    border-radius: 10px 10px 0 0;
+    color: blue;
 }
-.skillname::before {
-    content: '\bb\20';
+.skill.secondary {
+    box-shadow: 0 2px 4px #999;
+    border-radius: 0 0 4px 4px;
+    color: #666;
 }
-.work-hist {
-    margin: 1vmin 1vmax;
+.work-exp {
     display: flex;
     flex-flow: row wrap;
-    gap: 10px;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
 }
 .exp {
-    padding: 0;
-    box-shadow: 0 1vmin 1vmin #999;
-    margin: 1vmin;
-    background-color: whitesmoke;
-    border-radius: 10px 10px 0 0;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
+    padding: 1vh 1vw;
+    margin: 2vh 4px;
+    border-left: 4px solid teal;
+    box-shadow: 0 0 4px blue;
+    width: 18vw;
+    font-size: 1.2vw;
     text-align: center;
 }
-.job-title {
-    background: linear-gradient(to right ,#123456,#168aad,#123456);
-    color: aliceblue;
-    font-size: 2vmin;
-    display: flex;
-    align-items: flex-start;
-}
-.org-name {
-    font-size: 2vmin;
-}
-.job-title, .org-name {
-    padding: 1vmin 1vmax;
-    font-family: Montserrat;
-}
-.technologies {
-    padding: 1vmin 1vmax;
-    font-family: Roboto;
-    font-size: 2vmin;
-}
-@media screen and (min-width: 600px) and (max-width: 1096px) {
-    .resume-content {
-        position: fixed;
-        top: 1em;
-    }
-    .work-hist {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media screen and (max-width: 599px) {
-    .work-hist {
-        grid-template-columns: 1fr;
+@media screen and (max-width: 640px) {
+    .contacts {
+        flex-flow: column;
     }
 }
