@@ -38,7 +38,7 @@ export const data = {
 	},
 	exp: [
 		{
-			dates: '16-Jun-2016 to present',
+			dates: 'Jun-2016 to present',
 			jobTitle: 'Project Lead - System (FrontEnd development)',
 			org: 'Mphasis, Bengaluru',
 			technology: 'Angular, React, Svelte, Stencil, VueJS, NodeJS, MySQL, HTML5, JavaScript, CSS3',
@@ -53,7 +53,7 @@ export const data = {
 			]
 		},
 		{
-			dates: '15-Aug-2015 to 14-Jan-2016',
+			dates: 'Aug-2015 to Jan-2016',
 			jobTitle: 'FrontEnd AngularJS Developer',
 			org: 'Pandera Solutions, Bengaluru',
 			technology: 'Angular-1.x, HTML5, JavaScript, CSS3',
@@ -65,7 +65,7 @@ export const data = {
 			],
 		},
 		{
-			dates: '20-Aug-2014 to 22-Jan-2015',
+			dates: 'Aug-2014 to Jan-2015',
 			jobTitle: 'Senior UI Developer',
 			org: 'Basil Communications, Bengaluru',
 			technology: 'HTML5, JavaScript, CSS3',
@@ -86,7 +86,7 @@ export const data = {
 			],
 		},
 		{
-			dates: '23-Nov-2011 – 07-Mar-2014',
+			dates: 'Nov-2011 to Mar-2014',
 			jobTitle: 'Senior Software Developer (Consultant)',
 			org: 'Tejas Systems / SUNSYSTEMS, Bengaluru :: Client: MModal Global Services',
 			technology: 'PHP, MySQL, jQuery, HTML5, JavaScript, CSS3, Angular-1.x',
@@ -98,7 +98,7 @@ export const data = {
 			],
 		},
 		{
-			dates: '12-Feb-2010 –22-Sep-2011',
+			dates: 'Feb-2010 to Sep-2011',
 			jobTitle: 'Senior Software Engineer',
 			org: 'TechJini Solutions, Bengaluru',
 			technology: 'PHP, MySQL, jQuery, HTML5, JavaScript, CSS3, am-charts',
@@ -110,7 +110,7 @@ export const data = {
 			],
 		},
 		{
-			dates: '25-Jul-2007 – 14-Mar-2009',
+			dates: 'Jul-2007 to Mar-2009',
 			jobTitle: 'Senior Software Engineer',
 			org: 'TLI Software, Bengaluru',
 			technology: 'PHP, MySQL, jQuery, HTML5, JavaScript, CSS3',

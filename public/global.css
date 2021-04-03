@@ -17,7 +17,6 @@
     box-sizing: border-box;
     font-size: 6em;
     font-family: 'Arial Rounded MT Bold';
-    font-weight: 600;
     color: aliceblue;
     text-align: center;
     width: 100%;
@@ -37,7 +36,7 @@
     justify-content: space-around;
 }
 .contact-item {
-    font-size: 1vw;
+    font-size: 1.2em;
     margin: 10px;
     font-family: inherit;
 }
@@ -47,6 +46,7 @@
     box-shadow: 0 2px 20px #def;
     background: linear-gradient(whitesmoke, aliceblue);
     margin-bottom: 2vh;
+    line-height: 1.5;
 }
 .panel-title {
     font-family: 'Arial Rounded MT bold';
@@ -61,7 +61,7 @@
     border-left: 4px solid lightblue;
     box-shadow: 0 1px 1px #999;
     margin: 4px 10px;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 }
 .skills {
@@ -70,7 +70,9 @@
     padding: 1em;
 }
 .skill {
-    font-family: 'Arial Rounded MT bold';
+    font-family: Ubuntu;
+    font-size: 1.2em;
+    font-weight: 400;
     display: inline-flex;
     width: 8em;
     justify-content: center;
@@ -105,6 +107,7 @@
     width: 30em;
     font-size: 1em;
     text-align: center;
+    line-height: 1.5;
 }
 .job-title {
     font-size: 1.1em;
