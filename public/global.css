@@ -31,15 +31,14 @@
     color: navy;
 }
 .contacts {
-    display: flex;
-    margin: 0 1vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
     justify-content: space-around;
 }
 .contact-item {
     font-size: 1vw;
-    width: 40vw;
-    margin: 1vh 1vw;
-    text-align: center;
+    margin: 10px;
 }
 .panel {
     padding: 1vh 3vw;
@@ -68,15 +67,12 @@
 .skills {
     display: flex;
     flex-flow: row wrap;
-    padding: 1vh 1vw 0 2vw;
     justify-content: space-around;
 }
 .skill {
     padding: 4px;
     margin: 1vh 1vw;
-    box-shadow: 0 2px 4px blue;
     border-radius: 10px 10px 0 0;
-    color: blue;
 }
 .skill.secondary {
     box-shadow: 0 2px 4px #999;
@@ -99,7 +95,32 @@
     text-align: center;
 }
 @media screen and (max-width: 640px) {
+    .resume {
+        margin: 1vh 1vw;
+    }
+    .title {
+        font-size: 150%;
+    }
+    .positiontitle, .panel-title {
+        font-size: 100%;
+    }
     .contacts {
+        grid-template-columns: 1fr;
+    }
+    .content-item, .contact-item {
+        margin: 0;
+        width: auto;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .contact-item {
+        margin: 0;
+    }
+    .work-exp {
         flex-flow: column;
+    }
+    .exp {
+        margin: 1vh 4px;
+        width: auto;
     }
 }

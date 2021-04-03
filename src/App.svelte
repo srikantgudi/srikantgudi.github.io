@@ -25,7 +25,9 @@
 		</div>
 		<div class="contacts">
 			<div class="contact-item">
-				<a href="https://linkedin.com/in/srikantgudi-blr">LinkedIn Profile</a>
+				<a href="https://linkedin.com/in/srikantgudi-blr" target="_blank">
+					LinkedIn Profile
+				</a>
 			</div>
 			<div class="contact-item">
 				SKYPE: srikantgudi
