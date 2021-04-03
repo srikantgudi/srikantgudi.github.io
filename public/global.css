@@ -1,8 +1,8 @@
 .resume {
-    box-shadow: 0 2px 4px #666666;
+    box-shadow: 0 2px 4px #123123;
     padding: 10px;
     font-family: 'Montserrat';
-    background: linear-gradient(#666,#ddd,#666,#ccc,#666) repeat-y;
+    background: #123456;
 }
 .topnav {
     font-family: 'Arial Rounded MT Bold';
@@ -44,14 +44,17 @@
 .panel {
     padding: 1vh 3vw;
     margin: 1vh 2vw;
-    box-shadow: 0 2px 2px #666666;
+    box-shadow: 0 2px 20px #def;
     background: linear-gradient(whitesmoke, aliceblue);
     margin-bottom: 2vh;
 }
 .panel-title {
+    font-family: 'Arial Rounded MT bold';
     font-size: 2em;
-    background: linear-gradient(to right, lightcyan, lightgrey);
-    padding: 2vh 1vw;
+    background: linear-gradient(lightgrey,darkslategrey,lightslategrey);
+    padding: 1em 2em;
+    border-radius: 0 1em 0 1.5em;
+    color: aliceblue
 }
 .content-item {
     padding: 1vh 3vw;
@@ -64,12 +67,13 @@
 .skills {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    padding: 1em;
 }
 .skill {
     font-family: 'Arial Rounded MT bold';
     display: inline-flex;
     width: 8em;
+    justify-content: center;
     box-shadow: 0 2px 4px #999;
     border-radius: 0 0 4px 4px;
     padding: 10px 20px;
@@ -103,13 +107,16 @@
     text-align: center;
 }
 .job-title {
-    font-size: 1.2em;
-    font-weight: 400;
+    font-size: 1.1em;
+    font-weight: 600;
     color: teal;
 }
 @media screen and (max-width: 840px) {
     .title {
         font-size: 3em;
+    }
+    .skills {
+        text-align: center;
     }
     .positiontitle {
         font-size: 1.8em;
