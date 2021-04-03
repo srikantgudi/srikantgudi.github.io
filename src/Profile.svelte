@@ -1,16 +1,14 @@
 <script>
   import {data} from './data/data';
 </script>
-<div class="section-title">
-  PROFILE
-</div>
-<div class="section-content">
-  <div class="profile-content">
+<div class="panel">
+  <div class="panel-title">
+    PROFILE
+  </div>
+  <div class="panel-content">
     {#each data.profile as text}
-    <div>
-      <div class="profile-li">
-        {text}
-      </div>
+    <div class="content-item">
+      {text}
     </div>
     {/each}
   </div>

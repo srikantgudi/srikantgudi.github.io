@@ -39,7 +39,7 @@ export const data = {
 	exp: [
 		{
 			dates: '16-Jun-2016 to present',
-			jobTitle: 'Project Lead - System',
+			jobTitle: 'Project Lead - System (FrontEnd development)',
 			org: 'Mphasis, Bengaluru',
 			technology: 'Angular, React, Svelte, Stencil, VueJS, NodeJS, MySQL, HTML5, JavaScript, CSS3',
 			content: [
@@ -54,7 +54,7 @@ export const data = {
 		},
 		{
 			dates: '15-Aug-2015 to 14-Jan-2016',
-			jobTitle: 'Frontend AngularJS Developer',
+			jobTitle: 'FrontEnd AngularJS Developer',
 			org: 'Pandera Solutions, Bengaluru',
 			technology: 'Angular-1.x, HTML5, JavaScript, CSS3',
 			content: [
