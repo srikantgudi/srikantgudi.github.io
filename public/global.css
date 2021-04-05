@@ -41,10 +41,10 @@
     font-family: inherit;
 }
 .panel {
-    padding: 1vh 3vw;
+    padding: 1vh 8vw;
     margin: 1vh 2vw;
     box-shadow: 0 2px 20px #def;
-    background: linear-gradient(whitesmoke, aliceblue);
+    background: linear-gradient(#edf6f9, #a8dadc);
     margin-bottom: 2vh;
     line-height: 1.5;
 }
@@ -58,10 +58,12 @@
 }
 .content-item {
     padding: 1vh 3vw;
-    border-left: 4px solid lightblue;
-    box-shadow: 0 1px 1px #999;
-    margin: 4px 10px;
+    border-left: 4px solid #118ab2;
+    box-shadow: 0 2px 1px #118ab2;
+    margin: 8px 10px;
     font-size: 1.2em;
+    background-color: #e5e5e5;
+    color: #14213d;
 }
 }
 .skills {
@@ -76,20 +78,23 @@
     display: inline-flex;
     width: 8em;
     justify-content: center;
-    box-shadow: 0 2px 4px #999;
     border-radius: 0 0 4px 4px;
     padding: 10px 20px;
     margin: 10px;
 }
 .skill.primary {
     border-left: 4px groove blue;
-    color: teal;
+    color: 14213d;
     font-weight: 600;
+    background-color: #bde0fe;
+    box-shadow: 0 4px 4px #999;
 }
 .skill.secondary {
     border-left: 4px groove grey;
-    color: #666;
+    color: #495057;
     display: inline-flex;
+    background-color: #dee2e6;
+    box-shadow: 0 2px 2px #999;
 }
 .work-exp {
     display: flex;
@@ -100,19 +105,27 @@
     margin-bottom: 2vh;
 }
 .exp {
-    padding: 1vh 1vw;
-    margin: 2vh 4px;
+    padding: 1em 0.5em;
+    margin: 1em;
     border-left: 4px solid teal;
-    box-shadow: 0 0 4px blue;
+    box-shadow: 0 2px 2px #457b9d;
     width: 30em;
     font-size: 1em;
     text-align: center;
     line-height: 1.5;
+    background-color: #dee2e6;
 }
 .job-title {
-    font-size: 1.1em;
+    font-size: 1.4em;
     font-weight: 600;
-    color: teal;
+    color: #1d3557;
+    font-family: Roboto;
+}
+.technology {
+    font-size: 14px;
+    color: #023047;
+    font-family: Ubuntu;
+    font-style: italic;
 }
 @media screen and (max-width: 840px) {
     .title {

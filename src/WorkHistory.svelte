@@ -17,6 +17,9 @@
         <div>
           {xp.org}
         </div>
+        <div class="technology">
+          {xp.technology}
+        </div>
       </div>
     {/each}
   </div>
