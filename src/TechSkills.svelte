@@ -1,5 +1,4 @@
 <script>
-  import Rating from './Rating.svelte';
   import {data} from './data/data';
 </script>
 
@@ -11,14 +10,14 @@
     <div class="skills">
       {#each data.skills.primary as skill}
         <div class="skill primary">
-          {skill.name}
+          {skill.name} <span class="sup">({skill.rating * 10}%)</span>
         </div>
       {/each}
     </div>
     <div class="skills">
       {#each data.skills.secondary as skill}
         <div class="skill secondary">
-          {skill.name}
+          {skill.name}<span class="sup">({skill.rating * 10}%)</span>
         </div>
       {/each}
     </div>

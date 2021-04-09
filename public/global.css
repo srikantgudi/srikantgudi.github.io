@@ -70,13 +70,14 @@
     display: flex;
     flex-flow: row wrap;
     padding: 1em;
+    justify-content: space-around;
 }
 .skill {
     font-family: Ubuntu;
     font-size: 1.2em;
     font-weight: 400;
     display: inline-flex;
-    width: 8em;
+    width: 10em;
     justify-content: center;
     border-radius: 0 0 4px 4px;
     padding: 10px 20px;
@@ -126,6 +127,12 @@
     color: #023047;
     font-family: Ubuntu;
     font-style: italic;
+}
+.sup {
+    display: flex;
+    align-items: flex-start;
+    font-size: 12px;
+    margin-left: 10px;
 }
 @media screen and (max-width: 840px) {
     .title {
