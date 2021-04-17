@@ -14,11 +14,13 @@
         <div class="job-title">
           {xp.jobTitle}
         </div>
-        <div>
-          {xp.org}
-        </div>
-        <div class="technology">
-          {xp.technology}
+        <div class="exp-detail">
+          <div>
+            {xp.org}
+          </div>
+          <div class="technology">
+            {xp.technology}
+          </div>
         </div>
       </div>
     {/each}

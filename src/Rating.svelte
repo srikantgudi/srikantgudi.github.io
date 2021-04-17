@@ -1,11 +1,13 @@
 <script>
+	export let rating;
 	export let text;
-	export let rating = 5;
-	export let clr="#ccc";
-</script>
+</script> 
 
-<svg height="120" width="100">
-	<circle r={rating/2*10} cx="50" cy="50" fill={clr} />
-	<text x="50%" y="90%" text-anchor="middle">{text}</text>
-	<rect x="1" y="1" width="98%" height="98%" fill="transparent" stroke="grey" />
+<svg height="40" width="180">
+	<rect x="" y="0" width="100%" height="30" fill="grey" stroke="grey" />
+	<rect x="1" y="1" width={`${rating/10*100}%`} height="28" fill="#ddf">
+		<animate attributeName="fill" values="#333;lightblue;lightcyan;lightblue;#666" dur="3s" repeatCount="indefinite" />
+	</rect>
+
+	<text x="5" y="50%" font-size="16">{text}</text>
 </svg>
