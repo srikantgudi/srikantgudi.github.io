@@ -18,10 +18,19 @@
 				Senior FrontEnd Professional
 			</div>
 			<div class="content-item">
-				srikantgudi@gmail.com
+				Specialized in:
 			</div>
 			<div class="content-item">
-					+91 829 665 6336
+				Svelte, VueJS, React, Angular, StencilJS, NodeJS
+			</div>
+			<div class="content-item">
+				JavaScript, TypeScript, HTML5, CSS3, JSON, SVG
+			</div>
+			<div class="content-item">
+				Familiar with: Python-Django, Laravel
+			</div>
+			<div class="content-item">
+				srikantgudi@gmail.com | +91 829 665 6336
 			</div>
 		</div>
 		<Profile />
