@@ -132,6 +132,26 @@
     font-size: 12px;
     margin-left: 10px;
 }
+.demoapps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    padding: 1em;
+}
+.demoapp {
+    box-shadow: 0 4px 2px #999999;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+.demoapp-title {
+    font-family: 'Arial Rounded MT Bold';
+    color: navy;
+}
+.link {
+    text-decoration: none;
+    font-weight: 600;
+}
 @media screen and (max-width: 840px) {
     .title {
         font-size: 3em;
@@ -142,5 +162,8 @@
     .positiontitle {
         font-size: 1.8em;
         margin: 1em 0;
+    }
+    .demoapps {
+        grid-template-columns: 1fr;
     }
 }

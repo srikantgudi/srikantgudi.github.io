@@ -2,6 +2,7 @@
   	import {data} from './data/data';
 	import Profile from './Profile.svelte';
 	import TechSkills from './TechSkills.svelte';
+	import Demoapps from './Demoapps.svelte';
 	import WorkHistory from './WorkHistory.svelte';
 </script>
 
@@ -38,6 +39,9 @@
 	<div>
 		<div>
 			<TechSkills />
+		</div>
+		<div>
+			<Demoapps />
 		</div>
 		<div>
 			<WorkHistory />

@@ -36,6 +36,38 @@ export const data = {
 			{name: "Linux", rating: 8},
 		]
 	},
+	demoapps: [
+		{
+			title: 'Yearly Calendar',
+			technology: 'Svelte, HTML5, CSS3',
+			appname: 'sgyearlycal',
+			description: 'To view a yearly calendar with options to navigate to previous 10, previous 1 or next 1 or next 10 years'
+		},
+		{
+			title: 'Analog Clock by zone',
+			technology: 'JavaScript, HTML5, CSS3',
+			appname: 'zoneclock',
+			description: 'Web component to view clock for a selected zone from dropdown'
+		},
+		{
+			title: 'Multiple Analog Clocks',
+			technology: 'Svelte, HTML5, CSS3, SVG',
+			appname: 'sgzoneclocks',
+			description: 'To enable a user to view multiple analog clocks for pre-defined zones'
+		},
+		{
+			title: 'Zone Clock on a Map',
+			technology: 'Svelte, HTML5, CSS3, SVG',
+			appname: 'svzoneclocks',
+			description: 'To view analog clock for selected zone.'
+		},
+		{
+			title: 'Database demo app',
+			technology: 'Svelte, HTML5, CSS3',
+			appname: 'sgdbdemo',
+			description: 'A simple database demo app, where the user can select a category and view products belonging to the same, view all products by clicking a button. Data is static and stored as json.'
+		},
+	],
 	exp: [
 		{
 			dates: 'Jun-2016 to present',
