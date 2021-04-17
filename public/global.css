@@ -22,15 +22,6 @@
     width: 100%;
     transition: all 1s;
 }
-.profile-item {
-    opacity: 0.5;
-    transition: all 1s;
-    background-color: dimgrey;
-}
-.profile-item:hover {
-    opacity: 1;
-    background-color: aliceblue;
-}
 .positiontitle {
     box-sizing: border-box;
     font-size: 4em;
@@ -69,7 +60,7 @@
     padding: 1vh 3vw;
     border-left: 4px solid #118ab2;
     box-shadow: 0 2px 1px #118ab2;
-    margin: 8px 10px;
+    margin: 8px 2em;
     font-size: 1.2em;
     background-color: #e5e5e5;
     color: #14213d;
@@ -89,11 +80,6 @@
     border-radius: 0 0 4px 4px;
     padding: 10px 10px 0;
     margin: 10px;
-    opacity: 0.5;
-    transition: all 0.5s ease-in-out;
-}
-.skill:hover {
-    opacity: 1;
 }
 .skill.primary {
     border-left: 4px groove blue;
@@ -126,13 +112,7 @@
     font-size: 1em;
     text-align: center;
     line-height: 1.5;
-    background-color: #cccccc;
-    opacity: 0.5;
-    transition: all 1s;
-}
-.exp:hover {
-    opacity: 1;
-    background-color: #dee2e6;
+    background-color: whitesmoke;
 }
 .job-title {
     font-size: 1.4em;

@@ -7,7 +7,7 @@
   </div>
   <div class="panel-content">
     {#each data.profile as text}
-    <div class="content-item profile-item">
+    <div class="content-item">
       {text}
     </div>
     {/each}
