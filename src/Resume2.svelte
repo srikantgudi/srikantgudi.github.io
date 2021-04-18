@@ -77,7 +77,7 @@ import App from './App.svelte';
 				<ExpansionPanels class="mr-10">
 					{#each data.exp as xp}
 					<ExpansionPanel>
-						<div slot="header" class="text-h5 grey white-text pl-2 pr-2">
+						<div slot="header" class="text-h6 brown white-text pl-2 pr-2">
 							{xp.dates}: {xp.jobTitle}
 						</div>
 						<Card>
