@@ -51,7 +51,7 @@ import App from './App.svelte';
 				<ExpansionPanels>
 				{#each Object.keys(data.skills) as grouptitle}
 				<ExpansionPanel>
-					<div slot="header">{grouptitle.toUpperCase()}:&nbsp;{data.skills[grouptitle].length}</div>
+					<div slot="header" class="indigo white-text pa-4">{grouptitle.toUpperCase()}:&nbsp;{data.skills[grouptitle].length}</div>
 					<Row class="ml-2 mr-2 pa-4 skills">
 						{#each data.skills[grouptitle] as skill}
 							<Col md={3} sm={6} cols={12}>
