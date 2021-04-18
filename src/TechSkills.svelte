@@ -8,25 +8,19 @@
     TECHNICAL SKILLS
   </div>
   <div class="panel-content">
-    <h3>PRIMARY</h3>
-    <div class="skills">
-      {#each data.skills.primary as skill}
-      <div class="skill primary">
-        <div>
-          <Rating text={skill.name} rating={skill.rating} />
-        </div>
-      </div>
-      {/each}
-    </div>
-    <h3>Secondary</h3>
-    <div class="skills">
-      {#each data.skills.secondary as skill}
-        <div class="skill secondary">
-          <div>
-            <Rating text={skill.name} rating={skill.rating} />
-          </div>
-        </div>
-      {/each}
-    </div>
+    {#each Object.keys(data.skills) as grouptitle}
+			<div class="title groupname grey arialrounded">{grouptitle.toUpperCase()}</div>
+			<div class="skills">
+				{#each data.skills[grouptitle] as skill}
+				<div class="skill">
+					<div class="ubuntu skill-name">
+            <div>
+              <Rating text={skill.name} rating={skill.rating} />
+            </div>
+					</div>
+				</div>
+				{/each}
+			</div>
+		{/each}
   </div>
 </div>

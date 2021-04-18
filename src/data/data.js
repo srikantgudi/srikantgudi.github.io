@@ -13,27 +13,35 @@ export const data = {
 		"Bachelor of Commerce"
 	],
 	skills: {
-		primary: [
-			{name: "Angular", rating: 7.5},
-			{name: "Svelte", rating: 7.5},
-			{name: "VueJS", rating: 7.5},
-			{name: "React", rating: 7},
-			{name: "Stencil", rating: 7},
-			{name: "NodeJS", rating: 7},
-			{name: "JavaScript", rating: 7},
-			{name: "TypeScript", rating: 7},
-			{name: "HTML5", rating: 8},
-			{name: "CSS3", rating: 8},
-			{name: "SVG", rating: 7},
-			{name: "MySQL", rating: 7},
+		frameworks: [
+			{name: "Angular", rating: 75},
+			{name: "Svelte", rating: 75},
+			{name: "VueJS", rating: 75},
+			{name: "React", rating: 70},
+			{name: "Stencil", rating: 70},
+			{name: "NodeJS", rating: 70}
 		],
-		secondary: [
-			{name: "MongoDB", rating: 6},
-			{name: "Django", rating: 6},
-			{name: "Cassandra", rating: 6},
-			{name: "Windows",  rating: 8},
-			{name: "MacOS", rating: 8},
-			{name: "Linux", rating: 8},
+		frontend: [
+			{name: "JavaScript", rating: 70},
+			{name: "TypeScript", rating: 70},
+			{name: "HTML5", rating: 80},
+			{name: "JSON", rating: 80},
+			{name: "CSS3", rating: 80},
+			{name: "SVG", rating: 70},
+		],
+		databases: [
+			{name: "MySQL", rating: 70},
+			{name: "MongoDB", rating: 60},
+		],
+		familiar: [
+			{name: "GIT", rating: 70},
+			{name: "Django", rating: 60},
+			{name: "Cassandra", rating: 60}
+		],
+		'Operating Systems': [
+			{name: "Windows",  rating: 80},
+			{name: "MacOS", rating: 80},
+			{name: "Linux", rating: 80},
 		]
 	},
 	demoapps: [

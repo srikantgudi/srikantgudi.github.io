@@ -1,50 +1,36 @@
 <script>
-  	import {data} from './data/data';
-	import Profile from './Profile.svelte';
-	import TechSkills from './TechSkills.svelte';
-	import Demoapps from './Demoapps.svelte';
-	import WorkHistory from './WorkHistory.svelte';
+	import { Container, Radio, Row, Col, MaterialApp } from 'svelte-materialify';
+
+	import Resume1 from './Resume1.svelte';
+	import Resume2 from './Resume2.svelte';
+  	
+	let resumes = {
+		"r1": Resume1,
+		"r2": Resume2
+	};
+	let resume = 'r2';
+
+	const setResume = (opt) => {
+		console.log('setResume> opt:',opt);
+		resume = opt;
+	}
 </script>
 
-<style>
-</style>
+<MaterialApp theme={"light"}>
+	<Container fluid>
+		<Row dense>
+			<Col md={2} sm={12}>
+				<Radio bind:group={resume} class="ml-4" value="r1">
+					<span class="text-h5">Resume with custom styles</span>
+				</Radio>
+				<Radio bind:group={resume} class="ml-4" value="r2">
+					<span class="text-h5">Resume with Svelte-Materialify</span>
+				</Radio>
+			</Col>
+			<Col md>
+				<svelte:component this={resumes[resume]} />
+			</Col>
+		</Row>
+	</Container>
+</MaterialApp>
 
-<div class="resume">
-	<div>
-		<div class="topnav">
-			<div class="title">
-				SRIKANT GUDI
-			</div>
-			<div class="positiontitle">
-				Senior FrontEnd Professional
-			</div>
-			<div class="content-item">
-				Specialized in:
-			</div>
-			<div class="content-item">
-				Svelte, VueJS, React, Angular, StencilJS, NodeJS
-			</div>
-			<div class="content-item">
-				JavaScript, TypeScript, HTML5, CSS3, JSON, SVG
-			</div>
-			<div class="content-item">
-				Familiar with: Python-Django, Laravel
-			</div>
-			<div class="content-item">
-				srikantgudi@gmail.com | +91 829 665 6336
-			</div>
-		</div>
-		<Profile />
-	</div>
-	<div>
-		<div>
-			<TechSkills />
-		</div>
-		<div>
-			<Demoapps />
-		</div>
-		<div>
-			<WorkHistory />
-		</div>
-	</div>
-</div>

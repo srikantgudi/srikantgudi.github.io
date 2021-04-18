@@ -1,7 +1,6 @@
 .resume {
     box-shadow: 0 2px 4px #123123;
     padding: 10px;
-    font-family: 'Montserrat';
     background: #123456;
 }
 .topnav {
@@ -15,8 +14,7 @@
 }
 .title {
     box-sizing: border-box;
-    font-size: 6em;
-    font-family: 'Arial Rounded MT Bold';
+    font-family: Righteous;
     color: aliceblue;
     text-align: center;
     width: 100%;
@@ -25,7 +23,7 @@
 .positiontitle {
     box-sizing: border-box;
     font-size: 4em;
-    font-family: Ubuntu;
+    font-family: 'Arial Rounded MT Bold';
     transition: all 1s;
     text-align: center;
 }
@@ -38,14 +36,14 @@
 .contact-item {
     font-size: 1.2em;
     margin: 10px;
-    font-family: inherit;
+    font-family: Montserrat!important;
 }
 .panel {
-    padding: 1vh 8vw;
-    margin: 1vh 2vw;
+    padding: 1vh 1vw;
+    margin: 1vh 1vw;
     box-shadow: 0 2px 20px #def;
     background: linear-gradient(#edf6f9, #a8dadc);
-    margin-bottom: 2vh;
+    margin-bottom: 1em;
     line-height: 1.5;
 }
 .panel-title {
@@ -53,17 +51,19 @@
     font-size: 2em;
     background: linear-gradient(lightgrey,darkslategrey,lightslategrey);
     padding: 1em 2em;
-    border-radius: 0 1em 0 1.5em;
+    border-radius: 1em 1em 0 0;
+    margin-bottom: 10px;
     color: aliceblue
 }
 .content-item {
     padding: 1vh 3vw;
     border-left: 4px solid #118ab2;
     box-shadow: 0 2px 1px #118ab2;
-    margin: 8px 2em;
+    margin: 8px 2em 0 0;
     font-size: 1.2em;
     background-color: #e5e5e5;
     color: #14213d;
+    width: 100%;
 }
 .skills {
     display: flex;
@@ -71,12 +71,12 @@
     padding: 1em;
     justify-content: space-around;
 }
-.skill {
+/* .skill {
     font-family: Ubuntu;
     font-size: 1.2em;
     font-weight: 400;
     display: block;
-    width: 10em;
+    width: 20vw;
     border-radius: 0 0 4px 4px;
     padding: 10px 10px 0;
     margin: 10px;
@@ -94,6 +94,9 @@
     display: block;
     background-color: #dee2e6;
     box-shadow: 0 2px 2px #999;
+} */
+.skill-name {
+    font-size: 16px;
 }
 .work-exp {
     display: flex;
@@ -152,7 +155,7 @@
     text-decoration: none;
     font-weight: 600;
 }
-@media screen and (max-width: 840px) {
+/* @media screen and (max-width: 840px) {
     .title {
         font-size: 3em;
     }
@@ -165,5 +168,55 @@
     }
     .demoapps {
         grid-template-columns: 1fr;
+    }
+} */
+.ubuntu {
+    font-family: Ubuntu;
+}
+.montserrat {
+    font-family: Montserrat;
+}
+.arialrounded {
+    font-family: 'Arial Rounde';
+}
+.title {
+    font-family: Righteous!important;
+}
+.title.app {
+    font-size: 4vw;
+}
+.title.name {
+    font-size: 4em;
+}
+.title.position {
+    font-size: 4vw;
+}
+.title.page {
+    font-size: 6vw;
+}
+.title.section {
+    font-size: 3vw;
+}
+.title.groupname {
+    font-size: 2vw;
+}
+.ubuntu {
+    font-family: Ubuntu;
+}
+.righteous {
+    font-family: Righteous;
+}
+.montserrat {
+    font-family: Montserrat;
+}
+.arialrounded {
+    font-family: 'Arial Rounded MT Bold'!important;
+}
+@media screen and (min-width:320px) and (max-width: 640px) {
+    .title.name {
+        font-size: 18px;
+    }
+    .skill-name {
+        font-size: 12px;
     }
 }
