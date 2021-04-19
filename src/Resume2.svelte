@@ -10,7 +10,7 @@ import App from './App.svelte';
 </script>
 <MaterialApp {theme}>
 	<Container fluid>
-		<Card class="panel">
+		<Card dense class="panel">
 			<div class="title name righteous white-text page grey">
 				SRIKANT GUDI
 			</div>
@@ -18,8 +18,8 @@ import App from './App.svelte';
 				Senior FrontEnd Professional
 			</div>
 		</Card>
-		<Card class="panel">
-			<CardTitle class="panel-title arialrounded text-h3 blue white-text">About me</CardTitle>
+		<Card dense class="panel">
+			<CardTitle class="panel-title arialrounded text-h4 blue white-text">About me</CardTitle>
 			<CardText class="text-h6">
 				<div class="ml-8">Specialized in:</div>
 				<div class="ml-16">
@@ -35,18 +35,20 @@ import App from './App.svelte';
 				</Row>
 			</CardText>
         </Card>
-		<Card class="panel">
-			<CardTitle class="panel-title arialrounded text-h3 blue white-text">Profile</CardTitle>
+		<Card dense class="panel">
+			<CardTitle class="panel-title arialrounded text-h4 blue white-text">Profile</CardTitle>
 			<CardText class="montserrat">
 				{#each data.profile as text}
-					<div class="content-item">
-						{text}
-					</div>
+					<Card dense class="ml-8 mb-1 mr-12">
+						<CardText class="text-h6">
+							{text}
+						</CardText>
+					</Card>
 				{/each}
 			</CardText>
 		</Card>
-		<Card class="panel">
-			<CardTitle class="panel-title arialrounded text-h3 blue white-text">Technical Skills</CardTitle>
+		<Card dense class="panel">
+			<CardTitle class="panel-title arialrounded text-h4 blue white-text">Technical Skills</CardTitle>
 			<CardText class="ml-8 mr-8">
 				{#each Object.keys(data.skills) as grouptitle}
 					<Row dense class="groupname white-text text-h5 mr-10 pa-4">{grouptitle.toUpperCase()}</Row>
@@ -62,8 +64,8 @@ import App from './App.svelte';
 				{/each}
 			</CardText>
 		</Card>
-		<Card class="panel">
-			<CardTitle class="panel-title arialrounded text-h3 blue white-text">
+		<Card dense class="panel">
+			<CardTitle class="panel-title arialrounded text-h4 blue white-text">
 			  Demo Apps
 			</CardTitle>
 			<CardText class="mr-8 demoapps">
@@ -74,7 +76,7 @@ import App from './App.svelte';
 								{app.title}
 							</a>
 						</CardTitle>
-						<CardText>
+						<CardText class="montserrat">
 							<div>Technology: {app.technology}</div>
 							<div class="text-h6">{app.description}</div> 
 						</CardText>
@@ -82,8 +84,8 @@ import App from './App.svelte';
 				{/each}
 			</CardText>
 		</Card>
-		<Card class="panel">
-			<CardTitle class="panel-title arialrounded text-h3 blue white-text">Work Experience</CardTitle>
+		<Card dense class="panel">
+			<CardTitle class="panel-title arialrounded text-h4 blue white-text">Work Experience</CardTitle>
 			<CardText class="ml-2 mr-12">
 				{#each data.exp as xp}
 					<Card>
