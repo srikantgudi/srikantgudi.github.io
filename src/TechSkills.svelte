@@ -9,13 +9,13 @@
   </div>
   <div class="panel-content">
     {#each Object.keys(data.skills) as grouptitle}
-			<div class="title groupname grey arialrounded">{grouptitle.toUpperCase()}</div>
+			<div class="title groupname arialrounded">{grouptitle.toUpperCase()}</div>
 			<div class="skills">
 				{#each data.skills[grouptitle] as skill}
 				<div class="skill">
 					<div class="ubuntu skill-name">
             <div>
-              <Rating text={skill.name} rating={skill.rating} />
+              <Rating txt={skill.name} bg='darkslategrey' clr='lightcyan' r={skill.rating} />
             </div>
 					</div>
 				</div>

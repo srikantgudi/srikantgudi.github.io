@@ -8,9 +8,9 @@
 import App from './App.svelte';
 	let theme = 'light';
 </script>
-<MaterialApp {theme} style="background: lightcyan">
+<MaterialApp {theme}>
 	<Container fluid>
-		<Card class="text-center">
+		<Card class="panel">
 			<div class="title name righteous white-text page grey">
 				SRIKANT GUDI
 			</div>
@@ -18,8 +18,8 @@ import App from './App.svelte';
 				Senior FrontEnd Professional
 			</div>
 		</Card>
-		<Card dense>
-			<CardTitle class="text-h3 blue white-text">About me</CardTitle>
+		<Card class="panel">
+			<CardTitle class="panel-title text-h3 blue white-text">About me</CardTitle>
 			<CardText class="text-h6">
 				<div class="ml-8">Specialized in:</div>
 				<div class="ml-16">
@@ -35,9 +35,9 @@ import App from './App.svelte';
 				</Row>
 			</CardText>
         </Card>
-		<Card>
-			<CardTitle class="text-h3 blue white-text">Profile</CardTitle>
-			<CardText>
+		<Card class="panel">
+			<CardTitle class="panel-title arialrounded text-h3 blue white-text">Profile</CardTitle>
+			<CardText class="montserrat">
 				{#each data.profile as text}
 					<div class="content-item">
 						{text}
@@ -45,56 +45,63 @@ import App from './App.svelte';
 				{/each}
 			</CardText>
 		</Card>
-		<Card>
-			<CardTitle class="text-h3 blue white-text">Technical Skills</CardTitle>
+		<Card class="panel">
+			<CardTitle class="panel-title arialrounded text-h3 blue white-text">Technical Skills</CardTitle>
 			<CardText class="ml-8 mr-8">
-				<ExpansionPanels>
 				{#each Object.keys(data.skills) as grouptitle}
-				<ExpansionPanel>
-					<div slot="header" class="indigo white-text pa-4">{grouptitle.toUpperCase()}:&nbsp;{data.skills[grouptitle].length}</div>
-					<Row class="ml-2 mr-2 pa-4 skills">
+					<Row dense class="groupname white-text text-h5 mr-10 pa-4">{grouptitle.toUpperCase()}</Row>
+					<Row dense class="ml-2 mr-16 pr-16 skills">
 						{#each data.skills[grouptitle] as skill}
-							<Col md={3} sm={6} cols={12}>
-								<Card>
-									<CardTitle>
-										{skill.name}
-									</CardTitle>
-									<CardText>
-										<ProgressLinear height="30px" value={75} />
-									</CardText>
-								</Card>
+							<Col md={4} sm={6} cols={12}>
+								<ProgressLinear class='text-h5' color='cyan' backgroundColor="grey" height="40px" value={75}>
+									{skill.name}
+								</ProgressLinear>
 							</Col>
 						{/each}
 					</Row>
-				</ExpansionPanel>
 				{/each}
-			</ExpansionPanels>
 			</CardText>
 		</Card>
-		<Card>
-			<CardTitle class="text-h3 blue white-text">Work Experience</CardTitle>
-			<CardText>
-				<ExpansionPanels class="mr-10">
-					{#each data.exp as xp}
-					<ExpansionPanel>
-						<div slot="header" class="text-h6 brown white-text pl-2 pr-2">
+		<Card class="panel">
+			<CardTitle class="panel-title arialrounded text-h3 blue white-text">
+			  DEMO APPS
+			</CardTitle>
+			<CardText class="mr-8 demoapps">
+				{#each data.demoapps as app}
+					<Card dense class="demoapp">
+						<CardTitle>
+							<a class="demoapp-title link" target="_blank" href={`https://${app.appname}.netlify.app`}>
+								{app.title}
+							</a>
+						</CardTitle>
+						<CardText>
+							<div>Technology: {app.technology}</div>
+							<div class="text-h6">{app.description}</div> 
+						</CardText>
+					</Card>
+				{/each}
+			</CardText>
+		</Card>
+		<Card class="panel">
+			<CardTitle class="panel-title arialrounded text-h3 blue white-text">Work Experience</CardTitle>
+			<CardText class="ml-2 mr-12">
+				{#each data.exp as xp}
+					<Card>
+						<CardTitle class="mt-2 mb-1">
 							{xp.dates}: {xp.jobTitle}
-						</div>
-						<Card>
-							<CardTitle>
-								{xp.technology}
-							</CardTitle>
-							<CardText>
-								{#each xp.content as text}
-									<li>
-										&raquo; {text}
-									</li>
-								{/each}
-							</CardText>
-						</Card>
-					</ExpansionPanel>
-					{/each}
-				</ExpansionPanels>
+						</CardTitle>
+					</Card>
+					<Card class="ml-10 mr-4">
+					<CardText>
+							{xp.technology}
+							{#each xp.content as text}
+								<li>
+									{text}
+								</li>
+							{/each}
+						</CardText>
+					</Card>
+				{/each}
 			</CardText>
 		</Card>
 	</Container>

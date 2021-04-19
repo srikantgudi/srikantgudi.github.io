@@ -1,11 +1,11 @@
 <script>
-	export let rating;
-	export let text;
-</script> 
-
-<svg height="40" width="180">
-	<rect x="0" y="0" width="100%" height="30" fill="grey" stroke="grey" />
-	<rect x="1" y="1" width={`${rating}%`} height="28" fill="#ddf" />
-
-	<text x="5" y="50%" font-size="16">{text}</text>
+	export let r
+	export let txt
+	export let bg = 'lightgrey'
+	export let clr = 'whitesmoke'
+</script>
+<svg height='40' width='200'>
+	<rect x='0' y='0' width='90%' height='100%' fill={bg} stroke='blue' />
+	<rect x='1%' y='5%' width={`${r}%`} height='90%' fill={clr} />
+	<text x='5%' y='60%' font-size='16' fill='blue'>{txt}</text>
 </svg>

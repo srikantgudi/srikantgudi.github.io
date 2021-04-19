@@ -21,7 +21,7 @@ export const data = {
 			{name: "Stencil", rating: 70},
 			{name: "NodeJS", rating: 70}
 		],
-		frontend: [
+		'front-end': [
 			{name: "JavaScript", rating: 70},
 			{name: "TypeScript", rating: 70},
 			{name: "HTML5", rating: 80},
