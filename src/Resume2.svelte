@@ -93,8 +93,8 @@ import App from './App.svelte';
 							{xp.dates}: {xp.jobTitle}
 						</CardTitle>
 					</Card>
-					<Card class="ml-10 mr-4">
-					<CardText>
+					<Card class="ml-10 mr-4 montserrat">
+						<CardText>
 							{xp.technology}
 							{#each xp.content as text}
 								<li>
