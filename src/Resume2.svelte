@@ -19,7 +19,7 @@ import App from './App.svelte';
 			</div>
 		</Card>
 		<Card class="panel">
-			<CardTitle class="panel-title text-h3 blue white-text">About me</CardTitle>
+			<CardTitle class="panel-title arialrounded text-h3 blue white-text">About me</CardTitle>
 			<CardText class="text-h6">
 				<div class="ml-8">Specialized in:</div>
 				<div class="ml-16">
