@@ -64,7 +64,7 @@ import App from './App.svelte';
 		</Card>
 		<Card class="panel">
 			<CardTitle class="panel-title arialrounded text-h3 blue white-text">
-			  DEMO APPS
+			  Demo Apps
 			</CardTitle>
 			<CardText class="mr-8 demoapps">
 				{#each data.demoapps as app}
