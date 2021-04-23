@@ -83,6 +83,9 @@ a {
     padding: 0.5em 1em;
     margin: 0.5em 1em;
 }
+.content-item a {
+    color: navy;
+}
 .skills {
     display: flex;
     flex-flow: row wrap;
@@ -135,4 +138,9 @@ a {
 }
 .job-dates {
     color: #333333;
+}
+.link {
+    text-decoration: none;
+    font-weight: 600;
+    color: navy;
 }

@@ -28,9 +28,9 @@ import App from './App.svelte';
 				<div class="ml-8">Familiar with:</div>
 				<div class="ml-16">Python-Django, Laravel</div>
 				<Row dense class="content-item">
-					<Col md={3} sm={6} cols={12}><a href="mailto:srikantgudi@gmail.com">Mail me!</a></Col>
+					<Col md={3} sm={6} cols={12}>srikantgudi@gmail.com</Col>
 					<Col md={3} sm={6} cols={12}>+91 829 665 6336</Col>
-					<Col md={3} sm={6} cols={12}><a href="https://linkedin.com/in/srikantgudi-blr">LinkedIn Profile</a></Col>
+					<Col md={3} sm={6} cols={12}><a class="link" href="https://linkedin.com/in/srikantgudi-blr">LinkedIn Profile</a></Col>
 					<Col md={3} sm={6} cols={12}>Skype: srikantgudi</Col>
 				</Row>
 			</CardText>
