@@ -8,7 +8,7 @@
 		"r1": Resume1,
 		"r2": Resume2
 	};
-	let resume = 'r2';
+	let resume = 'r1';
 
 	const setResume = (opt) => {
 		console.log('setResume> opt:',opt);

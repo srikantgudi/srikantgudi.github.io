@@ -2,13 +2,13 @@
   import {data} from './data/data';
 </script>
 <div class="panel">
-  <div class="panel-title">
+  <div class="title panel-title section lite">
     WORK EXPERIENCE
   </div>
-  <div class="work-exp">
+  <div class="work-exp panel-content">
     {#each data.exp as xp}
-      <div class="exp">
-        <div>
+      <div class="content-item">
+        <div class="job-dates">
           {xp.dates}
         </div>
         <div class="job-title">

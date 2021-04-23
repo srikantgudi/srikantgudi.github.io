@@ -4,21 +4,24 @@
 </script>
 
 <div class="panel">
-  <div class="panel-title">
-    TECHNICAL SKILLS
+  <div class="title panel-title section lite">
+    Technical Skills
   </div>
+
   <div class="panel-content">
     {#each Object.keys(data.skills) as grouptitle}
-			<div class="title groupname arialrounded">{grouptitle.toUpperCase()}</div>
+			<div class="title groupname arialrounded">
+        {grouptitle.toUpperCase()}
+      </div>
 			<div class="skills">
 				{#each data.skills[grouptitle] as skill}
-				<div class="skill">
-					<div class="ubuntu skill-name">
-            <div>
-              <Rating txt={skill.name} bg='darkslategrey' clr='lightcyan' r={skill.rating} />
+          <div class="content-item">
+            <div class="ubuntu skill-name">
+              <div>
+                <Rating width="400" txt={skill.name} bg='grey' r={skill.rating} />
+              </div>
             </div>
-					</div>
-				</div>
+          </div>
 				{/each}
 			</div>
 		{/each}

@@ -1,112 +1,118 @@
-.resume {
-    box-shadow: 0 2px 4px #123123;
-    padding: 10px;
-    background: #123456;
-}
-.topnav {
-    font-family: 'Arial Rounded MT Bold';
+.container {
+    background: linear-gradient(whitesmoke, lightgrey, darkgrey,);
+    height: 100%;
+    overflow-y: auto;
     display: flex;
     flex-flow: column;
-    align-items: center;
-    padding: 2em 1em;
-    background: linear-gradient(lightblue,navy);
-    color: whitesmoke;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+.topnav {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 85vh;
+    padding: 1em 3em;
+    font-family: Montserrat;
+    background: url(/images/srikantgudi.jpg) no-repeat 75% 50% #666;
+    background-size: auto 20em;
+    color: aliceblue;
+    background-blend-mode: soft-light;
+}
+.topnav:hover {
+    background-blend-mode: normal;
 }
 .title {
-    box-sizing: border-box;
+    margin: 0.2em 0;
+}
+.name {
+    font-size: 6vw;
     font-family: Righteous;
-    color: aliceblue;
-    text-align: center;
-    width: 100%;
-    transition: all 1s;
 }
-.positiontitle {
-    box-sizing: border-box;
-    font-size: 4em;
-    font-family: 'Arial Rounded MT Bold';
-    transition: all 1s;
-    text-align: center;
+.position {
+    font-size: 3vw;
+    font-family: Orbitron;
 }
-.contacts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    justify-content: space-around;
+.title.section {
+    font-size: 4vw;
+    padding: 0 1em;
+    background-color: #666666;
+    color: lightcyan;
 }
-.contact-item {
+.title .name .fname {
+    font-weight: 600;
+}
+.title.groupname {
+    padding: 0 1em;
+    margin: 0 1em;
     font-size: 1.2em;
-    margin: 10px;
-    font-family: Montserrat!important;
 }
 .panel {
-    padding: 1vh 1vw;
-    margin: 1vh 1vw;
-    box-shadow: 0 2px 20px #def;
-    background: linear-gradient(#edf6f9, #a8dadc);
-    margin-bottom: 1em;
-    line-height: 1.5;
+    box-sizing: border-box;
+    margin: 1em;
+}
+.lite {
+    background-color: #eee;
+}
+.contact {
+    line-height: 2;
+    font-size: 1.5vw;
+}
+a {
+    color: lightcyan!important;
+    text-decoration: none;
 }
 .panel-title {
-    font-family: 'Arial Rounded MT bold';
-    font-size: 2em;
-    background: linear-gradient(lightslategrey,darkslategrey,lightslategrey);
-    padding: 1em 2em;
-    border-radius: 1em 1em 0 0;
-    margin-bottom: 10px;
-    color: aliceblue
+    border-radius: 40px 10px 10px 40px;
+    border: 2px solid lightblue;
+    border-left: 15px solid grey;
+    box-shadow: 0 2px 4px grey;
+    font-family: Orbitron;
+}
+.panel-content {
+    margin: 0 2em;
+    transition: all 1s;
+    color: #666666;
+    font-family: Montserrat;
 }
 .content-item {
-    padding: 1vh 3vw;
-    border-left: 4px solid #118ab2;
-    box-shadow: 0 2px 1px #118ab2;
-    margin: 8px 2em 0 0;
-    font-size: 1.2em;
-    background-color: #e5e5e5;
-    color: #14213d;
-    width: 100%;
+    box-shadow: 0 2px 4px #333333;
+    border-left: 4px solid navy;
+    border-radius: 10px 5px 5px 10px;
+    padding: 0.5em 1em;
+    margin: 0.5em 1em;
+    background-color: whitesmoke;
 }
 .skills {
     display: flex;
     flex-flow: row wrap;
-    padding: 1em;
+}
+.demoapps {
+    display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
 }
-.skill {
-    font-family: Ubuntu;
-    font-size: 1.2em;
-    font-weight: 400;
+.demoapp {
+    display: flex;
+    flex-flow: column;
+    width: 25em;
+    background-color: whitesmoke;
+    padding: 0.5em 1em;
+    margin: 0.5em 1em;
+    height: fit-content;
+    line-height: 1.2;
+}
+.demoapp-title {
     display: block;
-    width: 20vw;
-    border-radius: 0 0 4px 4px;
-    padding: 10px 10px 0;
-    margin: 10px;
+    background-color: grey;
+    width: inherit;
+    padding: 0.2em 0.5em;
 }
-.skill.primary {
-    border-left: 4px groove blue;
-    color: 14213d;
-    font-weight: 600;
-    background-color: #bde0fe;
-    box-shadow: 0 4px 4px #999;
-}
-.skill.secondary {
-    border-left: 4px groove grey;
-    color: #495057;
-    display: block;
-    background-color: #dee2e6;
-    box-shadow: 0 2px 2px #999;
-}
-.skill-name {
-    font-size: 16px;
-}
-.groupname {
-    box-sizing: border-box;
-    text-align: left;
-    color: lightgrey;
-    background-color: #123456;
-    border-radius: 10px 10px 0 0;
-    margin: 1vw 3vw;
-    padding-left: 2vw;
-    width: 95%;
+.appinfo {
+    background-color: aliceblue;
+    padding: 0.2em 0.5em;
 }
 .work-exp {
     display: flex;
@@ -117,11 +123,7 @@
     margin-bottom: 2vh;
 }
 .exp {
-    padding: 1em 0.5em;
-    margin: 1em;
-    border-left: 4px solid teal;
-    box-shadow: 0 2px 2px #457b9d;
-    width: 30em;
+    font-family: Montserrat;
     font-size: 1em;
     text-align: center;
     line-height: 1.5;
@@ -133,100 +135,6 @@
     color: #1d3557;
     font-family: Roboto;
 }
-.technology {
-    font-size: 14px;
-    color: #023047;
-    font-family: Ubuntu;
-    font-style: italic;
-}
-.sup {
-    display: flex;
-    align-items: flex-start;
-    font-size: 12px;
-    margin-left: 10px;
-}
-.demoapps {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1em;
-    padding: 1em;
-}
-.demoapp {
-    box-shadow: 0 4px 2px #999999;
-    padding: 1em;
-    border-radius: 10px;
-    background-color: whitesmoke;
-}
-.demoapp-title {
-    font-family: 'Arial Rounded MT Bold';
-    color: navy;
-}
-.link {
-    text-decoration: none;
-    font-weight: 600;
-}
-/* @media screen and (max-width: 840px) {
-    .title {
-        font-size: 3em;
-    }
-    .skills {
-        text-align: center;
-    }
-    .positiontitle {
-        font-size: 1.8em;
-        margin: 1em 0;
-    }
-    .demoapps {
-        grid-template-columns: 1fr;
-    }
-} */
-.ubuntu {
-    font-family: Ubuntu;
-}
-.montserrat {
-    font-family: Montserrat;
-}
-.arialrounded {
-    font-family: 'Arial Rounde';
-}
-.title {
-    font-family: Righteous!important;
-}
-.title.app {
-    font-size: 4vw;
-}
-.title.name {
-    font-size: 4em;
-}
-.title.position {
-    font-size: 4vw;
-}
-.title.page {
-    font-size: 6vw;
-}
-.title.section {
-    font-size: 3vw;
-}
-.title.groupname {
-    font-size: 2vw;
-}
-.ubuntu {
-    font-family: Ubuntu;
-}
-.righteous {
-    font-family: Righteous;
-}
-.montserrat {
-    font-family: Montserrat;
-}
-.arialrounded {
-    font-family: 'Arial Rounded MT Bold'!important;
-}
-@media screen and (min-width:320px) and (max-width: 640px) {
-    .title.name {
-        font-size: 18px;
-    }
-    .skill-name {
-        font-size: 12px;
-    }
+.job-dates {
+    color: #333333;
 }

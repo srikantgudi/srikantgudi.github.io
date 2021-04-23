@@ -3,8 +3,8 @@
   let appname = '';
 </script>
 <div class="panel">
-  <div class="panel-title">
-    DEMO APPS
+  <div class="title panel-title section lite">
+    Demo Apps
   </div>
   <div class="panel-content">
     <div class="demoapps">
@@ -15,7 +15,7 @@
             {app.title}
           </a>
           <div class="appinfo">
-            <div class="appinfo-detail" class:active={app.appname=appname}>
+            <div class:active={app.appname=appname}>
               <div>Technology: {app.technology}</div>
               <div>{app.description}</div>
             </div>
