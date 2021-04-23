@@ -3,7 +3,7 @@
 </script>
 <div class="panel">
   <div class="title panel-title section lite">
-    WORK EXPERIENCE
+    Work Experience
   </div>
   <div class="work-exp panel-content">
     {#each data.exp as xp}
