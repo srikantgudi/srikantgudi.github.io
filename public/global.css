@@ -74,7 +74,6 @@ a {
 .panel-content {
     margin: 0 2em;
     transition: all 1s;
-    color: #666666;
     font-family: Montserrat;
 }
 .content-item {
@@ -83,7 +82,6 @@ a {
     border-radius: 10px 5px 5px 10px;
     padding: 0.5em 1em;
     margin: 0.5em 1em;
-    background-color: whitesmoke;
 }
 .skills {
     display: flex;
