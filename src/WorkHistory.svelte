@@ -7,7 +7,7 @@
   </div>
   <div class="work-exp panel-content">
     {#each data.exp as xp}
-      <div class="content-item">
+      <div class="content-item exp">
         <div class="job-dates">
           {xp.dates}
         </div>
@@ -18,13 +18,18 @@
           <div>
             {xp.org}
           </div>
-          <div class="technology">
-            {xp.technology}
+          <div>
+            Technologies used: <span class="technology">{xp.technology}</span>
           </div>
           <div class="job-details">
-            <detail>
-              <summary>??</summary>
-            </detail>
+            <details>
+              <summary>Details:</summary>
+              <ul>
+                {#each xp.content as xptxt}
+                  <li>{xptxt}</li>
+                {/each}
+              </ul>
+            </details>
           </div>
         </div>
       </div>

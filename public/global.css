@@ -108,7 +108,7 @@ a {
     display: flex;
     flex-flow: column;
     gap: 1em;
-    margin: 1em 2em;
+    margin: 1em 5em;
 }
 .demoapp-title {
     padding: 0.2em 0;
@@ -122,15 +122,12 @@ a {
     margin: 0.5em;
 }
 .work-exp {
-    display: flex;
-    flex-flow: column;
-    gap: 1em;
-    margin: auto 2em;
+    display: block;
+    margin: auto 10vw;
 }
 .exp {
     font-family: Montserrat;
     font-size: 1em;
-    text-align: center;
     background-color: whitesmoke;
 }
 .job-title {
@@ -140,7 +137,8 @@ a {
     font-family: Roboto;
 }
 .job-dates {
-    color: #333333;
+    color: navy;
+    font-weight: 600;
 }
 .job-details {
     margin: 0 1em;
@@ -162,6 +160,9 @@ a {
 @media screen and (max-width: 640px) {
     .title.section {
         font-size: 24px;
+    }
+    .work-exp {
+        margin: auto 1vw;
     }
     .demoapp {
         margin: 0 0.5em 0 0;
