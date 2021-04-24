@@ -75,7 +75,7 @@ a {
     font-family: Orbitron;
 }
 .profile-item {
-    margin: 0.5em 1em;
+    margin: 0.5em 5em;
 }
 .panel-content {
     margin: 0 0 0 1em;
@@ -95,11 +95,11 @@ a {
     display: flex;
     flex-flow: row wrap;
     gap: 0.5em;
-    margin: 0 2em;
+    margin: 0 5em;
 }
 .skill-group {
     box-shadow: 0 0 2px #999;
-    margin: 0 1.5em;
+    margin: 0 5em;
 }
 .demoapps {
     display: flex;
