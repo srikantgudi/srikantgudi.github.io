@@ -7,9 +7,8 @@
     Demo Apps
   </div>
   <div class="panel-content">
-    <div class="demoapps">
-      {#each data.demoapps as app}
-      <div class="demoapp">
+    {#each data.demoapps as app}
+      <div class="demoapp content-item">
         <div>
           <a class="demoapp-title link" target="_blank" href={`https://${app.appname}.netlify.app`}>
             {app.title}
@@ -22,7 +21,6 @@
           </div>
         </div>
       </div>
-      {/each}
-    </div>
+    {/each}
   </div>
 </div>

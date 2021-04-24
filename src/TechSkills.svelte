@@ -10,20 +10,18 @@
 
   <div class="panel-content">
     {#each Object.keys(data.skills) as grouptitle}
-			<div class="title groupname arialrounded">
-        {grouptitle.toUpperCase()}
-      </div>
-			<div class="skills">
-				{#each data.skills[grouptitle] as skill}
-          <div class="content-item">
-            <div class="ubuntu skill-name">
-              <div>
-                <Rating width="400" txt={skill.name} bg='grey' r={skill.rating} />
-              </div>
+      <div class="skill-group">
+        <div class="title groupname">
+          {grouptitle.toUpperCase()}
+        </div>
+        <div class="skills">
+          {#each data.skills[grouptitle] as skill}
+            <div class="skill">
+              <Rating width="200" txt={skill.name} bg='grey' r={skill.rating} />
             </div>
-          </div>
-				{/each}
-			</div>
+          {/each}
+        </div>
+      </div>
 		{/each}
   </div>
 </div>

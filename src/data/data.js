@@ -17,13 +17,13 @@ export const data = {
 			{name: "Angular", rating: 75},
 			{name: "Svelte", rating: 75},
 			{name: "VueJS", rating: 75},
-			{name: "React", rating: 70},
+			{name: "React", rating: 75},
 			{name: "Stencil", rating: 70},
 			{name: "NodeJS", rating: 70}
 		],
 		'front-end': [
-			{name: "JavaScript", rating: 70},
-			{name: "TypeScript", rating: 70},
+			{name: "JavaScript", rating: 80},
+			{name: "TypeScript", rating: 80},
 			{name: "HTML5", rating: 80},
 			{name: "JSON", rating: 80},
 			{name: "CSS3", rating: 80},
@@ -31,9 +31,9 @@ export const data = {
 		],
 		databases: [
 			{name: "MySQL", rating: 70},
-			{name: "MongoDB", rating: 60},
 		],
-		familiar: [
+		'secondary': [
+			{name: "MongoDB", rating: 60},
 			{name: "GIT", rating: 70},
 			{name: "Django", rating: 60},
 			{name: "Cassandra", rating: 60}

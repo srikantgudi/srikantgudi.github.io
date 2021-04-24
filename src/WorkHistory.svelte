@@ -21,6 +21,11 @@
           <div class="technology">
             {xp.technology}
           </div>
+          <div class="job-details">
+            <detail>
+              <summary>??</summary>
+            </detail>
+          </div>
         </div>
       </div>
     {/each}
