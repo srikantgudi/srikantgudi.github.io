@@ -74,6 +74,9 @@ a {
     box-shadow: 0 2px 4px grey;
     font-family: Orbitron;
 }
+.profile-item {
+    margin: 0.5em 1em;
+}
 .panel-content {
     margin: 0 0 0 1em;
     transition: all 1s;
@@ -126,6 +129,7 @@ a {
     font-family: Montserrat;
     font-size: 1em;
     background-color: whitesmoke;
+    margin: 1em auto;
 }
 .job-title {
     font-size: 1.4em;
