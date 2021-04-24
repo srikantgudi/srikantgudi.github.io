@@ -108,7 +108,7 @@ a {
     display: flex;
     flex-flow: column;
     gap: 1em;
-    margin: 1em 5em;
+    margin: 1em 10em;
 }
 .demoapp-title {
     padding: 0.2em 0;
