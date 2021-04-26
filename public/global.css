@@ -36,10 +36,9 @@
     font-family: Orbitron;
 }
 .title.section {
-    font-size: 4vw;
+    font-size: 2vw;
     padding: 0 1em;
-    background-color: #666666;
-    color: lightcyan;
+    background: linear-gradient(to right, #eeeeee 60%, #666666);
 }
 .title .name .fname {
     font-weight: 600;
@@ -87,6 +86,7 @@ a {
     border-left: 4px solid navy;
     border-radius: 10px 5px 5px 10px;
     padding: 0.5em 1em;
+    font-family: Ubuntu;
 }
 .content-item a {
     color: navy;
@@ -111,10 +111,10 @@ a {
     margin: 1em 9em;
 }
 .demoapp-title {
-    padding: 0.2em 0;
+    padding: 0.5em 2em 0.5em 1em;
     font-style: italic;
-    background-color: lightcyan;
-    color: #00f;
+    background: linear-gradient(to right, #f7f7f7, #bbb);
+    box-shadow: 0 0 4px #999999;
 }
 .demoapp-info {
     background-color: aliceblue;
@@ -133,9 +133,8 @@ a {
 }
 .job-title {
     font-size: 1.4em;
-    font-weight: 600;
     color: #1d3557;
-    font-family: Roboto;
+    font-family: Montserrat;
 }
 .job-dates {
     color: navy;

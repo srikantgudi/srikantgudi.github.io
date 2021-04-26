@@ -10,7 +10,7 @@
     {#each data.demoapps as app}
       <div class="demoapp content-item">
         <div>
-          <a class="demoapp-title link" target="_blank" href={`https://${app.appname}.netlify.app`}>
+          <a class="demoapp-title" target="_blank" href={`https://${app.appname}.netlify.app`}>
             {app.title}
           </a>
           <div class="appinfo">
