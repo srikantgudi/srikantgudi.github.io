@@ -8,26 +8,30 @@
     Work Experience
   </CardTitle>
 </Card>
+<Row>
 {#each data.exp as xp}
-  <Card>
-    <CardTitle>
-      {xp.jobTitle}::{xp.dates}
-    </CardTitle>
-    <CardSubtitle>
-      {xp.org}
-    </CardSubtitle>
-    <CardText>
-      Technologies used: <span class="technology">{xp.technology}</span>
-    </CardText>
-    <CardText>
-      <details>
-        <summary>Details:</summary>
-        <ul>
-          {#each xp.content as xptxt}
-            <li>{xptxt}</li>
-          {/each}
-        </ul>
-      </details>
-    </CardText>
-  </Card>
+  <Col md={6}>
+    <Card class="mt-2 mb-2">
+      <CardTitle>
+        {xp.jobTitle}::{xp.dates}
+      </CardTitle>
+      <CardSubtitle>
+        {xp.org}
+      </CardSubtitle>
+      <CardText>
+        Technologies used: <span class="technology">{xp.technology}</span>
+      </CardText>
+      <CardText>
+        <details>
+          <summary>Details:</summary>
+          <ul>
+            {#each xp.content as xptxt}
+              <li>{xptxt}</li>
+            {/each}
+          </ul>
+        </details>
+      </CardText>
+    </Card>
+  </Col>
 {/each}
+</Row>

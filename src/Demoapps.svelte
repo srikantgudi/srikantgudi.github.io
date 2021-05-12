@@ -1,26 +1,28 @@
 <script>
+  import { Row, Col, Card, CardTitle, CardSubtitle, CardText, ListItem } from 'svelte-materialify';
+
   import {data} from './data/data';
   let appname = '';
 </script>
-<div class="panel">
-  <div class="title panel-title section lite">
+<Card>
+  <CardTitle class="section-title">
     Demo Apps
-  </div>
-  <div class="panel-content">
-    {#each data.demoapps as app}
-      <div class="demoapp content-item">
-        <div>
-          <a class="demoapp-title" target="_blank" href={`https://${app.appname}.netlify.app`}>
-            {app.title}
-          </a>
-          <div class="appinfo">
-            <div class:active={app.appname=appname}>
-              <div>Technology: {app.technology}</div>
-              <div>{app.description}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    {/each}
-  </div>
-</div>
+  </CardTitle>
+</Card>
+<Row noGutters>
+{#each data.demoapps as app}
+  <Col md={6}>
+    <Card class="mt-2 mb-2 mr-2">
+      <CardTitle>
+        <a class="demoapp-title" target="_blank" href={`https://${app.appname}.netlify.app`}>
+          {app.title}
+        </a>
+      </CardTitle>
+      <CardText>
+        <div>Technology: {app.technology}</div>
+        <div>{app.description}</div>
+      </CardText>
+    </Card>
+  </Col>
+{/each}
+</Row>

@@ -4,6 +4,7 @@
 	import Profile from './Profile.svelte';
 	import Contact from './Contact.svelte';
 	import TechSkills from './TechSkills.svelte';
+	import Demoapps from './Demoapps.svelte';
 	import WorkHistory from './WorkHistory.svelte';
 	
 </script>
@@ -27,6 +28,11 @@
 		<Row>
 			<Col cols={12}>
 				<TechSkills />
+			</Col>
+		</Row>
+		<Row>
+			<Col cols={12}>
+				<Demoapps />
 			</Col>
 		</Row>
 		<Row>
