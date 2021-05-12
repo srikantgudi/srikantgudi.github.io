@@ -1,7 +1,7 @@
 export const data = {
 	profile: [
-		'Senior software professional with extensive experience in various technologies',
-		'Frontend developer using Angular, Svelte, Stencil, React, NodeJS From April 2014',
+		'Senior software professional with experience in various technologies',
+		'Currently into Frontend development using Angular, Svelte, Stencil, React, NodeJS From April 2014',
 		'Proficient in VueJS, creating web components using StencilJS and Vanilla JavaScript, creating RESTful APIs using Nodejs',
 		'Proficient in creating POCs, prototypes, presentations, and wireframes',
 		'Working knowledge of Python-Django, MongoDB',
@@ -13,35 +13,29 @@ export const data = {
 		"Bachelor of Commerce"
 	],
 	skills: {
-		frameworks: [
-			{name: "Angular", rating: 75},
-			{name: "Svelte", rating: 75},
-			{name: "VueJS", rating: 75},
-			{name: "React", rating: 75},
-			{name: "Stencil", rating: 70},
-			{name: "NodeJS", rating: 70}
+		primary: [
+			"Angular",
+			"Svelte",
+			"VueJS",
+			"React",
+			"Stencil",
+			"NodeJS",
+			"JavaScript",
+			"TypeScript",
+			"HTML5",
+			"JSON",
+			"CSS3",
+			"SVG",
+			"MySQL",
+			"GIT"
 		],
-		'front-end': [
-			{name: "JavaScript", rating: 80},
-			{name: "TypeScript", rating: 80},
-			{name: "HTML5", rating: 80},
-			{name: "JSON", rating: 80},
-			{name: "CSS3", rating: 80},
-			{name: "SVG", rating: 70},
-		],
-		databases: [
-			{name: "MySQL", rating: 70},
-		],
-		'secondary': [
-			{name: "MongoDB", rating: 60},
-			{name: "GIT", rating: 70},
-			{name: "Django", rating: 60},
-			{name: "Cassandra", rating: 60}
-		],
-		'Operating Systems': [
-			{name: "Windows",  rating: 80},
-			{name: "MacOS", rating: 80},
-			{name: "Linux", rating: 80},
+		others: [
+			"MongoDB",
+			"Django",
+			"Cassandra",
+			"Windows 10",
+			"MacOS",
+			"Linux"
 		]
 	},
 	demoapps: [

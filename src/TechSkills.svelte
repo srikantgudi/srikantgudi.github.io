@@ -1,27 +1,27 @@
 <script>
+  import { Container, Row, Col, Chip, Card, CardTitle, ListItem } from 'svelte-materialify';
+
   import {data} from './data/data';
   import Rating from './Rating.svelte';
 </script>
 
-<div class="panel">
-  <div class="title panel-title section lite">
+<Card>
+  <CardTitle class="section-title">
     Technical Skills
-  </div>
+  </CardTitle>
 
-  <div class="panel-content">
-    {#each Object.keys(data.skills) as grouptitle}
-      <div class="skill-group">
-        <div class="title groupname">
-          {grouptitle.toUpperCase()}
-        </div>
-        <div class="skills">
-          {#each data.skills[grouptitle] as skill}
-            <div class="skill">
-              <Rating width="200" txt={skill.name} bg='grey' r={skill.rating} />
-            </div>
-          {/each}
-        </div>
-      </div>
-		{/each}
+  <div class="panel-content tech-skills">
+    <Row>
+      {#each Object.keys(data.skills) as grouptitle}
+        <Col>
+          <CardTitle>{grouptitle.toUpperCase()}</CardTitle>
+          <Col>
+            {#each data.skills[grouptitle] as skill}
+              <Chip class="ma-1">{skill}</Chip>
+            {/each}
+          </Col>
+        </Col>
+      {/each}
+    </Row>
   </div>
-</div>
+</Card>

@@ -1,15 +1,18 @@
 <script>
+  import { Container, Row, Col, Card, CardTitle, ListItem } from 'svelte-materialify';
   import {data} from './data/data';
 </script>
-<div class="panel">
-  <div class="title panel-title section lite">
+<Card>
+  <CardTitle class="section-title">
     Profile
+  </CardTitle>
+  <div>
+    <ul>
+      {#each data.profile as text}
+        <ListItem>
+          {text}
+        </ListItem>
+      {/each}
+    </ul>
   </div>
-  <div class="panel-content">
-    {#each data.profile as text}
-    <div class="content-item profile-item">
-      {text}
-    </div>
-    {/each}
-  </div>
-</div>
+</Card>
