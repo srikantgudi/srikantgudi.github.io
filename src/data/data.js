@@ -40,6 +40,12 @@ export const data = {
 	},
 	demoapps: [
 		{
+			title: 'View Zone-wise Times',
+			technology: 'VueJS, SVG, Vuetify, HTML5, CSS3',
+			appname: 'vzonetimes',
+			description: 'To view times of different zones based on time selected from a clock. The user can scroll the mouse wheel in areas for hours and minutes to select time. The user can also click the markers for hours and minutes.'
+		},
+		{
 			title: 'Yearly Calendar',
 			technology: 'Svelte, HTML5, CSS3',
 			appname: 'sgyearlycal',
