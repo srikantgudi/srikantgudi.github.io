@@ -14,7 +14,7 @@
 		<Row>
 			<Col md={12} cols={12} class="text-center">
 				<h3>SRIKANT GUDI</h3>
-				<h4>Senior FrontEnd Professional</h4>
+				<h4>Senior FrontEnd Engineer</h4>
 			</Col>
 		</Row>
 		<Row>
