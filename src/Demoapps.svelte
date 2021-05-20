@@ -18,8 +18,10 @@
           {app.title}
         </a>
       </CardTitle>
-      <CardText>
+      <CardSubtitle class="content-text">
         <div>Technology: {app.technology}</div>
+      </CardSubtitle>
+      <CardText class="content-text">
         <div>{app.description}</div>
       </CardText>
     </Card>

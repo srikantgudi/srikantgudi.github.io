@@ -12,16 +12,16 @@
 {#each data.exp as xp}
   <Col md={6} sm={12}>
     <Card class="mt-2 mb-2">
-      <CardTitle>
-        {xp.jobTitle}::{xp.dates}
+      <CardTitle class="demoapp-title">
+        <div>{xp.jobTitle}</div>
       </CardTitle>
-      <CardSubtitle>
-        {xp.org}
+      <CardSubtitle class="content-title">
+        {xp.dates} :: {xp.org}
       </CardSubtitle>
-      <CardText>
+      <CardText class="content-text">
         Technologies used: <span class="technology">{xp.technology}</span>
       </CardText>
-      <CardText>
+      <CardText class="content-text">
         <details>
           <summary>Details:</summary>
           <ul>

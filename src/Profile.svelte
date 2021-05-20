@@ -9,7 +9,7 @@
   <div>
     <ul>
       {#each data.profile as text}
-        <ListItem>
+        <ListItem class="content-text">
           {text}
         </ListItem>
       {/each}
