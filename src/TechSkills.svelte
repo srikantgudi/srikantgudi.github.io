@@ -13,7 +13,7 @@
   <div class="panel-content tech-skills">
     <Row>
       {#each Object.keys(data.skills) as grouptitle}
-        <Col>
+        <Col md={6} sm={12}>
           <CardTitle>{grouptitle.toUpperCase()}</CardTitle>
           <Col>
             {#each data.skills[grouptitle] as skill}

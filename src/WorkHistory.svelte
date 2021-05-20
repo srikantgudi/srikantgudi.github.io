@@ -10,7 +10,7 @@
 </Card>
 <Row>
 {#each data.exp as xp}
-  <Col md={6}>
+  <Col md={6} sm={12}>
     <Card class="mt-2 mb-2">
       <CardTitle>
         {xp.jobTitle}::{xp.dates}

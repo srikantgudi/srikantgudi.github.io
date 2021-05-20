@@ -11,7 +11,7 @@
 </Card>
 <Row noGutters>
 {#each data.demoapps as app}
-  <Col md={6}>
+  <Col md={6} sm={12}>
     <Card class="mt-2 mb-2 mr-2">
       <CardTitle>
         <a class="demoapp-title" target="_blank" href={`https://${app.appname}.netlify.app`}>
