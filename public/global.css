@@ -10,7 +10,7 @@ html {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 1em;
-    height: 94vh;
+    height: 96vh;
     overflow: hidden;
     margin: auto;
     background-color: whitesmoke;
@@ -57,10 +57,11 @@ html {
     transition: all 1s ease-in-out;
     margin-bottom: 1em;
 }
-.card:hover {
+.card {
     box-shadow: 0 0.2em 1em #666;
 }
 .card-title {
+    cursor: pointer;
     box-sizing: border-box;
     display: flex;
     position: relative;
@@ -77,10 +78,6 @@ html {
     justify-content: center;
     transition: all 0.3s ease-in-out;;
 }
-.card:hover > .card-title {
-    padding: 1em;
-    letter-spacing: 2px;
-}
 .card-details {
     box-sizing: border-box;
     display: none;
@@ -88,7 +85,7 @@ html {
     max-height: 24em;
     overflow-y: auto;
 }
-.card:hover > .card-details {
+.card-details.active {
     display: block;
     height: auto;
 }
@@ -98,7 +95,7 @@ html {
     gap: 1vh 1vw;
     transition: all 0.5em ease-in;
 }
-.exp:hover {
+.exp {
     border-radius: 1em 1em 0 0;
 }
 .content-text {
@@ -107,6 +104,10 @@ html {
 }
 .li:before {
     content: '\bb\20';
+}
+.link {
+    cursor: pointer;
+    text-decoration: none;
 }
 details {
     transition: all 0.5s ease-in;

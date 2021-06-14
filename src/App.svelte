@@ -6,7 +6,8 @@
 	import TechSkills from './TechSkills.svelte';
 	import Demoapps from './Demoapps.svelte';
 	import WorkHistory from './WorkHistory.svelte';
-	
+
+	let comp = 1;
 </script>
 
 <Container fluid class="app">
@@ -16,17 +17,18 @@
 		<Contact />
 	</div>
 	<div class="app-content">
+		<small class="ma-16">Click title to view details</small>
 		<div>
-			<Profile />
+			<Profile/>
 		</div>
 		<div>
-			<TechSkills />
+			<TechSkills/>
 		</div>
 		<div>
-			<Demoapps />
+			<Demoapps/>
 		</div>
 		<div>
-			<WorkHistory />
+			<WorkHistory/>
 		</div>
 	</div>
 </Container>

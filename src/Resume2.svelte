@@ -1,10 +1,5 @@
 <script>
 	import {data} from './data/data';
-	import {
-		MaterialApp, Card, CardTitle, CardText, CardActions,
-		ExpansionPanels, ExpansionPanel, 
-		ProgressLinear, Container, Row, Col
-	} from 'svelte-materialify';
 import App from './App.svelte';
 	let theme = 'light';
 </script>
@@ -50,18 +45,7 @@ import App from './App.svelte';
 		<Card dense class="panel">
 			<CardTitle class="panel-title arialrounded text-h4 blue white-text">Technical Skills</CardTitle>
 			<CardText class="ml-8 mr-8">
-				{#each Object.keys(data.skills) as grouptitle}
-					<Row dense class="groupname white-text text-h5 mr-10 pa-4">{grouptitle.toUpperCase()}</Row>
-					<Row dense class="ml-2 mr-16 pr-16 skills">
-						{#each data.skills[grouptitle] as skill}
-							<Col md={4} sm={6} cols={12}>
-								<ProgressLinear class='text-h5' color='cyan' backgroundColor="grey" height="40px" value={75}>
-									{skill.name}
-								</ProgressLinear>
-							</Col>
-						{/each}
-					</Row>
-				{/each}
+				<TechSkills />
 			</CardText>
 		</Card>
 		<Card dense class="panel">
