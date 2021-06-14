@@ -17,7 +17,6 @@
 		<Contact />
 	</div>
 	<div class="app-content">
-		<small class="ma-16">Click title to view details</small>
 		<div>
 			<Profile/>
 		</div>

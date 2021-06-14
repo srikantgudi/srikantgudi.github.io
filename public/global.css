@@ -82,7 +82,7 @@ html {
     box-sizing: border-box;
     display: none;
     padding: 1em;
-    max-height: 24em;
+    max-height: 22em;
     overflow-y: auto;
 }
 .card-details.active {
