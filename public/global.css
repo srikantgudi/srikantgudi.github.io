@@ -1,46 +1,133 @@
-:html {
-    background: linear-gradient(yellow,blue);
+* {
+    color: #000000;
 }
-.app-title {
+html {
+    background: linear-gradient(#333,#ccc,#666);
+    overflow: hidden;
+    padding: 1em;
+}
+.app {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1em;
+    height: 94vh;
+    overflow: hidden;
+    margin: auto;
+    background-color: whitesmoke;
+}
+.topnav {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 1em;
+    box-shadow: 0 0.5em 1em #333333;
+    margin-bottom: 1em;
+    border-radius: 1em 1em 0.3em 0.3em;
+    text-align: center;
+}
+.contact {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+    text-align: center;
+    line-height: 1.5em;
+    font-family: Montserrat;
+    font-size: 1.5em;
+}
+.title {
+    font-family: 'Arial Rounded MT Bold';
+}
+.title.name {
+    font-size: 3.5vw;
+    padding: 0.5em;
+}
+.title.profession {
+    font-size:2.2vw;
+    padding: 0.5em;
+}
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+.card {
+    display: flex;
+    flex-flow: column;
+    box-sizing: border-box;
+    transition: all 1s ease-in-out;
+    margin-bottom: 1em;
+}
+.card:hover {
+    box-shadow: 0 0.2em 1em #666;
+}
+.card-title {
     box-sizing: border-box;
     display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 4em;
+    position: relative;
+    top: 0%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: darkslategrey;
     font-family: Righteous;
-    background-color: cornflowerblue;
-    color: aliceblue;
-}
-.profession-title {
-    display: flex;
-    flex-flow: column;
+    color: whitesmoke;
+    height: 100%;
+    font-size: 2em;
     align-items: center;
     justify-content: center;
-    font-size: 2em;
-    height: 3em;
-    font-family: 'Arial Rounded MT Bold';
+    transition: all 0.3s ease-in-out;;
+}
+.card:hover > .card-title {
+    padding: 1em;
     letter-spacing: 2px;
-    background: linear-gradient(to bottom, cornflowerblue,lightcyan,cornflowerblue);
 }
-.section-title {
-    font-size: 24px;
-    font-family: Orbitron;
-    letter-spacing: 2px;
-    background: linear-gradient(to right, lightcyan,#069);
-    font-weight: 600;
+.card-details {
+    box-sizing: border-box;
+    display: none;
+    padding: 1em;
+    max-height: 24em;
+    overflow-y: auto;
 }
-.demoapp-title {
-    cursor: pointer;
-    text-decoration: none;
-    color: navy;
-    font-family: Ubuntu;
+.card:hover > .card-details {
+    display: block;
+    height: auto;
 }
-.content-title {
-    font-family: Montserrat;
-    color: #000000;
+.exp {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1vh 1vw;
+    transition: all 0.5em ease-in;
+}
+.exp:hover {
+    border-radius: 1em 1em 0 0;
 }
 .content-text {
     font-family: Montserrat;
-    color: #000000;
+    color: #333333;
+}
+.li:before {
+    content: '\bb\20';
+}
+details {
+    transition: all 0.5s ease-in;
+}
+@media screen and (max-width: 840px) {
+    .app {
+        grid-template-columns: 1fr;
+    }
+    .info {
+        grid-template-columns: 1fr;
+    }
+    .contact {
+        grid-template-columns: 1fr 1fr;
+    }
+    .title.name {
+        font-size: 150%;
+    }
+    .title.profession {
+        font-size: 100%;
+    }
+    .contact {
+        font-size: 90%;
+    }
 }

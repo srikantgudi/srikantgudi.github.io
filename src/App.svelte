@@ -9,38 +9,24 @@
 	
 </script>
 
-<MaterialApp>
-	<Container>
-		<Row>
-			<Col md={12} cols={12} class="text-center">
-				<div class="app-title">SRIKANT GUDI</div>
-				<div class="profession-title">Senior FrontEnd Engineer</div>
-			</Col>
-		</Row>
-		<Row>
-			<Col cols={12}>
-				<Contact />
-			</Col>
-		</Row>
-		<Row>
-			<Col cols={12}>
-				<Profile />
-			</Col>
-		</Row>
-		<Row>
-			<Col cols={12}>
-				<TechSkills />
-			</Col>
-		</Row>
-		<Row>
-			<Col cols={12}>
-				<Demoapps />
-			</Col>
-		</Row>
-		<Row>
-			<Col cols={12}>
-				<WorkHistory />
-			</Col>
-		</Row>
-	</Container>
-</MaterialApp>
+<Container fluid class="app">
+	<div class="topnav">
+		<div class="title name">SRIKANT GUDI</div>
+		<div class="title profession">Senior FrontEnd Engineer</div>
+		<Contact />
+	</div>
+	<div class="app-content">
+		<div>
+			<Profile />
+		</div>
+		<div>
+			<TechSkills />
+		</div>
+		<div>
+			<Demoapps />
+		</div>
+		<div>
+			<WorkHistory />
+		</div>
+	</div>
+</Container>

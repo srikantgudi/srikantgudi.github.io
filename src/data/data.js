@@ -1,9 +1,13 @@
 export const data = {
 	profile: [
-		'Seasoned and independent Frontend developer since 2014 using Angular, Svelte, Stencil, React, NodeJS',
+		'Experienced software professional since 1993, having worked on variety of technologies',
+		'Frontend developer since 2014 using Angular, Svelte, React, NodeJS, KavaScript, HTML5, CSS3',
+		'Have good working knowledge of NextJS, Vuejs, Mongodb, Ruby-on-Rails, Laravel',
+		'Exploring GoLang, Graphql',
 		'Proficient in creating engaging user experience through feature-rich web pages using modern style libraries',
+		'Can create POCs, presentations, wireframes',
 		'Can conduct trainings in the known technologies. Can mentor juniors and freshers',
-		'Have flair for new technologies'
+		'Have flair for new technologies and solution architecture'
 	],
 	academic: [
 		"Master in Computer Management",
@@ -11,14 +15,14 @@ export const data = {
 	],
 	skills: {
 		primary: [
-			"Angular",
 			"Svelte",
 			"VueJS",
 			"React",
-			"Stencil",
+			"Angular",
 			"NodeJS",
 			"JavaScript",
 			"TypeScript",
+			"Stencil",
 			"HTML5",
 			"JSON",
 			"CSS3",
@@ -80,7 +84,7 @@ export const data = {
 			org: 'Mphasis, Bengaluru',
 			technology: 'Angular, React, Svelte, Stencil, VueJS, NodeJS, MySQL, HTML5, JavaScript, CSS3',
 			content: [
-				'Currently working as Lead frontend developer with Schneider Electric using Svelte. Created web components using StencilJS',
+				'Currently working as Lead frontend developer with client in manufacturing industry using Svelte. Created web components using StencilJS',
 				'Worked offshore in Bengaluru with a banking conglomerate on projects in Angular and React',
 				'Worked with a client in financial domain using Angular relating to trading securities',
 				'Worked onsite in Glasgow, UK with a banking conglomerate on Angular based projects',
