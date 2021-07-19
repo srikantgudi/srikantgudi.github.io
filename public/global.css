@@ -7,11 +7,11 @@ html {
     padding: 1em;
 }
 .app {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    flex-flow: column;
     gap: 1em;
     height: 96vh;
-    overflow: hidden;
+    overflow-x: hidden;
     margin: auto;
     background-color: whitesmoke;
 }
@@ -19,30 +19,51 @@ html {
     display: flex;
     flex-flow: column;
     align-items: center;
-    padding: 1em;
-    box-shadow: 0 0.5em 1em #333333;
+    text-align: center;
     margin-bottom: 1em;
     border-radius: 1em 1em 0.3em 0.3em;
-    text-align: center;
+    box-shadow: 0 0.2em 1em #666;
+    padding-bottom: 1em;
+}
+.title {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+.title .name {
+    border-radius: 0.3em 0.3em 0 0;
+    font-size: 6vw;
+    height: 3em;
+    padding: 1em;
+    background: linear-gradient(to right top,#004299,#02a5db,#004299);
+    color: whitesmoke;
+}
+.title .profession {
+    font-size: 4vw;
+    color: #0080bb;
 }
 .contact {
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
     gap: 1em;
-    text-align: center;
+    justify-content: space-around;
     line-height: 1.5em;
     font-family: Montserrat;
     font-size: 1.5em;
+}
+.contact-item {
+    padding: 8px;
+    min-width: 10em;
 }
 .title {
     font-family: 'Arial Rounded MT Bold';
 }
 .title.name {
-    font-size: 3.5vw;
+    font-size: 3.5em;
     padding: 0.5em;
 }
 .title.profession {
-    font-size:2.2vw;
+    font-size:2.5em;
     padding: 0.5em;
 }
 .info {
@@ -73,7 +94,7 @@ html {
     font-family: Righteous;
     color: whitesmoke;
     height: 100%;
-    font-size: 2em;
+    font-size: 3em;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease-in-out;;
@@ -126,7 +147,7 @@ details {
         font-size: 150%;
     }
     .title.profession {
-        font-size: 100%;
+        font-size: 4vw;
     }
     .contact {
         font-size: 90%;

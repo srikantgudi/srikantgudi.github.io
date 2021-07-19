@@ -1,7 +1,7 @@
 export const data = {
 	profile: [
 		'Experienced software professional since 1993, having worked on variety of technologies',
-		'Frontend developer since 2014 using Angular, Svelte, React, NodeJS, KavaScript, HTML5, CSS3',
+		'Frontend developer since 2014 using Angular, Svelte, React, NodeJS, JavaScript, HTML5, CSS3',
 		'Have good working knowledge of NextJS, Vuejs, Mongodb, Ruby-on-Rails, Laravel',
 		'Exploring GoLang, Graphql',
 		'Proficient in creating engaging user experience through feature-rich web pages using modern style libraries',
