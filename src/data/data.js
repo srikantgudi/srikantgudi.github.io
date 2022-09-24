@@ -1,13 +1,9 @@
 export const data = {
 	profile: [
-		'Experienced software professional since 1993, having worked on variety of technologies',
-		'Frontend developer since 2014 using Angular, Svelte, React, NodeJS, JavaScript, HTML5, CSS3',
-		'Have good working knowledge of NextJS, Vuejs, Mongodb, Ruby-on-Rails, Laravel',
-		'Exploring GoLang, Graphql',
-		'Proficient in creating engaging user experience through feature-rich web pages using modern style libraries',
-		'Can create POCs, presentations, wireframes',
-		'Can conduct trainings in the known technologies. Can mentor juniors and freshers',
-		'Have flair for new technologies and solution architecture'
+		'Proficient Frontend developer since 2014 using Angular, Svelte, React, NodeJS',
+		'Have good working knowledge of Vuejs, Mongodb, Laravel',
+		'Exploring GoLang, Rust, WebAssembly',
+		'Have flair for new technologies'
 	],
 	academic: [
 		"Master in Computer Management",
@@ -79,18 +75,18 @@ export const data = {
 	],
 	exp: [
 		{
-			dates: 'Jun-2016 to present',
+			dates: 'Jun-2016 to Oct 2021',
 			jobTitle: 'Project Lead - System (FrontEnd development)',
 			org: 'Mphasis, Bengaluru',
 			technology: 'Angular, React, Svelte, Stencil, VueJS, NodeJS, MySQL, HTML5, JavaScript, CSS3',
 			content: [
-				'Currently working as Lead frontend developer with client in manufacturing industry using Svelte. Created web components using StencilJS',
+				'Worked as Lead frontend developer with client in manufacturing industry using Svelte. Created web components using StencilJS',
 				'Worked offshore in Bengaluru with a banking conglomerate on projects in Angular and React',
 				'Worked with a client in financial domain using Angular relating to trading securities',
 				'Worked onsite in Glasgow, UK with a banking conglomerate on Angular based projects',
 				'Developed UI for a POC for Digital Readiness Analysis Tool to create a survey questionnaire for various categories using Angular, Material Design, HTML5, CSS3, JavaScript, API integration',
 				'Developed UI for client in Insurance domain using React, Material-UI, HTML5, CSS3, JavaScript, IndexedDB',
-				'Worked offshore at client-side with Schneider Electric on Management Dashboard using Angular 1.x'
+				'Worked onsite with Schneider Electric on Management Dashboard using Angular 1.x'
 			]
 		},
 		{
