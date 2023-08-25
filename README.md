@@ -23,7 +23,7 @@ Senior Web Developer experience with 6 years in FrontEnd and 7 years in PHP. Ret
 
 ### Work History
 
-| Job Title | Organisation | Tenure |
+| :Job Title | :Organisation | :Period |
 |-----------|--------------|--------|
 | Project Lead | Mphasis, Bengaluru | June 2016 - Oct 2021 |
 | Frontend AngularJs Developer | Pandera Solutions, Bengaluru | June 2015 - Jan 2016 |
