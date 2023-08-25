@@ -24,7 +24,11 @@ Bengaluru, India
 | :----------- | :-------------- | :-------- |
 | Project Lead | Mphasis, Bengaluru | June 2016 - Oct 2021 |
 | Frontend AngularJs Developer | Pandera Solutions, Bengaluru | June 2015 - Jan 2016 |
-
+| Senior UI Developer | Basil Communications, Bengaluru | Aug 2014 - Jan 2015 |
+| Senior AngularJs Developer (Remote Work) | Saysyil Technologies, VA, USA | April 2014 - June 2014 |
+| Senior Software Developer | SUNSYSTEMS, Bengaluru | Nov 2011 - March 2014 |
+| Senior Software Engineer | TechJini Solutions, Bengaluru | Feb 2010 - Sep 2011 |
+| Senior Software Engineer | TLI Software, Bengaluru | July 2007 - March 2009 |
 
 
 ### Demo Projects created at Frontendmentor.io
