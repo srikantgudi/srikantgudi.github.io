@@ -15,27 +15,21 @@ Bengaluru, India
 | **Frameworks** | **Web Skills** | **Databases** |  **Enthusiast of** |
 | 
 - SvelteKit
-  - VueJs
-  - NodeJs (Express)
+- VueJs
+- NodeJs (Express)
 |
-  - HTML5
-  - CSS3
-  - JavaScript (ES6)
-  - TypeScript
-  </td>
-  <td>
-
-  - MySQL
-  - MongoDB
-  </td>
-  <td>
-
-  - GoLang
-  - FastAPI, Bottle
-  - Laravel
-  </td>
-</tr>
-</tbody></table>
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- TypeScript
+|
+- MySQL
+- MongoDB
+|
+- GoLang
+- FastAPI, Bottle
+- Laravel
+|
 
 ### Work History
 
