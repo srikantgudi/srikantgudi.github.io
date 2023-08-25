@@ -8,13 +8,23 @@ Bengaluru, India
 Senior Web Developer experience with 6 years in FrontEnd and 7 years in PHP. Retired from my previous company in Oct 2021, looking to work further as independant developer. Enthusiast of new technologies like GoLang, Python frameworks (FastAPI, Bottle), WebAssembly, and Laravel
 ```
 
++---------------+---------------+--------------------+
+| Fruit         | Price         | Advantages         |
++===============+===============+====================+
+| Bananas       | $1.34         | - built-in wrapper |
+|               |               | - bright color     |
++---------------+---------------+--------------------+
+| Oranges       | $2.10         | - cures scurvy     |
+|               |               | - tasty            |
++---------------+---------------+--------------------+
+
 ### Technical Skills
 
 | Frameworks | Web Skills | Databases | Enthusiast of |
 | :----------- | :-------------- | :-------- | :--------- |
-| - SvelteKit | - HTML5 | - MySQL | - GoLang |
-| - VueJs | - CSS3 | - MongoDB | - FastAPI, Bottle |
-| - NodeJS |  |  | - Laravel |
+| SvelteKit | HTML5 | - MySQL | - GoLang |
+| VueJs | - CSS3 | - MongoDB | - FastAPI, Bottle |
+| NodeJS |  |  | - Laravel |
 
 ### Work History
 
