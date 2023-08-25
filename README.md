@@ -1,7 +1,4 @@
-# My personal profile in Svelte
+# Srikant Gudi 
+Bengaluru, India
 
-## Personal Info
-Click [here](https://srikantgudi.netlify.app) to view
-
-### Other links
-[Zoneclock](https://srikantgudi.github.io/zoneclock)
+## FrontEnd Developer
