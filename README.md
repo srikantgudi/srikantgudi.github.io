@@ -33,15 +33,12 @@ Bengaluru, India
 
 
 ### Demo Projects created at Frontendmentor.io
-```
+
   [Frontendmentor solutions](https://www.frontendmentor.io/profile/srikantgudi/solutions)
-```
 
 ### Demo Projects Links
-```
+
 - [Rest countries Api](https://rest-countries-api-steel.vercel.app/)
 - [News homepage](https://news-homepage-eta-seven.vercel.app/)
 - [Job Listings](https://job-listings-pink.vercel.app/)
 - [Space Tourism App](https://space-tourism-app-three.vercel.app/)
-```
-
