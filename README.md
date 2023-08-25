@@ -13,7 +13,7 @@ Bengaluru, India
 ### Technical Skills
 
 <table><thead>
-<tr valign="top">
+<tr>
   <td>
       
   **Frameworks**
@@ -31,8 +31,8 @@ Bengaluru, India
   **Enthusiast of**
   </td>
 </tr>
-<tr><thead><tbody>
-<tr valign="top">
+<tr><thead>
+<tbody><tr>
   <td>
 
   - SvelteKit
