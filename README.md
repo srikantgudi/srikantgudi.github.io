@@ -11,6 +11,8 @@ Senior Web Developer experience with 6 years in FrontEnd and 7 years in PHP. Ret
 ### Technical Skills
 
 | Frameworks | Web Skills | Databases | Enthusiast of |
+| :----------- | :-------------- | :-------- | :--------- |
+
 
 ### Work History
 
