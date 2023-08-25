@@ -8,7 +8,9 @@ Bengaluru, India
 - Retired from my previous company in Oct 2021, looking to work further as independant developer
 - Have working knowledge of new technologies like GoLang, WebAssembly, and Laravel
 
-### Demo Projects created at ![Frontendmentor](https://frontendmentor.io/profile/srikantgudi]
+### Demo Projects created at Frontendmentor.io
+
+  [Frontendmentor](https://frontendmentor.io/profile/srikantgudi]
 
 ### Demo Projects Links
 - [Rest countries Api](https://rest-countries-api-steel.vercel.app/)
