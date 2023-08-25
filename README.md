@@ -12,35 +12,12 @@ Bengaluru, India
 
 ### Technical Skills
 
-<table><thead>
-<tr>
-  <td>
-      
-  **Frameworks**
-  </td>
-  <td>
-    
-  **Web Skills**
-  </td>
-  <td>
-    
-  **Databases**
-  </td>
-  <td>
-    
-  **Enthusiast of**
-  </td>
-</tr>
-<tr><thead>
-<tbody><tr>
-  <td>
-
-  - SvelteKit
+| **Frameworks** | **Web Skills** | **Databases** |  **Enthusiast of** |
+| 
+- SvelteKit
   - VueJs
   - NodeJs (Express)
-  </td>
-  <td>
-
+|
   - HTML5
   - CSS3
   - JavaScript (ES6)
