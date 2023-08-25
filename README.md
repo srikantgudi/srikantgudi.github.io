@@ -11,8 +11,14 @@ Bengaluru, India
 
 <table><tbody>
 <tr>
-  <th> Left column </th>
-  <th> Right column </th>
+  <td>
+  
+    **Frameworks**
+  </td>
+  <td>
+    
+    **Web Skills**
+  </td>
 <tr>
 <tr>
   <td>
