@@ -23,6 +23,5 @@ Senior Web Developer experience with 6 years in FrontEnd and 7 years in PHP. Ret
 
 ### Work History
 
-
-| ## Job Title | ## Organisation | ## Tenure |
+| Job Title | Organisation | Tenure |
 | Project Lead | Mphasis, Bengaluru | June 2016 - Oct 2021 |
