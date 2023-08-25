@@ -11,7 +11,29 @@ Bengaluru, India
 
 ### Technical Skills
 
-| Frameworks | Web Skills | Databases | Enthusiast of |
+<table>
+  <thead>
+    <tr>
+      <td>
+        
+        **Frameworks**
+      </td>
+      <td>
+
+        **Web Skills**
+      </td>
+      <td>
+
+        **Databases**
+      </td>
+      <td>
+
+        **Enthusiast of**
+      </td>
+    </tr>
+  </thead>
+</table>
+
 | :----------- | :-------------- | :-------- | :--------- |
 | SvelteKit | HTML5 | MySQL | GoLang |
 | VueJs | CSS3 | MongoDB | FastAPI, Bottle |
