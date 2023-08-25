@@ -4,9 +4,10 @@ Bengaluru, India
 ## FrontEnd Developer
 
 ### About Me!
-```
-Senior Web Developer experience with 6 years in FrontEnd and 7 years in PHP. Retired from my previous company in Oct 2021, looking to work further as independant developer. Enthusiast of new technologies like GoLang, Python frameworks (FastAPI, Bottle), WebAssembly, and Laravel
-```
+
+- Senior Web Developer experience with 6 years in FrontEnd and 7 years in PHP.
+- Retired from my previous company in Oct 2021, looking to work further as independant developer.
+- Enthusiast of new technologies like GoLang, Python frameworks (FastAPI, Bottle), WebAssembly, and Laravel
 
 ### Technical Skills
 
