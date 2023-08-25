@@ -9,6 +9,9 @@ Bengaluru, India
 - Retired from my previous company in Oct 2021, looking to work further as independant developer.
 - Enthusiast of new technologies like GoLang, Python frameworks (FastAPI, Bottle), WebAssembly, and Laravel
 
+
+### Technical Skills
+
 <table><thead>
 <tr>
   <td>
@@ -43,39 +46,19 @@ Bengaluru, India
   - JavaScript (ES6)
   - TypeScript
   </td>
+  <td>
+
+  - MySQL
+  - MongoDB
+  </td>
+  <td>
+
+  - GoLang
+  - FastAPI, Bottle
+  - Laravel
+  </td>
 </tr>
 </tbody></table>
-
-### Technical Skills
-
-<table>
-  <thead>
-    <tr>
-      <td>
-        
-        **Frameworks**
-      </td>
-      <td>
-
-        **Web Skills**
-      </td>
-      <td>
-
-        **Databases**
-      </td>
-      <td>
-
-        **Enthusiast of**
-      </td>
-    </tr>
-  </thead>
-</table>
-
-| :----------- | :-------------- | :-------- | :--------- |
-| SvelteKit | HTML5 | MySQL | GoLang |
-| VueJs | CSS3 | MongoDB | FastAPI, Bottle |
-| NodeJS | JavaScript (ES6) |  | Laravel |
-|  | TypeScript |  |  |
 
 ### Work History
 
