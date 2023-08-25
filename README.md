@@ -12,26 +12,15 @@ Bengaluru, India
 <table><tbody>
 <tr>
   <td>
+      
     **Frameworks**
   </td>
   <td>
     
     **Web Skills**
   </td>
+</tr>
 <tr>
-<tr>
-  <td>
-
-  * Just `write` **markdown**
-  * In _here_
-  </td>
-  <td>
-
-  ```python
-  def or_here():
-    pass
-  ```
-  </td>
 <tbody></table>
 
 ### Technical Skills
