@@ -9,6 +9,26 @@ Bengaluru, India
 - Retired from my previous company in Oct 2021, looking to work further as independant developer.
 - Enthusiast of new technologies like GoLang, Python frameworks (FastAPI, Bottle), WebAssembly, and Laravel
 
+<table><tbody>
+<tr>
+  <th> Left column </th>
+  <th> Right column </th>
+<tr>
+<tr>
+  <td>
+
+  * Just `write` **markdown**
+  * In _here_
+  </td>
+  <td>
+
+  ```python
+  def or_here():
+    pass
+  ```
+  </td>
+<tbody></table>
+
 ### Technical Skills
 
 <table>
