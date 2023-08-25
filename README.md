@@ -28,24 +28,22 @@ Bengaluru, India
   **Enthusiast of**
   </td>
 </tr>
+<tr><thead><tbody>
 <tr>
-<thead>
-<tbody>
-  <tr>
-    <td>
+  <td>
 
-    - SvelteKit
-    - VueJs
-    - NodeJs (Express)
-    </td>
-    <td>
+  - SvelteKit
+  - VueJs
+  - NodeJs (Express)
+  </td>
+  <td>
 
-      - HTML5
-      - CSS3
-      - JavaScript (ES6)
-      - TypeScript
-    </td>
-  </tr>
+  - HTML5
+  - CSS3
+  - JavaScript (ES6)
+  - TypeScript
+  </td>
+</tr>
 </tbody></table>
 
 ### Technical Skills
