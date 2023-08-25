@@ -9,7 +9,7 @@ Senior Web Developer experience with 6 years in FrontEnd and 7 years in PHP. Ret
 ```
 
 ### Technical Skills
-
+| :-------- |: -------- |
 | Frameworks | SvelteKit, VueJs, NodeJs (Express) |
 | Web Skills | HTML5, CSS3, JavaScript (ES6), TypeScript, JSON, AJAX |
 | Databases | MySQL, MongoDB |
