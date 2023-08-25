@@ -8,6 +8,23 @@ Bengaluru, India
 Senior Web Developer experience with 6 years in FrontEnd and 7 years in PHP. Retired from my previous company in Oct 2021, looking to work further as independant developer. Enthusiast of new technologies like GoLang, Python frameworks (FastAPI, Bottle), WebAssembly, and Laravel
 ```
 
+### Technical Skills
+
+| Frameworks | SvelteKit, VueJs, NodeJs (Express) |
+| Web Skills | HTML5, CSS3, JavaScript (ES6), TypeScript, JSON, AJAX |
+| Databases | MySQL, MongoDB |
+| Enthusiast of | GoLang, Python frameworks (FastAPI, Bottle), Laravel |
+
+
+### Work History
+
+| Job Title | Organisation | Period |
+| :----------- | :-------------- | :-------- |
+| Project Lead | Mphasis, Bengaluru | June 2016 - Oct 2021 |
+| Frontend AngularJs Developer | Pandera Solutions, Bengaluru | June 2015 - Jan 2016 |
+
+
+
 ### Demo Projects created at Frontendmentor.io
 ```
   [Frontendmentor solutions](https://www.frontendmentor.io/profile/srikantgudi/solutions)
@@ -20,11 +37,4 @@ Senior Web Developer experience with 6 years in FrontEnd and 7 years in PHP. Ret
 - [Job Listings](https://job-listings-pink.vercel.app/)
 - [Space Tourism App](https://space-tourism-app-three.vercel.app/)
 ```
-
-### Work History
-
-| Job Title | Organisation | Period |
-| :----------- | :-------------- | :-------- |
-| Project Lead | Mphasis, Bengaluru | June 2016 - Oct 2021 |
-| Frontend AngularJs Developer | Pandera Solutions, Bengaluru | June 2015 - Jan 2016 |
 
