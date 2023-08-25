@@ -13,11 +13,11 @@ Bengaluru, India
 <tr>
   <td>
       
-    **Frameworks**
+  **Frameworks**
   </td>
   <td>
     
-    **Web Skills**
+  **Web Skills**
   </td>
 </tr>
 <tr>
