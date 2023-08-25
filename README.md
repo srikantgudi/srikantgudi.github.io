@@ -12,7 +12,9 @@ Senior Web Developer experience with 6 years in FrontEnd and 7 years in PHP. Ret
 
 | Frameworks | Web Skills | Databases | Enthusiast of |
 | :----------- | :-------------- | :-------- | :--------- |
-| - SvelteKit, - VueJs, - NodeJS | HTML5, CSS3 | MySQL, MongoDB | GoLang, FastAPI, Bottle, Laravel |
+| - SvelteKit | - HTML5 | - MySQL | - GoLang |
+| - VueJs | - CSS3 | - MongoDB | - FastAPI, Bottle |
+| - NodeJS |  |  | - Laravel |
 
 ### Work History
 
