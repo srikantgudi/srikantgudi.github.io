@@ -13,23 +13,8 @@ Bengaluru, India
 ### Technical Skills
 
 | **Frameworks** | **Web Skills** | **Databases** |  **Enthusiast of** |
-| 
-- SvelteKit
-- VueJs
-- NodeJs (Express)
-|
-- HTML5
-- CSS3
-- JavaScript (ES6)
-- TypeScript
-|
-- MySQL
-- MongoDB
-|
-- GoLang
-- FastAPI, Bottle
-- Laravel
-|
+| :--- | :--- | :--- | :--- |
+| SvelteKit, VueJs, NodeJs (Express) | HTML5, CSS3, JavaScript (ES6), TypeScript | MySQL, MongoDB | GoLang, FastAPI, Bottle, Laravel |
 
 ### Work History
 
