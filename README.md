@@ -12,7 +12,6 @@ Bengaluru, India
 <table><tbody>
 <tr>
   <td>
-  
     **Frameworks**
   </td>
   <td>
