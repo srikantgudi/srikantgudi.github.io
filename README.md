@@ -10,7 +10,7 @@ Bengaluru, India
 
 ### Demo Projects created at Frontendmentor.io
 
-  [Frontendmentor](https://frontendmentor.io/profile/srikantgudi)
+  [Frontendmentor solutions](https://www.frontendmentor.io/profile/srikantgudi/solutions)
 
 ### Demo Projects Links
 - [Rest countries Api](https://rest-countries-api-steel.vercel.app/)
