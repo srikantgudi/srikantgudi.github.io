@@ -12,6 +12,7 @@ Bengaluru, India
 
 ### Technical Skills
 
+| :--- | :--- |
 | **Frameworks** | SvelteKit, VueJs, NodeJs (Express) |
 | **Web Skills** | HTML5, CSS3, JavaScript (ES6), TypeScript |
 | **Databases** | MySQL, MongoDB |
