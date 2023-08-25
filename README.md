@@ -22,7 +22,8 @@ Senior Web Developer experience with 6 years in FrontEnd and 7 years in PHP. Ret
 ```
 
 ### Work History
-```
+
+|-----------|--------------|--------|
 | Job Title | Organisation | Tenure |
 |-----------|--------------|--------|
-```
+
